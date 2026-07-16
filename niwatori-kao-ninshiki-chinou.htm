@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ニワトリは顔を見分ける？顔認識と知能の科学 | Animal IQ Labo</title>
+<meta name="description" content="ニワトリの顔認識能力を、雛の実験、人間の顔への反応、250人説の検証、2024年の顔選択ニューロン研究からわかりやすく解説します。">
+<link rel="icon" type="image/png" href="https://lolaniki.com/wp-content/uploads/2026/02/cropped-058__logo_icon-270x270.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF6F0;
+    --paper:#fffdf8;
+    --card:#EFE4D6;
+    --bark:#5C4630;
+    --brand:#8B6F47;
+    --ochre:#B98A2E;
+    --orange:#E68620;
+    --green:#2F6F45;
+    --blue:#4169A8;
+    --red:#C75146;
+    --ink:#3A2E22;
+    --muted:#67584A;
+    --line:rgba(92,70,48,0.16);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Sans JP',sans-serif;font-size:16px;line-height:1.95;}
+  a{color:inherit;}
+  .wrap{max-width:780px;margin:0 auto;padding:0 24px;}
+  header.site{border-bottom:1px solid var(--line);background:#fff;}
+  .nav-inner{max-width:960px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+  .brand-name{display:flex;align-items:center;gap:8px;font-weight:900;font-size:20px;color:var(--bark);text-decoration:none;}
+  .brand-name img{width:28px;height:28px;border-radius:50%;}
+  nav.main-nav{display:flex;gap:26px;font-size:14px;font-weight:700;}
+  nav.main-nav a{text-decoration:none;color:var(--brand);}
+  .hero{padding:56px 0 28px;}
+  .tag{display:inline-block;font-size:12px;color:var(--brand);background:var(--card);padding:4px 10px;border-radius:4px;margin-bottom:18px;font-weight:700;}
+  h1{font-size:clamp(27px,4.2vw,40px);line-height:1.5;color:var(--bark);margin:0 0 18px;font-weight:900;}
+  .lede{font-size:16.5px;color:var(--muted);margin:0;}
+  .hero-img{margin:28px 0 0;}
+  figure{margin:28px 0 42px;}
+  figure img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line);}
+  figcaption{font-size:12.5px;color:var(--brand);text-align:center;margin-top:8px;}
+  .block-label{font-size:11.5px;letter-spacing:.12em;color:var(--ochre);font-weight:900;margin:52px 0 12px;}
+  h2{font-size:clamp(23px,3vw,30px);line-height:1.55;color:var(--bark);margin:0 0 18px;font-weight:900;border-bottom:2px solid var(--card);padding-bottom:10px;}
+  h3{font-size:21px;color:var(--bark);margin:34px 0 14px;font-weight:900;}
+  p{margin:0 0 22px;}
+  .note,.panel{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin:16px 0 38px;}
+  .note{border-left:5px solid var(--orange);}
+  .note.green{border-left-color:var(--green);background:#F3FAF1;}
+  .note.blue{border-left-color:var(--blue);background:#F2F7FF;}
+  .note.red{border-left-color:var(--red);background:#FFF5F2;}
+  .note-title{font-weight:900;color:var(--bark);margin:0 0 10px;}
+  .note ul{margin:0;padding-left:20px;}
+  .note li{margin-bottom:8px;}
+  table{width:100%;border-collapse:collapse;margin:12px 0 42px;background:#fff;border:1px solid var(--line);font-size:14px;}
+  th,td{padding:13px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+  th{background:var(--card);color:var(--bark);font-weight:900;}
+  tr:nth-child(even) td{background:#FCF7EF;}
+  .flow{display:grid;gap:10px;margin:18px 0 40px;}
+  .flow-step{background:#fff;border:1px solid var(--line);border-left:5px solid var(--orange);border-radius:8px;padding:14px 16px;}
+  .flow-step strong{display:block;color:var(--bark);}
+  .cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:18px 0 42px;}
+  .mini-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px;text-align:center;}
+  .mini-card .icon{font-size:28px;margin-bottom:8px;}
+  .mini-card .name{font-weight:900;color:var(--bark);font-size:14px;margin-bottom:6px;}
+  .mini-card .desc{font-size:12.5px;color:var(--muted);line-height:1.75;}
+  .dark-box{background:#1f2230;color:#fff;border-radius:10px;padding:24px;margin:16px 0 28px;text-align:center;}
+  .dark-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;}
+  .dark-item{background:rgba(255,255,255,.1);border-radius:8px;padding:16px;}
+  .dark-item strong{display:block;color:#FFD56B;margin:6px 0;font-size:14px;}
+  .research-list{display:grid;gap:16px;margin:16px 0 42px;}
+  .research{background:#fff;border:1px solid var(--line);border-left:5px solid var(--orange);border-radius:10px;padding:20px;}
+  .research.blue{border-left-color:var(--blue);}
+  .research.green{border-left-color:var(--green);}
+  .research.purple{border-left-color:#7056A8;}
+  .research-title{font-weight:900;color:var(--bark);margin-bottom:8px;}
+  .source{font-size:12px;color:var(--brand);background:var(--card);border-radius:6px;padding:8px 10px;margin-top:12px;}
+  .summary-list{display:grid;gap:10px;margin:16px 0 34px;}
+  .summary-list div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:13px 16px;font-size:14px;}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0 44px;}
+  .cta{flex:1 1 180px;display:block;text-align:center;text-decoration:none;background:var(--bark);color:#fff;padding:15px 16px;border-radius:8px;font-size:14px;font-weight:900;}
+  .cta:hover{background:var(--ochre);}
+  .refs{font-size:13px;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin-bottom:46px;}
+  .refs ol{padding-left:22px;margin:0;}
+  .refs li{margin-bottom:12px;}
+  footer.site{text-align:center;padding:38px 24px 52px;font-size:12.5px;color:var(--brand);border-top:1px solid var(--line);margin-top:20px;}
+  @media (max-width:640px){
+    .wrap{padding:0 18px;}
+    .nav-inner{padding:16px 18px;}
+    nav.main-nav{gap:16px;}
+    th,td{padding:10px 9px;font-size:12.5px;}
+    .note,.panel,.dark-box,.research,.refs{padding:18px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav-inner">
+    <a class="brand-name" href="index.html"><img src="https://lolaniki.com/wp-content/uploads/2026/02/cropped-058__logo_icon-270x270.png" alt="">Animal IQ Labo</a>
+    <nav class="main-nav">
+      <a href="index.html">TOP</a>
+      <a href="animal.html">Animal</a>
+      <a href="category-chicken.html">Chicken</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <article>
+    <header class="hero">
+      <span class="tag">動物の頭脳 ・ 鶏</span>
+      <h1>ニワトリは顔を見分ける？顔認識と知能の科学</h1>
+      <p class="lede">鶏は「すぐ忘れる」「単純な動物」と思われがちですが、研究では生後まもない雛が顔らしい配置を好み、個別の顔を識別する能力を持つことが示されています。さらに2024年には、若い鶏の脳に顔刺激へ反応する神経細胞があることも報告されました。</p>
+      <figure class="hero-img">
+        <img src="chicken_voice.webp" alt="ニワトリたち">
+        <figcaption>ニワトリの視覚と顔認識能力は、想像以上に精密です。</figcaption>
+      </figure>
+    </header>
+
+    <div class="block-label">BLOCK 01 — この記事でわかること</div>
+    <section class="note">
+      <div class="note-title">この記事でわかること</div>
+      <ul>
+        <li>鶏の雛が生後まもなく「顔らしい配置」を識別する実験結果</li>
+        <li>鶏が人間の顔の「美しさ・対称性」に反応する研究データ</li>
+        <li>話題の「250人の顔を覚える説」の真偽</li>
+        <li>鶏が顔認識能力を持つ進化的・社会的な理由</li>
+        <li>この発見が動物福祉・農業・科学に与える意味</li>
+      </ul>
+    </section>
+
+    <div class="block-label">BLOCK 02 — 認知能力の位置づけ</div>
+    <h2>鶏の認知能力：動物界での位置づけ</h2>
+    <table>
+      <thead><tr><th>認知能力</th><th>鶏</th><th>犬</th><th>豚</th><th>人間</th></tr></thead>
+      <tbody>
+        <tr><td>顔の識別</td><td>確認済み</td><td>確認済み</td><td>研究中</td><td>高度</td></tr>
+        <tr><td>個体認識</td><td>群れ内で可能</td><td>高度</td><td>確認済み</td><td>高度</td></tr>
+        <tr><td>美しさの認識</td><td>対称性に反応</td><td>不明</td><td>不明</td><td>あり</td></tr>
+        <tr><td>社会的学習</td><td>確認済み</td><td>高度</td><td>確認済み</td><td>高度</td></tr>
+        <tr><td>生後即座の学習</td><td><strong>生後数時間</strong></td><td>数週間後</td><td>数日後</td><td>数週間後</td></tr>
+      </tbody>
+    </table>
+    <section class="note">
+      <p><strong>鶏の認知能力の特徴：</strong>鶏は生後わずか数時間で視覚的学習を開始する、動物界でも稀な「早成性」の認知能力を持ちます。これは刷り込み研究の観点からも重要な発見です。</p>
+    </section>
+
+    <div class="block-label">BLOCK 03 — 顔認識の実験</div>
+    <h2>第1章：ニワトリの「顔認識」はどこまで可能か</h2>
+    <p>実験では、視覚刺激にほとんど触れたことのない新生雛が「顔らしい配置」を好み、最初に見た「ひとつの顔」をのちに識別できることが示されました。つまり、顔の構成を検出する初期メカニズムが生まれつき備わっている可能性があります。</p>
+    <h3>顔らしさを検出する生得的メカニズム</h3>
+    <div class="flow">
+      <div class="flow-step"><strong>1. 生後まもない雛を観察</strong>視覚刺激をほとんど経験していない状態で実験を行う。</div>
+      <div class="flow-step"><strong>2. 顔らしい配置とランダムな配置を提示</strong>目やくちばしに相当する点の上下配置を比較する。</div>
+      <div class="flow-step"><strong>3. 雛は顔らしい配置を一貫して好む</strong>学習以前の段階で、顔の構成を検出する可能性が示された。</div>
+      <div class="flow-step"><strong>4. 最初に見た顔を後から識別</strong>刷り込みと長期記憶に関わる視覚メカニズムの存在が示唆される。</div>
+    </div>
+
+    <h3>2024年の最新発見：脳内の顔選択ニューロン</h3>
+    <section class="note blue">
+      <p><strong>Kobylkov et al. (2024)</strong> の研究では、鶏の若い脳に「顔刺激に特異的に反応するニューロン」が存在することが確認されました。これは行動実験を超えて、脳の神経レベルで顔認識の仕組みが組み込まれていることを示す発見です。</p>
+    </section>
+
+    <div class="block-label">BLOCK 04 — 人の顔への反応</div>
+    <h2>第2章：人の顔だって大丈夫？鶏の人認識能力</h2>
+    <p>鶏は人間の顔に対しても反応を示します。Ghirlanda et al. (2002) の研究では、人間の「平均顔」を基にした刺激に対する選好が観察され、人間の視覚的好みと似た傾向を示しました。</p>
+    <div class="cardgrid">
+      <div class="mini-card"><div class="icon">⚖</div><div class="name">対称性の検出</div><div class="desc">左右対称な顔を非対称な顔より好む傾向が確認されています。</div></div>
+      <div class="mini-card"><div class="icon">◎</div><div class="name">平均顔への選好</div><div class="desc">多くの顔を平均化した「平均顔」に強い選好を示しました。</div></div>
+      <div class="mini-card"><div class="icon">視</div><div class="name">視覚系の共通性</div><div class="desc">顔認識に関する基本原理が、鶏と人間で共通する可能性があります。</div></div>
+    </div>
+
+    <div class="block-label">BLOCK 05 — 250人説の検証</div>
+    <h2>第3章：「250人の顔を覚える」説を検証する</h2>
+    <p>ネット上でしばしば見られる「鶏は250人の顔を覚えられる」という話。この具体的な数字は、実際のところどれほど正確なのでしょうか。</p>
+    <div class="dark-box">
+      <h3 style="color:#fff;border:0;margin-top:0;">「250人説」の学術的検証結果</h3>
+      <div class="dark-grid">
+        <div class="dark-item"><strong>査読論文なし</strong>250人という具体的な数字を直接支持する学術論文は確認できません。</div>
+        <div class="dark-item"><strong>識別能力は確認済み</strong>複数の顔を区別できること自体は実験で示されています。</div>
+        <div class="dark-item"><strong>人数は未検証</strong>数百人分の個別識別を検証した研究は見つかっていません。</div>
+      </div>
+    </div>
+    <section class="note red">
+      <div class="note-title">「250人説」はどこから来たのか？</div>
+      <p>SNSやまとめサイトでの誇張、農場での飼育経験談、そして「複数の顔を識別できる」という研究結果の過度な具体化が重なって広まった可能性があります。結論としては、「250人」という数字は誇張・口伝が拡大したものと考えるのが妥当です。</p>
+    </section>
+    <section class="note green">
+      <p><strong>ただし、顔を見分けられる事実は変わりません。</strong>数字の正確性とは別に、鶏の認知能力が私たちの想像以上であることは確かです。</p>
+    </section>
+
+    <div class="block-label">BLOCK 06 — 進化の理由</div>
+    <h2>第4章：なぜ鶏は「顔」を見分けられるのか</h2>
+    <p>鶏は群れで暮らし、仲間や飼育者との関係の中で生きる社会性を持つ動物です。個体を見分けることは、序列の把握や餌の分配、危険な相手の判別に直結します。</p>
+    <div class="cardgrid">
+      <div class="mini-card"><div class="icon">👑</div><div class="name">序列の把握</div><div class="desc">群れの中で誰が上位かを識別する。</div></div>
+      <div class="mini-card"><div class="icon">🌾</div><div class="name">餌の分配</div><div class="desc">誰と餌を共有し、誰から奪われるかを判断する。</div></div>
+      <div class="mini-card"><div class="icon">!</div><div class="name">危険の判別</div><div class="desc">攻撃的な個体や初対面の人間を認識する。</div></div>
+      <div class="mini-card"><div class="icon">🤝</div><div class="name">飼育者との関係</div><div class="desc">信頼できる人と初対面の人を区別する。</div></div>
+    </div>
+
+    <div class="block-label">BLOCK 07 — この発見の意味</div>
+    <h2>第5章：「鶏を見直す」発見が持つ意味</h2>
+    <table>
+      <thead><tr><th>分野</th><th>発見が与える影響</th><th>具体的な変化</th></tr></thead>
+      <tbody>
+        <tr><td>畜産・農業</td><td>個体識別能力の活用</td><td>同じ飼育者が関わることでストレス軽減につながる可能性</td></tr>
+        <tr><td>動物福祉</td><td>認知・感情を持つ存在として認識</td><td>飼育環境や扱い方の見直し</td></tr>
+        <tr><td>認知科学</td><td>顔認識の収束進化の証拠</td><td>哺乳類以外で顔認識が発達した理由の解明</td></tr>
+        <tr><td>教育</td><td>動物の知性への理解促進</td><td>「鶏は単純」という固定観念の打破</td></tr>
+        <tr><td>ペット飼育</td><td>鶏との関係構築の重要性</td><td>継続した世話で安心感が増す</td></tr>
+      </tbody>
+    </table>
+
+    <div class="block-label">BLOCK 08 — 研究が明かした5つの驚き</div>
+    <h2>研究が明かした「5つの驚き」</h2>
+    <div class="research-list">
+      <section class="research"><div class="research-title">1. 生後数時間で「顔らしい配置」を識別</div><p>Wood et al. (2015) の研究で、視覚刺激にほとんど触れたことのない新生雛が顔らしい配置をランダムな配置より好むことが確認されました。</p><div class="source">Wood, S.M.W. et al. (2015). Face recognition in newly hatched chicks at the onset of vision.</div></section>
+      <section class="research blue"><div class="research-title">2. 2024年：脳内に「顔選択ニューロン」を発見</div><p>Kobylkov et al. (2024) は、若い鶏の脳に顔刺激へ特異的に反応する神経細胞が存在することを報告しました。</p><div class="source">Kobylkov, D. et al. (2024). Innate face-selectivity in the brain of young domestic chicks.</div></section>
+      <section class="research green"><div class="research-title">3. 鶏は人間と似た「美しい顔の基準」を持つ</div><p>Ghirlanda et al. (2002) では、鶏が平均顔や左右対称な顔を選好することが確認されました。</p><div class="source">Ghirlanda, S., Jansson, L., Enquist, M. (2002). Chickens prefer beautiful humans.</div></section>
+      <section class="research"><div class="research-title">4. 最初に見た顔を長く記憶できる</div><p>Rosa-Salva et al. (2010) は、新生雛にとって顔様刺激が特別であり、生後の視覚経験が記憶として固定される仕組みを示しました。</p><div class="source">Rosa-Salva, O. et al. (2010). Faces are special for newly hatched chicks.</div></section>
+      <section class="research purple"><div class="research-title">5. 顔認識能力は動物福祉の改善に直結する</div><p>顔認識能力の存在は、鶏が人間を個体として区別している可能性を示します。同じ飼育者が継続して世話をすることは、ストレス軽減の科学的根拠になり得ます。</p><div class="source">複数研究の統合的知見より</div></section>
+    </div>
+
+    <div class="block-label">BLOCK 09 — まとめ</div>
+    <h2>まとめ</h2>
+    <div class="summary-list">
+      <div>鶏は生後まもない段階から「顔らしい刺激」を識別し、個別の顔を記憶できる能力があります。</div>
+      <div>2024年の研究で、鶏の脳に「顔選択ニューロン」が存在することが神経レベルで確認されました。</div>
+      <div>鶏は人間の「美しい顔」、つまり対称性や平均顔を選好することがあります。</div>
+      <div>「250人の顔を覚える」という数字を支持する査読論文は確認できず、誇張・口伝の可能性が高いです。</div>
+      <div>鶏を「認知と感情を持つ生き物」として捉えることは、畜産・動物福祉・科学の各分野で重要です。</div>
+    </div>
+    <p>次に鶏を見かけたとき、その小さな目があなたを見ている理由を考えてみてください。それは単なる反射ではなく、脳内の顔認識システムがあなたの顔を処理している瞬間かもしれません。</p>
+
+    <div class="block-label">BLOCK 10 — 関連記事</div>
+    <h2>関連記事</h2>
+    <div class="cta-row">
+      <a class="cta" href="https://lolaniki.com/archives/1831">鶏の4色型色覚の世界</a>
+      <a class="cta" href="https://lolaniki.com/archives/1797">犬は嗅覚・鶏は視覚が最強</a>
+      <a class="cta" href="https://lolaniki.com/archives/1848">犬と猫どっちが賢い？</a>
+      <a class="cta" href="https://lolaniki.com/archives/category/animal-brain">動物の頭脳カテゴリーへ</a>
+    </div>
+
+    <div class="block-label">BLOCK 11 — 参考文献</div>
+    <h2>参考文献</h2>
+    <div class="refs">
+      <ol>
+        <li>Wood, S.M.W. et al. (2015). Face recognition in newly hatched chicks at the onset of vision.</li>
+        <li>Kobylkov, D. et al. (2024). Innate face-selectivity in the brain of young domestic chicks.</li>
+        <li>Rosa-Salva, O. et al. (2010). Faces are special for newly hatched chicks: evidence for inborn domain-specific mechanisms underlying spontaneous preferences for face-like stimuli.</li>
+        <li>Ghirlanda, S., Jansson, L., Enquist, M. (2002). Chickens prefer beautiful humans.</li>
+      </ol>
+    </div>
+  </article>
+</main>
+
+<footer class="site">Animal IQ Labo（テスト環境） / 本番サイトは <a href="https://lolaniki.com" style="color:var(--brand);">lolaniki.com</a></footer>
+
+</body>
+</html>

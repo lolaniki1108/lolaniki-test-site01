@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animal IQ Labo — 豚・鶏・犬・猫の「なぜ？」を科学データで解き明かすブログ</title>
+<link rel="icon" type="image/png" href="cat-pig_puzzle.webp">
+<meta name="description" content="農業現場で動物と向き合ってきた経験をもとに、最新の研究論文から動物の知能・感覚・行動の不思議をわかりやすくお届けします。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF6F0;
+    --card:#EFE4D6;
+    --bark:#5C4630;
+    --brand:#8B6F47;
+    --ochre:#B98A2E;
+    --ink:#3A2E22;
+    --line: rgba(92,70,48,0.16);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Sans JP', sans-serif;line-height:1.9;}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+  a{color:inherit;}
+  header.site{border-bottom:1px solid var(--line);background:#fff;}
+  .nav-inner{max-width:960px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+  .brand-name{font-family:'Noto Sans JP', sans-serif;font-weight:700;font-size:20px;font-weight:700;color:var(--bark);text-decoration:none;}
+  nav.main-nav{display:flex;gap:28px;font-size:14px;font-weight:700;}
+  nav.main-nav a{text-decoration:none;color:var(--brand);}
+  nav.main-nav a:hover{color:var(--ochre);}
+  .hero{display:grid;grid-template-columns:1.1fr 0.9fr;gap:36px;padding:48px 0;align-items:center;}
+  @media (max-width:720px){.hero{grid-template-columns:1fr;}}
+  .hero-img{width:100%;border-radius:14px;display:block;background:#fff;border:1px solid var(--line);}
+  .hero-caption{font-size:12px;color:var(--brand);margin-top:8px;}
+  .eyebrow{font-size:12.5px;letter-spacing:0.12em;color:var(--ochre);font-weight:700;margin-bottom:14px;}
+  h1{font-family:'Noto Sans JP', sans-serif;font-weight:700;font-size:clamp(24px,3.4vw,32px);line-height:1.6;color:var(--bark);margin:0 0 18px;}
+  .hero-lede{font-size:15px;color:#5a4c3c;margin:0 0 20px;}
+  .tag-pills{display:flex;flex-wrap:wrap;gap:10px;}
+  .pill{background:var(--card);color:var(--bark);font-size:13px;padding:6px 14px;border-radius:999px;font-weight:700;}
+  section.search-box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:28px;margin:16px 0 48px;}
+  .search-title{font-family:'Noto Sans JP', sans-serif;font-weight:700;font-size:19px;color:var(--bark);margin:0 0 6px;}
+  .search-sub{font-size:13px;color:var(--brand);margin:0 0 18px;}
+  .search-row{display:flex;gap:10px;margin-bottom:16px;}
+  .search-row input{flex:1;padding:12px 14px;border:1px solid var(--line);border-radius:8px;font-size:14px;font-family:inherit;background:var(--cream);}
+  .search-row button{padding:12px 20px;border:none;border-radius:8px;background:var(--bark);color:#fff;font-weight:700;font-size:14px;cursor:pointer;}
+  .tag-search-label{font-size:13px;color:var(--brand);margin-bottom:10px;}
+  .tag-links{display:flex;gap:10px;flex-wrap:wrap;}
+  .tag-links a{background:var(--cream);border:1px solid var(--line);padding:6px 14px;border-radius:999px;font-size:13px;text-decoration:none;color:var(--bark);font-weight:700;}
+  .section-title{font-family:'Noto Sans JP', sans-serif;font-weight:700;font-size:22px;color:var(--bark);margin:0 0 24px;border-left:5px solid var(--ochre);padding-left:14px;}
+  .theme-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-bottom:56px;}
+  .theme-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px;}
+  .theme-icon{font-size:30px;margin-bottom:12px;}
+  .theme-card h3{font-family:'Noto Sans JP', sans-serif;font-weight:700;font-size:18px;color:var(--bark);margin:0 0 10px;}
+  .theme-card p{font-size:13.5px;color:#5a4c3c;margin:0 0 18px;}
+  .theme-card a{font-size:13px;font-weight:700;color:var(--ochre);text-decoration:none;}
+  .card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);border-radius:10px;padding:28px;margin-bottom:16px;transition:transform .18s ease, box-shadow .18s ease;}
+  .card:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(92,70,48,0.14);}
+  .card .tag{display:inline-block;font-size:12px;color:var(--brand);background:var(--card);padding:4px 10px;border-radius:4px;margin-bottom:14px;}
+  .card h2{font-family:'Noto Sans JP', sans-serif;font-weight:700;font-size:22px;margin:0 0 10px;color:var(--bark);line-height:1.5;}
+  .card p{margin:0;font-size:14px;color:#5a4c3c;}
+  .card .read{margin-top:16px;font-size:13px;color:var(--ochre);font-weight:700;}
+  .profile{display:grid;grid-template-columns:120px 1fr;gap:22px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:28px;margin:16px 0 56px;}
+  @media (max-width:520px){.profile{grid-template-columns:1fr;text-align:center;}.profile img{margin:0 auto;}}
+  .profile img{width:100%;border-radius:50%;border:1px solid var(--line);}
+  .profile-label{font-size:11.5px;letter-spacing:0.1em;color:var(--ochre);font-weight:700;margin-bottom:8px;}
+  .profile h3{font-family:'Noto Sans JP', sans-serif;font-weight:700;font-size:18px;color:var(--bark);margin:0 0 10px;}
+  .profile p{font-size:14px;color:#5a4c3c;margin:0;}
+  .note{background:var(--card);border-left:4px solid var(--ochre);padding:18px 22px;border-radius:4px;font-size:13.5px;margin-bottom:40px;}
+  footer.site{text-align:center;padding:36px 24px 48px;font-size:12.5px;color:var(--brand);border-top:1px solid var(--line);margin-top:20px;}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav-inner">
+    <a class="brand-name" href="index.html" style="display:flex;align-items:center;gap:8px;"><img src="https://lolaniki.com/wp-content/uploads/2026/02/cropped-058__logo_icon-270x270.png" alt="" style="width:28px;height:28px;border-radius:50%;">Animal IQ Labo</a>
+    <nav class="main-nav">
+      <a href="index.html">TOP</a>
+      <a href="animal.html">Animal</a>
+      <a href="#articles">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="note">
+    これはお試し用の静的サイトです。本番の<strong>lolaniki.com</strong>（WordPress）はこれまで通り運用中で、何も変更されていません。
+  </div>
+
+  <section class="hero">
+    <div>
+      <img class="hero-img" src="cat-pig_puzzle.webp" alt="豚と猫のイラスト">
+      <div class="hero-caption">📷：豚と猫</div>
+    </div>
+    <div>
+      <div class="eyebrow">ANIMAL IQ LABO について</div>
+      <h1>豚・鶏・犬・猫の「なぜ？」を<br>科学データで解き明かすブログ</h1>
+      <p class="hero-lede">Cloudflare向けの静的ブログとして、農業現場で動物と向き合ってきた経験をもとに、最新の研究論文から動物の知能・感覚・行動の不思議をわかりやすくお届けします。</p>
+      <div class="tag-pills">
+        <span class="pill">🐷 豚の知能</span>
+        <span class="pill">🐓 鶏の感覚</span>
+        <span class="pill">🐶 犬の行動</span>
+        <span class="pill">🐱 猫の謎</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="search-box">
+    <div class="search-title">🔍 記事を探す</div>
+    <div class="search-sub">キーワードで検索、またはタグで絞り込み</div>
+    <div class="search-row">
+      <input type="text" placeholder="例：豚の知能、猫のひげ…">
+      <button type="button">検索</button>
+    </div>
+    <div class="tag-search-label">タグで探す：</div>
+    <div class="tag-links">
+      <a href="#articles">🐷 豚</a>
+      <a href="#articles">🐓 鶏</a>
+      <a href="#articles">🐶 犬</a>
+      <a href="#articles">🐱 猫</a>
+    </div>
+  </section>
+
+  <div id="themes"></div>
+  <div class="section-title">📚 3つのテーマで学ぶ</div>
+  <div class="theme-grid">
+    <div class="theme-card">
+      <div class="theme-icon">🧠</div>
+      <h3>動物の頭脳</h3>
+      <p>学習能力、問題解決、記憶、社会性など、動物の「賢さ」を科学的に解説。豚と犬どちらが賢い？猫が仲間を認識する仕組みとは？</p>
+      <a href="#articles">記事を見る →</a>
+    </div>
+    <div class="theme-card">
+      <div class="theme-icon">👁️</div>
+      <h3>動物の五感</h3>
+      <p>視覚、聴覚、嗅覚、味覚、触覚。人間とは全く異なる動物たちの感覚世界を探求します。鶏が見える色、犬が聞こえる音とは？</p>
+      <a href="#articles">記事を見る →</a>
+    </div>
+    <div class="theme-card">
+      <div class="theme-icon">🐾</div>
+      <h3>動物の行動</h3>
+      <p>摂食、繁殖、社会性、コミュニケーション。動物たちの行動パターンや習慣を研究データから読み解きます。</p>
+      <a href="#articles">記事を見る →</a>
+    </div>
+  </div>
+
+  <div id="articles"></div>
+  <div class="section-title">最新記事</div>
+
+  <a class="card" href="dog-tail-article.html">
+    <span class="tag">動物の五感 ・ 犬</span>
+    <h2>犬のしっぽ左右振り分け——右は好意・左は警戒の科学的根拠</h2>
+    <p>犬がしっぽを振るとき、実は「右に振るか」「左に振るか」で気持ちが違う——脳の左右差が生み出す、知られざるしっぽの言語を科学的に解説します。</p>
+    <div class="read">記事を読む →</div>
+  </a>
+
+  <a class="card" href="cat-affection-cloudflare.html">
+    <span class="tag">動物の頭脳 ・ 猫</span>
+    <h2>猫が「あなただけ」に見せる行動5選——愛情サインの神経科学</h2>
+    <p>猫が飼い主にだけ見せる5つの愛情行動と、その裏にある科学的な理由。スローブリンクや愛着研究から、猫のサインを読み解きます。</p>
+    <div class="read">記事を読む →</div>
+  </a>
+
+  <a class="card" href="pig-clean.html">
+    <span class="tag">動物の行動 ・ 豚</span>
+    <h2>豚が泥に入る理由｜「汚い」のではなく、自然のスキンケアだった</h2>
+    <p>豚の泥浴びは、実は体温調整・虫よけ・日焼け対策のための高度な衛生行動です。犬・猫・鶏との比較も交えて、豚の“きれい好き”を科学的に解説します。</p>
+    <div class="read">記事を読む →</div>
+  </a>
+
+  <a class="card" href="pig-intelligence.html">
+    <span class="tag">動物の頭脳 ・ 豚</span>
+    <h2>豚 賢いエピソード｜研究で判明した知能レベルと感情の秘密</h2>
+    <p>豚の知能は犬や3歳児と同レベル。鏡で自分を認識し、感情を読み取り、仲間と会話する——豚の驚くべき知性を科学的根拠とともに解説します。</p>
+    <div class="read">記事を読む →</div>
+  </a>
+
+  <a class="card" href="dog-chicken-senses.html">
+    <span class="tag">動物の五感 ・ 鶏 ・ 犬</span>
+    <h2>犬は嗅覚・鶏は視覚が最強！動物の感覚特化の秘密を研究データで徹底比較</h2>
+    <p>犬の嗅覚は人間の数万倍、鶏は4色型色覚で紫外線まで見える。それぞれ異なる感覚に特化した進化の理由を、研究データで徹底解説します。</p>
+    <div class="read">記事を読む →</div>
+  </a>
+
+  <div class="section-title" style="margin-top:56px;">プロフィール</div>
+  <div class="profile">
+    <img src="https://lolaniki.com/wp-content/uploads/2026/05/f803d7d3aaeca6d03461c933abc3deb4.jpg" alt="ローランキー アイコン">
+    <div>
+      <div class="profile-label">【運営者】ローランキー</div>
+      <h3>Animal あにまる IQ Labo</h3>
+      <p>農業系の学校を卒業後、農業畜産の現場で長く働き、向き合う中で気づいたことがあります。その驚きと発見を科学的な研究データとともにわかりやすくお伝えしたいです。現場経験と動物科学の知識を活かして正確で役立つ情報を発信中。</p>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site">
+  Animal IQ Labo（テスト環境） / 本番サイトは <a href="https://lolaniki.com" style="color:var(--brand);">lolaniki.com</a>
+  <br><a href="contact.html" style="color:var(--brand);">ご意見・お問い合わせ</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>犬のしっぽ左右振り分け——右は好意・左は警戒の科学的根拠 | Animal IQ Labo</title>
+<meta name="description" content="犬がしっぽを振るとき、右に振るか左に振るかで気持ちが違う。脳の左右差が生み出すしっぽの言語を、研究データをもとにわかりやすく解説します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF6F0;
+    --card:#EFE4D6;
+    --bark:#5C4630;
+    --brand:#8B6F47;
+    --ochre:#B98A2E;
+    --ink:#3A2E22;
+    --line: rgba(92,70,48,0.16);
+    --right:#B98A2E;
+    --left:#6E7F8C;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Noto Sans JP', sans-serif;
+    font-size:16px;
+    line-height:1.95;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+
+  nav.top{
+    padding:20px 24px;
+    border-bottom:1px solid var(--line);
+  }
+  nav.top a{
+    color:var(--brand);
+    text-decoration:none;
+    font-size:13.5px;
+    font-weight:700;
+  }
+
+  header.hero{
+    padding:56px 0 32px;
+  }
+  .tag{
+    display:inline-block;
+    font-size:12px;
+    color:var(--brand);
+    background:var(--card);
+    padding:4px 10px;
+    border-radius:4px;
+    margin-bottom:20px;
+  }
+  h1{
+    font-family:'Noto Sans JP', sans-serif;font-weight:700;
+    font-size:clamp(26px,4.2vw,38px);
+    line-height:1.5;
+    color:var(--bark);
+    margin:0 0 20px;
+  }
+  .lede{
+    font-size:16px;
+    color:#5a4c3c;
+    margin:0;
+  }
+
+  .block-label{
+    font-size:11.5px;
+    letter-spacing:0.12em;
+    color:var(--ochre);
+    font-weight:700;
+    margin:52px 0 12px;
+  }
+
+  .highlight{
+    background:var(--card);
+    border-left:5px solid var(--ochre);
+    border-radius:6px;
+    padding:26px 28px;
+    margin:12px 0 40px;
+  }
+  .highlight-title{
+    font-size:1.4em;
+    font-weight:700;
+    color:var(--bark);
+    margin:0 0 14px;
+  }
+  .highlight ul{margin:0;padding-left:20px;}
+  .highlight li{margin-bottom:8px;font-size:15.5px;}
+
+  h3{
+    font-family:'Noto Sans JP', sans-serif;font-weight:700;
+    font-size:23px;
+    color:var(--bark);
+    margin:0 0 18px;
+    padding-bottom:10px;
+    border-bottom:2px solid var(--card);
+  }
+
+  p{margin:0 0 22px;}
+
+  /* gauge diagram */
+  .gauge-wrap{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:32px 24px 24px;
+    margin:24px 0 40px;
+    text-align:center;
+  }
+  .gauge-caption{
+    font-size:13px;
+    color:var(--brand);
+    margin-top:14px;
+  }
+
+  /* comparison table */
+  table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0 40px;
+    font-size:14.5px;
+  }
+  th,td{
+    padding:14px 16px;
+    text-align:left;
+    border-bottom:1px solid var(--line);
+  }
+  th{
+    font-family:'Noto Sans JP', sans-serif;font-weight:700;
+    font-size:15px;
+    color:var(--bark);
+    background:var(--card);
+  }
+  td.right-col{color:var(--right);font-weight:700;}
+  td.left-col{color:var(--left);font-weight:700;}
+
+  /* photo placeholder */
+  .photo{
+    max-width:280px;
+    width:100%;
+    border-radius:10px;
+    display:block;
+    margin:8px auto 8px;
+    background:#fff;
+    border:1px solid var(--line);
+    padding:12px;
+  }
+  .photo-caption{
+    font-size:12.5px;
+    color:var(--brand);
+    margin-bottom:36px;
+    text-align:center;
+  }
+
+  .cta-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin:16px 0 44px;
+  }
+  .cta{
+    flex:1 1 220px;
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    background:var(--bark);
+    color:#fff;
+    padding:16px 18px;
+    border-radius:8px;
+    font-size:14.5px;
+    font-weight:700;
+    transition:background .15s ease;
+  }
+  .cta:hover{background:var(--ochre);}
+
+  .refs{
+    font-size:13px;
+    color:#5a4c3c;
+    margin-top:8px;
+  }
+  .refs ol{padding-left:20px;}
+  .refs li{margin-bottom:8px;}
+
+  footer{
+    text-align:center;
+    padding:40px 24px 56px;
+    font-size:12.5px;
+    color:var(--brand);
+    border-top:1px solid var(--line);
+    margin-top:40px;
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap"><a href="index.html">← Animal IQ Labo テスト版トップ</a></div>
+</nav>
+
+<div class="wrap">
+
+<header class="hero">
+  <span class="tag">動物の五感 ・ 犬</span>
+  <h1>犬のしっぽ左右振り分け——右は好意・左は警戒の科学的根拠</h1>
+  <p class="lede">愛犬がしっぽを振っているとき、「喜んでいるんだな」と思うのが普通です。しかし実は、しっぽが振れる方向——右寄りか左寄りか——によって、犬の気持ちはまったく違うことが研究でわかっています。今回は、その左右差の裏にある脳のしくみを、科学的な視点でわかりやすく解説します。</p>
+</header>
+
+<div class="block-label">BLOCK 01 — この記事でわかること</div>
+<div class="highlight">
+  <div class="highlight-title">この記事でわかること</div>
+  <ul>
+    <li>犬のしっぽが右に振れるか左に振れるかで、感情の種類が変わること</li>
+    <li>その左右差が「脳の役割分担」に由来する、本能的なしくみであること</li>
+    <li>実際にどんな場面で右振り・左振りが観察されたのか</li>
+    <li>飼い主が日常でしっぽの向きを観察するときのポイント</li>
+  </ul>
+</div>
+
+<div class="block-label">BLOCK 02 — しっぽの向きゲージ</div>
+<h3>右に振れば好意、左に振れば警戒</h3>
+<p>犬の体を後ろから見たとき、しっぽが右側に大きく振れているなら、リラックスして好意的な気持ちを表しているサインです。逆に左側に大きく振れているときは、不安や警戒心が高まっている可能性があります。まずは、その傾向を一枚のゲージにまとめました。</p>
+
+<div class="gauge-wrap">
+<svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;width:100%;">
+<path d="M 40 200 A 160 160 0 0 1 360 200" fill="none" stroke="#EFE4D6" stroke-width="28"/>
+<path d="M 200 200 A 160 160 0 0 1 360 200" fill="none" stroke="#B98A2E" stroke-width="28"/>
+<path d="M 40 200 A 160 160 0 0 1 200 200" fill="none" stroke="#6E7F8C" stroke-width="28"/>
+<line x1="200" y1="200" x2="305" y2="110" stroke="#3A2E22" stroke-width="5" stroke-linecap="round"/>
+<circle cx="200" cy="200" r="10" fill="#3A2E22"/>
+<text x="330" y="205" font-family="Noto Sans JP, sans-serif" font-size="15" font-weight="700" fill="#B98A2E">右＝好意</text>
+<text x="30" y="205" font-family="Noto Sans JP, sans-serif" font-size="15" font-weight="700" fill="#6E7F8C" text-anchor="start">左＝警戒</text>
+<text x="200" y="230" font-family="Noto Sans JP, sans-serif" font-size="12" fill="#8B6F47" text-anchor="middle">しっぽの振れ方向</text>
+</svg>
+<div class="gauge-caption">図1：しっぽの振れ方向と感情の対応イメージ（お尻側から見た向き）</div>
+</div>
+
+<div class="block-label">BLOCK 03 — なぜ左右で違うのか</div>
+<h3>脳の左右差が、しっぽの動きに現れる</h3>
+<p>人間の脳が「言語は左脳」「空間認知は右脳」のように役割分担しているのと同じように、犬の脳にも左右で得意分野の違いがあると考えられています。近づきたい・安心したいといった前向きな感情は左脳が処理を担当し、警戒したい・距離を取りたいといった後ろ向きな感情は右脳が処理を担当する、という説が有力です。</p>
+<p>しっぽを動かす筋肉は、体の反対側の脳とつながっています。つまり左脳が働くと体の右側の筋肉が動きやすくなり、右脳が働くと体の左側の筋肉が動きやすくなります。前向きな感情（左脳）→しっぽが右に振れる、後ろ向きな感情（右脳）→しっぽが左に振れる、という対応関係は、この神経のつながり方から自然に説明できるのです。</p>
+
+<div class="block-label">BLOCK 04 — 研究でわかったこと</div>
+<h3>実際にどんな場面で観察されたのか</h3>
+<p>2007年に発表された研究では、犬に「飼い主」「知らない人」「猫」「見知らぬ大型犬」など、異なる相手や物を見せたときのしっぽの振れ方が観察されました。その結果、飼い主のような親しい相手を見たときは右寄りに大きく振れ、見知らぬ大型犬のような警戒すべき相手を見たときは左寄りに振れる傾向がはっきりと確認されています。</p>
+<p>さらに興味深いのは、犬自身が「他の犬のしっぽの振れ方」を見たときの反応です。左寄りに振っている犬の映像を見せられた犬は、心拍数が上がり不安そうな様子を見せたという報告もあります。つまりしっぽの向きは、人間だけでなく犬同士のコミュニケーションにも使われている可能性があるのです。</p>
+
+<img class="photo" src="dogtail-illustration.webp" alt="元気に走る犬のイラスト" loading="lazy">
+<p class="photo-caption">イラスト：しっぽを動かしながら駆ける犬。感情の動きは、しっぽの先までダイレクトに伝わります。</p>
+
+<div class="block-label">BLOCK 05 — 比較表</div>
+<h3>右振りと左振り、何が違う？</h3>
+<table>
+  <tr><th>特徴</th><th>右振り</th><th>左振り</th></tr>
+  <tr><td>関連する感情</td><td class="right-col">好意・安心・喜び</td><td class="left-col">警戒・不安・緊張</td></tr>
+  <tr><td>優位に働く脳</td><td class="right-col">左脳（接近系）</td><td class="left-col">右脳（回避系）</td></tr>
+  <tr><td>よく見られる場面</td><td class="right-col">飼い主との再会、遊び</td><td class="left-col">見知らぬ大型犬、緊張する状況</td></tr>
+  <tr><td>振れ幅の傾向</td><td class="right-col">大きく元気に振れやすい</td><td class="left-col">小刻みで低い位置になりやすい</td></tr>
+</table>
+
+<div class="block-label">BLOCK 06 — 観察のポイント</div>
+<h3>日常でしっぽの向きを見分けるコツ</h3>
+<p>実際に見分けるときは、犬の正面からではなく「お尻側」からしっぽの付け根を観察するのがコツです。しっぽが長い犬種は根元、巻き尾の犬種は付け根のわずかな傾きに注目すると変化がわかりやすくなります。</p>
+<p>ただし、しっぽの向きだけで判断せず、耳の向きや体の緊張具合など他のサインと合わせて見ることが大切です。しっぽは犬の感情を知る大きなヒントですが、唯一の答えではありません。</p>
+
+<div class="block-label">BLOCK 07 — まとめ</div>
+<h3>しっぽは、犬からの静かなメッセージ</h3>
+<p>犬がしっぽを振っているからといって、必ずしも喜んでいるとは限りません。右に振れているか、左に振れているか——そのわずかな違いに、犬の脳が処理している感情の種類が表れています。日々のふれあいの中で、しっぽの「向き」にも目を向けてみると、これまで気づかなかった愛犬の気持ちが見えてくるかもしれません。</p>
+
+<div class="cta-row">
+  <a class="cta" href="https://lolaniki.com/archives/1577">関連記事：犬の耳が語る心</a>
+  <a class="cta" href="https://lolaniki.com/archives/1848">関連記事：犬と猫の思考回路</a>
+  <a class="cta" href="https://lolaniki.com/archives/1716">関連記事：犬のストレスと嗅覚</a>
+</div>
+
+<div class="block-label">BLOCK 08 — 参考文献</div>
+<div class="refs">
+  <ol>
+    <li>Quaranta, A., Siniscalchi, M., & Vallortigara, G. (2007). Asymmetric tail-wagging responses by dogs to different emotive stimuli. <em>Current Biology</em>, 17(6).</li>
+    <li>Siniscalchi, M. et al. (2013). Seeing left- or right-asymmetric tail wagging produces different emotional responses in dogs. <em>Current Biology</em>, 23(22).</li>
+  </ol>
+</div>
+
+</div>
+
+<footer>
+  Animal IQ Labo（テスト環境） / 本番サイトは <a href="https://lolaniki.com" style="color:var(--brand);">lolaniki.com</a>
+</footer>
+
+</body>
+</html>
