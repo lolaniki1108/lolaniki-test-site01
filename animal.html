@@ -25,7 +25,21 @@
   h1{font-family:'Noto Sans JP', sans-serif;font-weight:900;font-size:clamp(26px,4vw,34px);color:var(--bark);margin:44px 0 24px;}
   h2{font-family:'Noto Sans JP', sans-serif;font-weight:900;font-size:20px;color:var(--bark);margin:40px 0 16px;}
   p{margin:0 0 20px;font-size:15.5px;}
-  .hero-img{width:100%;max-height:320px;object-fit:cover;border-radius:12px;border:1px solid var(--line);margin-bottom:32px;display:block;}
+
+  /* 修正箇所：イラストを小さくして中央寄せにする */
+  .hero-img{
+    /* width:100%; max-height:320px; は削除 */
+    max-width: 300px; /* 横幅を最大300pxに制限 */
+    height: auto;     /* 高さは自動調整 */
+    object-fit:cover;
+    border-radius:12px;
+    border:1px solid var(--line);
+    margin-bottom:32px;
+    margin-left: auto;  /* 左側のマージンを自動に */
+    margin-right: auto; /* 右側のマージンを自動にして中央寄せ */
+    display:block;
+  }
+
   .animal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:24px 0 44px;}
   .animal-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 14px;text-align:center;text-decoration:none;transition:transform .18s ease;}
   .animal-card:hover{transform:translateY(-3px);}
@@ -66,7 +80,7 @@
   </div>
 
   <h2>Farm Animals 農場動物について</h2>
-  <p>農場動物（ニワトリ、ブタなど）はいつから飼われるようになったのでしょうか。もっとも古い家畜は、約1万年前、タイリクオオカミが飼い慣らされたイヌだと言われています。人が生活に役立つよう、野生動物であったものを飼い慣らし、繁殖させ、品種改良したものが家畜です。使役動物・愛玩動物・実験動物の3種に大別されます。</p>
+  <p>農場動物（ニワトリ、ブタなど）はいつから飼われるようになったのでしょうか. もっとも古い家畜は、約1万年前、タイリクオオカミが飼い慣らされたイヌだと言われています。人が生活に役立つよう、野生動物であったものを飼い慣らし、繁殖させ、品種改良したものが家畜です。使役動物・愛玩動物・実験動物の3種に大別されます。</p>
 
 </div>
 
