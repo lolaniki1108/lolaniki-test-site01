@@ -36,6 +36,44 @@
   .card p{margin:0;font-size:14px;color:#5a4c3c;}
   .card .read{margin-top:16px;font-size:13px;color:var(--ochre);font-weight:700;}
   footer.site{text-align:center;padding:36px 24px 48px;font-size:12.5px;color:var(--brand);border-top:1px solid var(--line);margin-top:60px;}
+.card{
+  display:flex;
+  gap:24px;
+  align-items:flex-start;
+}
+
+.thumb{
+  width:260px;
+  flex-shrink:0;
+}
+
+.thumb img{
+  width:100%;
+  height:170px;
+  object-fit:cover;
+  border-radius:8px;
+  display:block;
+}
+
+.content{
+  flex:1;
+}
+
+@media (max-width:768px){
+
+.card{
+  flex-direction:column;
+}
+
+.thumb{
+  width:100%;
+}
+
+.thumb img{
+  height:auto;
+}
+
+}
 </style>
 </head>
 <body>
