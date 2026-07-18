@@ -17,63 +17,237 @@
     --ochre:#B98A2E;
     --ink:#3A2E22;
     --line: rgba(92,70,48,0.16);
+    --aql-brown: #8B6F47;
+    --aql-border: #ddd;
   }
   *{box-sizing:border-box;}
   body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Sans JP', sans-serif;line-height:1.9;}
-  .wrap{max-width:960px;margin:0 auto;padding:48px 24px;} /* 上下の余白を調整しました */
+  .wrap{max-width:960px;margin:0 auto;padding:48px 24px;}
   a{color:inherit;}
   header.site{border-bottom:1px solid var(--line);background:#fff;}
   .nav-inner{max-width:960px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
-  .brand-name{font-family:'Noto Sans JP', sans-serif;font-weight:700;font-size:20px;font-weight:700;color:var(--bark);text-decoration:none;}
+  .brand-name{font-family:'Noto Sans JP', sans-serif;font-weight:700;font-size:20px;color:var(--bark);text-decoration:none;}
   nav.main-nav{display:flex;gap:28px;font-size:14px;font-weight:700;}
   nav.main-nav a{text-decoration:none;color:var(--brand);}
   nav.main-nav a:hover{color:var(--ochre);}
-  .section-title{font-family:'Noto Sans JP', sans-serif;font-weight:700;font-size:22px;color:var(--bark);margin:0 0 24px;border-left:5px solid var(--ochre);padding-left:14px;}
-  .card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);border-radius:10px;padding:28px;margin-bottom:16px;transition:transform .18s ease, box-shadow .18s ease;}
-  .card:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(92,70,48,0.14);}
-  .card .tag{display:inline-block;font-size:12px;color:var(--brand);background:var(--card);padding:4px 10px;border-radius:4px;margin-bottom:14px;}
-  .card h2{font-family:'Noto Sans JP', sans-serif;font-weight:700;font-size:22px;margin:0 0 10px;color:var(--bark);line-height:1.5;}
-  .card p{margin:0;font-size:14px;color:#5a4c3c;}
-  .card .read{margin-top:16px;font-size:13px;color:var(--ochre);font-weight:700;}
-  footer.site{text-align:center;padding:36px 24px 48px;font-size:12.5px;color:var(--brand);border-top:1px solid var(--line);margin-top:60px;}
-.card{
-  display:flex;
-  gap:24px;
-  align-items:flex-start;
-}
+  
+  /* 共通カード構造（イラスト横並び） */
+  .card {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    text-decoration: none;
+    color: inherit;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 20px;
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(92,70,48,0.14);
+    border-color: var(--aql-brown);
+  }
+  .card .thumb {
+    width: 240px;
+    flex-shrink: 0;
+  }
+  .card .thumb img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+  }
+  .card .content {
+    flex: 1;
+  }
+  .card .tag, .card .aql-badge {
+    display: inline-block;
+    font-size: 12px;
+    color: var(--brand);
+    background: var(--card);
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .card .aql-tag-badge {
+    display: inline-block;
+    font-size: 12px;
+    color: #666;
+    background: #f0f0f0;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    margin-left: 6px;
+  }
+  .card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: var(--bark);
+    line-height: 1.5;
+  }
+  .card:hover h3 {
+    color: var(--aql-brown);
+  }
+  .card .date {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 6px;
+  }
+  .card p {
+    margin: 0;
+    font-size: 14px;
+    color: #5a4c3c;
+    line-height: 1.7;
+  }
+  .card .read {
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--ochre);
+    font-weight: 700;
+  }
 
-.thumb{
-  width:260px;
-  flex-shrink:0;
-}
+  /* フィルターセクション */
+  .aql-filter-section {
+    margin: 0 0 2.5rem 0;
+    padding: 1.5rem;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+  }
+  .aql-filter-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--bark);
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+  .aql-filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .aql-filter-btn {
+    padding: 8px 16px;
+    background: #fff;
+    color: #333;
+    border: 1px solid var(--aql-border);
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .aql-filter-btn:hover, .aql-filter-btn.active {
+    background: var(--aql-brown);
+    color: white;
+    border-color: var(--aql-brown);
+  }
+  .aql-tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .aql-tag-item {
+    padding: 7px 14px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .aql-tag-item:hover {
+    background: #555;
+    transform: scale(1.05);
+  }
 
-.thumb img{
-  width:100%;
-  height:170px;
-  object-fit:cover;
-  border-radius:8px;
-  display:block;
-}
+  /* おすすめ記事セクション */
+  .aql-featured-section {
+    margin: 2rem 0 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(139,111,71,0.06) 0%, rgba(230,218,206,0.1) 100%);
+    border-radius: 8px;
+    border-left: 5px solid var(--aql-brown);
+  }
+  .aql-featured-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--bark);
+    margin: 0 0 1.5rem 0;
+  }
+  .aql-featured-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .aql-featured-card {
+    position: relative;
+    overflow: hidden;
+  }
+  .aql-featured-card::before {
+    content: attr(data-rank);
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(135deg, var(--aql-brown) 0%, #7A5F3E 100%);
+    color: white;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 20px;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    z-index: 2;
+  }
+  .aql-featured-clicks {
+    font-size: 12px;
+    color: var(--aql-brown);
+    font-weight: 700;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .aql-clicks-badge {
+    background: var(--aql-brown);
+    color: white;
+    padding: 1px 6px;
+    border-radius: 12px;
+    font-size: 10px;
+  }
 
-.content{
-  flex:1;
-}
+  /* セクション見出し */
+  .section-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--bark);
+    margin: 2rem 0 1.5rem;
+    border-left: 5px solid var(--ochre);
+    padding-left: 14px;
+  }
 
-@media (max-width:768px){
-
-.card{
-  flex-direction:column;
-}
-
-.thumb{
-  width:100%;
-}
-
-.thumb img{
-  height:auto;
-}
-
-}
+  /* レスポンシブ対応 */
+  @media (max-width:768px){
+    .card { flex-direction: column; gap: 16px; padding: 20px; }
+    .card .thumb { width: 100%; }
+    .card .thumb img { height: auto; }
+  }
 </style>
 </head>
 <body>
@@ -91,74 +265,185 @@
 
 <div class="wrap">
 
+  <!-- カテゴリー・タグ絞り込みセクション -->
+  <div class="aql-filter-section">
+    <span class="aql-filter-label">📂 カテゴリーで絞る</span>
+    <div class="aql-filter-buttons">
+      <a class="aql-filter-btn active" href="#">すべて</a>
+      <a class="aql-filter-btn" href="#">動物の頭脳</a>
+      <a class="aql-filter-btn" href="#">動物の五感</a>
+      <a class="aql-filter-btn" href="#">動物の行動</a>
+    </div>
+    <span class="aql-filter-label">🏷️ タグで探す</span>
+    <div class="aql-tag-cloud">
+      <a class="aql-tag-item" href="#">豚</a>
+      <a class="aql-tag-item" href="#">犬</a>
+      <a class="aql-tag-item" href="#">鶏</a>
+      <a class="aql-tag-item" href="#">猫</a>
+    </div>
+  </div>
+
+  <!-- おすすめ記事セクション（人気の記事） -->
+  <div class="aql-featured-section">
+    <h2 class="aql-featured-title">⭐ 人気の記事</h2>
+    <div class="aql-featured-grid">
+      
+      <!-- 人気 No.1 -->
+      <a href="pig-intelligence.html" class="aql-featured-card card" data-rank="1">
+        <div class="thumb">
+          <img src="pig-illust.webp" alt="豚の知能イラスト">
+        </div>
+        <div class="content">
+          <div class="aql-featured-clicks">📊 <span class="aql-clicks-badge">No.1</span></div>
+          <h3>豚のエピソード：犬以上の学習力を持つ認知能力</h3>
+          <p>豚が示す驚くべき学習能力と問題解決スキル。犬との認知能力比較から見える、豚の実力の秘密とは。</p>
+          <div style="margin-top: 10px;">
+            <span class="aql-badge">動物の頭脳</span>
+            <span class="aql-tag-badge">豚</span>
+          </div>
+        </div>
+      </a>
+      
+      <!-- 人気 No.2 -->
+      <a href="dog-chicken-senses.html" class="aql-featured-card card" data-rank="2">
+        <div class="thumb">
+          <img src="dog-chicken-senses_illustration.webp" alt="鶏の視覚イラスト">
+        </div>
+        <div class="content">
+          <div class="aql-featured-clicks">📊 <span class="aql-clicks-badge">No.2</span></div>
+          <h3>鶏の視覚：人間と異なる4色カラービジョン</h3>
+          <p>紫外線も見える鶏の眼。その独特な色彩認識が、生活行動にどう影響しているのかを科学的に解説します。</p>
+          <div style="margin-top: 10px;">
+            <span class="aql-badge">動物の五感</span>
+            <span class="aql-tag-badge">鶏</span>
+          </div>
+        </div>
+      </a>
+      
+      <!-- 人気 No.3 -->
+      <a href="cat-affection-cloudflare.html" class="aql-featured-card card" data-rank="3">
+        <div class="thumb">
+          <img src="cat-illust.webp" alt="猫のイラスト">
+        </div>
+        <div class="content">
+          <div class="aql-featured-clicks">📊 <span class="aql-clicks-badge">No.3</span></div>
+          <h3>猫のコミュニケーション：鳴き声とボディランゲージの科学</h3>
+          <p>一見ツンデレな猫たちの複雑なコミュニケーション戦略。その秘密を行動学と神経科学から探ります。</p>
+          <div style="margin-top: 10px;">
+            <span class="aql-badge">動物の行動</span>
+            <span class="aql-tag-badge">猫</span>
+          </div>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+
+  <!-- 全記事一覧セクション -->
   <div class="section-title">すべての記事一覧</div>
 
-  <!-- 記事カードのリスト -->
-
-  <a class="card" href="pig-sign.html">
-    <div class="thumb">
-      <!-- 💡 ここに豚のサインに関するイラストの画像パスを入れてください -->
-      <img src="pig-illust.webp" alt="豚が見せる7つのサインのイラスト">
-    </div>
-    <div class="content">
-      <span class="tag">動物の行動 ・ 豚</span>
-      <h2>豚が見せる7つのサイン</h2>
-      <p>豚がみみを下げるとき、実は気持ちが違う——知られざる耳の言語を科学的に解説します。</p>
-      <div class="read">記事を読む →</div>
-    </div>
-  </a>
-
-  <a class="card" href="cat-affection-cloudflare.html">
-    <div class="thumb">
-      <!-- 💡 ここに猫の愛情サインに関するイラストの画像パスを入れてください -->
-      <img src="cat-illust.webp" alt="猫の愛情サインのイラスト">
-    </div>
-    <div class="content">
-      <span class="tag">動物の頭脳 ・ 猫</span>
-      <h2>猫が「あなただけ」に見せる行動5選——愛情サインの神経科学</h2>
-      <p>猫が飼い主にだけ見せる5つの愛情行動と、その裏にある科学的な理由。スローブリンクや愛着研究から、猫のサインを読み解きます。</p>
-      <div class="read">記事を読む →</div>
-    </div>
-  </a>
-
-  <a class="card" href="pig-clean.html">
-    <div class="thumb">
-      <!-- 💡 ここに豚の泥浴びに関するイラストの画像パスを入れてください -->
-      <img src="pig-clean.webp" alt="豚の泥浴びのイラスト">
-    </div>
-    <div class="content">
-      <span class="tag">動物の行動 ・ 豚</span>
-      <h2>豚が泥に入る理由｜「汚い」のではなく、自然のスキンケアだった</h2>
-      <p>豚の泥浴びは、実は体温調整・虫よけ・日焼け対策のための高度な衛生行動です。犬・猫・鶏との比較も交えて、豚の“きれい好き”を科学的に解説します。</p>
-      <div class="read">記事を読む →</div>
-    </div>
-  </a>
-
-  <a class="card" href="pig-intelligence.html">
-    <div class="thumb">
-      <!-- 💡 ここに豚の知能に関するイラストの画像パスを入れてください -->
-      <img src="pig-illust.webp" alt="豚の鏡認識や知能のイラスト">
-    </div>
-    <div class="content">
-      <span class="tag">動物の頭脳 ・ 豚</span>
-      <h2>豚 賢いエピソード｜研究で判明した知能レベルと感情の秘密</h2>
-      <p>豚の知能は犬や3歳児と同レベル。鏡で自分を認識し、感情を読み取り、仲間と会話する——豚の驚くべき知性を科学防根拠とともに解説します。</p>
-      <div class="read">記事を読む →</div>
-    </div>
-  </a>
-
-  <a class="card" href="dog-chicken-senses.html">
-    <div class="thumb">
-      <!-- 💡 ここに犬や鶏の五感に関するイラストの画像パスを入れてください -->
-      <img src="dog-chicken-senses.webp" alt="犬の嗅覚と鶏の視覚のイラスト">
-    </div>
-    <div class="content">
-      <span class="tag">動物の五感 ・ 鶏 ・ 犬</span>
-      <h2>犬は嗅覚・鶏は視覚が最強！動物の感覚特化の秘密を研究データで徹底比較</h2>
-      <p>犬の嗅覚は人間の数万倍、鶏は4色型色覚で紫外線まで見える。それぞれ異なる感覚に特化した進化の理由を、研究データで徹底解説します。</p>
-      <div class="read">記事を読む →</div>
-    </div>
-  </a>
+  <div class="aql-article-list-wrap">
+    
+    <!-- 記事 1 -->
+    <a href="pig-intelligence.html" class="card">
+      <div class="thumb">
+        <img src="pig-illust.webp" alt="豚の知能イラスト">
+      </div>
+      <div class="content">
+        <div class="date">2026年5月14日</div>
+        <h3>豚のエピソード：犬以上の学習力を持つ認知能力</h3>
+        <p>豚が持つ複雑な思考回路と学習能力について、最新の神経科学研究から解説。</p>
+        <div style="margin-top: 10px;">
+          <span class="aql-badge">動物の頭脳</span>
+          <span class="aql-tag-badge">豚</span>
+        </div>
+      </a>
+    </a>
+    
+    <!-- 記事 2 -->
+    <a href="dog-chicken-senses.html" class="card">
+      <div class="thumb">
+        <img src="dog-chicken-senses_illustration.webp" alt="鶏の視覚イラスト">
+      </div>
+      <div class="content">
+        <div class="date">2026年5月12日</div>
+        <h3>鶏の視覚：人間と異なる4色カラービジョン</h3>
+        <p>紫外線も見える鶏の目。その独特な色彩認識が、行動にどう影響するのか。</p>
+        <div style="margin-top: 10px;">
+          <span class="aql-badge">動物の五感</span>
+          <span class="aql-tag-badge">鶏</span>
+        </div>
+      </div>
+    </a>
+    
+    <!-- 記事 3 -->
+    <a href="dog-chicken-senses.html" class="card">
+      <div class="thumb">
+        <!-- 💡 必要に応じて画像名を実際のファイル名に変更してください -->
+        <img src="dog-chicken-senses_illustration.webp" alt="犬のイラスト">
+      </div>
+      <div class="content">
+        <div class="date">2026年5月10日</div>
+        <h3>犬が人間の顔を見分ける仕組み：個人認識の科学</h3>
+        <p>犬の脳がどのようにして飼い主の顔を識別しているのか、脳研究から解明。</p>
+        <div style="margin-top: 10px;">
+          <span class="aql-badge">動物の頭脳</span>
+          <span class="aql-tag-badge">犬</span>
+        </div>
+      </div>
+    </a>
+    
+    <!-- 記事 4 -->
+    <a href="cat-affection-cloudflare.html" class="card">
+      <div class="thumb">
+        <img src="cat-illust.webp" alt="猫のイラスト">
+      </div>
+      <div class="content">
+        <div class="date">2026年5月08日</div>
+        <h3>猫のコミュニケーション：鳴き声の意味とは</h3>
+        <p>猫の複雑なコミュニケーション能力を行動学から深く探ります。</p>
+        <div style="margin-top: 10px;">
+          <span class="aql-badge">動物の行動</span>
+          <span class="aql-tag-badge">猫</span>
+        </div>
+      </div>
+    </a>
+    
+    <!-- 記事 5 -->
+    <a href="pig-intelligence.html" class="card">
+      <div class="thumb">
+        <img src="pig-illust.webp" alt="豚のイラスト">
+      </div>
+      <div class="content">
+        <div class="date">2026年5月06日</div>
+        <h3>豚と犬の知能比較：どちらが本当に賢い？</h3>
+        <p>同じくらい高い知能を持つ豚と犬。その認知能力の違いを科学的に比較。</p>
+        <div style="margin-top: 10px;">
+          <span class="aql-badge">動物の頭脳</span>
+          <span class="aql-tag-badge">豚</span>
+          <span class="aql-tag-badge">犬</span>
+        </div>
+      </div>
+    </a>
+    
+    <!-- 記事 6 -->
+    <a href="dog-chicken-senses.html" class="card">
+      <div class="thumb">
+        <!-- 💡 必要に応じて画像名を実際のファイル名に変更してください -->
+        <img src="dog-chicken-senses_illustration.webp" alt="犬のイラスト">
+      </div>
+      <div class="content">
+        <div class="date">2026年5月04日</div>
+        <h3>動物たちの聴覚世界：人間には聞こえない音</h3>
+        <p>犬の超音波から象の極低周波まで。異なる音の世界を解説。</p>
+        <div style="margin-top: 10px;">
+          <span class="aql-badge">動物の五感</span>
+          <span class="aql-tag-badge">犬</span>
+        </div>
+      </div>
+    </a>
+    
+  </div>
 
 </div>
 
