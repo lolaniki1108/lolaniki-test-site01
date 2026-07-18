@@ -31,11 +31,11 @@
   nav.main-nav a{text-decoration:none;color:var(--brand);}
   nav.main-nav a:hover{color:var(--ochre);}
   
-  /* 共通カード構造（イラスト横並び） */
+  /* 共通カード構造（アイキャッチ画像を35%前後の大きさに調整） */
   .card {
     display: flex;
     gap: 24px;
-    align-items: flex-start;
+    align-items: center;
     text-decoration: none;
     color: inherit;
     background: #fff;
@@ -51,12 +51,13 @@
     border-color: var(--aql-brown);
   }
   .card .thumb {
-    width: 240px;
+    width: 35%; /* アイキャッチ画像を30%〜40%の間のサイズに指定 */
+    max-width: 320px;
     flex-shrink: 0;
   }
   .card .thumb img {
     width: 100%;
-    height: 160px;
+    height: auto;
     object-fit: cover;
     border-radius: 8px;
     display: block;
@@ -105,12 +106,6 @@
     font-size: 14px;
     color: #5a4c3c;
     line-height: 1.7;
-  }
-  .card .read {
-    margin-top: 14px;
-    font-size: 13px;
-    color: var(--ochre);
-    font-weight: 700;
   }
 
   /* フィルターセクション */
@@ -245,8 +240,7 @@
   /* レスポンシブ対応 */
   @media (max-width:768px){
     .card { flex-direction: column; gap: 16px; padding: 20px; }
-    .card .thumb { width: 100%; }
-    .card .thumb img { height: auto; }
+    .card .thumb { width: 100%; max-width: 100%; }
   }
 </style>
 </head>
@@ -269,17 +263,18 @@
   <div class="aql-filter-section">
     <span class="aql-filter-label">📂 カテゴリーで絞る</span>
     <div class="aql-filter-buttons">
-      <a class="aql-filter-btn active" href="#">すべて</a>
-      <a class="aql-filter-btn" href="#">動物の頭脳</a>
-      <a class="aql-filter-btn" href="#">動物の五感</a>
-      <a class="aql-filter-btn" href="#">動物の行動</a>
+      <a class="aql-filter-btn active" href="blog.html">すべて</a>
+      <a class="aql-filter-btn" href="category-cat.html">動物の頭脳</a>
+      <a class="aql-filter-btn" href="category-chicken.html">動物の五感</a>
+      <a class="aql-filter-btn" href="category-pig.html">動物の行動</a>
     </div>
     <span class="aql-filter-label">🏷️ タグで探す</span>
     <div class="aql-tag-cloud">
-      <a class="aql-tag-item" href="#">豚</a>
-      <a class="aql-tag-item" href="#">犬</a>
-      <a class="aql-tag-item" href="#">鶏</a>
-      <a class="aql-tag-item" href="#">猫</a>
+      <!-- リンク先を各カテゴリー（タグごと）のHTMLファイルに指定しました -->
+      <a class="aql-tag-item" href="category-pig.html">豚</a>
+      <a class="aql-tag-item" href="category-dog.html">犬</a>
+      <a class="aql-tag-item" href="category-chicken.html">鶏</a>
+      <a class="aql-tag-item" href="category-cat.html">猫</a>
     </div>
   </div>
 
@@ -307,7 +302,8 @@
       <!-- 人気 No.2 -->
       <a href="dog-chicken-senses.html" class="aql-featured-card card" data-rank="2">
         <div class="thumb">
-          <img src="dog-chicken-senses_illustration.webp" alt="鶏の視覚イラスト">
+          <!-- 鶏のイラストパスを指定 -->
+          <img src="niwatori-illustration.webp" alt="鶏の視覚イラスト">
         </div>
         <div class="content">
           <div class="aql-featured-clicks">📊 <span class="aql-clicks-badge">No.2</span></div>
@@ -344,7 +340,7 @@
 
   <div class="aql-article-list-wrap">
     
-    <!-- 記事 1 -->
+    <!-- 記事 1 (豚のカードバグをきれいに修正しました) -->
     <a href="pig-intelligence.html" class="card">
       <div class="thumb">
         <img src="pig-illust.webp" alt="豚の知能イラスト">
@@ -357,13 +353,14 @@
           <span class="aql-badge">動物の頭脳</span>
           <span class="aql-tag-badge">豚</span>
         </div>
-      </a>
+      </div>
     </a>
     
     <!-- 記事 2 -->
     <a href="dog-chicken-senses.html" class="card">
       <div class="thumb">
-        <img src="dog-chicken-senses_illustration.webp" alt="鶏の視覚イラスト">
+        <!-- 鶏のイラストパスを指定 -->
+        <img src="niwatori-illustration.webp" alt="鶏の視覚イラスト">
       </div>
       <div class="content">
         <div class="date">2026年5月12日</div>
@@ -379,8 +376,8 @@
     <!-- 記事 3 -->
     <a href="dog-chicken-senses.html" class="card">
       <div class="thumb">
-        <!-- 💡 必要に応じて画像名を実際のファイル名に変更してください -->
-        <img src="dog-chicken-senses_illustration.webp" alt="犬のイラスト">
+        <!-- 犬のイラストパス（dog-tail-illustration.webp）を指定 -->
+        <img src="dogtail-illustration.webp" alt="犬のイラスト">
       </div>
       <div class="content">
         <div class="date">2026年5月10日</div>
@@ -429,8 +426,8 @@
     <!-- 記事 6 -->
     <a href="dog-chicken-senses.html" class="card">
       <div class="thumb">
-        <!-- 💡 必要に応じて画像名を実際のファイル名に変更してください -->
-        <img src="dog-chicken-senses_illustration.webp" alt="犬のイラスト">
+        <!-- 犬のイラストパス（dog-tail-illustration.webp）を指定 -->
+        <img src="dogtail-illustration.webp" alt="犬のイラスト">
       </div>
       <div class="content">
         <div class="date">2026年5月04日</div>
