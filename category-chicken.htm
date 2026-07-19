@@ -31,11 +31,65 @@
   .card p{margin:0;font-size:14px;color:#5a4c3c;}
   .empty{background:var(--card);border-left:4px solid var(--ochre);padding:22px 24px;border-radius:6px;font-size:14px;margin:16px 0 44px;}
   footer.site{text-align:center;padding:36px 24px 48px;font-size:12.5px;color:var(--brand);border-top:1px solid var(--line);margin-top:20px;}
+
+/* 以下のコードを <style> 〜 </style> の中に追加してください */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+.logo-area {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+.logo-icon {
+    height: 50px;
+    width: auto;
+    margin-right: 12px;
+    object-fit: contain;
+}
+.logo-text {
+    font-size: 22px;
+    font-weight: bold;
+}
+nav {
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    font-size: 16px;
+}
+nav a:hover {
+    color: #b5895b;
+}
+
 </style>
 </head>
 <body>
 
 <header>
+    <a href="index.html" class="logo-area">
+        <!-- ⭕️ 正しいロゴ画像と小さなサイズが適用されます -->
+        <img src="cropped-logo-icon.webp" alt="Animal IQ Labo" class="logo-icon">
+        <span class="logo-text">Animal IQ Labo</span>
+    </a>
+    <nav>
+        <a href="index.html">TOP</a>
+        <a href="animal.html">Animal</a>
+        <a href="blog.html">Blog</a>
+    </nav>
+</header>
+
+
+  <header>
         <a href="index.html" class="logo-area">
             <img src="4animals-logo-icon.webp" alt="Animal IQ Labo Icon" class="logo-icon">
             <span class="logo-text">Animal IQ Labo</span>
@@ -44,8 +98,6 @@
             <a href="index.html">TOP</a>
             <a href="animal.html">Animal</a>
             <a href="blog.html">Blog</a>
-        </nav>
-    </header>
 
 <div class="wrap">
   <section class="hero">
