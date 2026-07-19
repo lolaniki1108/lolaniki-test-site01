@@ -4,35 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>動物の行動 の記事一覧 - Animal IQ Labo</title>
+    <style>
+        body { font-family: sans-serif; color: #333; background-color: #fdfbf7; margin: 0; padding: 0; }
+        .wrap { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: #fff; border-bottom: 1px solid #eee; }
+        .logo-area { display: flex; align-items: center; text-decoration: none; color: #333; }
+        .logo-icon { width: 40px; height: 40px; margin-right: 10px; object-fit: contain; }
+        .logo-text { font-size: 24px; font-weight: bold; }
+        nav a { margin-left: 20px; text-decoration: none; color: #555; font-weight: 500; }
+        nav a:hover { color: #b5895b; }
+        .category-title-area { text-align: center; margin: 50px 0 30px; }
+        .cat-badge { color: #b5895b; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-size: 14px; }
+        .category-title-area h2 { font-size: 28px; margin: 10px 0; color: #222; }
+        .article-list { display: flex; flex-direction: column; gap: 30px; margin-top: 40px; }
+        .article-card { display: flex; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.2s; }
+        .article-card:hover { transform: translateY(-3px); }
+        .article-img-wrapper { width: 30%; min-width: 200px; max-width: 260px; background: #f9f9f9; }
+        .article-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .article-content { width: 70%; padding: 25px; display: flex; flex-direction: column; justify-content: center; }
+        .article-date { font-size: 13px; color: #999; margin-bottom: 8px; }
+        .article-title { font-size: 20px; font-weight: bold; margin: 0 0 10px 0; }
+        .article-title a { color: #333; text-decoration: none; }
+        .article-title a:hover { color: #b5895b; }
+        .article-desc { color: #666; font-size: 14px; line-height: 1.6; margin: 0; }
+        .back-link-wrapper { text-align: center; margin: 50px 0; }
+        .back-link { color: #b5895b; text-decoration: none; font-weight: bold; }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Animal IQ Labo</h1>
+        <a href="index.html" class="logo-area">
+            <img src="4animals-logo-icon.webp" alt="Animal IQ Labo Icon" class="logo-icon">
+            <span class="logo-text">Animal IQ Labo</span>
+        </a>
         <nav>
-            <a href="index.html">TOP</a> | 
-            <a href="animal.html">Animal</a> | 
+            <a href="index.html">TOP</a>
+            <a href="animal.html">Animal</a>
             <a href="blog.html">Blog</a>
         </nav>
     </header>
 
     <main class="wrap">
-        <div class="aql-category-header" style="text-align: center; margin: 40px 0;">
-            <span style="font-size: 48px;">🐾</span> 
-            <p style="color: #b5895b; font-weight: bold; margin-bottom: 5px; text-transform: uppercase;">Category</p>
+        <div class="category-title-area">
+            <span class="cat-badge">🐾 Category</span>
             <h2>動物の行動 の記事一覧</h2>
         </div>
 
-        <div class="aql-featured-grid">
-            <!-- 📁 動物の行動に該当する記事 -->
-            <div class="aql-featured-card-wrapper" style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin-bottom: 20px;">
-                <span style="background: #f4ebe1; padding: 3px 8px; border-radius: 4px; font-size: 12px; color: #b5895b;">動物の行動</span>
-                <h3><a href="cat-rubbing-softly.html" style="color: #333; text-decoration: none; font-size: 20px; font-weight: bold; display: block; margin: 10px 0;">猫がすりすりしてくる時の心理と行動の意味</a></h3>
-                <p style="color: #666; font-size: 14px;">猫が優しくすりすりしてくるときの愛情表現や、縄張り主張のサインなど、行動に隠された心理を解説。</p>
-            </div>
+        <div class="article-list">
+            <article class="article-card">
+                <div class="article-img-wrapper">
+                    <!-- 左側：猫のイラスト画像 -->
+                    <img src="cat-illust.webp" alt="猫の行動イラスト" class="article-img">
+                </div>
+                <div class="article-content">
+                    <div class="article-date">📅 2026年7月19日</div>
+                    <h3 class="article-title"><a href="cat-rubbing-softly.html">猫がすりすりしてくる時の心理と行動の意味</a></h3>
+                    <p class="article-desc">猫が優しくすりすりしてくるときの愛情表現や、縄張り主張のサインなど、行動に隠された心理を紐解きます。</p>
+                </div>
+            </article>
         </div>
 
-        <div style="text-align: center; margin: 40px 0;">
-            <a href="blog.html" style="color: #b5895b; text-decoration: none; font-weight: bold;">← 動物一覧に戻る</a>
+        <div class="back-link-wrapper">
+            <a href="blog.html" class="back-link">← ブログトップに戻る</a>
         </div>
     </main>
 </body>
