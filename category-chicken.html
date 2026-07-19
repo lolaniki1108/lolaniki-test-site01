@@ -3,45 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>犬（イヌ） の記事一覧 - Animal IQ Labo</title>
+    <title>猫（ネコ） の記事一覧 - Animal IQ Labo</title>
     <style>
         body { font-family: sans-serif; color: #333; background-color: #fdfbf7; margin: 0; padding: 0; }
         .wrap { max-width: 1000px; margin: 0 auto; padding: 20px; }
         
-        /* ✨ ここがヘッダーとアイコンを綺麗に整えるコードです */
-        header { display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; background: #fff; border-bottom: 1px solid #eee; }
+        /* ヘッダー：スマホでも横並びをキープ */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background: #fff; border-bottom: 1px solid #eee; }
         .logo-area { display: flex; align-items: center; text-decoration: none; color: #333; }
-        .logo-icon { height: 50px; width: auto; margin-right: 12px; object-fit: contain; }
+        /* ３：左上アイコンを30%大きく（50px → 65pxに拡大） */
+        .logo-icon { height: 65px; width: auto; margin-right: 12px; object-fit: contain; }
         .logo-text { font-size: 22px; font-weight: bold; }
-        nav { display: flex; gap: 20px; }
-        nav a { text-decoration: none; color: #555; font-weight: bold; font-size: 16px; }
+        nav { display: flex; gap: 15px; }
+        nav a { text-decoration: none; color: #555; font-weight: bold; font-size: 15px; }
         nav a:hover { color: #b5895b; }
 
-        /* カテゴリーのタイトル周り */
-        .category-title-area { text-align: center; margin: 50px 0 30px; }
+        .category-title-area { text-align: center; margin: 40px 0 20px; }
         .cat-badge { color: #b5895b; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-size: 14px; }
-        .category-title-area h2 { font-size: 28px; margin: 10px 0; color: #222; }
+        .category-title-area h2 { font-size: 26px; margin: 10px 0; color: #222; }
 
-        /* 記事一覧のレイアウト（左に画像、右にテキスト） */
+        /* ４：スマホ対応（フレックスの縦横切り替え） */
         .article-list { display: flex; flex-direction: column; gap: 25px; margin-top: 30px; }
-        .article-card { display: flex; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
-        .article-img-wrapper { width: 250px; min-width: 250px; background: #f9f9f9; }
+        .article-card { display: flex; flex-direction: row; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+        
+        /* ２：イラストを40%くらいのサイズ感に（幅を狭める） */
+        .article-img-wrapper { width: 140px; min-width: 140px; max-width: 140px; background: #f9f9f9; }
         .article-img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .article-content { padding: 25px; display: flex; flex-direction: column; justify-content: center; }
-        .article-date { font-size: 13px; color: #999; margin-bottom: 8px; }
-        .article-title { font-size: 20px; font-weight: bold; margin: 0 0 10px 0; }
+        .article-content { padding: 20px; display: flex; flex-direction: column; justify-content: center; flex-grow: 1; }
+        .article-title { font-size: 18px; font-weight: bold; margin: 0 0 10px 0; line-height: 1.4; }
         .article-title a { color: #333; text-decoration: none; }
         .article-title a:hover { color: #b5895b; }
-        .article-desc { color: #666; font-size: 14px; line-height: 1.6; margin: 0; }
+        .article-desc { color: #666; font-size: 14px; line-height: 1.5; margin: 0; }
 
         .back-link-wrapper { text-align: center; margin: 50px 0; }
         .back-link { color: #b5895b; text-decoration: none; font-weight: bold; }
+
+        /* スマートフォン画面用の改善スタイル */
+        @media (max-width: 600px) {
+            header { padding: 10px 15px; }
+            .logo-icon { height: 50px; } /* スマホではロゴを少しだけ自動縮小 */
+            .logo-text { font-size: 18px; }
+            nav a { font-size: 14px; }
+            .article-card { flex-direction: column; } /* スマホではイラストと文字を上下並びに */
+            .article-img-wrapper { width: 100%; min-width: 100%; max-width: 100%; height: 180px; }
+        }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo-area">
-            <!-- ⭕️ ここで正しいロゴを指定しています -->
             <img src="cropped-logo-icon.webp" alt="Animal IQ Labo" class="logo-icon">
             <span class="logo-text">Animal IQ Labo</span>
         </a>
@@ -54,23 +64,20 @@
 
     <main class="wrap">
         <div class="category-title-area">
-            <span class="cat-badge">鶏 CATEGORY</span>
-            <h2>鶏（ニワトリ） の記事一覧</h2>
+    <span class="cat-badge">🐔 CATEGORY</span>
+    <h2>鶏（ニワトリ） の記事一覧</h2>
+</div>
+<div class="article-list">
+    <article class="article-card">
+        <div class="article-img-wrapper">
+            <img src="niwatori-illustration.webp" alt="鶏のイラスト" class="article-img">
         </div>
-
-        <div class="article-list">
-            <!-- 鶏の記事 -->
-            <article class="article-card">
-                <div class="article-img-wrapper">
-                    <!-- 左側の画像（左のファイル名に合わせています） -->
-                    <img src="niwatori-illustration.webp" alt="鶏のイラスト" class="article-img">
-                </div>
-                <div class="article-content">
-                    <h3 class="article-title"><a href="niwatori-kao-ninshiki-chinou.html">　ニワトリの顔認識能力</a></h3>
-                    <p class="article-desc">鶏の顔認識能力について、最新の研究結果をもとにわかりやすく解説します。</p>
-                </div>
-            </article>
+        <div class="article-content">
+            <h3 class="article-title"><a href="niwatori-kao-ninshiki-chinou.html">ニワトリの知能：人間の顔を認識できる驚きの能力</a></h3>
+            <p class="article-desc">ニワトリが持つ高度な視覚認識。特定の人間を識別し覚えているという研究データを紐解きます。</p>
         </div>
+    </article>
+</div>
 
         <div class="back-link-wrapper">
             <a href="animal.html" class="back-link">← 動物一覧に戻る</a>
