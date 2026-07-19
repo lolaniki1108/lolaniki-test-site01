@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動物の行動 カテゴリ記事一覧 - Animal IQ Labo</title>
+</head>
+<body>
+    <header>
+        <h1>Animal IQ Labo</h1>
+        <nav>
+            <a href="index.html">TOP</a> | 
+            <a href="animal.html">Animal</a> | 
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>カテゴリー：動物の行動 (animal-behavior)</h2>
+        <p>動物たちの興味深い行動や習性に関する記事一覧です。</p>
+        <hr>
+
+        <article>
+            <h3><a href="cat-rubbing-softly.html">猫がすりすりしてくる時の心理（例）</a></h3>
+            <p>ここに記事の簡単な説明文を入れます。</p>
+        </article>
+        
+    </main>
+</body>
+</html>

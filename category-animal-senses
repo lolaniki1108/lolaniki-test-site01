@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動物の五感 カテゴリ記事一覧 - Animal IQ Labo</title>
+    <!-- ここに共通のCSSリンクがあれば追加してください（例: <link rel="stylesheet" href="style.css">） -->
+</head>
+<body>
+    <header>
+        <h1>Animal IQ Labo</h1>
+        <nav>
+            <a href="index.html">TOP</a> | 
+            <a href="animal.html">Animal</a> | 
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>カテゴリー：動物の五感 (animal-senses)</h2>
+        <p>動物たちの驚異的な感覚や五感に関する記事一覧です。</p>
+        <hr>
+
+        <!-- 記事リストの例（実際の記事ファイル名に合わせて書き換えてください） -->
+        <article>
+            <h3><a href="dog-chicken-senses.html">犬と鶏の五感の違いについて（例）</a></h3>
+            <p>ここに記事の簡単な説明文を入れます。</p>
+        </article>
+        
+    </main>
+</body>
+</html>
