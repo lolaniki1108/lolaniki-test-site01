@@ -3,30 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>動物の行動 の記事一覧 - Animal IQ Labo</title>
+    <title>動物の頭脳 の記事一覧 - Animal IQ Labo</title>
     <style>
         body { font-family: sans-serif; color: #333; background-color: #fdfbf7; margin: 0; padding: 0; }
         .wrap { max-width: 1000px; margin: 0 auto; padding: 20px; }
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: #fff; border-bottom: 1px solid #eee; }
+        
+        /* ✨ ヘッダー：左上ロゴ、右側メニューの横並びを完全に制御 */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; background: #fff; border-bottom: 1px solid #eee; }
         .logo-area { display: flex; align-items: center; text-decoration: none; color: #333; }
-        .logo-icon { width: 40px; height: 40px; margin-right: 10px; object-fit: contain; }
-        .logo-text { font-size: 24px; font-weight: bold; }
-        nav a { margin-left: 20px; text-decoration: none; color: #555; font-weight: 500; }
+        
+        /* ⭕️ 正しいロゴ指定と適切なサイズ調整 */
+        .logo-icon { height: 50px; width: auto; margin-right: 12px; object-fit: contain; }
+        .logo-text { font-size: 22px; font-weight: bold; }
+        
+        /* 右側統一メニュー */
+        nav { display: flex; gap: 20px; }
+        nav a { text-decoration: none; color: #555; font-weight: bold; font-size: 16px; }
         nav a:hover { color: #b5895b; }
+
+        /* カテゴリー共通ヘッダー */
         .category-title-area { text-align: center; margin: 50px 0 30px; }
         .cat-badge { color: #b5895b; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-size: 14px; }
         .category-title-area h2 { font-size: 28px; margin: 10px 0; color: #222; }
-        .article-list { display: flex; flex-direction: column; gap: 30px; margin-top: 40px; }
-        .article-card { display: flex; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.2s; }
-        .article-card:hover { transform: translateY(-3px); }
-        .article-img-wrapper { width: 30%; min-width: 200px; max-width: 260px; background: #f9f9f9; }
+
+        /* 記事一覧（お手本サイト風：左画像・右テキスト） */
+        .article-list { display: flex; flex-direction: column; gap: 25px; margin-top: 30px; }
+        .article-card { display: flex; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+        .article-img-wrapper { width: 250px; min-width: 250px; background: #f9f9f9; }
         .article-img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .article-content { width: 70%; padding: 25px; display: flex; flex-direction: column; justify-content: center; }
+        .article-content { padding: 25px; display: flex; flex-direction: column; justify-content: center; }
         .article-date { font-size: 13px; color: #999; margin-bottom: 8px; }
         .article-title { font-size: 20px; font-weight: bold; margin: 0 0 10px 0; }
         .article-title a { color: #333; text-decoration: none; }
         .article-title a:hover { color: #b5895b; }
         .article-desc { color: #666; font-size: 14px; line-height: 1.6; margin: 0; }
+
         .back-link-wrapper { text-align: center; margin: 50px 0; }
         .back-link { color: #b5895b; text-decoration: none; font-weight: bold; }
     </style>
@@ -34,7 +45,8 @@
 <body>
     <header>
         <a href="index.html" class="logo-area">
-            <img src="4animals-logo-icon.webp" alt="Animal IQ Labo Icon" class="logo-icon">
+            <!-- ⭕️ 正しいサイトロゴに修正 -->
+            <img src="cropped-logo-icon.webp" alt="Animal IQ Labo" class="logo-icon">
             <span class="logo-text">Animal IQ Labo</span>
         </a>
         <nav>
@@ -53,19 +65,19 @@
         <div class="article-list">
             <article class="article-card">
                 <div class="article-img-wrapper">
-                    <!-- 左側：猫のイラスト画像 -->
+                    <!-- 📁 記事に小さいイラストをセット -->
                     <img src="cat-illust.webp" alt="猫の行動イラスト" class="article-img">
                 </div>
                 <div class="article-content">
-                    <div class="article-date">📅 2026年7月19日</div>
-                    <h3 class="article-title"><a href="cat-rubbing-softly.html">猫がすりすりしてくる時の心理と行動の意味</a></h3>
-                    <p class="article-desc">猫が優しくすりすりしてくるときの愛情表現や、縄張り主張のサインなど、行動に隠された心理を紐解きます。</p>
+                    <div class="article-date">📅 2026年7月16日</div>
+                    <h3 class="article-title"><a href="cat-rubbing-softly.html">猫がすりすりしてくる時の心理...</a></h3>
+                    <p class="article-desc">猫の行動とその背後にある心理について解説します。</p>
                 </div>
             </article>
         </div>
 
         <div class="back-link-wrapper">
-            <a href="blog.html" class="back-link">← ブログトップに戻る</a>
+            <a href="blog.html" class="back-link">← 動物一覧に戻る</a>
         </div>
     </main>
 </body>
