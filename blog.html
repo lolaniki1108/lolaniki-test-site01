@@ -107,7 +107,38 @@
     color: #5a4c3c;
     line-height: 1.7;
   }
+/* 記事カード全体のコンテナ幅調整 */
+.blog-list, .article-container {
+  max-width: 60%; /* 全体の幅を60%程度に制限 */
+  margin: 0 auto; /* 中央寄せ */
+}
 
+/* 個々の記事カードの調整 */
+.article-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+/* イラスト（画像）領域のサイズ調整（元の40%〜50%に縮小） */
+.article-card img, 
+.article-card .thumbnail {
+  width: 120px;       /* 画面幅に応じて調整（例: 従来240px〜300px程度だったものを半減） */
+  max-width: 45%;     /* カード内における横幅の割合を抑える */
+  height: auto;
+  object-fit: contain;
+}
+
+/* モバイル（スマホ）表示用のレスポンシブ対応 */
+@media (max-width: 768px) {
+  .blog-list, .article-container {
+    max-width: 92%; /* スマホ画面では見やすさのため90%前後に拡大 */
+  }
+}
   /* フィルターセクション */
   .aql-filter-section {
     margin: 0 0 2.5rem 0;
@@ -437,6 +468,40 @@
         <div style="margin-top: 10px;">
           <span class="aql-badge">動物の五感</span>
           <span class="aql-tag-badge">犬</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- 記事 7 -->
+    <a href="pig-sign.html" class="card">
+      <div class="thumb">
+        <!-- 犬のイラストパス（dog-tail-illustration.webp）を指定 -->
+        <img src="pig-illust.webp" alt="豚のイラスト">
+      </div>
+      <div class="content">
+        <div class="date">2026年7</div>
+        <h3>豚の7つのサイン</h3>
+        <p>豚の群れの中から不調な一頭を驚くほど早く見つけ出す。</p>
+        <div style="margin-top: 10px;">
+          <span class="aql-badge">動物の行動</span>
+          <span class="aql-tag-badge">豚</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- 記事 8 -->
+    <a href="chicken-sand.html" class="card">
+      <div class="thumb">
+        <!-- 鶏のイラストパス（chicken-sand.webp）を指定 -->
+        <img src="chicken-sand.webp" alt="鶏のイラスト">
+      </div>
+      <div class="content">
+        <div class="date">2026年7</div>
+        <h3>鶏の「砂浴び」は何のため？感覚・社会性・寄生虫対策の三重の意味</h3>
+        <p>鶏が地面で転げまわる「砂浴び」。実は皮膚の感覚ケア・仲間との交流のため。</p>
+        <div style="margin-top: 10px;">
+          <span class="aql-badge">動物の行動</span>
+          <span class="aql-tag-badge">鶏</span>
         </div>
       </div>
     </a>
