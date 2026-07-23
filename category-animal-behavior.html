@@ -1,87 +1,92 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>猫（ネコ） の記事一覧 - Animal IQ Labo</title>
-    <style>
-        body { font-family: sans-serif; color: #333; background-color: #fdfbf7; margin: 0; padding: 0; }
-        .wrap { max-width: 1000px; margin: 0 auto; padding: 20px; }
-        
-        /* ヘッダー：スマホでも横並びをキープ */
-        header { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background: #fff; border-bottom: 1px solid #eee; }
-        .logo-area { display: flex; align-items: center; text-decoration: none; color: #333; }
-        /* ３：左上アイコンを30%大きく（50px → 65pxに拡大） */
-        .logo-icon { height: 65px; width: auto; margin-right: 12px; object-fit: contain; }
-        .logo-text { font-size: 22px; font-weight: bold; }
-        nav { display: flex; gap: 15px; }
-        nav a { text-decoration: none; color: #555; font-weight: bold; font-size: 15px; }
-        nav a:hover { color: #b5895b; }
-
-        .category-title-area { text-align: center; margin: 40px 0 20px; }
-        .cat-badge { color: #b5895b; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-size: 14px; }
-        .category-title-area h2 { font-size: 26px; margin: 10px 0; color: #222; }
-
-        /* ４：スマホ対応（フレックスの縦横切り替え） */
-        .article-list { display: flex; flex-direction: column; gap: 25px; margin-top: 30px; }
-        .article-card { display: flex; flex-direction: row; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
-        
-        /* ２：イラストを40%くらいのサイズ感に（幅を狭める） */
-        .article-img-wrapper { width: 140px; min-width: 140px; max-width: 140px; background: #f9f9f9; }
-        .article-img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .article-content { padding: 20px; display: flex; flex-direction: column; justify-content: center; flex-grow: 1; }
-        .article-title { font-size: 18px; font-weight: bold; margin: 0 0 10px 0; line-height: 1.4; }
-        .article-title a { color: #333; text-decoration: none; }
-        .article-title a:hover { color: #b5895b; }
-        .article-desc { color: #666; font-size: 14px; line-height: 1.5; margin: 0; }
-
-        .back-link-wrapper { text-align: center; margin: 50px 0; }
-        .back-link { color: #b5895b; text-decoration: none; font-weight: bold; }
-
-        /* スマートフォン画面用の改善スタイル */
-        @media (max-width: 600px) {
-            header { padding: 10px 15px; }
-            .logo-icon { height: 50px; } /* スマホではロゴを少しだけ自動縮小 */
-            .logo-text { font-size: 18px; }
-            nav a { font-size: 14px; }
-            .article-card { flex-direction: column; } /* スマホではイラストと文字を上下並びに */
-            .article-img-wrapper { width: 100%; min-width: 100%; max-width: 100%; height: 180px; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>動物の行動の記事一覧 — Animal IQ Labo</title>
+<link rel="icon" type="image/png" href="cat-pig_puzzle.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{ --cream:#FAF6F0; --card:#EFE4D6; --bark:#5C4630; --brand:#8B6F47; --aql-brown: #8B6F47; --line: rgba(92,70,48,0.16); }
+  *{box-sizing:border-box;} body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Sans JP', sans-serif;line-height:1.8;}
+  .wrap{max-width:700px;margin:0 auto;padding:32px 20px;} a{color:inherit;text-decoration:none;}
+  header.site{border-bottom:1px solid var(--line);background:#fff;}
+  .nav-inner{max-width:700px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;}
+  .logo-area { display: flex; align-items: center; font-weight: 700; font-size: 18px; gap: 8px; }
+  nav.main-nav{display:flex;gap:20px;font-size:14px;font-weight:700;} nav.main-nav a{color:var(--brand);}
+  .page-title { font-size: 22px; font-weight: 700; color: var(--bark); margin: 0 0 20px; border-bottom: 2px solid var(--brand); padding-bottom: 8px; }
+  .card { display: flex; gap: 16px; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 16px; margin-bottom: 16px; }
+  .card .thumb { width: 28%; max-width: 150px; flex-shrink: 0; }
+  .card .thumb img { width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; border-radius: 6px; display: block; }
+  .card .content { flex: 1; }
+  .card .aql-badge { display: inline-block; font-size: 11px; color: var(--brand); background: var(--card); padding: 2px 8px; border-radius: 4px; font-weight: 600; }
+  .card .aql-tag-badge { display: inline-block; font-size: 11px; color: #666; background: #f0f0f0; padding: 2px 8px; border-radius: 4px; font-weight: 600; margin-left: 4px; }
+  .card h3 { font-size: 16px; font-weight: 700; margin: 4px 0 6px; color: var(--bark); }
+  .card .date { font-size: 11px; color: #999; }
+  .card p { margin: 0; font-size: 13px; color: #5a4c3c; line-height: 1.5; }
+  footer.site { text-align: center; padding: 24px; font-size: 12px; color: #777; border-top: 1px solid var(--line); background: #fff; margin-top: 40px; }
+  @media (max-width: 600px){ .card { flex-direction: column; align-items: flex-start; } .card .thumb { width: 100%; max-width: 100%; } }
+</style>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo-area">
-            <img src="cropped-logo-icon.webp" alt="Animal IQ Labo" class="logo-icon">
-            <span class="logo-text">Animal IQ Labo</span>
-        </a>
-        <nav>
-            <a href="index.html">TOP</a>
-            <a href="animal.html">Animal</a>
-            <a href="blog.html">Blog</a>
-        </nav>
-    </header>
+<header class="site">
+  <div class="nav-inner">
+    <a class="logo-area" href="index.html">
+      <img src="cropped-058__logo_icon-270x270.png" alt="" style="width:24px;height:24px;border-radius:50%;">Animal IQ Labo
+    </a>
+    <nav class="main-nav"><a href="index.html">TOP</a><a href="animal.html">Animal</a><a href="blog.html">Blog</a></nav>
+  </div>
+</header>
 
-    <main class="wrap">
-        <div class="category-title-area">
-    <span class="cat-badge">🐾 CATEGORY</span>
-    <h2>動物の行動 の記事一覧</h2>
-</div>
-<div class="article-list">
-    <article class="article-card">
-        <div class="article-img-wrapper">
-            <img src="cat-illust.webp" alt="行動イラスト" class="article-img">
-        </div>
-        <div class="article-content">
-            <h3 class="article-title"><a href="cat-rubbing-softly.html">猫がすりすりしてくる時の心理と行動の意味</a></h3>
-            <p class="article-desc">猫が優しくすりすりしてくるときの愛情表現や、縄張り主張のサインなど、行動に隠された心理を解説。</p>
-        </div>
-    </article>
+<div class="wrap">
+  <h1 class="page-title">🐾 動物の行動に関する記事一覧</h1>
+
+  <!-- 犬：尻尾 -->
+  <a href="dog-tail-wagging.html" class="card">
+    <div class="thumb"><img src="dogtail-illustration.webp" alt="犬"></div>
+    <div class="content">
+      <div class="date">2026年7月22日</div>
+      <h3>犬の尻尾振りの向きでわかる感情：右振り・左振りの科学</h3>
+      <p>好意的な時は右、警戒時は左？尻尾の振る方向から読み取る犬の脳と感情の関係。</p>
+      <div style="margin-top: 6px;"><span class="aql-badge">動物の行動</span><span class="aql-tag-badge">犬</span></div>
+    </div>
+  </a>
+
+  <!-- 豚：サイン -->
+  <a href="pig-sign.html" class="card">
+    <div class="thumb"><img src="pig-illust.webp" alt="豚"></div>
+    <div class="content">
+      <div class="date">2026年7月01日</div>
+      <h3>豚の7つのサイン：行動から読み取る健康状態</h3>
+      <p>豚の群れの中から不調な一頭を驚くほど早く見つけ出すための行動サイン。</p>
+      <div style="margin-top: 6px;"><span class="aql-badge">動物の行動</span><span class="aql-tag-badge">豚</span></div>
+    </div>
+  </a>
+
+  <!-- 鶏：砂浴び -->
+  <a href="chicken-sand.html" class="card">
+    <div class="thumb"><img src="chicken-sand.webp" alt="鶏"></div>
+    <div class="content">
+      <div class="date">2026年6月28日</div>
+      <h3>鶏の「砂浴び」は何のため？感覚・社会性・寄生虫対策の三重の意味</h3>
+      <p>鶏が地面で転げまわる「砂浴び」。実は皮膚の感覚ケア・仲間との交流のため。</p>
+      <div style="margin-top: 6px;"><span class="aql-badge">動物の行動</span><span class="aql-tag-badge">鶏</span></div>
+    </div>
+  </a>
+
+  <!-- 猫：鳴き声 -->
+  <a href="cat-communication.html" class="card">
+    <div class="thumb"><img src="cat-illust.webp" alt="猫"></div>
+    <div class="content">
+      <div class="date">2026年5月08日</div>
+      <h3>猫のコミュニケーション：鳴き声の意味とは</h3>
+      <p>猫の複雑なコミュニケーション能力を行動学から深く探ります。</p>
+      <div style="margin-top: 6px;"><span class="aql-badge">動物の行動</span><span class="aql-tag-badge">猫</span></div>
+    </div>
+  </a>
 </div>
 
-        <div class="back-link-wrapper">
-            <a href="animal.html" class="back-link">← 動物一覧に戻る</a>
-        </div>
-    </main>
+<footer class="site">Animal IQ Labo / <a href="blog.html">ブログ一覧へ戻る</a></footer>
 </body>
 </html>
