@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ブログ記事一覧 — Animal IQ Labo</title>
 <link rel="icon" type="image/png" href="cat-pig_puzzle.webp">
-<meta name="description" content="Animal IQ Laboのブログ記事一覧ページです。動物の知能・感覚・行動の不思議を科学データで解説した記事を掲載しています。">
+<meta name="description" content="Animal IQ Laboのブログ記事一覧ページです。動物の知力・感覚・行動の不思議を科学データで解説した記事を掲載しています。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
@@ -21,256 +21,181 @@
     --aql-border: #ddd;
   }
   *{box-sizing:border-box;}
-  body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Sans JP', sans-serif;line-height:1.9;}
-  .wrap{max-width:960px;margin:0 auto;padding:48px 24px;}
-  a{color:inherit;}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Sans JP', sans-serif;line-height:1.8;}
+  
+  /* PC画面での全体幅を約70%相当（720px）にスリム化 */
+  .wrap{max-width:720px;margin:0 auto;padding:32px 20px;}
+  a{color:inherit;text-decoration:none;}
   header.site{border-bottom:1px solid var(--line);background:#fff;}
-  .nav-inner{max-width:960px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
-  .brand-name{font-family:'Noto Sans JP', sans-serif;font-weight:700;font-size:20px;color:var(--bark);text-decoration:none;}
-  nav.main-nav{display:flex;gap:28px;font-size:14px;font-weight:700;}
-  nav.main-nav a{text-decoration:none;color:var(--brand);}
+  .nav-inner{max-width:720px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+  .brand-name{font-weight:700;font-size:18px;color:var(--bark);}
+  nav.main-nav{display:flex;gap:20px;font-size:14px;font-weight:700;}
+  nav.main-nav a{color:var(--brand);}
   nav.main-nav a:hover{color:var(--ochre);}
   
-  /* 共通カード構造（アイキャッチ画像を35%前後の大きさに調整） */
+  /* 記事カードの調整 */
   .card {
     display: flex;
-    gap: 24px;
+    gap: 16px;
     align-items: center;
-    text-decoration: none;
-    color: inherit;
     background: #fff;
     border: 1px solid var(--line);
-    border-radius: 10px;
-    padding: 24px;
-    margin-bottom: 20px;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
     transition: transform .18s ease, box-shadow .18s ease;
   }
   .card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 28px rgba(92,70,48,0.14);
+    box-shadow: 0 6px 16px rgba(92,70,48,0.12);
     border-color: var(--aql-brown);
   }
+  /* サムネイル画像を小さめ（約25%〜30%）に設定 */
   .card .thumb {
-    width: 35%; /* アイキャッチ画像を30%〜40%の間のサイズに指定 */
-    max-width: 320px;
+    width: 28%;
+    max-width: 160px;
     flex-shrink: 0;
   }
   .card .thumb img {
     width: 100%;
     height: auto;
+    aspect-ratio: 4/3;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 6px;
     display: block;
   }
   .card .content {
     flex: 1;
   }
-  .card .tag, .card .aql-badge {
+  .card .aql-badge {
     display: inline-block;
-    font-size: 12px;
+    font-size: 11px;
     color: var(--brand);
     background: var(--card);
-    padding: 4px 10px;
+    padding: 2px 8px;
     border-radius: 4px;
-    margin-bottom: 12px;
     font-weight: 600;
   }
   .card .aql-tag-badge {
     display: inline-block;
-    font-size: 12px;
+    font-size: 11px;
     color: #666;
     background: #f0f0f0;
-    padding: 4px 10px;
+    padding: 2px 8px;
     border-radius: 4px;
-    margin-bottom: 12px;
     font-weight: 600;
-    margin-left: 6px;
+    margin-left: 4px;
   }
   .card h3 {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
-    margin: 0 0 10px;
+    margin: 4px 0 6px;
     color: var(--bark);
-    line-height: 1.5;
+    line-height: 1.4;
   }
   .card:hover h3 {
     color: var(--aql-brown);
   }
   .card .date {
-    font-size: 12px;
+    font-size: 11px;
     color: #999;
-    margin-bottom: 6px;
   }
   .card p {
     margin: 0;
-    font-size: 14px;
+    font-size: 13px;
     color: #5a4c3c;
-    line-height: 1.7;
+    line-height: 1.5;
   }
-/* 記事カード全体のコンテナ幅調整 */
-.blog-list, .article-container {
-  max-width: 60%; /* 全体の幅を60%程度に制限 */
-  margin: 0 auto; /* 中央寄せ */
-}
 
-/* 個々の記事カードの調整 */
-.article-card {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 24px;
-  padding: 16px;
-  border-radius: 8px;
-  background-color: #fff;
-}
-
-/* イラスト（画像）領域のサイズ調整（元の40%〜50%に縮小） */
-.article-card img, 
-.article-card .thumbnail {
-  width: 120px;       /* 画面幅に応じて調整（例: 従来240px〜300px程度だったものを半減） */
-  max-width: 45%;     /* カード内における横幅の割合を抑える */
-  height: auto;
-  object-fit: contain;
-}
-
-/* モバイル（スマホ）表示用のレスポンシブ対応 */
-@media (max-width: 768px) {
-  .blog-list, .article-container {
-    max-width: 92%; /* スマホ画面では見やすさのため90%前後に拡大 */
-  }
-}
   /* フィルターセクション */
-  .aql-filter-section {
-    margin: 0 0 2.5rem 0;
-    padding: 1.5rem;
+  .filter-group {
     background: #fff;
-    border: 1px solid var(--line);
+    padding: 16px;
     border-radius: 8px;
+    border: 1px solid var(--line);
+    margin-bottom: 24px;
   }
   .aql-filter-label {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     color: var(--bark);
-    margin-bottom: 0.75rem;
+    margin-bottom: 8px;
     display: block;
-  }
-  .aql-filter-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
-  }
-  .aql-filter-btn {
-    padding: 8px 16px;
-    background: #fff;
-    color: #333;
-    border: 1px solid var(--aql-border);
-    border-radius: 6px;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
-    text-decoration: none;
-    display: inline-block;
-  }
-  .aql-filter-btn:hover, .aql-filter-btn.active {
-    background: var(--aql-brown);
-    color: white;
-    border-color: var(--aql-brown);
   }
   .aql-tag-cloud {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.6rem;
+    gap: 8px;
+    margin-bottom: 12px;
   }
   .aql-tag-item {
-    padding: 7px 14px;
-    background: #333;
+    padding: 5px 12px;
+    background: #4A3E31;
     color: white;
-    border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     font-size: 12px;
     font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
-    text-decoration: none;
-    display: inline-block;
+    transition: all 0.2s;
   }
   .aql-tag-item:hover {
-    background: #555;
-    transform: scale(1.05);
+    background: var(--brand);
   }
 
-  /* おすすめ記事セクション */
+  /* 人気記事セクション */
   .aql-featured-section {
-    margin: 2rem 0 3rem;
-    padding: 2rem;
+    margin: 20px 0 28px;
+    padding: 16px;
     background: linear-gradient(135deg, rgba(139,111,71,0.06) 0%, rgba(230,218,206,0.1) 100%);
     border-radius: 8px;
-    border-left: 5px solid var(--aql-brown);
+    border-left: 4px solid var(--aql-brown);
   }
   .aql-featured-title {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
     color: var(--bark);
-    margin: 0 0 1.5rem 0;
-  }
-  .aql-featured-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    margin: 0 0 12px 0;
   }
   .aql-featured-card {
     position: relative;
-    overflow: hidden;
   }
   .aql-featured-card::before {
     content: attr(data-rank);
     position: absolute;
     top: 0;
     right: 0;
-    background: linear-gradient(135deg, var(--aql-brown) 0%, #7A5F3E 100%);
+    background: var(--aql-brown);
     color: white;
-    width: 45px;
-    height: 45px;
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 900;
-    font-size: 20px;
+    font-size: 14px;
     clip-path: polygon(100% 0, 0 0, 100% 100%);
     z-index: 2;
   }
-  .aql-featured-clicks {
-    font-size: 12px;
-    color: var(--aql-brown);
-    font-weight: 700;
-    margin-bottom: 6px;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-  .aql-clicks-badge {
-    background: var(--aql-brown);
-    color: white;
-    padding: 1px 6px;
-    border-radius: 12px;
-    font-size: 10px;
-  }
 
-  /* セクション見出し */
   .section-title {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 700;
     color: var(--bark);
-    margin: 2rem 0 1.5rem;
-    border-left: 5px solid var(--ochre);
-    padding-left: 14px;
+    margin: 24px 0 16px;
+    border-left: 4px solid var(--ochre);
+    padding-left: 10px;
   }
 
-  /* レスポンシブ対応 */
-  @media (max-width:768px){
-    .card { flex-direction: column; gap: 16px; padding: 20px; }
+  footer.site {
+    text-align: center;
+    padding: 24px;
+    font-size: 12px;
+    color: #777;
+    border-top: 1px solid var(--line);
+    background: #fff;
+  }
+
+  @media (max-width: 600px){
+    .card { flex-direction: column; align-items: flex-start; }
     .card .thumb { width: 100%; max-width: 100%; }
   }
 </style>
@@ -279,7 +204,9 @@
 
 <header class="site">
   <div class="nav-inner">
-    <a class="brand-name" href="index.html" style="display:flex;align-items:center;gap:8px;"><img src="https://lolaniki.com/wp-content/uploads/2026/02/cropped-058__logo_icon-270x270.png" alt="" style="width:28px;height:28px;border-radius:50%;">Animal IQ Labo</a>
+    <a class="brand-name" href="index.html" style="display:flex;align-items:center;gap:8px;">
+      <img src="https://lolaniki.com/wp-content/uploads/2026/02/cropped-058__logo_icon-270x270.png" alt="" style="width:24px;height:24px;border-radius:50%;">Animal IQ Labo
+    </a>
     <nav class="main-nav">
       <a href="index.html">TOP</a>
       <a href="animal.html">Animal</a>
@@ -290,19 +217,18 @@
 
 <div class="wrap">
 
-  <!-- 📂 カテゴリーで絞る（「タグで探す」と同じデザインに修正） -->
-<div class="category-section">
+  <!-- 絞り込みフィルター -->
+  <div class="filter-group">
     <span class="aql-filter-label">📂 カテゴリーで絞る</span>
     <div class="aql-tag-cloud">
-        <a class="aql-tag-item" href="blog.html">すべて</a>
-        <a class="aql-tag-item" href="category-animal-brain.html">動物の頭脳</a>
-        <a class="aql-tag-item" href="category-animal-senses.html">動物の五感</a>
-        <a class="aql-tag-item" href="category-animal-behavior.html">動物の行動</a>
+      <a class="aql-tag-item" href="blog.html">すべて</a>
+      <a class="aql-tag-item" href="category-animal-brain.html">動物の頭脳</a>
+      <a class="aql-tag-item" href="category-animal-senses.html">動物の五感</a>
+      <a class="aql-tag-item" href="category-animal-behavior.html">動物の行動</a>
     </div>
-</div>
-    <span class="aql-filter-label">🏷️ タグで探す</span>
-    <div class="aql-tag-cloud">
-      <!-- リンク先を各カテゴリー（タグごと）のHTMLファイルに指定しました -->
+
+    <span class="aql-filter-label" style="margin-top:12px;">🏷️ タグで探す</span>
+    <div class="aql-tag-cloud" style="margin-bottom:0;">
       <a class="aql-tag-item" href="category-pig.html">豚</a>
       <a class="aql-tag-item" href="category-dog.html">犬</a>
       <a class="aql-tag-item" href="category-chicken.html">鶏</a>
@@ -310,56 +236,31 @@
     </div>
   </div>
 
-  <!-- おすすめ記事セクション（人気の記事） -->
+  <!-- 人気の記事 -->
   <div class="aql-featured-section">
     <h2 class="aql-featured-title">⭐ 人気の記事</h2>
     <div class="aql-featured-grid">
       
-      <!-- 人気 No.1 -->
       <a href="pig-intelligence.html" class="aql-featured-card card" data-rank="1">
-        <div class="thumb">
-          <img src="pig-illust.webp" alt="豚の知能イラスト">
-        </div>
+        <div class="thumb"><img src="pig-illust.webp" alt="豚の知能イラスト"></div>
         <div class="content">
-          <div class="aql-featured-clicks">📊 <span class="aql-clicks-badge">No.1</span></div>
           <h3>豚のエピソード：犬以上の学習力を持つ認知能力</h3>
-          <p>豚が示す驚くべき学習能力と問題解決スキル。犬との認知能力比較から見える、豚の実力の秘密とは。</p>
-          <div style="margin-top: 10px;">
+          <p>豚が示す驚くべき学習能力と問題解決スキル。犬との認知能力比較から見える実力の秘密。</p>
+          <div style="margin-top:6px;">
             <span class="aql-badge">動物の頭脳</span>
             <span class="aql-tag-badge">豚</span>
           </div>
         </div>
       </a>
       
-      <!-- 人気 No.2 -->
       <a href="dog-chicken-senses.html" class="aql-featured-card card" data-rank="2">
-        <div class="thumb">
-          <!-- 鶏のイラストパスを指定 -->
-          <img src="niwatori-illustration.webp" alt="鶏の視覚イラスト">
-        </div>
+        <div class="thumb"><img src="niwatori-illustration.webp" alt="鶏の視覚イラスト"></div>
         <div class="content">
-          <div class="aql-featured-clicks">📊 <span class="aql-clicks-badge">No.2</span></div>
           <h3>鶏の視覚：人間と異なる4色カラービジョン</h3>
-          <p>紫外線も見える鶏の眼。その独特な色彩認識が、生活行動にどう影響しているのかを科学的に解説します。</p>
-          <div style="margin-top: 10px;">
+          <p>紫外線も見える鶏の眼。その独特な色彩認識が生活行動にどう影響しているのか解説。</p>
+          <div style="margin-top:6px;">
             <span class="aql-badge">動物の五感</span>
             <span class="aql-tag-badge">鶏</span>
-          </div>
-        </div>
-      </a>
-      
-      <!-- 人気 No.3 -->
-      <a href="cat-affection-cloudflare.html" class="aql-featured-card card" data-rank="3">
-        <div class="thumb">
-          <img src="cat-illust.webp" alt="猫のイラスト">
-        </div>
-        <div class="content">
-          <div class="aql-featured-clicks">📊 <span class="aql-clicks-badge">No.3</span></div>
-          <h3>猫のコミュニケーション：鳴き声とボディランゲージの科学</h3>
-          <p>一見ツンデレな猫たちの複雑なコミュニケーション戦略。その秘密を行動学と神経科学から探ります。</p>
-          <div style="margin-top: 10px;">
-            <span class="aql-badge">動物の行動</span>
-            <span class="aql-tag-badge">猫</span>
           </div>
         </div>
       </a>
@@ -367,141 +268,87 @@
     </div>
   </div>
 
-  <!-- 全記事一覧セクション -->
+  <!-- 全記事一覧 -->
   <div class="section-title">すべての記事一覧</div>
 
   <div class="aql-article-list-wrap">
     
-    <!-- 記事 1 (豚のカードバグをきれいに修正しました) -->
     <a href="pig-intelligence.html" class="card">
-      <div class="thumb">
-        <img src="pig-illust.webp" alt="豚の知能イラスト">
-      </div>
+      <div class="thumb"><img src="pig-illust.webp" alt="豚の知能イラスト"></div>
       <div class="content">
         <div class="date">2026年5月14日</div>
         <h3>豚のエピソード：犬以上の学習力を持つ認知能力</h3>
         <p>豚が持つ複雑な思考回路と学習能力について、最新の神経科学研究から解説。</p>
-        <div style="margin-top: 10px;">
+        <div style="margin-top: 6px;">
           <span class="aql-badge">動物の頭脳</span>
           <span class="aql-tag-badge">豚</span>
         </div>
       </div>
     </a>
     
-    <!-- 記事 2 -->
     <a href="dog-chicken-senses.html" class="card">
-      <div class="thumb">
-        <!-- 鶏のイラストパスを指定 -->
-        <img src="niwatori-illustration.webp" alt="鶏の視覚イラスト">
-      </div>
+      <div class="thumb"><img src="niwatori-illustration.webp" alt="鶏の視覚イラスト"></div>
       <div class="content">
         <div class="date">2026年5月12日</div>
         <h3>鶏の視覚：人間と異なる4色カラービジョン</h3>
         <p>紫外線も見える鶏の目。その独特な色彩認識が、行動にどう影響するのか。</p>
-        <div style="margin-top: 10px;">
+        <div style="margin-top: 6px;">
           <span class="aql-badge">動物の五感</span>
           <span class="aql-tag-badge">鶏</span>
         </div>
       </div>
     </a>
     
-    <!-- 記事 3 -->
-    <a href="dog-chicken-senses.html" class="card">
-      <div class="thumb">
-        <!-- 犬のイラストパス（dog-tail-illustration.webp）を指定 -->
-        <img src="dogtail-illustration.webp" alt="犬のイラスト">
-      </div>
+    <a href="dog-face-recognition.html" class="card">
+      <div class="thumb"><img src="dogtail-illustration.webp" alt="犬のイラスト"></div>
       <div class="content">
         <div class="date">2026年5月10日</div>
         <h3>犬が人間の顔を見分ける仕組み：個人認識の科学</h3>
         <p>犬の脳がどのようにして飼い主の顔を識別しているのか、脳研究から解明。</p>
-        <div style="margin-top: 10px;">
+        <div style="margin-top: 6px;">
           <span class="aql-badge">動物の頭脳</span>
           <span class="aql-tag-badge">犬</span>
         </div>
       </div>
     </a>
     
-    <!-- 記事 4 -->
-    <a href="cat-affection-cloudflare.html" class="card">
-      <div class="thumb">
-        <img src="cat-illust.webp" alt="猫のイラスト">
-      </div>
+    <a href="cat-communication.html" class="card">
+      <div class="thumb"><img src="cat-illust.webp" alt="猫のイラスト"></div>
       <div class="content">
         <div class="date">2026年5月08日</div>
         <h3>猫のコミュニケーション：鳴き声の意味とは</h3>
         <p>猫の複雑なコミュニケーション能力を行動学から深く探ります。</p>
-        <div style="margin-top: 10px;">
+        <div style="margin-top: 6px;">
           <span class="aql-badge">動物の行動</span>
           <span class="aql-tag-badge">猫</span>
         </div>
       </div>
     </a>
-    
-    <!-- 記事 5 -->
-    <a href="pig-intelligence.html" class="card">
-      <div class="thumb">
-        <img src="pig-illust.webp" alt="豚のイラスト">
-      </div>
+
+    <!-- ★追加記事の例1（例：猫×動物の五感） -->
+    <a href="cat-senses.html" class="card">
+      <div class="thumb"><img src="cat-illust.webp" alt="猫のイラスト"></div>
       <div class="content">
-        <div class="date">2026年5月06日</div>
-        <h3>豚と犬の知能比較：どちらが本当に賢い？</h3>
-        <p>同じくらい高い知能を持つ豚と犬。その認知能力の違いを科学的に比較。</p>
-        <div style="margin-top: 10px;">
-          <span class="aql-badge">動物の頭脳</span>
-          <span class="aql-tag-badge">豚</span>
-          <span class="aql-tag-badge">犬</span>
-        </div>
-      </div>
-    </a>
-    
-    <!-- 記事 6 -->
-    <a href="dog-chicken-senses.html" class="card">
-      <div class="thumb">
-        <!-- 犬のイラストパス（dog-tail-illustration.webp）を指定 -->
-        <img src="dogtail-illustration.webp" alt="犬のイラスト">
-      </div>
-      <div class="content">
-        <div class="date">2026年5月04日</div>
-        <h3>動物たちの聴覚世界：人間には聞こえない音</h3>
-        <p>犬の超音波から象の極低周波まで。異なる音の世界を解説。</p>
-        <div style="margin-top: 10px;">
+        <div class="date">2026年7月20日</div>
+        <h3>猫のヒゲは高精度センサー：空間認知と触覚の秘密</h3>
+        <p>暗闇でも障害物を避けて歩ける猫のヒゲ（触毛）の優れた感覚機能を解説。</p>
+        <div style="margin-top: 6px;">
           <span class="aql-badge">動物の五感</span>
+          <span class="aql-tag-badge">猫</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- ★追加記事の例2（例：犬×動物の行動） -->
+    <a href="dog-behavior.html" class="card">
+      <div class="thumb"><img src="dogtail-illustration.webp" alt="犬のイラスト"></div>
+      <div class="content">
+        <div class="date">2026年7月18日</div>
+        <h3>犬が尻尾を振る方向の謎：右振りと左振りで違う感情</h3>
+        <p>ポジティブな時とネガティブな時で変わる犬の尻尾の振り方を行動学で紐解く。</p>
+        <div style="margin-top: 6px;">
+          <span class="aql-badge">動物の行動</span>
           <span class="aql-tag-badge">犬</span>
-        </div>
-      </div>
-    </a>
-
-    <!-- 記事 7 -->
-    <a href="pig-sign.html" class="card">
-      <div class="thumb">
-        <!-- 犬のイラストパス（dog-tail-illustration.webp）を指定 -->
-        <img src="pig-illust.webp" alt="豚のイラスト">
-      </div>
-      <div class="content">
-        <div class="date">2026年7</div>
-        <h3>豚の7つのサイン</h3>
-        <p>豚の群れの中から不調な一頭を驚くほど早く見つけ出す。</p>
-        <div style="margin-top: 10px;">
-          <span class="aql-badge">動物の行動</span>
-          <span class="aql-tag-badge">豚</span>
-        </div>
-      </div>
-    </a>
-
-    <!-- 記事 8 -->
-    <a href="chicken-sand.html" class="card">
-      <div class="thumb">
-        <!-- 鶏のイラストパス（chicken-sand.webp）を指定 -->
-        <img src="chicken-sand.webp" alt="鶏のイラスト">
-      </div>
-      <div class="content">
-        <div class="date">2026年7</div>
-        <h3>鶏の「砂浴び」は何のため？感覚・社会性・寄生虫対策の三重の意味</h3>
-        <p>鶏が地面で転げまわる「砂浴び」。実は皮膚の感覚ケア・仲間との交流のため。</p>
-        <div style="margin-top: 10px;">
-          <span class="aql-badge">動物の行動</span>
-          <span class="aql-tag-badge">鶏</span>
         </div>
       </div>
     </a>
