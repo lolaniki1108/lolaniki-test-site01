@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>犬と豚、どちらがコマンドを覚えるのが速い？学習速度の脳科学比較</title>
+  <meta name="description" content="犬と豚、コマンドを覚えるのはどちらが速い?研究データをもとに、学習の得意分野の違いを脳科学の視点でわかりやすく解説します。">
+  <meta name="keywords" content="犬, 豚, 学習速度, 比較, 犬 学習スピード, 豚 知能, 動物 認知科学, コマンド 覚える 速さ, ペット 学習能力">
+  
+  <style>
+    /* --------------------------------------------------
+       Global Reset & CSS Variables
+    -------------------------------------------------- */
+    :root {
+      --color-bg-primary: #FAF6F0;
+      --color-bg-card: #EFE4D6;
+      --color-bg-highlight: #FBF0DD;
+      --color-text-main: #3E3226;
+      --color-accent-primary: #B98A2E;
+      --color-accent-dark: #8B6F47;
+      --color-heading: #5C4630;
+      --color-white: #FFFFFF;
+      --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family-base);
+      background-color: var(--color-bg-primary);
+      color: var(--color-text-main);
+      line-height: 1.8;
+      font-size: 16px;
+      padding: 16px;
+    }
+
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: var(--color-white);
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(92, 70, 48, 0.08);
+    }
+
+    /* --------------------------------------------------
+       Typography & Section Titles
+    -------------------------------------------------- */
+    h3 {
+      font-size: 1.35em;
+      font-weight: bold;
+      color: var(--color-heading);
+      border-bottom: 3px solid var(--color-accent-primary);
+      padding-bottom: 8px;
+      margin: 36px 0 20px 0;
+    }
+
+    p {
+      font-size: 1em;
+      line-height: 1.9;
+      color: var(--color-text-main);
+      margin-bottom: 16px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* --------------------------------------------------
+       Components & Blocks
+    -------------------------------------------------- */
+    .block-wrapper {
+      margin-bottom: 32px;
+    }
+
+    /* Highlight Box */
+    .highlight-box {
+      background-color: var(--color-bg-highlight);
+      border-left: 6px solid var(--color-accent-primary);
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .highlight-title {
+      font-size: 1.25em;
+      font-weight: bold;
+      color: var(--color-heading);
+      margin-bottom: 12px;
+    }
+
+    .highlight-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .highlight-list li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 10px;
+      font-size: 0.98em;
+    }
+
+    .highlight-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--color-accent-primary);
+      font-weight: bold;
+    }
+
+    /* Card Wrapper (SVG & Charts) */
+    .card-box {
+      background-color: var(--color-bg-card);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 1.1em;
+      font-weight: bold;
+      color: var(--color-heading);
+      margin-bottom: 14px;
+    }
+
+    .card-caption {
+      font-size: 0.85em;
+      color: var(--color-accent-dark);
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    /* Media Styles */
+    .image-block {
+      text-align: center;
+    }
+
+    .image-block img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(92, 70, 48, 0.12);
+    }
+
+    /* Responsive Tables */
+    .table-container {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: var(--color-white);
+      border-radius: 8px;
+      overflow: hidden;
+      min-width: 500px;
+    }
+
+    th, td {
+      padding: 12px 14px;
+      text-align: left;
+      font-size: 0.92em;
+    }
+
+    th {
+      background-color: var(--color-accent-dark);
+      color: var(--color-white);
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: var(--color-bg-primary);
+    }
+
+    tr {
+      border-bottom: 1px solid var(--color-bg-card);
+    }
+
+    /* FAQ Section */
+    .faq-item {
+      margin-bottom: 16px;
+    }
+
+    .faq-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-question {
+      font-weight: bold;
+      color: var(--color-heading);
+      margin-bottom: 6px;
+    }
+
+    .faq-answer {
+      font-size: 0.95em;
+    }
+
+    /* Related Links Grid */
+    .related-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .related-card {
+      display: block;
+      background-color: var(--color-accent-dark);
+      color: var(--color-white);
+      text-decoration: none;
+      text-align: center;
+      padding: 14px 12px;
+      border-radius: 8px;
+      font-size: 0.95em;
+      font-weight: bold;
+      transition: background-color 0.2s ease;
+    }
+
+    .related-card:hover {
+      background-color: var(--color-heading);
+    }
+
+    /* --------------------------------------------------
+       Responsive Breakpoints (Desktop)
+    -------------------------------------------------- */
+    @media (min-width: 640px) {
+      body {
+        padding: 32px 16px;
+      }
+
+      .article-container {
+        padding: 40px;
+      }
+
+      h3 {
+        font-size: 1.5em;
+      }
+
+      .highlight-box {
+        padding: 24px 28px;
+      }
+
+      .card-box {
+        padding: 24px;
+      }
+
+      .related-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <article class="article-container">
+
+    <!-- Block 1: Highlight Box -->
+    <section class="block-wrapper highlight-box">
+      <h2 class="highlight-title">この記事でわかること</h2>
+      <ul class="highlight-list">
+        <li>犬と豚は「学習の種類」がそもそも違うため、単純な速さ比べが難しいこと</li>
+        <li>コマンド理解では、上位の犬種が5回未満の反復で新しい指示を覚えるという報告があること</li>
+        <li>迷路や道具を使う課題では、豚のほうが少ない試行回数で正解にたどり着いたとする研究があること</li>
+        <li>学習の速さの違いは、脳の大きさだけでなく「何のために発達した学習能力か」に関係している可能性があること</li>
+      </ul>
+    </section>
+
+    <!-- Block 2: Introduction -->
+    <section class="block-wrapper">
+      <p>「お手」や「まて」を数回教えただけで覚えてしまう犬。一方で、鼻先でジョイスティックのようなものを操作し、画面の的にカーソルを合わせられる豚。どちらも「賢い」と言われますが、その中身はまったく別物かもしれません。</p>
+      <p>長年、豚と鶏の飼育に携わってきた立場から見ても、犬と豚の「覚えの良さ」はタイプがまるで違うと感じます。本記事では、研究で報告されているデータをもとに、犬と豚の学習速度を科学的な視点で比較していきます。獣医学的な立場ではなく、あくまで研究で得られた知見をわかりやすく紹介する視点でまとめました。</p>
+    </section>
+
+    <!-- Block 3: Section Title & Content -->
+    <section class="block-wrapper">
+      <h3>「学習が速い」とはそもそも何を指すのか</h3>
+      <p>動物の学習速度を調べる研究では、主に2つの指標が使われます。ひとつは「新しい課題を覚えるまでに何回の試行が必要か」という反復回数。もうひとつは「一度覚えた行動を、次にどれくらいの確率で正しく行えるか」という成功率です。</p>
+      <p>ただし、ここで注意したいのは、研究ごとに測っている課題の種類がまったく違うという点です。人の指示に従う課題、迷路を抜ける課題、道具を操作する課題では、求められる能力が異なります。そのため「犬と豚、どちらが速いか」という問いには、まず「何をする速さなのか」を分けて考える必要があります。</p>
+    </section>
+
+    <!-- Block 4: Flow Diagram (SVG) -->
+    <section class="block-wrapper card-box">
+      <p class="card-title">図解: 学習速度を測る実験の基本的な流れ</p>
+      <svg viewBox="0 0 720 160" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto; display:block;">
+        <rect x="10" y="55" width="150" height="60" rx="10" fill="#8B6F47"/>
+        <text x="85" y="90" font-size="16" fill="#FFFFFF" text-anchor="middle">課題を提示</text>
+        <rect x="195" y="55" width="150" height="60" rx="10" fill="#B98A2E"/>
+        <text x="270" y="90" font-size="16" fill="#FFFFFF" text-anchor="middle">試行(挑戦)</text>
+        <rect x="380" y="55" width="150" height="60" rx="10" fill="#8B6F47"/>
+        <text x="455" y="90" font-size="16" fill="#FFFFFF" text-anchor="middle">結果を観察</text>
+        <rect x="565" y="55" width="145" height="60" rx="10" fill="#5C4630"/>
+        <text x="637" y="83" font-size="14" fill="#FFFFFF" text-anchor="middle">反復回数を</text>
+        <text x="637" y="103" font-size="14" fill="#FFFFFF" text-anchor="middle">カウント</text>
+        <path d="M160 85 L195 85" stroke="#5C4630" stroke-width="3" marker-end="url(#arrow1)"/>
+        <path d="M345 85 L380 85" stroke="#5C4630" stroke-width="3" marker-end="url(#arrow1)"/>
+        <path d="M530 85 L565 85" stroke="#5C4630" stroke-width="3" marker-end="url(#arrow1)"/>
+        <defs>
+          <marker id="arrow1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+            <path d="M0,0 L10,5 L0,10 Z" fill="#5C4630"/>
+          </marker>
+        </defs>
+      </svg>
+      <p class="card-caption">この「正解にたどり着くまでの回数」が少ないほど、その課題については学習が速いと判定されます。</p>
+    </section>
+
+    <!-- Block 5: Image 1 -->
+    <section class="block-wrapper image-block">
+      <img src="dog-pig-play.webp" alt="遊ぶ犬と豚のイラスト">
+      <p class="card-caption">遊び方ひとつをとっても、犬と豚では興味の示し方が違って見えます。</p>
+    </section>
+
+    <!-- Block 6: Dog Learning Speed -->
+    <section class="block-wrapper">
+      <h3>犬の学習スピード:「コマンド理解」の科学</h3>
+      <p>犬の「賢さ」を語るとき、よく使われるのが服従訓練における学習速度です。大規模な調査によれば、上位のグループに分類される犬種は、新しいコマンドを5回未満の反復で理解し、初回で正しく応じる割合も95%以上になるとされています。一方で下位のグループでは、同じコマンドの理解に80〜100回もの反復が必要になることがある、という報告もあります。</p>
+      <p>さらに興味深いのは、個体によっては1000語以上のモノの名前を覚えたとされる事例が報告されていることです。これは、犬が「人の言葉と物」を結びつける能力に非常に長けていることを示す一例として紹介されています。</p>
+    </section>
+
+    <!-- Block 7: Dog Table -->
+    <section class="block-wrapper">
+      <p class="card-title">表: 犬の「コマンド理解の速さ」による分類の目安</p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>分類</th>
+              <th>新しいコマンド理解に必要な反復回数</th>
+              <th>初回で従う割合の目安</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>最上位グループ</td><td>5回未満</td><td>95%以上</td></tr>
+            <tr><td>優秀な作業犬グループ</td><td>5〜15回</td><td>85%前後</td></tr>
+            <tr><td>平均より上のグループ</td><td>15〜25回</td><td>70%前後</td></tr>
+            <tr><td>標準的なグループ</td><td>25〜40回</td><td>50%前後</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="card-caption" style="text-align: left;">※オビディエンス(服従訓練)審査員への調査をもとにした分類の目安です。個体差が大きく、犬種だけで断定できるものではありません。</p>
+    </section>
+
+    <!-- Block 8: Pig Learning Speed -->
+    <section class="block-wrapper">
+      <h3>豚の学習スピード:ジョイスティック実験と迷路課題</h3>
+      <p>豚に関する有名な実験のひとつに、鼻先でジョイスティックのような装置を操作し、画面上のカーソルを的に合わせるという課題があります。ある大学の研究チームが行ったこの実験では、豚がこの抽象的な操作を習得できることが確認されており、多くの犬にとっては難しいとされるタイプの課題です。</p>
+      <p>また、複雑な問題解決課題を犬と豚それぞれに与えたある研究では、豚は平均15回程度の試行で正解にたどり着いたのに対し、犬は平均25回程度の試行を要したという結果が報告されています。ただし、これは特定の一つの課題における結果であり、あらゆる場面で豚が犬より速いことを意味するわけではない点に注意が必要です。</p>
+      <p>このほかにも、豚は鏡を使って隠された食べ物の位置を推測できること、数年単位で餌の隠し場所を記憶していられること、初めて見る物に強い好奇心を示すことなどが報告されています。物事をじっくり観察し、自力で答えを探すタイプの学習を得意としているようです。</p>
+    </section>
+
+    <!-- Block 9: Image 2 -->
+    <section class="block-wrapper image-block">
+      <img src="pig-problem-solving-photo.jpg" alt="課題に取り組む豚の写真">
+      <p class="card-caption">豚は困りごとを自力で解決しようとする傾向が強いとされています。</p>
+    </section>
+
+    <!-- Block 10: Comparative Research -->
+    <section class="block-wrapper">
+      <h3>犬と豚を同じ条件で比べた研究では?</h3>
+      <p>2019年に発表された研究では、訓練を受けていない生後4か月の子豚と子犬を対象に、人が指差しなどの合図を示したときの反応が比較されました。結果、両者は人の合図に対して似たような反応を見せ、指差しのような伝達的なサインを読み取る能力そのものに、犬と豚で本質的な差はないのではないか、と結論づけられています。</p>
+      <p>ただし同じ研究では、犬にとって人という存在が特別に強い社会的な合図として機能しやすいため、特別な訓練をしなくても人からの合図に反応しやすい、という違いも指摘されています。つまり、能力の差というより「人に注目しやすいかどうか」という性質の差が、結果として学習のしやすさに表れている可能性があるということです。</p>
+      <p>別の実験では、パズルのような課題を与えられたとき、子豚は自力で解決しようと粘り強く取り組み続けたのに対し、子犬は途中で人間のほうを見て助けを求める行動を見せたという報告もあります。これは学習の速さというより、学習の「スタイル」の違いを表す興味深い例といえます。</p>
+    </section>
+
+    <!-- Block 11: Comparison Table -->
+    <section class="block-wrapper">
+      <p class="card-title">表: 犬と豚の学習に関する特徴の比較</p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>犬</th>
+              <th>豚</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>人の合図への反応</td>
+              <td>非常に速い(特別な訓練なしでも反応しやすい)</td>
+              <td>合図を読み取る力自体は同程度とする報告あり</td>
+            </tr>
+            <tr>
+              <td>自力での問題解決</td>
+              <td>困ると人を頼る傾向</td>
+              <td>粘り強く自力で挑み続ける傾向</td>
+            </tr>
+            <tr>
+              <td>長期記憶</td>
+              <td>飼い主との関係性の記憶に強い</td>
+              <td>餌の隠し場所などを年単位で記憶</td>
+            </tr>
+            <tr>
+              <td>新しいコマンドの習得</td>
+              <td>上位犬種で5回未満の例も</td>
+              <td>課題によっては犬より少ない試行数の報告も</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Block 12: Image 3 -->
+    <section class="block-wrapper image-block">
+      <img src="dog-training-photo.jpg" alt="訓練を受ける犬の写真">
+      <p class="card-caption">犬は人からの合図をきっかけに学習が進みやすいとされています。</p>
+    </section>
+
+    <!-- Block 13: Brain Mechanisms -->
+    <section class="block-wrapper">
+      <h3>なぜ差が生まれる?学習速度を左右する脳のしくみ</h3>
+      <p>一部の解説記事では、豚は体の大きさに対する大脳皮質の割合が犬より大きく、それが複雑な推論や抽象的な思考を得意とする一因ではないか、と紹介されています。まだ議論の余地がある見方ではありますが、豚が道具を使うような課題を得意とする背景として興味深い視点です。</p>
+      <p>一方、犬がコマンドを速く覚えられるのは、単純な処理能力の高さというより、長い年月をかけて人と暮らすなかで培われてきた「人の表情や視線、指差しを読み取る力」に特化した社会的な認知能力によるところが大きいと考えられています。つまり、犬の学習の速さは「人向けにチューニングされた学習能力」であり、豚の学習の速さは「独力で環境を理解する学習能力」だと捉えると、両者の違いがわかりやすくなります。</p>
+    </section>
+
+    <!-- Block 14: Chart (SVG) -->
+    <section class="block-wrapper card-box">
+      <p class="card-title">グラフ: 課題ごとの試行回数の目安</p>
+      <svg viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto; display:block;">
+        <line x1="80" y1="20" x2="80" y2="220" stroke="#5C4630" stroke-width="2"/>
+        <line x1="80" y1="220" x2="600" y2="220" stroke="#5C4630" stroke-width="2"/>
+        <rect x="130" y="200" width="90" height="20" fill="#B98A2E"/>
+        <text x="175" y="215" font-size="13" fill="#FFFFFF" text-anchor="middle">5回未満</text>
+        <text x="175" y="240" font-size="13" fill="#5C4630" text-anchor="middle">上位犬種</text>
+        <text x="175" y="257" font-size="11" fill="#5C4630" text-anchor="middle">(コマンド理解)</text>
+        <rect x="280" y="100" width="90" height="120" fill="#8B6F47"/>
+        <text x="325" y="115" font-size="13" fill="#FFFFFF" text-anchor="middle">約15回</text>
+        <text x="325" y="240" font-size="13" fill="#5C4630" text-anchor="middle">豚</text>
+        <text x="325" y="257" font-size="11" fill="#5C4630" text-anchor="middle">(問題解決課題)</text>
+        <rect x="430" y="40" width="90" height="180" fill="#5C4630"/>
+        <text x="475" y="55" font-size="13" fill="#FFFFFF" text-anchor="middle">約25回</text>
+        <text x="475" y="240" font-size="13" fill="#5C4630" text-anchor="middle">犬</text>
+        <text x="475" y="257" font-size="11" fill="#5C4630" text-anchor="middle">(同一の問題解決課題)</text>
+      </svg>
+      <p class="card-caption">※「上位犬種のコマンド理解」と「問題解決課題での豚・犬の比較」は、それぞれ別の研究・別の課題に基づく数値です。同じものさしで測った結果ではない点にご注意ください。</p>
+    </section>
+
+    <!-- Block 13-2: Breed Differences -->
+    <section class="block-wrapper">
+      <h3>同じ「犬」でも幅がある:犬種による学習速度の違い</h3>
+      <p>先ほどの分類表からもわかるように、犬は犬種によって学習速度に大きな幅があります。上位グループと下位グループを比べると、新しいコマンドの理解に必要な反復回数は20倍以上も違うことになります。これは、犬という一つの種のなかでも、もともと担ってきた役割(牧羊、狩猟、番犬、愛玩など)によって、人の指示への反応の仕方が大きく異なってきたためだと考えられています。</p>
+      <p>つまり「犬は学習が速い」とひとくくりにするのは、実はやや乱暴な言い方でもあります。豚と比較する場合も、「どの犬種の、どんな課題における速さなのか」を意識すると、研究データの見え方がぐっとクリアになります。</p>
+    </section>
+
+    <!-- Block 13-3: Mini Pig Case Study -->
+    <section class="block-wrapper">
+      <h3>豚も芸を覚える?ミニブタの訓練報告</h3>
+      <p>近年はペットとして迎えられるミニブタも増えており、犬と同じようにトイレの場所を覚えたり、簡単な合図に応じて座ったりする姿が報告されています。長年にわたり豚の飼育に関わってきた経験からしても、豚は同じ手順を数回繰り返すと、その流れ自体をかなり早い段階で覚える印象があります。えさの時間や飼育担当者の動き方のパターンを察知するのも早く、犬のように「人の顔色をうかがう」というより、「状況そのものを観察して先を読む」タイプの覚え方をしているように見えます。</p>
+      <p>この観察は研究データとも矛盾しません。豚が得意とするのは、人の指示待ちではなく、環境の変化やパターンを自分で見つけ出す学習だと考えられているからです。飼育の現場感覚と研究結果が一致する、興味深いポイントだといえるでしょう。</p>
+    </section>
+
+    <!-- Block 13-4: FAQ -->
+    <section class="block-wrapper card-box">
+      <p class="card-title" style="font-size: 1.25em;">よくある質問</p>
+      <div class="faq-item">
+        <p class="faq-question">Q. 結局、頭がいいのは犬と豚どちらですか?</p>
+        <p class="faq-answer">A. 「頭のよさ」の物差しが違うため、単純に優劣をつけるのは難しいというのが研究者の見方に近いです。人の指示に従う学習では犬、自力での問題解決では豚が強みを見せることが多い、と考えるとわかりやすくなります。</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-question">Q. 豚に犬と同じようにコマンドを教えることはできますか?</p>
+        <p class="faq-answer">A. 座る・触れるといった簡単な動作であれば、繰り返しと餌などのごほうびを使って覚えさせられるという報告があります。ただし、人の指差しなどの合図に自発的に注目する度合いは犬ほど高くない可能性があるため、教え方には工夫が必要です。</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-question">Q. コマンドを覚えるのが遅い犬種は賢くないのですか?</p>
+        <p class="faq-answer">A. 反復回数はあくまで「人の指示への反応の速さ」を測る一つの指標にすぎません。嗅覚を使った探索能力や独立心の強さなど、別の側面で優れている犬種も多く、反復回数の多さがそのまま知能の低さを意味するわけではありません。</p>
+      </div>
+    </section>
+
+    <!-- Block 15: Summary -->
+    <section class="block-wrapper">
+      <h3>まとめ:結局、どちらが「速い」のか</h3>
+      <p>ここまで見てきたように、「犬と豚、どちらが学習が速いか」という問いには、ひとつの答えでは片づけられません。人からの指示を覚えて従うという課題では、長年の共進化によって人向けに磨かれた犬の社会的な認知能力が強みを発揮し、上位の犬種であれば数回の反復で新しいコマンドを覚えてしまいます。</p>
+      <p>一方、道具を使ったり、迷路のような課題を自力で解いたりする場面では、豚が犬と同等か、それ以上の成績を残したとする研究も存在します。粘り強く自分で答えを探すタイプの学習が得意なようです。</p>
+      <p>つまり犬と豚は、どちらが優れているというより、それぞれ違う種類の「速さ」を持っていると考えるのが実情に近いといえそうです。長年、豚や鶏の飼育に関わってきた経験からも、この「学習スタイルの違い」を知っておくと、動物たちの行動をより深く楽しめるようになると感じています。</p>
+    </section>
+
+    <!-- Block 16: References -->
+    <section class="block-wrapper highlight-box" style="background-color: var(--color-bg-primary); border-left: none;">
+      <p class="card-title">参考文献</p>
+      <ol style="padding-left: 20px; font-size: 0.95em; line-height: 1.9;">
+        <li>Comparing interspecific socio-communicative skills of socialized juvenile dogs and miniature pigs, PMC(2019年発表の比較研究)</li>
+        <li>スタンレー・コレン『犬の知能(The Intelligence of Dogs)』(オビディエンス審査員への大規模調査に基づく分類)</li>
+        <li>ペンシルベニア州立大学の研究チームによるジョイスティック実験に関する報告</li>
+        <li>豚の問題解決能力・記憶力に関する複数の動物行動学レビュー記事</li>
+      </ol>
+    </section>
+
+    <!-- Block 17: Related Articles Grid -->
+    <section class="block-wrapper">
+      <p class="card-title">関連記事</p>
+      <div class="related-grid">
+        <a href="https://lolaniki.com/archives/14" class="related-card">犬のしっぽの振り方でわかる気持ち</a>
+        <a href="https://lolaniki.com/archives/23" class="related-card">豚が出す体調不良のサインとは</a>
+        <a href="https://lolaniki.com/archives/8" class="related-card">猫の愛情表現、しぐさでわかるサイン</a>
+        <a href="https://lolaniki.com/archives/19" class="related-card">豚の知能、最新研究まとめ</a>
+      </div>
+      <p class="card-caption">※実際の記事パスに合わせてリンク先URLをご確認ください。</p>
+    </section>
+
+  </article>
+
+</body>
+</html>
