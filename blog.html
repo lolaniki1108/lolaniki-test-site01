@@ -22,7 +22,7 @@
   }
   *{box-sizing:border-box;}
   body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Sans JP', sans-serif;line-height:1.8;}
-  
+
   /* PC画面での全体幅を約70%相当（720px）にスリム化 */
   .wrap{max-width:720px;margin:0 auto;padding:32px 20px;}
   a{color:inherit;text-decoration:none;}
@@ -32,7 +32,7 @@
   nav.main-nav{display:flex;gap:20px;font-size:14px;font-weight:700;}
   nav.main-nav a{color:var(--brand);}
   nav.main-nav a:hover{color:var(--ochre);}
-  
+
   /* 記事カードの調整 */
   .card {
     display: flex;
@@ -185,6 +185,42 @@
     padding-left: 10px;
   }
 
+  /* ページネーション */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 32px 0 8px;
+  }
+  .page-btn {
+    min-width: 36px;
+    height: 36px;
+    padding: 0 10px;
+    border-radius: 4px;
+    background: var(--card);
+    color: var(--bark);
+    font-weight: 700;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .15s ease, color .15s ease;
+  }
+  .page-btn:hover {
+    background: var(--ochre);
+    color: #fff;
+  }
+  .page-btn.active {
+    background: var(--brand);
+    color: #fff;
+    border-color: var(--brand);
+    cursor: default;
+  }
+
   footer.site {
     text-align: center;
     padding: 24px;
@@ -193,6 +229,8 @@
     border-top: 1px solid var(--line);
     background: #fff;
   }
+  footer.site a { color: var(--brand); }
+  footer.site .footer-links a { margin: 0 6px; }
 
   @media (max-width: 600px){
     .card { flex-direction: column; align-items: flex-start; }
@@ -240,7 +278,7 @@
   <div class="aql-featured-section">
     <h2 class="aql-featured-title">⭐ 人気の記事</h2>
     <div class="aql-featured-grid">
-      
+
       <a href="pig-intelligence.html" class="aql-featured-card card" data-rank="1">
         <div class="thumb"><img src="pig-illust.webp" alt="豚の知能イラスト"></div>
         <div class="content">
@@ -252,7 +290,7 @@
           </div>
         </div>
       </a>
-      
+
       <a href="dog-chicken-senses.html" class="aql-featured-card card" data-rank="2">
         <div class="thumb"><img src="niwatori-illustration.webp" alt="鶏の視覚イラスト"></div>
         <div class="content">
@@ -264,15 +302,15 @@
           </div>
         </div>
       </a>
-      
+
     </div>
   </div>
 
   <!-- 全記事一覧 -->
   <div class="section-title">すべての記事一覧</div>
 
-  <div class="aql-article-list-wrap">
-    
+  <div class="aql-article-list-wrap" id="article-list">
+
     <a href="pig-intelligence.html" class="card">
       <div class="thumb"><img src="pig-illust.webp" alt="豚の知能イラスト"></div>
       <div class="content">
@@ -285,7 +323,7 @@
         </div>
       </div>
     </a>
-    
+
     <a href="dog-chicken-senses.html" class="card">
       <div class="thumb"><img src="niwatori-illustration.webp" alt="鶏の視覚イラスト"></div>
       <div class="content">
@@ -298,7 +336,7 @@
         </div>
       </div>
     </a>
-    
+
     <a href="dog-face-recognition.html" class="card">
       <div class="thumb"><img src="dogtail-illustration.webp" alt="犬のイラスト"></div>
       <div class="content">
@@ -311,7 +349,7 @@
         </div>
       </div>
     </a>
-    
+
     <a href="cat-communication.html" class="card">
       <div class="thumb"><img src="cat-illust.webp" alt="猫のイラスト"></div>
       <div class="content">
@@ -325,7 +363,6 @@
       </div>
     </a>
 
-    <!-- ★追加記事の例1（例：猫×動物の五感） -->
     <a href="cat-senses.html" class="card">
       <div class="thumb"><img src="cat-illust.webp" alt="猫のイラスト"></div>
       <div class="content">
@@ -339,7 +376,6 @@
       </div>
     </a>
 
-    <!-- ★追加記事の例2（例：犬×動物の行動） -->
     <a href="dog-behavior.html" class="card">
       <div class="thumb"><img src="dogtail-illustration.webp" alt="犬のイラスト"></div>
       <div class="content">
@@ -352,15 +388,73 @@
         </div>
       </div>
     </a>
-    
+
   </div>
+
+  <!-- ページネーション -->
+  <div class="pagination" id="pagination"></div>
 
 </div>
 
 <footer class="site">
-  Animal IQ Labo（テスト環境） / 本番サイトは <a href="https://lolaniki.com" style="color:var(--brand);">lolaniki.com</a>
-  <br><a href="contact.html" style="color:var(--brand);">ご意見・お問い合わせ</a>
+  Animal IQ Labo（テスト環境） / 本番サイトは <a href="https://lolaniki.com">lolaniki.com</a>
+  <br>
+  <span class="footer-links">
+    <a href="privacy.html">プライバシーポリシー</a> | <a href="contact.html">ご意見・お問い合わせ</a>
+  </span>
 </footer>
+
+<script>
+(function(){
+  var ITEMS_PER_PAGE = 6; // ★このページに何記事たまったら次ページへ回すかをここで調整できます
+  var list = document.getElementById('article-list');
+  var pagination = document.getElementById('pagination');
+  if (!list || !pagination) return;
+
+  var items = Array.prototype.filter.call(list.children, function(el){
+    return el.classList && el.classList.contains('card');
+  });
+  var totalPages = Math.max(1, Math.ceil(items.length / ITEMS_PER_PAGE));
+
+  function showPage(page, scroll){
+    items.forEach(function(item, i){
+      var itemPage = Math.floor(i / ITEMS_PER_PAGE) + 1;
+      item.style.display = (itemPage === page) ? '' : 'none';
+    });
+    renderPagination(page);
+    if (scroll) {
+      list.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function renderPagination(current){
+    pagination.innerHTML = '';
+    if (totalPages <= 1) return;
+
+    for (var p = 1; p <= totalPages; p++) {
+      (function(p){
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.textContent = p;
+        btn.className = 'page-btn' + (p === current ? ' active' : '');
+        btn.addEventListener('click', function(){ showPage(p, true); });
+        pagination.appendChild(btn);
+      })(p);
+    }
+
+    if (current < totalPages) {
+      var next = document.createElement('button');
+      next.type = 'button';
+      next.textContent = '»';
+      next.className = 'page-btn';
+      next.addEventListener('click', function(){ showPage(current + 1, true); });
+      pagination.appendChild(next);
+    }
+  }
+
+  showPage(1, false);
+})();
+</script>
 
 </body>
 </html>
