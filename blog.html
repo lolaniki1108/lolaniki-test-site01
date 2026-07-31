@@ -59,12 +59,14 @@
   /* サムネイル画像をカード上部いっぱいに表示 */
   .card .thumb {
     width: 100%;
+    background: var(--card);
   }
   .card .thumb img {
     width: 100%;
     height: auto;
-    aspect-ratio: 16/10;
-    object-fit: cover;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    padding: 14px;
     display: block;
   }
   .card .content {
@@ -283,7 +285,7 @@
   </div>
 
   <!-- 人気の記事 -->
-  <div class="aql-featured-section">
+  <div class="aql-featured-section" id="featured-section">
     <h2 class="aql-featured-title">⭐ 人気の記事</h2>
     <div class="aql-featured-grid">
 
@@ -458,6 +460,7 @@
   var ITEMS_PER_PAGE = 6; // ★このページに何記事たまったら次ページへ回すかをここで調整できます
   var list = document.getElementById('article-list');
   var pagination = document.getElementById('pagination');
+  var featured = document.getElementById('featured-section');
   if (!list || !pagination) return;
 
   var items = Array.prototype.filter.call(list.children, function(el){
@@ -470,6 +473,9 @@
       var itemPage = Math.floor(i / ITEMS_PER_PAGE) + 1;
       item.style.display = (itemPage === page) ? '' : 'none';
     });
+    if (featured) {
+      featured.style.display = (page === 1) ? '' : 'none';
+    }
     renderPagination(page);
     if (scroll) {
       list.scrollIntoView({ behavior: 'smooth', block: 'start' });
