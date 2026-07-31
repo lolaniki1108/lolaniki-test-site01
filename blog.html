@@ -33,46 +33,52 @@
   nav.main-nav a{color:var(--brand);}
   nav.main-nav a:hover{color:var(--ochre);}
 
-  /* 記事カードの調整 */
+  /* 記事一覧・人気記事：カードをグリッド表示 */
+  .aql-article-list-wrap,
+  .aql-featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  /* 記事カードの調整（画像を上に大きく見せるレイアウト） */
   .card {
     display: flex;
-    gap: 16px;
-    align-items: center;
+    flex-direction: column;
     background: #fff;
     border: 1px solid var(--line);
-    border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 16px;
+    border-radius: 12px;
+    overflow: hidden;
     transition: transform .18s ease, box-shadow .18s ease;
   }
   .card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(92,70,48,0.12);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(92,70,48,0.16);
     border-color: var(--aql-brown);
   }
-  /* サムネイル画像を小さめ（約25%〜30%）に設定 */
+  /* サムネイル画像をカード上部いっぱいに表示 */
   .card .thumb {
-    width: 28%;
-    max-width: 160px;
-    flex-shrink: 0;
+    width: 100%;
   }
   .card .thumb img {
     width: 100%;
     height: auto;
-    aspect-ratio: 4/3;
+    aspect-ratio: 16/10;
     object-fit: cover;
-    border-radius: 6px;
     display: block;
   }
   .card .content {
     flex: 1;
+    padding: 16px 18px 20px;
+    display: flex;
+    flex-direction: column;
   }
   .card .aql-badge {
     display: inline-block;
     font-size: 11px;
     color: var(--brand);
     background: var(--card);
-    padding: 2px 8px;
+    padding: 3px 9px;
     border-radius: 4px;
     font-weight: 600;
   }
@@ -81,30 +87,32 @@
     font-size: 11px;
     color: #666;
     background: #f0f0f0;
-    padding: 2px 8px;
+    padding: 3px 9px;
     border-radius: 4px;
     font-weight: 600;
     margin-left: 4px;
   }
   .card h3 {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 700;
-    margin: 4px 0 6px;
+    margin: 8px 0 8px;
     color: var(--bark);
-    line-height: 1.4;
+    line-height: 1.45;
   }
   .card:hover h3 {
     color: var(--aql-brown);
   }
   .card .date {
-    font-size: 11px;
+    font-size: 11.5px;
     color: #999;
+    order: -1;
   }
   .card p {
-    margin: 0;
-    font-size: 13px;
+    margin: 0 0 4px;
+    font-size: 13.5px;
     color: #5a4c3c;
-    line-height: 1.5;
+    line-height: 1.65;
+    flex: 1;
   }
 
   /* フィルターセクション */
@@ -232,9 +240,9 @@
   footer.site a { color: var(--brand); }
   footer.site .footer-links a { margin: 0 6px; }
 
-  @media (max-width: 600px){
-    .card { flex-direction: column; align-items: flex-start; }
-    .card .thumb { width: 100%; max-width: 100%; }
+  @media (max-width: 480px){
+    .aql-article-list-wrap,
+    .aql-featured-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
