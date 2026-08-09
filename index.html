@@ -6,6 +6,10 @@
 <title>Animal IQ Labo — 豚・鶏・犬・猫の「なぜ？」を科学データで解き明かすブログ</title>
 <link rel="icon" type="image/png" href="cat-pig_puzzle.webp">
 <meta name="description" content="農業現場で動物と向き合ってきた経験をもとに、最新の研究論文から動物の知能・感覚・行動の不思議をわかりやすくお届けします。">
+<meta property="og:title" content="Animal IQ Labo — 豚・鶏・犬・猫の「なぜ？」を科学データで解き明かすブログ">
+<meta property="og:description" content="農業現場で動物と向き合ってきた経験をもとに、最新の研究論文から動物の知能・感覚・行動の不思議をわかりやすくお届けします。">
+<meta property="og:image" content="cat-pig_puzzle.webp">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
@@ -22,12 +26,32 @@
   body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Sans JP', sans-serif;line-height:1.9;}
   .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
   a{color:inherit;}
-  header.site{border-bottom:1px solid var(--line);background:#fff;}
-  .nav-inner{max-width:960px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+  header.site{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:50;}
+  .nav-inner{max-width:960px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
   .brand-name{font-family:'Noto Sans JP', sans-serif;font-weight:700;font-size:20px;font-weight:700;color:var(--bark);text-decoration:none;}
-  nav.main-nav{display:flex;gap:28px;font-size:14px;font-weight:700;}
+  .nav-right{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+  nav.main-nav{display:flex;gap:22px;font-size:14px;font-weight:700;}
   nav.main-nav a{text-decoration:none;color:var(--brand);}
   nav.main-nav a:hover{color:var(--ochre);}
+
+  /* Compact header search */
+  .nav-search{position:relative;}
+  .nav-search-row{display:flex;align-items:center;gap:6px;}
+  .nav-search input{width:150px;padding:6px 10px;border:1px solid var(--line);border-radius:6px;font-size:12.5px;font-family:inherit;background:var(--cream);color:var(--ink);}
+  .nav-search input:focus{outline:2px solid var(--ochre);}
+  .nav-search button{padding:6px 12px;border:none;border-radius:6px;background:var(--bark);color:#fff;font-weight:700;font-size:12.5px;cursor:pointer;white-space:nowrap;}
+  .nav-search-results{position:absolute;top:calc(100% + 8px);right:0;width:320px;max-width:88vw;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 8px 24px rgba(58,46,34,0.14);padding:8px;display:none;max-height:360px;overflow-y:auto;}
+  .nav-search-results.open{display:block;}
+  .nsr-item{display:block;padding:9px 10px;border-radius:6px;text-decoration:none;font-size:13px;color:var(--ink);}
+  .nsr-item:hover{background:var(--card);}
+  .nsr-item .nsr-cat{display:block;font-size:11px;color:var(--ochre);font-weight:700;margin-bottom:2px;}
+  .nsr-empty, .nsr-hint{padding:10px;font-size:12.5px;color:var(--brand);}
+
+  @media (max-width:640px){
+    .nav-search input{width:120px;}
+    .nav-search-results{right:auto;left:0;width:280px;}
+  }
+
   .hero{display:grid;grid-template-columns:1.1fr 0.9fr;gap:36px;padding:48px 0;align-items:center;}
   @media (max-width:720px){.hero{grid-template-columns:1fr;}}
   .hero-img{width:100%;border-radius:14px;display:block;background:#fff;border:1px solid var(--line);}
@@ -37,15 +61,12 @@
   .hero-lede{font-size:15px;color:#5a4c3c;margin:0 0 20px;}
   .tag-pills{display:flex;flex-wrap:wrap;gap:10px;}
   .pill{background:var(--card);color:var(--bark);font-size:13px;padding:6px 14px;border-radius:999px;font-weight:700;}
-  section.search-box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:28px;margin:16px 0 48px;}
-  .search-title{font-family:'Noto Sans JP', sans-serif;font-weight:700;font-size:19px;color:var(--bark);margin:0 0 6px;}
-  .search-sub{font-size:13px;color:var(--brand);margin:0 0 18px;}
-  .search-row{display:flex;gap:10px;margin-bottom:16px;}
-  .search-row input{flex:1;padding:12px 14px;border:1px solid var(--line);border-radius:8px;font-size:14px;font-family:inherit;background:var(--cream);}
-  .search-row button{padding:12px 20px;border:none;border-radius:8px;background:var(--bark);color:#fff;font-weight:700;font-size:14px;cursor:pointer;}
-  .tag-search-label{font-size:13px;color:var(--brand);margin-bottom:10px;}
+
+  .tag-browse{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 28px;margin:16px 0 48px;}
+  .tag-browse-title{font-family:'Noto Sans JP', sans-serif;font-weight:700;font-size:16px;color:var(--bark);margin:0 0 12px;}
   .tag-links{display:flex;gap:10px;flex-wrap:wrap;}
   .tag-links a{background:var(--cream);border:1px solid var(--line);padding:6px 14px;border-radius:999px;font-size:13px;text-decoration:none;color:var(--bark);font-weight:700;}
+
   .section-title{font-family:'Noto Sans JP', sans-serif;font-weight:700;font-size:22px;color:var(--bark);margin:0 0 24px;border-left:5px solid var(--ochre);padding-left:14px;}
   .theme-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-bottom:56px;}
   .theme-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px;}
@@ -67,12 +88,21 @@
 
 <header class="site">
   <div class="nav-inner">
-    <a class="brand-name" href="index.html" style="display:flex;align-items:center;gap:8px;"><img src="cropped-logo-icon.webp" alt="" style="width: 100px; height: 100px; border-radius: 50%;">Animal IQ Labo</a>
-    <nav class="main-nav">
-      <a href="index.html">TOP</a>
-      <a href="animal.html">Animal</a>
-      <a href="blog.html">Blog</a>
-    </nav>
+    <a class="brand-name" href="index.html" style="display:flex;align-items:center;gap:8px;"><img src="cropped-logo-icon.webp" alt="" style="width: 44px; height: 44px; border-radius: 50%;">Animal IQ Labo</a>
+    <div class="nav-right">
+      <nav class="main-nav">
+        <a href="index.html">TOP</a>
+        <a href="animal.html">Animal</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+      <div class="nav-search" id="nav-search">
+        <div class="nav-search-row">
+          <input type="text" id="site-search-input" placeholder="記事を検索" autocomplete="off">
+          <button type="button" id="site-search-btn">検索</button>
+        </div>
+        <div class="nav-search-results" id="site-search-results"></div>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -100,14 +130,8 @@
     </div>
   </section>
 
-  <section class="search-box">
-    <div class="search-title">🔍 記事を探す</div>
-    <div class="search-sub">キーワードで検索、またはタグで絞り込み</div>
-    <div class="search-row">
-      <input type="text" placeholder="例：豚の知能、猫のひげ…">
-      <button type="button">検索</button>
-    </div>
-    <div class="tag-search-label">タグで探す：</div>
+  <section class="tag-browse">
+    <div class="tag-browse-title">タグで探す</div>
     <div class="tag-links">
       <a href="category-pig.html">🐽 豚</a>
       <a href="category-chicken.html">🐣 鶏</a>
@@ -157,6 +181,73 @@
   Animal IQ Labo（テスト環境） / 本番サイトは <a href="https://lolaniki.com" style="color:var(--brand);">lolaniki.com</a>
   <br><a href="contact.html" style="color:var(--brand);">ご意見・お問い合わせ</a>
 </footer>
+
+<script>
+(function(){
+  var input = document.getElementById('site-search-input');
+  var btn = document.getElementById('site-search-btn');
+  var resultsBox = document.getElementById('site-search-results');
+  var container = document.getElementById('nav-search');
+  var catLabel = {brain:'動物の頭脳', senses:'動物の五感', behavior:'動物の行動'};
+  var data = null;
+
+  fetch('search-data.json').then(function(r){ return r.json(); }).then(function(d){ data = d; });
+
+  function normalize(s){
+    return (s || '').toLowerCase();
+  }
+
+  function search(query){
+    if (!data) return [];
+    var q = normalize(query);
+    if (!q) return [];
+    return data.filter(function(item){
+      var haystack = normalize(item.title + ' ' + item.keywords + ' ' + (item.tags || []).join(' '));
+      return haystack.indexOf(q) !== -1;
+    }).slice(0, 8);
+  }
+
+  function render(query){
+    var q = query.trim();
+    if (!data) {
+      resultsBox.innerHTML = '<div class="nsr-hint">読み込み中です…</div>';
+      resultsBox.classList.add('open');
+      return;
+    }
+    if (!q) {
+      resultsBox.classList.remove('open');
+      resultsBox.innerHTML = '';
+      return;
+    }
+    var matches = search(q);
+    if (matches.length === 0) {
+      resultsBox.innerHTML = '<div class="nsr-empty">「' + q + '」に一致する記事が見つかりませんでした。</div>';
+    } else {
+      resultsBox.innerHTML = matches.map(function(item){
+        var cat = catLabel[item.category] || '';
+        return '<a class="nsr-item" href="' + item.url + '">' +
+          '<span class="nsr-cat">' + cat + '</span>' +
+          item.title +
+        '</a>';
+      }).join('');
+    }
+    resultsBox.classList.add('open');
+  }
+
+  input.addEventListener('input', function(){ render(input.value); });
+  input.addEventListener('focus', function(){ if (input.value.trim()) render(input.value); });
+  btn.addEventListener('click', function(){ render(input.value); });
+  input.addEventListener('keydown', function(e){
+    if (e.key === 'Enter') { render(input.value); }
+    if (e.key === 'Escape') { resultsBox.classList.remove('open'); input.blur(); }
+  });
+  document.addEventListener('click', function(e){
+    if (!container.contains(e.target)) {
+      resultsBox.classList.remove('open');
+    }
+  });
+})();
+</script>
 
 </body>
 </html>
