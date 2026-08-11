@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-  :root{ --cream:#FAF6F0; --card:#EFE4D6; --bark:#5C4630; --brand:#8B6F47; --aql-brown: #8B6F47; --line: rgba(92,70,48,0.16); }
+  :root{ --cream:#FAF6F0; --card:#EFE4D6; --bark:#5C4630; --brand:#8B6F47; --aql-brown: #8B6F47; --line: rgba(92,70,48,0.16); --ink:#3f342a; }
   *{box-sizing:border-box;} body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Sans JP', sans-serif;line-height:1.8;}
   .wrap{max-width:700px;margin:0 auto;padding:32px 20px;} a{color:inherit;text-decoration:none;}
   header.site{border-bottom:1px solid var(--line);background:#fff;}
@@ -26,6 +26,13 @@
   .card .date { font-size: 11px; color: #999; }
   .card p { margin: 0; font-size: 13px; color: #5a4c3c; line-height: 1.5; }
   footer.site { text-align: center; padding: 24px; font-size: 12px; color: #777; border-top: 1px solid var(--line); background: #fff; margin-top: 40px; }
+
+  /* ページネーション用のスタイル */
+  .pagination { display: flex; justify-content: center; gap: 8px; margin-top: 24px; }
+  .page-btn { padding: 6px 12px; border: 1px solid var(--brand); background: #fff; color: var(--brand); border-radius: 4px; cursor: pointer; font-weight: bold; }
+  .page-btn.active { background: var(--brand); color: #fff; }
+  .page-btn:hover:not(.active) { background: var(--card); }
+
   @media (max-width: 600px){ .card { flex-direction: column; align-items: flex-start; } .card .thumb { width: 100%; max-width: 100%; } }
 </style>
 </head>
@@ -35,57 +42,137 @@
 <div class="wrap">
   <h1 class="page-title">🐣 鶏に関する記事一覧</h1>
 
-  <a href="chicken-numerical-cognition.html" class="card">
-    <div class="thumb"><img src="niwatori-illustration.webp" alt="鶏"></div>
-    <div class="content">
-      <div class="date">2026年7月15日</div>
-      <h3>鶏の数の認知能力：簡単な足し算・引き算ができる？</h3>
-      <p>ヒヨコの段階から数を理解する能力。最新の研究が明らかにした鳥類の優れた認知機能。</p>
-      <div style="margin-top: 6px;"><span class="aql-badge">動物の頭脳</span><span class="aql-tag-badge">鶏</span></div>
-    </div>
-  </a>
+  <!-- 記事一覧コンテナに id="article-list" を追加 -->
+  <div id="article-list">
+    <a href="chicken-numerical-cognition.html" class="card">
+      <div class="thumb"><img src="niwatori-illustration.webp" alt="鶏"></div>
+      <div class="content">
+        <div class="date">2026年7月15日</div>
+        <h3>鶏の数の認知能力：簡単な足し算・引き算ができる？</h3>
+        <p>ヒヨコの段階から数を理解する能力。最新の研究が明らかにした鳥類の優れた認知機能。</p>
+        <div style="margin-top: 6px;"><span class="aql-badge">動物の頭脳</span><span class="aql-tag-badge">鶏</span></div>
+      </div>
+    </a>
 
-  <a href="dog-chicken-senses.html" class="card">
-    <div class="thumb"><img src="dog-chicken-hero.webp" alt="犬と鶏"></div>
-    <div class="content">
-      <div class="date">2026年</div>
-      <h3>犬と鶏の感覚能力の比較</h3>
-      <p>犬と鶏のそれぞれの感覚能力を比較し、進化の歴史から解明。</p>
-      <div style="margin-top: 6px;"><span class="aql-badge">動物の五感</span><span class="aql-tag-badge">犬</span><span class="aql-tag-badge">鶏</span></div>
-    </div>
-  </a>
+    <a href="dog-chicken-senses.html" class="card">
+      <div class="thumb"><img src="dog-chicken-hero.webp" alt="犬と鶏"></div>
+      <div class="content">
+        <div class="date">2026年</div>
+        <h3>犬と鶏の感覚能力の比較</h3>
+        <p>犬と鶏のそれぞれの感覚能力を比較し、進化の歴史から解明。</p>
+        <div style="margin-top: 6px;"><span class="aql-badge">動物の五感</span><span class="aql-tag-badge">犬</span><span class="aql-tag-badge">鶏</span></div>
+      </div>
+    </a>
 
-  <a href="chicken-sand.html" class="card">
-    <div class="thumb"><img src="chicken-sand.webp" alt="鶏"></div>
-    <div class="content">
-      <div class="date">2026年7月</div>
-      <h3>鶏の「砂浴び」は何のため？感覚・社会性・寄生虫対策の三重の意味</h3>
-      <p>鶏が地面で転げまわる「砂浴び」。実は皮膚の感覚ケア・仲間との交流のため。</p>
-      <div style="margin-top: 6px;"><span class="aql-badge">動物の行動</span><span class="aql-tag-badge">鶏</span></div>
-    </div>
-  </a>
+    <a href="chicken-sand.html" class="card">
+      <div class="thumb"><img src="chicken-sand.webp" alt="鶏"></div>
+      <div class="content">
+        <div class="date">2026年7月</div>
+        <h3>鶏の「砂浴び」は何のため？感覚・社会性・寄生虫対策の三重の意味</h3>
+        <p>鶏が地面で転げまわる「砂浴び」。実は皮膚の感覚ケア・仲間との交流のため。</p>
+        <div style="margin-top: 6px;"><span class="aql-badge">動物の行動</span><span class="aql-tag-badge">鶏</span></div>
+      </div>
+    </a>
 
-  <a href="A003-chicken-morning-check-management-intelligence.html" class="card">
-    <div class="thumb"><img src="niwatori-illustration.webp" alt="鶏"></div>
-    <div class="content">
-      <div class="date">2026年3月</div>
-      <h3>鶏の元気度チェック：朝の様子でわかる飼育管理のコツと、知能の正体</h3>
-      <p>飼育のプロが毎朝行う元気度チェックの極意と、鶏の驚きの知性を解説。</p>
-      <div style="margin-top: 6px;"><span class="aql-badge">動物の頭脳</span><span class="aql-tag-badge">鶏</span></div>
-    </div>
-  </a>
+    <a href="A003-chicken-morning-check-management-intelligence.html" class="card">
+      <div class="thumb"><img src="niwatori-illustration.webp" alt="鶏"></div>
+      <div class="content">
+        <div class="date">2026年3月</div>
+        <h3>鶏の元気度チェック：朝の様子でわかる飼育管理のコツと、知能の正体</h3>
+        <p>飼育のプロが毎朝行う元気度チェックの極意と、鶏の驚きの知性を解説。</p>
+        <div style="margin-top: 6px;"><span class="aql-badge">動物の頭脳</span><span class="aql-tag-badge">鶏</span></div>
+      </div>
+    </a>
 
-  <a href="C002-chicken-wings-function-evolution.html" class="card">
-    <div class="thumb"><img src="niwatori-illustration.webp" alt="鶏"></div>
-    <div class="content">
-      <div class="date">2026年5月</div>
-      <h3>鶏の羽はなぜある？飛ばないのに羽を持つ「7つの驚くべき機能」</h3>
-      <p>保温・擬態・匂いのステルスまで、鶏の羽が持つ多機能を研究データで解説。</p>
-      <div style="margin-top: 6px;"><span class="aql-badge">動物の行動</span><span class="aql-tag-badge">鶏</span></div>
-    </div>
-  </a>
+    <a href="C002-chicken-wings-function-evolution.html" class="card">
+      <div class="thumb"><img src="niwatori-illustration.webp" alt="鶏"></div>
+      <div class="content">
+        <div class="date">2026年5月</div>
+        <h3>鶏の羽はなぜある？飛ばないのに羽を持つ「7つの驚くべき機能」</h3>
+        <p>保温・擬態・匂いのステルスまで、鶏の羽が持つ多機能を研究データで解説。</p>
+        <div style="margin-top: 6px;"><span class="aql-badge">動物の行動</span><span class="aql-tag-badge">鶏</span></div>
+      </div>
+    </a>
+  </div>
+
+  <!-- ページネーションボタン用のコンテナ -->
+  <div id="pagination" class="pagination"></div>
 </div>
 
-<footer class="site">Animal IQ Labo / <a href="blog.html">ブログ一覧へ戻る</a></footer>
+<footer class="site">
+  Animal IQ Labo（テスト環境） / 本番サイトは <a href="https://lolaniki.com">lolaniki.com</a><br>
+  <span class="footer-links">
+    <a href="privacy.html">プライバシーポリシー</a> | <a href="contact.html">ご意見・お問い合わせ</a> | <a href="blog.html">ブログ一覧へ戻る</a>
+  </span>
+</footer>
+
+<script>
+(function(){
+  var ITEMS_PER_PAGE = 6;
+  var list = document.getElementById('article-list');
+  var pagination = document.getElementById('pagination');
+  var featured = document.getElementById('featured-section');
+  if (!list || !pagination) return;
+
+  var items = Array.prototype.filter.call(list.children, function(el){
+    return el.classList && el.classList.contains('card');
+  });
+  var totalPages = Math.max(1, Math.ceil(items.length / ITEMS_PER_PAGE));
+
+  function showPage(page, scroll){
+    items.forEach(function(item, i){
+      var itemPage = Math.floor(i / ITEMS_PER_PAGE) + 1;
+      item.style.display = (itemPage === page) ? '' : 'none';
+    });
+    if (featured) {
+      featured.style.display = (page === 1) ? '' : 'none';
+    }
+    renderPagination(page);
+    if (scroll) {
+      list.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function renderPagination(current){
+    pagination.innerHTML = '';
+    if (totalPages <= 1) return;
+
+    // 前へボタン («)
+    if (current > 1) {
+      var prev = document.createElement('button');
+      prev.type = 'button';
+      prev.textContent = '«';
+      prev.className = 'page-btn';
+      prev.addEventListener('click', function(){ showPage(current - 1, true); });
+      pagination.appendChild(prev);
+    }
+
+    // ページ番号ボタン
+    for (var p = 1; p <= totalPages; p++) {
+      (function(p){
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.textContent = p;
+        btn.className = 'page-btn' + (p === current ? ' active' : '');
+        btn.addEventListener('click', function(){ showPage(p, true); });
+        pagination.appendChild(btn);
+      })(p);
+    }
+
+    // 次へボタン (»)
+    if (current < totalPages) {
+      var next = document.createElement('button');
+      next.type = 'button';
+      next.textContent = '»';
+      next.className = 'page-btn';
+      next.addEventListener('click', function(){ showPage(current + 1, true); });
+      pagination.appendChild(next);
+    }
+  }
+
+  showPage(1, false);
+})();
+</script>
+
 </body>
 </html>
