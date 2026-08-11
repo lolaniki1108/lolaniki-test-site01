@@ -116,6 +116,72 @@
   </a>
 </div>
 
-<footer class="site">Animal IQ Labo / <a href="blog.html">ブログ一覧へ戻る</a></footer>
+<footer class="site">Animal IQ Labo / <a href="blog.html">ブログ一覧へ戻る
+</body>
+</html>
+
+  Animal IQ Labo（テスト環境） / 本番サイトは <a href="https://lolaniki.com">lolaniki.com</a>
+  <br>
+  <span class="footer-links">
+    <a href="privacy.html">プライバシーポリシー</a> | <a href="contact.html">ご意見・お問い合わせ</a>
+  </span>
+</footer>
+
+<script>
+(function(){
+  var ITEMS_PER_PAGE = 6;
+  var list = document.getElementById('article-list');
+  var pagination = document.getElementById('pagination');
+  var featured = document.getElementById('featured-section');
+  if (!list || !pagination) return;
+
+  var items = Array.prototype.filter.call(list.children, function(el){
+    return el.classList && el.classList.contains('card');
+  });
+  var totalPages = Math.max(1, Math.ceil(items.length / ITEMS_PER_PAGE));
+
+  function showPage(page, scroll){
+    items.forEach(function(item, i){
+      var itemPage = Math.floor(i / ITEMS_PER_PAGE) + 1;
+      item.style.display = (itemPage === page) ? '' : 'none';
+    });
+    if (featured) {
+      featured.style.display = (page === 1) ? '' : 'none';
+    }
+    renderPagination(page);
+    if (scroll) {
+      list.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function renderPagination(current){
+    pagination.innerHTML = '';
+    if (totalPages <= 1) return;
+
+    for (var p = 1; p <= totalPages; p++) {
+      (function(p){
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.textContent = p;
+        btn.className = 'page-btn' + (p === current ? ' active' : '');
+        btn.addEventListener('click', function(){ showPage(p, true); });
+        pagination.appendChild(btn);
+      })(p);
+    }
+
+    if (current < totalPages) {
+      var next = document.createElement('button');
+      next.type = 'button';
+      next.textContent = '»';
+      next.className = 'page-btn';
+      next.addEventListener('click', function(){ showPage(current + 1, true); });
+      pagination.appendChild(next);
+    }
+  }
+
+  showPage(1, false);
+})();
+</script>
+
 </body>
 </html>
