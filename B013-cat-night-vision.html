@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>猫の夜間視力はなぜ人間の6倍？タペタム・ルシダムの秘密を徹底解説 | Animal IQ Labo</title>
+<meta name="description" content="真っ暗な部屋でも平然と歩き回る猫。その正体は人間の6倍ともいわれる夜間視力にあります。タペタム・ルシダムや瞳孔の仕組みを図解でわかりやすく解説します。">
+<meta name="keywords" content="猫 夜間視力, 猫 目 光る, タペタム・ルシダム, 猫 暗視能力, 薄明性 動物, 猫 瞳孔">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #FAF6F0;
+    color: #3a2f22;
+    font-family: "Noto Sans JP", sans-serif;
+    line-height: 1.8;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 20px 16px 60px; }
+  .back-link {
+    display: inline-block;
+    margin: 16px 0 24px;
+    color: #8B6F47;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .back-link:hover { text-decoration: underline; }
+  h1 {
+    font-family: "Shippori Mincho", serif;
+    color: #5C4630;
+    font-size: 1.9em;
+    line-height: 1.5;
+    border-bottom: 3px solid #B98A2E;
+    padding-bottom: 12px;
+    margin-bottom: 8px;
+  }
+  .lead {
+    font-size: 1.05em;
+    color: #5C4630;
+    margin-bottom: 28px;
+  }
+  h2 {
+    font-family: "Shippori Mincho", serif;
+    color: #5C4630;
+    font-size: 1.4em;
+    margin-top: 44px;
+    border-left: 6px solid #B98A2E;
+    padding-left: 12px;
+  }
+  h4 { color: #5C4630; font-size: 1.05em; }
+  .highlight-box {
+    background: #EFE4D6;
+    border-radius: 12px;
+    padding: 20px 22px;
+    font-size: 1.15em;
+    font-weight: bold;
+    color: #5C4630;
+    margin: 20px 0;
+    border-left: 6px solid #B98A2E;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 0.95em;
+  }
+  th, td {
+    border: 1px solid #ddd0bd;
+    padding: 10px 12px;
+    text-align: left;
+  }
+  th { background: #EFE4D6; color: #5C4630; }
+  tr:nth-child(even) { background: #FBF8F3; }
+  .quote {
+    background: #EFE4D6;
+    border-left: 6px solid #8B6F47;
+    padding: 16px 20px;
+    border-radius: 0 8px 8px 0;
+    margin: 20px 0;
+    color: #5C4630;
+    font-style: italic;
+  }
+  img { max-width: 100%; border-radius: 10px; display: block; margin: 20px auto; }
+  figcaption { text-align: center; font-size: 0.85em; color: #8B6F47; margin-top: -10px; }
+  .stat-box {
+    background: #1a1a2e;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  .stat-num { color: #FFD700; font-size: 2.6em; font-weight: bold; }
+  .stat-sub { color: #ccc; font-size: 0.85em; margin-top: 4px; }
+  .compare-row { display: flex; justify-content: center; gap: 32px; margin-top: 20px; flex-wrap: wrap; }
+  .compare-item { text-align: center; color: #fff; }
+  .flow-wrap {
+    background: #EFE4D6;
+    border-radius: 12px;
+    padding: 24px 16px;
+    margin: 20px 0;
+  }
+  .flow-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; }
+  .flow-step {
+    color: #fff;
+    border-radius: 8px;
+    padding: 12px 14px;
+    min-width: 100px;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+  .flow-arrow { color: #8B6914; font-size: 20px; }
+  .flow-note { text-align: center; font-size: 0.8em; color: #8B6F47; margin-top: 12px; }
+  .pupil-cards { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin: 20px 0; }
+  .pupil-card {
+    background: #fff;
+    border: 2px solid #B98A2E;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    min-width: 140px;
+    flex: 1;
+  }
+  .pupil-card.human { border-color: #ccc; }
+  .pupil-num { font-weight: bold; font-size: 1.4em; color: #B98A2E; margin: 6px 0; }
+  .pupil-card.human .pupil-num { color: #888; }
+  .twilight-row { display: flex; flex-wrap: wrap; justify-content: space-around; gap: 12px; text-align: center; }
+  .twilight-item { color: #FFD700; font-weight: bold; font-size: 0.85em; }
+  .twilight-wrap { background: #1a1a2e; border-radius: 12px; padding: 20px; margin: 20px 0; }
+  details {
+    background: #FBF3E6;
+    border: 1px solid #B98A2E;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+  }
+  summary {
+    font-weight: bold;
+    color: #5C4630;
+    cursor: pointer;
+    list-style: none;
+  }
+  .cta-wrap { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0; }
+  .cta-btn {
+    display: block;
+    flex: 1;
+    min-width: 200px;
+    background: #8B6F47;
+    color: #fff;
+    border-radius: 8px;
+    padding: 14px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.9em;
+  }
+  .refs { background: #EFE4D6; border-radius: 12px; padding: 20px 22px; margin: 20px 0; }
+  .ref-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #ddd0bd; font-size: 0.9em; }
+  .ref-item a { color: #5C4630; }
+  .ref-num {
+    display: inline-block;
+    background: #8B6F47;
+    color: #fff;
+    border-radius: 50%;
+    width: 24px; height: 24px;
+    text-align: center; line-height: 24px;
+    font-size: 11px; margin-right: 8px;
+  }
+  footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd0bd;
+    text-align: center;
+    font-size: 0.8em;
+    color: #8B6F47;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<a class="back-link" href="/">← Animal IQ Labo テスト版トップ</a>
+
+<h1>猫の夜間視力はなぜ人間の6倍？タペタム・ルシダムの秘密を徹底解説</h1>
+<p class="lead">夜、部屋の電気を消した瞬間——猫だけは何事もなかったかのように歩き回る。あの余裕、実は「目のスペック」がズルいレベルだからです。</p>
+
+<div class="highlight-box">
+📋 この記事でわかること：なぜ猫は暗闇に強いのか／目が光る理由／瞳孔の驚異の調節力／猫は本当に夜行性なのか
+</div>
+
+<h2>👁️ 1/6の光で「見える」に到達する目</h2>
+<p>人間はほぼ100%の光がないと視覚が働きませんが、猫はその<strong>約1/6の光量</strong>でしっかり周りを認識できます。結果として、暗闇での見え方は人間の<strong>約6倍</strong>とされています。</p>
+
+<div class="stat-box">
+  <div class="stat-num">6倍</div>
+  <div class="stat-sub">猫の夜間視力は人間の約6倍</div>
+  <div class="compare-row">
+    <div class="compare-item">🐱<br><span style="font-size:12px;">1/6の光でOK</span></div>
+    <div class="compare-item">👤<br><span style="font-size:12px;">100%の光が必要</span></div>
+  </div>
+</div>
+
+<h2>✨ 目が光る正体「タペタム・ルシダム」</h2>
+<p>懐中電灯を当てると猫の目がキラリと光る——あれは目の奥にある反射板<strong>「タペタム・ルシダム」</strong>の仕業です。一度網膜を素通りした光をもう一度反射して網膜に送り返すことで、光の感度を最大<strong>44%</strong>も底上げしています。いわば、目の中に小さな鏡を仕込んでいるようなものです。</p>
+
+<div class="flow-wrap">
+  <h4 style="text-align:center;margin-top:0;">🔄 タペタム・ルシダムのしくみ</h4>
+  <div class="flow-row">
+    <div class="flow-step" style="background:#FFD700;color:#333;">💡<br>光が目に入る</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step" style="background:#FFA500;">👁️<br>網膜で一度感知</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step" style="background:#FF8C00;">🪞<br>タペタムで反射</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step" style="background:#D2691E;">✨<br>網膜に再投影</div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step" style="background:#8B4513;">📈<br>感度44%UP</div>
+  </div>
+  <p class="flow-note">※ この反射こそが「目がキラリと光る」現象の正体</p>
+</div>
+
+<div class="quote">夜に猫の目が光るのは、タペタム・ルシダムが光を反射しているから。あの神秘的な輝きの正体はこれです。</div>
+
+<img src="https://lolaniki.com/wp-content/uploads/2025/07/108_cat_eyes.webp" alt="暗闇でキラリと光る猫の瞳">
+<figcaption>暗闇でキラリと光る猫の瞳——秘密は目の構造にある</figcaption>
+
+<h2>🔬 網膜の中身：ロッドとコーン</h2>
+<p>猫の網膜には、暗所や動きを感知する「ロッド（杆体）」が人間の5〜6倍もあります。その代わり色を識別する「コーン（錐体）」は少なめ。カラフルに見る力と引き換えに、暗視性能と動体視力を手に入れた進化です。</p>
+
+<table>
+<thead><tr><th>種類</th><th>役割</th><th>猫</th><th>人間</th></tr></thead>
+<tbody>
+<tr><td>🔵 ロッド</td><td>暗所・動き感知</td><td>人間の5〜6倍</td><td>基準</td></tr>
+<tr><td>🟡 コーン</td><td>色・詳細識別</td><td>少ない</td><td>多い</td></tr>
+<tr><td>🎨 色覚</td><td>色の識別</td><td>青・黄色が得意</td><td>フルカラー</td></tr>
+<tr><td>🏃 動体認識</td><td>動くものを追う</td><td>非常に得意</td><td>普通</td></tr>
+</tbody>
+</table>
+
+<img src="https://lolaniki.com/wp-content/uploads/2026/04/003_cat_plants_windowsill.jpg" alt="窓辺の猫の写真">
+<figcaption>猫の色覚は人間と異なる——青・黄色は見えるが赤・緑は苦手</figcaption>
+
+<h2>⚫ 瞳孔は135〜300倍ズーム対応</h2>
+<p>猫の瞳孔は縦長スリット型で、明るさに応じて<strong>135〜300倍</strong>も開き具合を調節できます。人間の瞳孔調節能力は約15倍なので、桁違いの可変域です。</p>
+
+<div class="pupil-cards">
+  <div class="pupil-card">
+    <div>🐱</div>
+    <div class="pupil-num">135〜300倍</div>
+    <div style="font-size:12px;color:#666;">猫の瞳孔調節能力</div>
+  </div>
+  <div class="pupil-card human">
+    <div>👤</div>
+    <div class="pupil-num">約15倍</div>
+    <div style="font-size:12px;color:#666;">人間の瞳孔調節能力</div>
+  </div>
+</div>
+
+<h2>📊 「6倍暗視」を支える3大しくみ</h2>
+<table>
+<thead><tr><th>#</th><th>メカニズム</th><th>効果</th></tr></thead>
+<tbody>
+<tr><td>①</td><td>ロッドが人間の5〜6倍</td><td>薄明・動きを感知しやすい</td></tr>
+<tr><td>②</td><td>タペタム・ルシダム層</td><td>光を再利用して感度44%UP</td></tr>
+<tr><td>③</td><td>瞳孔が135〜300倍調節</td><td>わずかな光も見逃さない</td></tr>
+</tbody>
+</table>
+
+<h2>🌙 実は夜行性じゃない？「薄明性」の正体</h2>
+<p>猫は厳密には夜行性ではなく<strong>「薄明性（はくめいせい）」</strong>の動物。明け方と夕暮れにもっとも活発に動きます。夜中の「運動会」も、この本能のスイッチが入った証拠です。</p>
+
+<div class="twilight-wrap">
+  <div class="twilight-row">
+    <div class="twilight-item">🌅<br>明け方<br><span style="color:#aaa;font-weight:normal;">最も活発</span></div>
+    <div class="twilight-item" style="color:#888;">☀️<br>昼間<br><span style="color:#666;font-weight:normal;">休息</span></div>
+    <div class="twilight-item">🌆<br>夕暮れ<br><span style="color:#aaa;font-weight:normal;">最も活発</span></div>
+    <div class="twilight-item" style="color:#aaa;">🌙<br>深夜<br><span style="color:#666;font-weight:normal;">活動可能</span></div>
+  </div>
+</div>
+
+<h2>❓ よくある質問</h2>
+
+<details>
+<summary>Q. 猫は完全な暗闇でも見えますか？</summary>
+<p>A. 見えません。光がゼロの環境では猫でも視覚は働かず、その代わりヒゲや聴覚・嗅覚で周囲を把握しています。</p>
+</details>
+
+<details>
+<summary>Q. なぜ猫は色盲だと言われるのですか？</summary>
+<p>A. 完全な色盲ではありませんが、コーンが少ないため色の識別範囲が人間より狭く、赤・緑の区別が苦手です。暗視能力を優先した進化のトレードオフです。</p>
+</details>
+
+<details>
+<summary>Q. 夜中に猫が急に走り回るのはなぜ？</summary>
+<p>A. 薄明性の本能によるものです。暗くなると瞳孔が開き狩り本能が刺激されるため、「夜の運動会」は猫にとってごく自然な行動です。</p>
+</details>
+
+<img src="https://lolaniki.com/wp-content/uploads/2025/05/139_cat_silver_long.jpg" alt="猫の写真">
+
+<h2>🔗 関連記事</h2>
+<div class="cta-wrap">
+  <a class="cta-btn" href="https://lolaniki.com/archives/2016">🐱🐷 猫と豚のヒゲを科学比較</a>
+  <a class="cta-btn" href="https://lolaniki.com/archives/1394">🐔 鶏の視覚の秘密を読む</a>
+</div>
+
+<h2>まとめ</h2>
+<ul>
+  <li>猫の夜間視力は人間の<strong>約6倍</strong>——1/6の光で視覚が働く</li>
+  <li><strong>タペタム・ルシダム</strong>が光を反射・再投影し感度を44%アップ</li>
+  <li>網膜のロッドが人間の<strong>5〜6倍</strong>あり暗所・動体認識が得意</li>
+  <li>瞳孔は<strong>135〜300倍</strong>の調節能力で光を最大限取り込む</li>
+  <li>猫は夜行性ではなく<strong>薄明性</strong>——明け方・夕暮れに最も活発</li>
+</ul>
+<p>次に夜中の猫が颯爽と歩き回る姿を見たら、その目に隠された驚異のテクノロジーを思い出してみてください🐱✨</p>
+
+<h2>📚 参考文献</h2>
+<div class="refs">
+  <div class="ref-item"><span class="ref-num">1</span>Tapetum lucidum — Wikipedia<br><a href="https://en.wikipedia.org/wiki/Tapetum_lucidum" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Tapetum_lucidum</a></div>
+  <div class="ref-item"><span class="ref-num">2</span>Cornell Feline Health Center — Cornell University College of Veterinary Medicine<br><a href="https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center" target="_blank" rel="noopener">https://www.vet.cornell.edu/</a></div>
+  <div class="ref-item"><span class="ref-num">3</span>American Veterinary Medical Association (AVMA)<br><a href="https://www.avma.org/" target="_blank" rel="noopener">https://www.avma.org/</a></div>
+  <div class="ref-item"><span class="ref-num">4</span>PubMed — Retinal structure and visual acuity in cats<br><a href="https://pubmed.ncbi.nlm.nih.gov/14738502" target="_blank" rel="noopener">https://pubmed.ncbi.nlm.nih.gov/14738502</a></div>
+</div>
+
+<footer>
+  © Animal IQ Labo（lolaniki.com）— 動物の知能・感覚・行動を科学でひもとくブログ
+</footer>
+
+</div>
+</body>
+</html>
