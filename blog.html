@@ -23,12 +23,10 @@
   *{box-sizing:border-box;}
   body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Sans JP', sans-serif;line-height:1.8;}
 
-  /* PC画面での全体幅をトップページと統一（760px） */
   .wrap{max-width:760px;margin:0 auto;padding:32px 20px;}
   a{color:inherit;text-decoration:none;}
   header.site{border-bottom:1px solid var(--line);background:#fff;}
 
-  /* ★ nav-inner の幅を .wrap と統一（720px→760px） */
   .nav-inner{
     max-width:760px;
     margin:0 auto;
@@ -40,7 +38,6 @@
     gap:12px;
   }
 
-  /* ★ ロゴ画像：大きく見やすく */
   .brand-logo{
     width:96px;
     height:96px;
@@ -50,7 +47,6 @@
     display:block;
   }
 
-  /* ★ ブランド名は控えめなサイズに */
   .brand-name{
     font-weight:700;
     font-size:16px;
@@ -61,12 +57,24 @@
     white-space:nowrap;
   }
 
-  /* ★ メニュー文字も大きく */
+  .nav-right{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
   nav.main-nav{display:flex;gap:24px;font-size:16px;font-weight:700;}
   nav.main-nav a{color:var(--brand);}
   nav.main-nav a:hover{color:var(--ochre);}
 
-  /* 記事一覧・人気記事：カードをグリッド表示 */
+  /* サイト内検索（ヘッダー・フッター共通） */
+  .site-search{position:relative;}
+  .site-search form{display:flex;gap:6px;}
+  .site-search input[type="search"]{width:150px;padding:6px 10px;border:1px solid var(--line);border-radius:6px;font-size:12.5px;font-family:inherit;background:var(--cream);color:var(--ink);}
+  .site-search input[type="search"]:focus{outline:2px solid var(--ochre);}
+  .site-search button{padding:6px 12px;border:none;border-radius:6px;background:var(--bark);color:#fff;font-weight:700;font-size:12.5px;cursor:pointer;white-space:nowrap;}
+  .search-results{position:absolute;top:calc(100% + 8px);left:0;width:320px;max-width:88vw;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 8px 24px rgba(58,46,34,0.14);padding:8px;display:none;max-height:360px;overflow-y:auto;z-index:60;}
+  .search-results.open{display:block;}
+  .search-results a{display:block;padding:9px 10px;border-radius:6px;text-decoration:none;font-size:13px;color:var(--ink);}
+  .search-results a:hover{background:var(--card);}
+  .search-results .no-hit{padding:10px;font-size:12.5px;color:var(--brand);}
+  @media (max-width:640px){ .site-search input[type="search"]{width:120px;} }
+
   .aql-article-list-wrap,
   .aql-featured-grid {
     display: grid;
@@ -74,7 +82,6 @@
     gap: 20px;
   }
 
-  /* 記事カードの調整（画像を上に大きく見せるレイアウト） */
   .card {
     display: flex;
     flex-direction: column;
@@ -89,7 +96,6 @@
     box-shadow: 0 10px 24px rgba(92,70,48,0.16);
     border-color: var(--aql-brown);
   }
-  /* サムネイル画像をカード上部いっぱいに表示 */
   .card .thumb {
     width: 100%;
     background: var(--card);
@@ -150,7 +156,6 @@
     flex: 1;
   }
 
-  /* フィルターセクション */
   .filter-group {
     background: #fff;
     padding: 16px;
@@ -184,7 +189,6 @@
     background: var(--brand);
   }
 
-  /* 人気記事セクション */
   .aql-featured-section {
     margin: 20px 0 28px;
     padding: 16px;
@@ -228,7 +232,6 @@
     padding-left: 10px;
   }
 
-  /* ページネーション */
   .pagination {
     display: flex;
     justify-content: center;
@@ -273,7 +276,13 @@
     background: #fff;
   }
   footer.site a { color: var(--brand); }
-  footer.site .footer-links a { margin: 0 6px; }
+  .footer-inner { max-width: 760px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; text-align: left; }
+  .footer-col-nav { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+  footer.site nav.main-nav { flex-direction: column; gap: 6px; }
+  .footer-col-about { text-align: left; }
+  .footer-col-links { text-align: left; }
+  .footer-links a { display: block; margin-bottom: 4px; }
+  @media (max-width: 600px){ .footer-inner { grid-template-columns: 1fr; } }
 
   @media (max-width: 480px){
     .aql-article-list-wrap,
@@ -292,11 +301,20 @@
       <img class="brand-logo" src="cropped-logo-icon.webp" alt="">
       Animal IQ Labo
     </a>
-    <nav class="main-nav">
-      <a href="index.html">TOP</a>
-      <a href="animal.html">Animal</a>
-      <a href="blog.html">Blog</a>
-    </nav>
+    <div class="nav-right">
+      <nav class="main-nav">
+        <a href="index.html">TOP</a>
+        <a href="animal.html">Animal</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+      <div class="site-search" data-search-box>
+        <form onsubmit="return false;">
+          <input type="search" placeholder="サイト内検索" data-search-input>
+          <button type="button" data-search-button>検索</button>
+        </form>
+        <div class="search-results" data-search-results></div>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -384,9 +402,7 @@
       </div>
     </a>
 
-    
-
-    <a href="B017-dog-tail-wag-direction-left-right" class="card">
+    <a href="B017-dog-tail-wag-direction-left-right.html" class="card">
       <div class="thumb"><img src="dogtail-illustration.webp" alt="犬のイラスト"></div>
       <div class="content">
         <div class="date">2026年7月18日</div>
@@ -426,7 +442,7 @@
       </div>
     </a>
 
-    <a href="B005-dog-smell-chicken-vision-sense-comparison" class="card">
+    <a href="B005-dog-smell-chicken-vision-sense-comparison.html" class="card">
       <div class="thumb"><img src="dog-chicken-hero.webp" alt="犬と鶏"></div>
       <div class="content">
         <div class="date">2026年</div>
@@ -585,7 +601,7 @@
       </div>
     </a>
 
-    <a href="A001-animal-intelligence-chicken-pig-dog" class="card">
+    <a href="A001-animal-intelligence-chicken-pig-dog.html" class="card">
       <div class="thumb"><img src="pig-illust.webp" alt="豚の鳴き声のイラスト"></div>
       <div class="content">
         <div class="date">2026年3月</div>
@@ -600,7 +616,7 @@
       </div>
     </a>
 
-    <a href="A011-dog-walking-brain-health" class="card">
+    <a href="A011-dog-walking-brain-health.html" class="card">
       <div class="thumb"><img src="dogtail-illustration.webp" alt="犬の尻尾のイラスト"></div>
       <div class="content">
         <div class="date">2026年3月</div>
@@ -613,7 +629,7 @@
       </div>
     </a>
 
-    <a href="A012-dog-ears-back-signs-emotion" class="card">
+    <a href="A012-dog-ears-back-signs-emotion.html" class="card">
       <div class="thumb"><img src="dogtail-illustration.webp" alt="犬の尻尾のイラスト"></div>
       <div class="content">
         <div class="date">2026年3月</div>
@@ -801,7 +817,7 @@
       <div class="thumb"><img src="niwatori-illustration.webp" alt="鶏のイラスト"></div>
       <div class="content">
         <div class="date">2026年3月</div>
-        <h3>鶏の視覚は人間の上位互換！4色型色覚と紫外線が見えるニワトリの驚くべき目の仕組み/h3>
+        <h3>鶏の視覚は人間の上位互換！4色型色覚と紫外線が見えるニワトリの驚くべき目の仕組み</h3>
         <p>鶏の視覚を研究データで解説</p>
         <div style="margin-top: 6px;">
           <span class="aql-badge">動物の五感</span>
@@ -822,15 +838,6 @@
         </div>
       </div>
     </a>
-
-    
-
-
-
-
-
-
-    
 
     <a href="B009-cat-paw-pad-science-episodes.html" class="card">
       <div class="thumb"><img src="cat-illust.webp" alt="猫のイラスト"></div>
@@ -993,11 +1000,6 @@
       </div>
     </a>
 
-
-
-    
-
-
   </div>
 
   <!-- ページネーション -->
@@ -1006,12 +1008,90 @@
 </div>
 
 <footer class="site">
-  Animal IQ Labo（テスト環境） / 本番サイトは <a href="https://lolaniki.com">lolaniki.com</a>
-  <br>
-  <span class="footer-links">
-    <a href="blog.html">ブログ記事一覧</a> | <a href="privacy.html">プライバシーポリシー</a> | <a href="contact.html">ご意見・お問い合わせ</a>
-  </span>
+  <div class="footer-inner">
+    <div class="footer-col-nav">
+      <nav class="main-nav"><a href="index.html">TOP</a><a href="animal.html">Animal</a><a href="blog.html">Blog</a></nav>
+      <div class="site-search" data-search-box>
+        <form onsubmit="return false;">
+          <input type="search" placeholder="サイト内検索" data-search-input>
+          <button type="button" data-search-button>検索</button>
+        </form>
+        <div class="search-results" data-search-results></div>
+      </div>
+    </div>
+    <div class="footer-col-about">
+      Animal IQ Labo（テスト環境）<br>本番サイトは <a href="https://lolaniki.com">lolaniki.com</a>
+    </div>
+    <div class="footer-col-links footer-links">
+      <a href="blog.html">ブログ記事一覧</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="contact.html">ご意見・お問い合わせ</a>
+    </div>
+  </div>
 </footer>
+
+<script>
+// ===== サイト内検索（JSON索引を読み込んでヘッダー・フッター両方の検索欄で共有） =====
+(function(){
+  var indexData = null;
+
+  function loadIndex(){
+    if (indexData) return Promise.resolve(indexData);
+    return fetch('search-index.json')
+      .then(function(res){ return res.json(); })
+      .then(function(data){ indexData = data; return data; })
+      .catch(function(){ indexData = []; return []; });
+  }
+
+  function renderResults(box, matches){
+    var resultsEl = box.querySelector('[data-search-results]');
+    resultsEl.innerHTML = '';
+    if (matches.length === 0){
+      resultsEl.innerHTML = '<div class="no-hit">一致する記事が見つかりません</div>';
+    } else {
+      matches.slice(0, 8).forEach(function(item){
+        var a = document.createElement('a');
+        a.href = item.url;
+        a.textContent = item.title;
+        resultsEl.appendChild(a);
+      });
+    }
+    resultsEl.classList.add('open');
+  }
+
+  function runSearch(box){
+    var input = box.querySelector('[data-search-input]');
+    var keyword = input.value.trim();
+    var resultsEl = box.querySelector('[data-search-results]');
+    if (!keyword){
+      resultsEl.classList.remove('open');
+      return;
+    }
+    loadIndex().then(function(data){
+      var matches = data.filter(function(item){
+        return item.title.indexOf(keyword) !== -1 || item.tags.indexOf(keyword) !== -1;
+      });
+      renderResults(box, matches);
+    });
+  }
+
+  document.querySelectorAll('[data-search-box]').forEach(function(box){
+    var input = box.querySelector('[data-search-input]');
+    var button = box.querySelector('[data-search-button]');
+    input.addEventListener('input', function(){ runSearch(box); });
+    input.addEventListener('focus', function(){ if (input.value.trim()) runSearch(box); });
+    button.addEventListener('click', function(){ runSearch(box); });
+  });
+
+  document.addEventListener('click', function(e){
+    document.querySelectorAll('[data-search-box]').forEach(function(box){
+      if (!box.contains(e.target)){
+        box.querySelector('[data-search-results]').classList.remove('open');
+      }
+    });
+  });
+})();
+</script>
 
 <script>
 (function(){
