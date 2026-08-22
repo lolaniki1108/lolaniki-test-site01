@@ -37,7 +37,18 @@
 </style>
 </head>
 <body>
-<header class="site"><div class="nav-inner"><a class="logo-area" href="index.html"><img src="cropped-058__logo_icon-270x270.png" alt="" style="width:24px;height:24px;border-radius:50%;">Animal IQ Labo</a><nav class="main-nav"><a href="index.html">TOP</a><a href="animal.html">Animal</a><a href="blog.html">Blog</a></nav></div></header>
+
+  <header class="site"><div class="nav-inner">
+  <a class="logo-area" href="index.html"><img src="cropped-058__logo_icon-270x270.png" alt="" style="width:24px;height:24px;border-radius:50%;">Animal IQ Labo</a>
+  <nav class="main-nav"><a href="index.html">TOP</a><a href="animal.html">Animal</a><a href="blog.html">Blog</a></nav>
+  <div class="site-search" data-search-box>
+    <form onsubmit="return false;">
+      <input type="search" placeholder="サイト内検索" data-search-input>
+      <button type="button" data-search-button>検索</button>
+    </form>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div></header>
 
 <div class="wrap">
   <h1 class="page-title">🐣 鶏に関する記事一覧</h1>
@@ -146,6 +157,69 @@
     <a href="blog.html">ブログ記事一覧</a> | <a href="privacy.html">プライバシーポリシー</a> | <a href="contact.html">ご意見・お問い合わせ</a>
   </span>
 </footer>
+
+<script>
+// ===== サイト内検索（JSON索引を読み込んでヘッダー・フッター両方の検索欄で共有） =====
+(function(){
+  var indexData = null;
+
+  function loadIndex(){
+    if (indexData) return Promise.resolve(indexData);
+    return fetch('search-index.json')
+      .then(function(res){ return res.json(); })
+      .then(function(data){ indexData = data; return data; })
+      .catch(function(){ indexData = []; return []; });
+  }
+
+  function renderResults(box, matches){
+    var resultsEl = box.querySelector('[data-search-results]');
+    resultsEl.innerHTML = '';
+    if (matches.length === 0){
+      resultsEl.innerHTML = '<div class="no-hit">一致する記事が見つかりません</div>';
+    } else {
+      matches.slice(0, 8).forEach(function(item){
+        var a = document.createElement('a');
+        a.href = item.url;
+        a.textContent = item.title;
+        resultsEl.appendChild(a);
+      });
+    }
+    resultsEl.classList.add('open');
+  }
+
+  function runSearch(box){
+    var input = box.querySelector('[data-search-input]');
+    var keyword = input.value.trim();
+    var resultsEl = box.querySelector('[data-search-results]');
+    if (!keyword){
+      resultsEl.classList.remove('open');
+      return;
+    }
+    loadIndex().then(function(data){
+      var matches = data.filter(function(item){
+        return item.title.indexOf(keyword) !== -1 || item.tags.indexOf(keyword) !== -1;
+      });
+      renderResults(box, matches);
+    });
+  }
+
+  document.querySelectorAll('[data-search-box]').forEach(function(box){
+    var input = box.querySelector('[data-search-input]');
+    var button = box.querySelector('[data-search-button]');
+    input.addEventListener('input', function(){ runSearch(box); });
+    input.addEventListener('focus', function(){ if (input.value.trim()) runSearch(box); });
+    button.addEventListener('click', function(){ runSearch(box); });
+  });
+
+  document.addEventListener('click', function(e){
+    document.querySelectorAll('[data-search-box]').forEach(function(box){
+      if (!box.contains(e.target)){
+        box.querySelector('[data-search-results]').classList.remove('open');
+      }
+    });
+  });
+})();
+</script>
 
 <script>
 (function(){
