@@ -5,6 +5,32 @@
   { "title": "犬と豚、どちらがコマンドを覚えるのが速い？学習速度の脳科学比較", "url": "A017-dog-vs-pig-learning-speed.html", "tags": "動物の頭脳 豚 犬" },
   { "title": "犬は空気を読み、豚は倫理で動く？研究が明かす動物の知性の驚くべき真実", "url": "A002-dog-reads-air-pig-ethics-animal-intelligence.html", "tags": "動物の頭脳 犬 豚" },
   { "title": "犬は嗅覚・鶏は視覚が最強！動物の感覚特化の秘密を研究データで徹底比較", "url": "B007-dog-stress-smell-detection-mechanism.html", "tags": "動物の五感 犬 鶏" },
-  { "title": "犬のしっぽ左右振り分け——右は好意・左は警戒の科学的根拠", "url": "B017-dog-tail-wag-direction-left-right.html", "tags": "動物の五感 犬" },
-  { "title": "ブタとイヌ、本当の「鼻の王様」はどっち?！嗅覚バトル！", "url": "B001-pig-dog-smell-battle-olfactory-comparison.html", "tags": "動物の頭脳 犬 豚" }
+  { "title": "ブタとイヌ、本当の「鼻の王様」はどっち?！嗅覚バトル！", "url": "B001-pig-dog-smell-battle-olfactory-comparison.html", "tags": "動物の頭脳 犬 豚" },
+
+  { "title": "鶏の数の認知能力：簡単な足し算・引き算ができる？", "url": "chicken-numerical-cognition.html", "tags": "動物の頭脳 鶏" },
+  { "title": "鶏の「砂浴び」は何のため？感覚・社会性・寄生虫対策の三重の意味", "url": "C013-why-chickens-dust-bathe.html", "tags": "動物の行動 鶏" },
+  { "title": "鶏の元気度チェック：朝の様子でわかる飼育管理のコツと、知能の正体", "url": "A003-chicken-morning-check-management-intelligence.html", "tags": "動物の頭脳 鶏" },
+  { "title": "鶏の羽はなぜある？飛ばないのに羽を持つ「7つの驚くべき機能」", "url": "C002-chicken-wings-function-evolution.html", "tags": "動物の行動 鶏" },
+  { "title": "鶏の視覚：人間と異なる4色カラービジョン", "url": "B004-chicken-vision-4color-uv-human-comparison.html", "tags": "動物の五感 鶏" },
+  { "title": "鶏は人間の顔を見分けられる？", "url": "A009-chicken-face-recognition-250-people-research.html", "tags": "動物の頭脳 鶏" },
+  { "title": "鶏の「コケコッコー」は何時何分？体内時計と概日リズムの科学", "url": "A015-chicken-crowing-body-clock-circadian-rhythm.html", "tags": "動物の頭脳 鶏" },
+
+  { "title": "猫のゴロゴロ音と周波数25〜150Hzの癒し効果", "url": "B18-cat-purr-frequency-healing.html", "tags": "動物の五感 猫" },
+  { "title": "猫がスリスリしてくる理由｜愛情？マーキング？科学でわかる本当の意味", "url": "cat-rubbing-softly.html", "tags": "動物の行動 猫" },
+  { "title": "猫が「あなただけ」に見せる行動5選——愛情サインの神経科学", "url": "A017-strongcat-love-signs-neuroscience.html", "tags": "動物の行動 猫" },
+  { "title": "ネコのヒゲと幸運｜ネコのヒゲが持つ不思議なパワー", "url": "B003-cat-whisker-lucky-power-science.html", "tags": "動物の五感 猫" },
+  { "title": "猫のしっぽは語る！〜ミケとしっぽの7日間戦争〜", "url": "B011-cat-tail-language-story.html", "tags": "動物の五感 猫" },
+  { "title": "”スリスリ”は甘え？マーキング？猫のスリスリ行動の秘密", "url": "B012-cat-rubbing-behavior-love-marking.html", "tags": "動物の五感 猫" },
+  { "title": "ネコとブタのヒゲを科学比較！暗闇センサーvs泥中レーダー", "url": "B002-cat-pig-whisker-science-comparison.html", "tags": "動物の五感 猫 豚" },
+  { "title": "ネコが水を飲まない理由", "url": "A004-cat-water-drinking-science-comparison.html", "tags": "動物の頭脳 猫" },
+  { "title": "猫が「あなただけ」に見せる行動5選——愛情サインの神経科学", "url": "C012-cat-strongcat-love-signs-neuroscience.html", "tags": "動物の行動 猫" },
+  { "title": "猫の食事の科学：「真性肉食動物」の驚くべき栄養世界", "url": "C007-cat-obligate-carnivore-nutrition-science.html", "tags": "動物の行動 猫" },
+  { "title": "猫の爪とぎをやめさせられない理由【学術研究が明かす本能と心理の真実】", "url": "C015-cat-scratching-instinct-psychology-research.html", "tags": "動物の行動 猫" },
+  { "title": "猫の夜間視力はなぜ人間の6倍？タペタム・ルシダムの秘密を徹底解説", "url": "B013-cat-night-vision.html", "tags": "動物の五感 猫" },
+
+  { "title": "豚のエピソード：犬以上の学習力を持つ認知能力", "url": "A010-pig-intelligence-episodes-emotion-research.html", "tags": "動物の頭脳 豚" },
+  { "title": "豚が見せる7つのサイン｜尻尾・耳・鳴き声でわかる気持ちと体調のSOS", "url": "C011-pig-tail-ear-stress-signs.html", "tags": "動物の行動 豚" },
+  { "title": "子豚の強さランキング！生まれた順番で決まる力関係の秘密", "url": "C009-piglet-strength-ranking-birth-order.html", "tags": "動物の行動 豚" },
+  { "title": "豚の鳴き声は20種類以上！感情と状況で使い分ける驚きの会話能力", "url": "C005-pig-20-types-voice-communication-ability.html", "tags": "動物の行動 豚" },
+  { "title": "豚が泥に入る理由｜「汚い」のではなく、自然のスキンケアだった", "url": "C014-why-pigs-wallow-in-mud.html", "tags": "動物の行動 豚" }
 ]
