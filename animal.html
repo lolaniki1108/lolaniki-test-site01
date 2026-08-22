@@ -19,24 +19,37 @@
   header.site{border-bottom:1px solid var(--line);background:#fff;}
   .nav-inner{max-width:960px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
   .brand-name{font-family:'Noto Sans JP', sans-serif;font-weight:900;font-size:20px;color:var(--bark);text-decoration:none;}
+  .nav-right{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
   nav.main-nav{display:flex;gap:28px;font-size:14px;font-weight:700;}
   nav.main-nav a{text-decoration:none;color:var(--brand);}
   nav.main-nav a:hover{color:var(--ochre);}
+
+  /* サイト内検索（ヘッダー・フッター共通） */
+  .site-search{position:relative;}
+  .site-search form{display:flex;gap:6px;}
+  .site-search input[type="search"]{width:150px;padding:6px 10px;border:1px solid var(--line);border-radius:6px;font-size:12.5px;font-family:inherit;background:var(--cream);color:var(--ink);}
+  .site-search input[type="search"]:focus{outline:2px solid var(--ochre);}
+  .site-search button{padding:6px 12px;border:none;border-radius:6px;background:var(--bark);color:#fff;font-weight:700;font-size:12.5px;cursor:pointer;white-space:nowrap;}
+  .search-results{position:absolute;top:calc(100% + 8px);left:0;width:320px;max-width:88vw;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 8px 24px rgba(58,46,34,0.14);padding:8px;display:none;max-height:360px;overflow-y:auto;z-index:60;}
+  .search-results.open{display:block;}
+  .search-results a{display:block;padding:9px 10px;border-radius:6px;text-decoration:none;font-size:13px;color:var(--ink);}
+  .search-results a:hover{background:var(--card);}
+  .search-results .no-hit{padding:10px;font-size:12.5px;color:var(--brand);}
+  @media (max-width:640px){ .site-search input[type="search"]{width:120px;} }
+
   h1{font-family:'Noto Sans JP', sans-serif;font-weight:900;font-size:clamp(26px,4vw,34px);color:var(--bark);margin:44px 0 24px;}
   h2{font-family:'Noto Sans JP', sans-serif;font-weight:900;font-size:20px;color:var(--bark);margin:40px 0 16px;}
   p{margin:0 0 20px;font-size:15.5px;}
 
-  /* 修正箇所：イラストを小さくして中央寄せにする */
   .hero-img{
-    /* width:100%; max-height:320px; は削除 */
-    max-width: 300px; /* 横幅を最大300pxに制限 */
-    height: auto;     /* 高さは自動調整 */
+    max-width: 300px;
+    height: auto;
     object-fit:cover;
     border-radius:12px;
     border:1px solid var(--line);
     margin-bottom:32px;
-    margin-left: auto;  /* 左側のマージンを自動に */
-    margin-right: auto; /* 右側のマージンを自動にして中央寄せ */
+    margin-left: auto;
+    margin-right: auto;
     display:block;
   }
 
@@ -45,7 +58,15 @@
   .animal-card:hover{transform:translateY(-3px);}
   .animal-card .icon{font-size:38px;margin-bottom:8px;}
   .animal-card .name{font-weight:700;color:var(--bark);font-size:15px;}
-  footer.site{text-align:center;padding:36px 24px 48px;font-size:12.5px;color:var(--brand);border-top:1px solid var(--line);margin-top:40px;}
+
+  footer.site{text-align:center;padding:36px 24px 48px;font-size:12.5px;color:var(--brand);border-top:1px solid var(--line);margin-top:40px;background:#fff;}
+  .footer-inner{max-width:760px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;text-align:left;}
+  .footer-col-nav{display:flex;flex-direction:column;align-items:flex-start;gap:10px;}
+  footer.site nav.main-nav{flex-direction:column;gap:6px;}
+  .footer-col-about{text-align:left;}
+  .footer-col-links{text-align:left;}
+  .footer-links a{display:block;margin-bottom:4px;}
+  @media (max-width:600px){.footer-inner{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -53,11 +74,20 @@
 <header class="site">
   <div class="nav-inner">
     <a class="brand-name" href="index.html" style="display:flex;align-items:center;gap:8px;"><img src="cropped-logo-icon.webp" alt="" style="width: 100px; height: 100px; border-radius: 50%;">Animal IQ Labo</a>
-    <nav class="main-nav">
-      <a href="index.html">TOP</a>
-      <a href="animal.html">Animal</a>
-      <a href="blog.html">Blog</a>
-    </nav>
+    <div class="nav-right">
+      <nav class="main-nav">
+        <a href="index.html">TOP</a>
+        <a href="animal.html">Animal</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+      <div class="site-search" data-search-box>
+        <form onsubmit="return false;">
+          <input type="search" placeholder="サイト内検索" data-search-input>
+          <button type="button" data-search-button>検索</button>
+        </form>
+        <div class="search-results" data-search-results></div>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -85,12 +115,90 @@
 </div>
 
 <footer class="site">
-  Animal IQ Labo（テスト環境） / 本番サイトは <a href="https://lolaniki.com">lolaniki.com</a>
-  <br>
-  <span class="footer-links">
-    <a href="blog.html">ブログ記事一覧</a> | <a href="privacy.html">プライバシーポリシー</a> | <a href="contact.html">ご意見・お問い合わせ</a>
-  </span>
+  <div class="footer-inner">
+    <div class="footer-col-nav">
+      <nav class="main-nav"><a href="index.html">TOP</a><a href="animal.html">Animal</a><a href="blog.html">Blog</a></nav>
+      <div class="site-search" data-search-box>
+        <form onsubmit="return false;">
+          <input type="search" placeholder="サイト内検索" data-search-input>
+          <button type="button" data-search-button>検索</button>
+        </form>
+        <div class="search-results" data-search-results></div>
+      </div>
+    </div>
+    <div class="footer-col-about">
+      Animal IQ Labo（テスト環境）<br>本番サイトは <a href="https://lolaniki.com">lolaniki.com</a>
+    </div>
+    <div class="footer-col-links footer-links">
+      <a href="blog.html">ブログ記事一覧</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="contact.html">ご意見・お問い合わせ</a>
+    </div>
+  </div>
 </footer>
+
+<script>
+// ===== サイト内検索（JSON索引を読み込んでヘッダー・フッター両方の検索欄で共有） =====
+(function(){
+  var indexData = null;
+
+  function loadIndex(){
+    if (indexData) return Promise.resolve(indexData);
+    return fetch('search-index.json')
+      .then(function(res){ return res.json(); })
+      .then(function(data){ indexData = data; return data; })
+      .catch(function(){ indexData = []; return []; });
+  }
+
+  function renderResults(box, matches){
+    var resultsEl = box.querySelector('[data-search-results]');
+    resultsEl.innerHTML = '';
+    if (matches.length === 0){
+      resultsEl.innerHTML = '<div class="no-hit">一致する記事が見つかりません</div>';
+    } else {
+      matches.slice(0, 8).forEach(function(item){
+        var a = document.createElement('a');
+        a.href = item.url;
+        a.textContent = item.title;
+        resultsEl.appendChild(a);
+      });
+    }
+    resultsEl.classList.add('open');
+  }
+
+  function runSearch(box){
+    var input = box.querySelector('[data-search-input]');
+    var keyword = input.value.trim();
+    var resultsEl = box.querySelector('[data-search-results]');
+    if (!keyword){
+      resultsEl.classList.remove('open');
+      return;
+    }
+    loadIndex().then(function(data){
+      var matches = data.filter(function(item){
+        return item.title.indexOf(keyword) !== -1 || item.tags.indexOf(keyword) !== -1;
+      });
+      renderResults(box, matches);
+    });
+  }
+
+  document.querySelectorAll('[data-search-box]').forEach(function(box){
+    var input = box.querySelector('[data-search-input]');
+    var button = box.querySelector('[data-search-button]');
+    input.addEventListener('input', function(){ runSearch(box); });
+    input.addEventListener('focus', function(){ if (input.value.trim()) runSearch(box); });
+    button.addEventListener('click', function(){ runSearch(box); });
+  });
+
+  document.addEventListener('click', function(e){
+    document.querySelectorAll('[data-search-box]').forEach(function(box){
+      if (!box.contains(e.target)){
+        box.querySelector('[data-search-results]').classList.remove('open');
+      }
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
