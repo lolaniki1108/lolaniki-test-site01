@@ -25,7 +25,18 @@
   .card h3 { font-size: 16px; font-weight: 700; margin: 4px 0 6px; color: var(--bark); }
   .card .date { font-size: 11px; color: #999; }
   .card p { margin: 0; font-size: 13px; color: #5a4c3c; line-height: 1.5; }
-  footer.site { text-align: center; padding: 24px; font-size: 12px; color: #777; border-top: 1px solid var(--line); background: #fff; margin-top: 40px; }
+  footer.site { padding: 24px; font-size: 12px; color: #777; border-top: 1px solid var(--line); background: #fff; margin-top: 40px; }
+  .footer-inner { max-width: 700px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; text-align: left; }
+  .footer-col-nav { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+  footer.site nav.main-nav { flex-direction: column; gap: 6px; }
+  .footer-search { display: flex; gap: 4px; }
+  .footer-search input[type="search"] { border: 1px solid var(--line); border-radius: 4px; padding: 5px 8px; font-size: 12px; font-family: inherit; width: 120px; }
+  .footer-search button { border: 1px solid var(--brand); background: var(--brand); color: #fff; border-radius: 4px; padding: 5px 10px; font-size: 12px; cursor: pointer; }
+  .footer-col-about { text-align: left; }
+  .footer-col-links { text-align: left; }
+  .footer-links a { display: block; margin-bottom: 4px; }
+
+  @media (max-width: 600px){ .footer-inner { grid-template-columns: 1fr; } }
 
   /* ページネーション用のスタイル */
   .pagination { display: flex; justify-content: center; gap: 8px; margin-top: 24px; }
@@ -42,7 +53,7 @@
 <div class="wrap">
   <h1 class="page-title">🐶 犬に関する記事一覧</h1>
 
-  <!-- 記事一覧コンテナに id="article-list" を追加 -->
+  <!-- 記事一覧コンテナ：ページネーション対象は必ずこの中に入れる -->
   <div id="article-list">
     <a href="dog-face-recognition.html" class="card">
       <div class="thumb"><img src="dogtail-illustration.webp" alt="犬"></div>
@@ -54,7 +65,7 @@
       </div>
     </a>
 
-    <a href="B005-dog-smell-chicken-vision-sense-comparison" class="card">
+    <a href="B005-dog-smell-chicken-vision-sense-comparison.html" class="card">
       <div class="thumb"><img src="dog-chicken-hero.webp" alt="犬と鶏"></div>
       <div class="content">
         <div class="date">2026年</div>
@@ -67,8 +78,8 @@
         </div>
       </div>
     </a>
-    
-    <a href="B017-dog-tail-wag-direction-left-right" class="card">
+
+    <a href="B017-dog-tail-wag-direction-left-right.html" class="card">
       <div class="thumb"><img src="dogtail-illustration.webp" alt="犬"></div>
       <div class="content">
         <div class="date">2026年7月22日</div>
@@ -101,9 +112,8 @@
         <div style="margin-top: 6px;"><span class="aql-badge">動物の頭脳</span><span class="aql-tag-badge">犬</span><span class="aql-tag-badge">豚</span></div>
       </div>
     </a>
-  </div>
 
-  <a href="B007-dog-stress-smell-detection-mechanism.html" class="card">
+    <a href="B007-dog-stress-smell-detection-mechanism.html" class="card">
       <div class="thumb"><img src="dogtail-illustration.webp" alt="犬の尻尾のイラスト"></div>
       <div class="content">
         <div class="date">2026年3月</div>
@@ -143,17 +153,30 @@
         </div>
       </div>
     </a>
-
+  </div>
 
   <!-- ページネーションボタン用のコンテナ -->
   <div id="pagination" class="pagination"></div>
 </div>
 
 <footer class="site">
-  Animal IQ Labo（テスト環境） / 本番サイトは <a href="https://lolaniki.com">lolaniki.com</a><br>
-  <span class="footer-links">
-    <a href="blog.html">ブログ記事一覧</a> | <a href="privacy.html">プライバシーポリシー</a> | <a href="contact.html">ご意見・お問い合わせ</a>
-  </span>
+  <div class="footer-inner">
+    <div class="footer-col-nav">
+      <nav class="main-nav"><a href="index.html">TOP</a><a href="animal.html">Animal</a><a href="blog.html">Blog</a></nav>
+      <form class="footer-search" action="blog.html" method="get" role="search">
+        <input type="search" name="s" placeholder="サイト内検索">
+        <button type="submit">検索</button>
+      </form>
+    </div>
+    <div class="footer-col-about">
+      Animal IQ Labo（テスト環境）<br>本番サイトは <a href="https://lolaniki.com">lolaniki.com</a>
+    </div>
+    <div class="footer-col-links footer-links">
+      <a href="blog.html">ブログ記事一覧</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="contact.html">ご意見・お問い合わせ</a>
+    </div>
+  </div>
 </footer>
 
 <script>
