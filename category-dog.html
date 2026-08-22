@@ -12,9 +12,20 @@
   *{box-sizing:border-box;} body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Sans JP', sans-serif;line-height:1.8;}
   .wrap{max-width:700px;margin:0 auto;padding:32px 20px;} a{color:inherit;text-decoration:none;}
   header.site{border-bottom:1px solid var(--line);background:#fff;}
-  .nav-inner{max-width:700px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;}
+  .nav-inner{max-width:700px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
   .logo-area { display: flex; align-items: center; font-weight: 700; font-size: 18px; gap: 8px; }
   nav.main-nav{display:flex;gap:20px;font-size:14px;font-weight:700;} nav.main-nav a{color:var(--brand);}
+  .site-search { position: relative; }
+  .site-search form { display: flex; gap: 4px; }
+  .site-search input[type="search"] { border: 1px solid var(--line); border-radius: 4px; padding: 5px 8px; font-size: 12px; font-family: inherit; width: 130px; }
+  .site-search button { border: 1px solid var(--brand); background: var(--brand); color: #fff; border-radius: 4px; padding: 5px 10px; font-size: 12px; cursor: pointer; }
+  .search-results { position: absolute; top: 100%; left: 0; margin-top: 4px; width: 260px; max-height: 260px; overflow-y: auto; background: #fff; border: 1px solid var(--line); border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); z-index: 20; display: none; }
+  .search-results.open { display: block; }
+  .search-results a { display: block; padding: 8px 10px; font-size: 12px; color: var(--ink); border-bottom: 1px solid var(--line); }
+  .search-results a:last-child { border-bottom: none; }
+  .search-results a:hover { background: var(--card); }
+  .search-results .no-hit { padding: 8px 10px; font-size: 12px; color: #999; }
+  footer.site .site-search .search-results { left: 0; }
   .page-title { font-size: 22px; font-weight: 700; color: var(--bark); margin: 0 0 20px; border-bottom: 2px solid var(--brand); padding-bottom: 8px; }
   .card { display: flex; gap: 16px; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 16px; margin-bottom: 16px; }
   .card .thumb { width: 28%; max-width: 150px; flex-shrink: 0; }
@@ -29,9 +40,6 @@
   .footer-inner { max-width: 700px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; text-align: left; }
   .footer-col-nav { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
   footer.site nav.main-nav { flex-direction: column; gap: 6px; }
-  .footer-search { display: flex; gap: 4px; }
-  .footer-search input[type="search"] { border: 1px solid var(--line); border-radius: 4px; padding: 5px 8px; font-size: 12px; font-family: inherit; width: 120px; }
-  .footer-search button { border: 1px solid var(--brand); background: var(--brand); color: #fff; border-radius: 4px; padding: 5px 10px; font-size: 12px; cursor: pointer; }
   .footer-col-about { text-align: left; }
   .footer-col-links { text-align: left; }
   .footer-links a { display: block; margin-bottom: 4px; }
@@ -48,7 +56,17 @@
 </style>
 </head>
 <body>
-<header class="site"><div class="nav-inner"><a class="logo-area" href="index.html"><img src="cropped-058__logo_icon-270x270.png" alt="" style="width:24px;height:24px;border-radius:50%;">Animal IQ Labo</a><nav class="main-nav"><a href="index.html">TOP</a><a href="animal.html">Animal</a><a href="blog.html">Blog</a></nav></div></header>
+<header class="site"><div class="nav-inner">
+  <a class="logo-area" href="index.html"><img src="cropped-058__logo_icon-270x270.png" alt="" style="width:24px;height:24px;border-radius:50%;">Animal IQ Labo</a>
+  <nav class="main-nav"><a href="index.html">TOP</a><a href="animal.html">Animal</a><a href="blog.html">Blog</a></nav>
+  <div class="site-search" data-search-box>
+    <form onsubmit="return false;">
+      <input type="search" placeholder="サイト内検索" data-search-input>
+      <button type="button" data-search-button>検索</button>
+    </form>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div></header>
 
 <div class="wrap">
   <h1 class="page-title">🐶 犬に関する記事一覧</h1>
@@ -163,10 +181,13 @@
   <div class="footer-inner">
     <div class="footer-col-nav">
       <nav class="main-nav"><a href="index.html">TOP</a><a href="animal.html">Animal</a><a href="blog.html">Blog</a></nav>
-      <form class="footer-search" action="blog.html" method="get" role="search">
-        <input type="search" name="s" placeholder="サイト内検索">
-        <button type="submit">検索</button>
-      </form>
+      <div class="site-search" data-search-box>
+        <form onsubmit="return false;">
+          <input type="search" placeholder="サイト内検索" data-search-input>
+          <button type="button" data-search-button>検索</button>
+        </form>
+        <div class="search-results" data-search-results></div>
+      </div>
     </div>
     <div class="footer-col-about">
       Animal IQ Labo（テスト環境）<br>本番サイトは <a href="https://lolaniki.com">lolaniki.com</a>
@@ -178,6 +199,69 @@
     </div>
   </div>
 </footer>
+
+<script>
+// ===== サイト内検索（JSON索引を読み込んでヘッダー・フッター両方の検索欄で共有） =====
+(function(){
+  var indexData = null;
+
+  function loadIndex(){
+    if (indexData) return Promise.resolve(indexData);
+    return fetch('search-index.json')
+      .then(function(res){ return res.json(); })
+      .then(function(data){ indexData = data; return data; })
+      .catch(function(){ indexData = []; return []; });
+  }
+
+  function renderResults(box, matches){
+    var resultsEl = box.querySelector('[data-search-results]');
+    resultsEl.innerHTML = '';
+    if (matches.length === 0){
+      resultsEl.innerHTML = '<div class="no-hit">一致する記事が見つかりません</div>';
+    } else {
+      matches.slice(0, 8).forEach(function(item){
+        var a = document.createElement('a');
+        a.href = item.url;
+        a.textContent = item.title;
+        resultsEl.appendChild(a);
+      });
+    }
+    resultsEl.classList.add('open');
+  }
+
+  function runSearch(box){
+    var input = box.querySelector('[data-search-input]');
+    var keyword = input.value.trim();
+    var resultsEl = box.querySelector('[data-search-results]');
+    if (!keyword){
+      resultsEl.classList.remove('open');
+      return;
+    }
+    loadIndex().then(function(data){
+      var matches = data.filter(function(item){
+        return item.title.indexOf(keyword) !== -1 || item.tags.indexOf(keyword) !== -1;
+      });
+      renderResults(box, matches);
+    });
+  }
+
+  document.querySelectorAll('[data-search-box]').forEach(function(box){
+    var input = box.querySelector('[data-search-input]');
+    var button = box.querySelector('[data-search-button]');
+    input.addEventListener('input', function(){ runSearch(box); });
+    input.addEventListener('focus', function(){ if (input.value.trim()) runSearch(box); });
+    button.addEventListener('click', function(){ runSearch(box); });
+  });
+
+  document.addEventListener('click', function(e){
+    document.querySelectorAll('[data-search-box]').forEach(function(box){
+      if (!box.contains(e.target)){
+        box.querySelector('[data-search-results]').classList.remove('open');
+      }
+    });
+  });
+})();
+</script>
 
 <script>
 (function(){
