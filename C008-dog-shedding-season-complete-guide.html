@@ -4,114 +4,210 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>犬の換毛期完全ガイド｜毛周期の科学から実践的ケア法｜Animal IQ Labo</title>
-<meta name="description" content="犬の換毛期はなぜ起こるのか、毛周期の仕組みから季節ごとの抜け毛対策、効果的なブラッシング方法まで科学的に解説する完全ガイド。">
+<meta name="description" content="犬の換毛期はなぜ起こる？毛周期の科学、季節で毛が生え変わる仕組み、犬種別のケア方法、異常な抜け毛のサインまで、研究にもとづきわかりやすく解説します。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --cream:#FAF6F0; --card:#EFE4D6; --bark:#5C4630; --brand:#8B6F47; --ochre:#B98A2E;
-  }
+  :root { --cream:#FAF6F0; --card:#EFE4D6; --bark:#5C4630; --brand:#8B6F47; --ochre:#B98A2E; }
   * { box-sizing:border-box; }
-  body {
-    margin:0; background:var(--cream); color:var(--bark);
-    font-family:'Noto Sans JP',sans-serif; line-height:1.9;
-  }
-  h1,h2,h3 { font-family:'Shippori Mincho',serif; color:var(--bark); }
-  .wrap { max-width:760px; margin:0 auto; padding:20px 18px 60px; }
-  .backlink {
-    display:inline-block; margin:16px 0; font-size:0.85em; color:var(--brand);
-    text-decoration:none; font-weight:700;
-  }
-  h1 { font-size:1.7em; font-weight:800; line-height:1.5; margin:8px 0 20px; }
-  .lead {
-    background:var(--card); border-left:5px solid var(--ochre); border-radius:0 12px 12px 0;
-    padding:18px 22px; margin:0 0 26px; font-size:0.95em;
-  }
-  .lead p { margin:0 0 8px; font-weight:700; color:var(--bark); }
-  .lead ul { margin:0; padding-left:20px; }
-  .lead li { margin:4px 0; }
-  h2 {
-    font-size:1.3em; font-weight:800; border-left:6px solid var(--ochre);
-    padding-left:14px; margin:34px 0 16px;
-  }
-  h3 { font-size:1.08em; font-weight:700; margin:22px 0 10px; }
+  body { margin:0; background:var(--cream); color:var(--bark); font-family:'Noto Sans JP',sans-serif; line-height:1.9; }
+  h1,h2,h3,h4 { font-family:'Shippori Mincho',serif; color:var(--bark); }
+  .wrap { max-width:800px; margin:0 auto; padding:20px 18px 60px; }
+  .backlink { display:inline-block; margin:16px 0; font-size:0.85em; color:var(--brand); text-decoration:none; font-weight:700; }
+  .highlight { background:linear-gradient(135deg,var(--brand) 0%,var(--bark) 100%); color:#fff; padding:28px 26px; border-radius:16px; margin:10px 0 30px; }
+  .highlight h1 { color:#fff; font-size:1.5em; font-weight:800; margin:0 0 14px; line-height:1.5; }
+  .highlight p { margin:0 0 18px; font-size:1em; line-height:1.9; }
+  .stat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:12px; }
+  .stat-card { background:rgba(255,255,255,0.15); border-radius:12px; padding:14px; text-align:center; }
+  .stat-num { font-size:1.5em; font-weight:800; display:block; }
+  .stat-label { font-size:0.78em; opacity:0.9; margin-top:4px; }
+  .lead { background:var(--card); border-left:6px solid var(--ochre); border-radius:0 12px 12px 0; padding:20px 24px; margin:0 0 30px; }
+  .lead p.lead-title { font-size:1.4em; font-weight:800; margin:0 0 12px; }
+  .lead ol { margin:0; padding-left:20px; }
+  .lead li { margin:6px 0; }
+  .toc { background:#F4EEE3; padding:22px; border-left:4px solid var(--brand); border-radius:8px; margin:0 0 30px; }
+  .toc h2 { font-size:1.15em; margin:0 0 14px; border:none; padding:0; }
+  .toc ol { padding-left:20px; margin:0; }
+  .toc li { margin-bottom:8px; color:var(--brand); }
+  h2 { font-size:1.35em; font-weight:800; border-left:6px solid var(--ochre); padding-left:14px; margin:38px 0 18px; }
+  h3 { font-size:1.05em; font-weight:700; margin:22px 0 10px; }
   p { margin:0 0 16px; font-size:0.98em; }
-  .stat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:12px; margin:22px 0; }
-  .stat-card { background:var(--card); border-radius:14px; padding:16px; text-align:center; }
-  .stat-num { font-size:1.7em; font-weight:800; color:var(--ochre); font-family:'Shippori Mincho',serif; }
-  .stat-label { font-size:0.78em; margin-top:4px; }
-  table { width:100%; border-collapse:collapse; font-size:0.86em; margin:18px 0; }
+  table { width:100%; border-collapse:collapse; font-size:0.86em; margin:18px 0; background:#fff; border-radius:8px; overflow:hidden; }
   th { background:var(--brand); color:#fff; padding:10px 12px; text-align:left; }
   td { padding:9px 12px; border-bottom:1px solid #E4D9C8; }
   tr:nth-child(even) td { background:#F4EEE3; }
-  .img-placeholder {
-    margin:22px 0; padding:14px; background:var(--card); border:2px dashed var(--brand);
-    border-radius:12px; text-align:center; font-size:0.82em; color:var(--brand);
-  }
-  .summary-box {
-    background:var(--card); border-radius:14px; padding:20px 24px; margin:30px 0;
-  }
-  .summary-box strong { display:block; margin-bottom:10px; font-size:1em; }
-  .summary-box ul { margin:0; padding-left:20px; }
-  .cta-wrap { display:flex; flex-wrap:wrap; gap:10px; margin:26px 0; }
-  .cta {
-    display:inline-flex; align-items:center; gap:6px; background:var(--brand); color:#fff;
-    padding:10px 18px; border-radius:24px; text-decoration:none; font-size:0.85em; font-weight:700;
-  }
-  .refs { font-size:0.78em; color:#8a7a68; line-height:2; margin-top:10px; }
-  footer {
-    margin-top:50px; padding-top:20px; border-top:1px solid #E4D9C8;
-    font-size:0.78em; color:#8a7a68; text-align:center;
-  }
+  .callout { padding:18px 20px; border-radius:10px; margin:22px 0; }
+  .callout.info { background:#d9edf3; border-left:4px solid #17a2b8; }
+  .callout.warn { background:#f8d7da; border-left:4px solid #dc3545; }
+  .callout.note { background:#fff3cd; border-left:4px solid #B98A2E; }
+  .callout h4 { margin:0 0 8px; font-size:1em; font-family:'Noto Sans JP',sans-serif; font-weight:700; }
+  .flow { background:#fff; border-radius:12px; padding:18px; margin:22px 0; }
+  .flow-step { display:flex; align-items:flex-start; margin:12px 0; }
+  .flow-num { width:34px; height:34px; background:var(--brand); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0; margin-right:14px; }
+  .img-placeholder { margin:24px 0; padding:16px; background:var(--card); border:2px dashed var(--brand); border-radius:12px; text-align:center; font-size:0.82em; color:var(--brand); }
+  .related-links { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin:24px 0; }
+  .related-btn { display:block; padding:14px 16px; background:#fff; color:var(--brand); text-decoration:none; border-radius:10px; border:2px solid var(--brand); text-align:center; font-weight:700; font-size:0.88em; }
+  .refs { font-size:0.8em; color:#8a7a68; line-height:2; padding-left:20px; }
+  footer { margin-top:50px; padding-top:20px; border-top:1px solid #E4D9C8; font-size:0.78em; color:#8a7a68; text-align:center; }
 </style>
 </head>
 <body>
 <div class="wrap">
 <a class="backlink" href="/">← Animal IQ Labo テスト版トップ</a>
-<h1>犬の換毛期完全ガイド｜毛周期の科学から実践的ケア法</h1>
+
+<div class="highlight">
+  <h1>🐕 掃除の悩みの種「抜け毛」は、犬の体内カレンダーが正確に動いている証拠だった</h1>
+  <p>床いっぱいに散らばる愛犬の毛。うんざりする季節がありますよね。でもこの現象、実は太陽の光の長さを感じ取った犬の体が、ホルモンを使って被毛を「衣替え」する精密なプログラムなのです。犬は温度よりも先に「日照時間」で季節を先読みし、数週間かけて毛を入れ替えます。この仕組みを知ると、ブラッシングのタイミングや室内飼育の工夫まで、見え方がガラッと変わります。</p>
+  <div class="stat-grid">
+    <div class="stat-card"><span class="stat-num">年2回</span><span class="stat-label">春・秋の大きな換毛期</span></div>
+    <div class="stat-card"><span class="stat-num">3〜4段階</span><span class="stat-label">毛が生え変わるサイクル</span></div>
+    <div class="stat-card"><span class="stat-num">日照時間</span><span class="stat-label">気温より強い引き金</span></div>
+  </div>
+</div>
+
 <div class="lead">
-<p>📌 この記事でわかること</p>
-<ul>
-<li>犬の毛が生え変わる「毛周期」の仕組み</li>
-<li>季節性の換毛が起こる理由</li>
-<li>ダブルコート犬とシングルコート犬の違い</li>
-<li>効果的なブラッシング・ケア方法</li>
-</ul>
+  <p class="lead-title">📌 この記事でわかること</p>
+  <ol>
+    <li>換毛の仕組みを支える「毛周期」の科学</li>
+    <li>犬が季節を感じ取って毛を生え変わらせるメカニズム</li>
+    <li>ダブルコート犬とシングルコート犬でケアがまったく違う理由</li>
+    <li>室内飼育がもたらす「換毛期のズレ」とその対処法</li>
+    <li>ただの換毛期ではない、病気のサインの見分け方</li>
+    <li>犬種別の正しいブラッシング方法とプロの技術</li>
+  </ol>
 </div>
 
-<div class="img-placeholder">📷 ここに犬のフリー画像を追加</div>
+<div class="img-placeholder">📷 画像挿入位置：健康的な被毛の犬のフリー画像をここに追加</div>
 
+<div class="toc">
+  <h2>📋 目次</h2>
+  <ol>
+    <li>毛周期という仕組み ― 毛は「生えっぱなし」ではない</li>
+    <li>犬が季節を先読みするメカニズム：日照時間とホルモン</li>
+    <li>ダブルコートとシングルコートの決定的違い</li>
+    <li>室内飼育で換毛期がズレる理由</li>
+    <li>換毛期の生理的な役割</li>
+    <li>要注意！病気が隠れているサイン</li>
+    <li>犬種・被毛タイプ別ケア早見表</li>
+    <li>プロが教える正しいブラッシング手順</li>
+    <li>食事とサプリメントでできる被毛サポート</li>
+    <li>よくある質問</li>
+  </ol>
+</div>
 
-<h2>🐕 毛周期という仕組み</h2>
-<p>犬の被毛は、成長する「成長期」、成長が止まる「退行期」、休止して抜け落ちを待つ「休止期」というサイクルを繰り返しています。この毛周期のタイミングが多くの毛でそろって「休止期」から「抜ける」段階に入ると、まとまった抜け毛として現れます。</p>
-<h2>🌸🍂 季節性の換毛が起こる理由</h2>
-<p>日照時間や気温の変化は、毛周期のタイミングに影響を与えるとされています。特に二層構造の被毛（ダブルコート）を持つ犬種は、冬毛から夏毛、夏毛から冬毛へと季節ごとに大きく生え変わる傾向が強く見られます。</p>
-<h2>🐩 ダブルコートとシングルコートの違い</h2>
+<h2>1. 毛周期という仕組み ― 毛は「生えっぱなし」ではない</h2>
+<p>犬の一本一本の毛は、実はずっと伸び続けているわけではありません。毛根は「成長期（アナゲン）」「退行期（カタゲン）」「休止期（テロゲン）」というサイクルを繰り返しており、多くの獣医皮膚科では、休止期のあとに毛が実際に抜け落ちる「脱毛期（エクソゲン）」を加えた4段階で説明されることもあります。</p>
+<p>この4つの段階を多数の毛根がバラバラのタイミングで繰り返しているため、犬は年間を通して少しずつ毛が抜けます。ところが季節の変わり目には、多くの毛根が一斉に「休止期→脱毛期」に入るタイミングが重なり、まとまった大量の抜け毛として現れます。これが世間で言う「換毛期」の正体です。</p>
+
+<div class="callout info">
+  <h4>💡 ポイント</h4>
+  <p style="margin:0;">「換毛期」は特別なイベントではなく、日々少しずつ動いている毛周期が、季節の合図で一斉に足並みを揃えるタイミングにすぎません。</p>
+</div>
+
+<div class="flow">
+  <p style="font-weight:700;text-align:center;margin:0 0 14px;">図：毛周期の4段階</p>
+  <div class="flow-step"><div class="flow-num">1</div><div><strong>成長期（アナゲン）</strong>：毛根が活発に細胞分裂し、毛が伸び続ける。期間は数ヶ月〜2年と幅広い。</div></div>
+  <div class="flow-step"><div class="flow-num">2</div><div><strong>退行期（カタゲン）</strong>：成長が止まり毛根が縮小する、数週間の短い移行期。</div></div>
+  <div class="flow-step"><div class="flow-num">3</div><div><strong>休止期（テロゲン）</strong>：毛根が眠り、新しい毛が下から育つのを待つ数ヶ月間。</div></div>
+  <div class="flow-step"><div class="flow-num">4</div><div><strong>脱毛期（エクソゲン）</strong>：古い毛が新しい毛に押し出され、実際に抜け落ちる。多くの毛でここが重なると「換毛期」に見える。</div></div>
+</div>
+
+<h2>2. 犬が季節を先読みするメカニズム：日照時間とホルモン</h2>
+<p>「暑くなってきたから毛が抜ける」と思われがちですが、実際の主役は気温ではなく<strong>日照時間（光周期）</strong>です。目から入った光の情報は脳の視床下部に伝わり、メラトニンというホルモンの分泌量を調整します。日が短くなるとメラトニンが増えて毛の成長期を引き延ばし、密で保温性の高い冬毛を作らせる一方、日が長くなるとその指令が緩み、毛が一斉に休止・脱落期へ切り替わって夏毛への準備が始まる、という流れが多くの研究で報告されています。</p>
+<p>気温は無関係ではありませんが、あくまで補助的な役割です。実際、屋外の気温がまだ暑い真夏でも、日が短くなり始めた時点で冬毛への準備が始まる犬が多く見られます。これは、気温の変化を待ってから毛を用意していては、本格的な寒さに間に合わないためだと考えられています。</p>
+
+<div class="callout note">
+  <h4>⚠️ 犬種による差</h4>
+  <p style="margin:0;">ダブルコート犬種（柴犬、ゴールデンレトリバー、ハスキー、ジャーマンシェパードなど）は、この季節の切り替え時にアンダーコートを一気に「ブロー（吹き出す）」させる傾向が強く、抜け毛の量も一気に増えます。シングルコート犬種（プードル、マルチーズなど）は毛周期の同調がゆるやかなため、季節を問わず少しずつ抜け続けます。</p>
+</div>
+
+<div class="img-placeholder">📷 画像挿入位置：ダブルコート犬種（柴犬・ゴールデンレトリバー等）のフリー画像をここに追加</div>
+
+<h2>3. ダブルコートとシングルコートの決定的違い</h2>
 <table>
-<tr><th>タイプ</th><th>特徴</th><th>換毛の傾向</th></tr>
-<tr><td>ダブルコート</td><td>硬いオーバーコートと柔らかいアンダーコートの二層構造</td><td>季節ごとに大量の抜け毛が出やすい</td></tr>
-<tr><td>シングルコート</td><td>アンダーコートがない、または少ない</td><td>一年を通して少しずつ抜ける傾向</td></tr>
+<tr><th>特徴</th><th>ダブルコート</th><th>シングルコート</th></tr>
+<tr><td>構造</td><td>硬いオーバーコート＋柔らかいアンダーコートの二層</td><td>オーバーコートのみの一層</td></tr>
+<tr><td>換毛のパターン</td><td>春・秋に集中して大量に抜ける</td><td>季節を問わず少しずつ抜ける</td></tr>
+<tr><td>代表犬種</td><td>柴犬、ゴールデンレトリバー、ハスキー、コーギー</td><td>プードル、マルチーズ、ヨークシャーテリア</td></tr>
+<tr><td>ケアの頻度</td><td>換毛期は毎日ブラッシング推奨</td><td>週3〜4回＋月1回のトリミング</td></tr>
 </table>
-<h2>🧴 効果的なブラッシング・ケア</h2>
-<p>換毛期には、アンダーコートまでしっかりかき出せるアンダーコートレーキやスリッカーブラシの活用が推奨されています。頻度を上げてこまめにケアすることで、抜け毛の飛散や毛玉のトラブルを減らすことができるとされています。</p>
 
-
-<div class="summary-box">
-<strong>📌 この記事のポイント</strong>
-<ul>
-<li>犬の毛は成長期・退行期・休止期という毛周期を繰り返している</li>
-<li>ダブルコート犬種は季節ごとに大きな換毛が起こりやすい</li>
-<li>アンダーコート用ブラシでのこまめなケアが効果的</li>
-</ul>
+<div class="callout warn">
+  <h4>❌ サマーカットの落とし穴</h4>
+  <p style="margin:0;">ダブルコート犬種を涼しくさせようと丸刈りにするのは逆効果になりえます。アンダーコートは断熱材であると同時に紫外線からも皮膚を守っており、刈り込むと皮膚が直接ダメージを受けやすくなります。暑さ対策はブラッシングでアンダーコートを減らすことが基本です。</p>
 </div>
 
-<div class="cta-wrap">
-<a class="cta" href="https://lolaniki.com/archives/1632">犬が食べてはいけない食材トップ10 →</a>
-<a class="cta" href="https://lolaniki.com/archives/1655">犬の散歩は「脳と心の薬」だった →</a>
+<h2>4. 室内飼育で換毛期がズレる理由</h2>
+<p>換毛の引き金が「日照時間」であるということは、裏を返せば、室内の照明や空調でその合図が乱れやすいということでもあります。夜も明るい室内照明、一年中快適な室温は、犬の体にとって「季節が変わらない世界」に見えてしまいます。その結果、はっきりした換毛期を迎えず、一年を通して少量の抜け毛がだらだら続く犬が多く報告されています。</p>
+<p>これは病気ではありませんが、被毛の健康サイクルという意味では、屋外で自然の光を浴びる犬に比べてメリハリが弱くなりがちです。散歩の時間を日中に確保し、できるだけ自然光を浴びる機会を作ることが、体内時計を整えるシンプルで効果的な対策になります。</p>
+
+<h2>5. 換毛期の生理的な役割</h2>
+<table>
+<tr><th>役割</th><th>内容</th></tr>
+<tr><td>体温調節</td><td>夏は密な冬毛を減らして熱を逃がし、冬は保温性の高い毛で体温を守る</td></tr>
+<tr><td>皮膚の刷新</td><td>古い毛が抜けることで毛穴や皮脂腺が刺激され、皮膚のターンオーバーが促される</td></tr>
+<tr><td>紫外線・害虫からの保護</td><td>夏毛でも一定の被毛密度を保ち、日焼けや虫刺されのリスクを抑える</td></tr>
+</table>
+
+<h2>6. 要注意！病気が隠れているサイン</h2>
+<div class="callout warn">
+  <h4>⚠️ こんな症状は動物病院へ</h4>
+  <ul style="margin:0;padding-left:20px;">
+    <li>部分的・左右対称な脱毛</li>
+    <li>季節に関係なく続く大量の脱毛</li>
+    <li>皮膚の赤み、かさぶた、強い痒み</li>
+    <li>被毛のパサつきや艶の急な喪失</li>
+    <li>フケの大量発生</li>
+  </ul>
+</div>
+<p>正常な換毛期は「全身から均等に、痒みなく、被毛には艶がある」のが基本形です。特定の部位だけ丸く毛が抜けていたり、皮膚に炎症を伴う場合は、換毛期ではなくアレルギーや寄生虫、ホルモン異常などが隠れている可能性があるため、獣医師に相談することをおすすめします。</p>
+
+<h2>7. 犬種・被毛タイプ別ケア早見表</h2>
+<table>
+<tr><th>タイプ</th><th>代表犬種</th><th>推奨ブラシ</th><th>頻度</th></tr>
+<tr><td>ダブルコート（長毛）</td><td>ゴールデンレトリバー、ボーダーコリー</td><td>スリッカー＋アンダーコートレーキ</td><td>換毛期は毎日</td></tr>
+<tr><td>ダブルコート（短毛）</td><td>柴犬、コーギー、ラブラドール</td><td>ラバーブラシ、デシェディングツール</td><td>換毛期は毎日</td></tr>
+<tr><td>シングルコート</td><td>プードル、マルチーズ</td><td>ピンブラシ＋コーム</td><td>週3〜4回</td></tr>
+</table>
+
+<h2>8. プロが教える正しいブラッシング手順</h2>
+<div class="flow">
+  <div class="flow-step"><div class="flow-num">1</div><div><strong>落ち着ける環境を作る</strong>：静かな場所で、おやつを使いポジティブな時間にする</div></div>
+  <div class="flow-step"><div class="flow-num">2</div><div><strong>粗めのブラシで大まかに除去</strong>：毛の流れに沿って、力を入れすぎずに</div></div>
+  <div class="flow-step"><div class="flow-num">3</div><div><strong>スリッカーで毛玉部位を重点ケア</strong>：耳の後ろ、脇、股を丁寧に</div></div>
+  <div class="flow-step"><div class="flow-num">4</div><div><strong>コームで仕上げ確認</strong>：引っかかりがあれば毛玉の合図</div></div>
+  <div class="flow-step"><div class="flow-num">5</div><div><strong>褒めて終わる</strong>：ブラッシング＝楽しい時間だと覚えてもらう</div></div>
+</div>
+
+<div class="img-placeholder">📷 画像挿入位置：ブラッシングされている犬のフリー画像をここに追加</div>
+
+<h2>9. 食事とサプリメントでできる被毛サポート</h2>
+<p>毛周期そのものは季節の光の変化で動くため、食事だけで換毛期そのものをなくすことはできません。ただし、オメガ3・オメガ6系脂肪酸を含む魚油などの栄養は、皮膚と被毛のコンディションを整える助けになると多くの獣医療系の情報源で紹介されています。栄養が不足していると被毛が乾燥しやすく、余計な抜け毛やパサつきにつながることもあるため、日々の総合栄養食に加えて、必要に応じてサプリメントを取り入れるのも一つの方法です。ただし持病がある犬や投薬中の犬は、始める前にかかりつけの獣医師に相談すると安心です。</p>
+
+<h2>10. よくある質問</h2>
+<h3>Q1. 換毛期はどれくらい続く？</h3>
+<p>一般的に3〜8週間程度とされています。犬種、年齢、室内外の飼育環境によって差があります。</p>
+<h3>Q2. シャンプーは換毛期に効果的？</h3>
+<p>はい。抜け毛が浮き上がり、ブラッシングだけでは取りきれないアンダーコートも落としやすくなります。ただし洗いすぎは皮脂を奪うため、月1〜2回程度が目安です。</p>
+<h3>Q3. 抜け毛が家中に散らばって困っています</h3>
+<p>換毛期のこまめなブラッシング、こまめな掃除、空気清浄機の活用が基本の対策です。抜け毛キャッチ用の犬服も市販されています。</p>
+
+<h2>🔗 関連記事</h2>
+<div class="related-links">
+  <a class="related-btn" href="https://lolaniki.com/archives/1577">👂 犬の耳が語る心理サイン</a>
+  <a class="related-btn" href="https://lolaniki.com/archives/1632">🍖 犬が食べてはいけない食材トップ10</a>
+  <a class="related-btn" href="https://lolaniki.com/archives/1655">🚶 犬の散歩は「脳と心の薬」だった</a>
+  <a class="related-btn" href="#">coming soon（4本目のリンクを追加）</a>
 </div>
 
 <h2>📖 参考文献</h2>
-<p class="refs">記事内で参照した研究・データは公表されている学術情報にもとづいています。詳細な文献リストは随時更新します。</p>
+<ol class="refs">
+  <li>Hill's Pet「When Is Shedding Season for Dogs & Cats?」（毛周期の各段階と季節性の換毛の一般的な解説）</li>
+  <li>American Kennel Club「Dog Shedding: When Dogs Shed Most and How to Manage It」</li>
+  <li>Embark Veterinary「Dog Shedding Explained」（光周期と換毛に関わる遺伝的要因について）</li>
+  <li>FOUR PAWS「Understanding Shedding in Dogs and Cats」（ホルモンと日照・気温による換毛メカニズム）</li>
+  <li>NaturVet「5 Tips to Manage Seasonal Dog Shedding」（光周期が毛周期に与える影響）</li>
+</ol>
 
 <footer>© Animal IQ Labo（テスト版） — 豚・鶏・犬・猫の知能・感覚・行動を科学的に解説</footer>
 </div>
