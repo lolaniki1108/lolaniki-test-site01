@@ -8,13 +8,24 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-  :root{ --cream:#FAF6F0; --card:#EFE4D6; --bark:#5C4630; --brand:#8B6F47; --ochre:#B98A2E; --aql-brown: #8B6F47; --line: rgba(92,70,48,0.16); }
+  :root{ --cream:#FAF6F0; --card:#EFE4D6; --bark:#5C4630; --brand:#8B6F47; --ochre:#B98A2E; --aql-brown: #8B6F47; --line: rgba(92,70,48,0.16); --ink:#3A2E22; }
   *{box-sizing:border-box;} body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Sans JP', sans-serif;line-height:1.8;}
   .wrap{max-width:700px;margin:0 auto;padding:32px 20px;} a{color:inherit;text-decoration:none;}
   header.site{border-bottom:1px solid var(--line);background:#fff;}
-  .nav-inner{max-width:700px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;}
+  .nav-inner{max-width:700px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
   .logo-area { display: flex; align-items: center; font-weight: 700; font-size: 18px; gap: 8px; }
   nav.main-nav{display:flex;gap:20px;font-size:14px;font-weight:700;} nav.main-nav a{color:var(--brand);}
+  .site-search { position: relative; }
+  .site-search form { display: flex; gap: 4px; }
+  .site-search input[type="search"] { border: 1px solid var(--line); border-radius: 4px; padding: 5px 8px; font-size: 12px; font-family: inherit; width: 130px; }
+  .site-search button { border: 1px solid var(--brand); background: var(--brand); color: #fff; border-radius: 4px; padding: 5px 10px; font-size: 12px; cursor: pointer; }
+  .search-results { position: absolute; top: 100%; left: 0; margin-top: 4px; width: 260px; max-height: 260px; overflow-y: auto; background: #fff; border: 1px solid var(--line); border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); z-index: 20; display: none; }
+  .search-results.open { display: block; }
+  .search-results a { display: block; padding: 8px 10px; font-size: 12px; color: var(--ink); border-bottom: 1px solid var(--line); }
+  .search-results a:last-child { border-bottom: none; }
+  .search-results a:hover { background: var(--card); }
+  .search-results .no-hit { padding: 8px 10px; font-size: 12px; color: #999; }
+  footer.site .site-search .search-results { left: 0; }
   .page-title { font-size: 22px; font-weight: 700; color: var(--bark); margin: 0 0 20px; border-bottom: 2px solid var(--brand); padding-bottom: 8px; }
   .card { display: flex; gap: 16px; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 16px; margin-bottom: 16px; }
   .card .thumb { width: 28%; max-width: 150px; flex-shrink: 0; }
@@ -29,8 +40,15 @@
   .page-btn { min-width: 36px; height: 36px; padding: 0 10px; border-radius: 4px; background: var(--card); color: var(--bark); font-weight: 700; font-size: 14px; font-family: inherit; cursor: pointer; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; transition: background .15s ease, color .15s ease; }
   .page-btn:hover { background: var(--ochre); color: #fff; }
   .page-btn.active { background: var(--brand); color: #fff; border-color: var(--brand); cursor: default; }
-  footer.site { text-align: center; padding: 24px; font-size: 12px; color: #777; border-top: 1px solid var(--line); background: #fff; margin-top: 40px; }
+  footer.site { padding: 24px; font-size: 12px; color: #777; border-top: 1px solid var(--line); background: #fff; margin-top: 40px; }
   footer.site a { color: var(--brand); }
+  .footer-inner { max-width: 700px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; text-align: left; }
+  .footer-col-nav { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+  footer.site nav.main-nav { flex-direction: column; gap: 6px; }
+  .footer-col-about { text-align: left; }
+  .footer-col-links { text-align: left; }
+  .footer-links a { display: block; margin-bottom: 4px; }
+  @media (max-width: 600px){ .footer-inner { grid-template-columns: 1fr; } }
   @media (max-width: 600px){ .card { flex-direction: column; align-items: flex-start; } .card .thumb { width: 100%; max-width: 100%; } }
 </style>
 </head>
@@ -41,6 +59,13 @@
       <img src="cropped-058__logo_icon-270x270.png" alt="" style="width:24px;height:24px;border-radius:50%;">Animal IQ Labo
     </a>
     <nav class="main-nav"><a href="index.html">TOP</a><a href="animal.html">Animal</a><a href="blog.html">Blog</a></nav>
+    <div class="site-search" data-search-box>
+      <form onsubmit="return false;">
+        <input type="search" placeholder="サイト内検索" data-search-input>
+        <button type="button" data-search-button>検索</button>
+      </form>
+      <div class="search-results" data-search-results></div>
+    </div>
   </div>
 </header>
 
@@ -129,7 +154,7 @@
         <div class="date">2026年3月</div>
         <h3>鶏は人間の顔を見分けられる？</h3>
         <p>「250人説」の真偽と驚くべき認知能力を研究データで解説</p>
-        <div style="margin-top: 6px;"><span class="aql-badge">動物の頭脳</span><span class="aql-tag-badge">猫</span></div>
+        <div style="margin-top: 6px;"><span class="aql-badge">動物の頭脳</span><span class="aql-tag-badge">鶏</span></div>
       </div>
     </a>
 
@@ -152,8 +177,90 @@
 </div>
 
 <footer class="site">
-  Animal IQ Labo / <a href="blog.html">ブログ一覧へ戻る</a> | <a href="privacy.html">プライバシーポリシー</a> | <a href="contact.html">ご意見・お問い合わせ</a>
+  <div class="footer-inner">
+    <div class="footer-col-nav">
+      <nav class="main-nav"><a href="index.html">TOP</a><a href="animal.html">Animal</a><a href="blog.html">Blog</a></nav>
+      <div class="site-search" data-search-box>
+        <form onsubmit="return false;">
+          <input type="search" placeholder="サイト内検索" data-search-input>
+          <button type="button" data-search-button>検索</button>
+        </form>
+        <div class="search-results" data-search-results></div>
+      </div>
+    </div>
+    <div class="footer-col-about">
+      Animal IQ Labo（テスト環境）<br>本番サイトは <a href="https://lolaniki.com">lolaniki.com</a>
+    </div>
+    <div class="footer-col-links footer-links">
+      <a href="blog.html">ブログ記事一覧</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="contact.html">ご意見・お問い合わせ</a>
+    </div>
+  </div>
 </footer>
+
+<script>
+// ===== サイト内検索（JSON索引を読み込んでヘッダー・フッター両方の検索欄で共有） =====
+(function(){
+  var indexData = null;
+
+  function loadIndex(){
+    if (indexData) return Promise.resolve(indexData);
+    return fetch('search-index.json')
+      .then(function(res){ return res.json(); })
+      .then(function(data){ indexData = data; return data; })
+      .catch(function(){ indexData = []; return []; });
+  }
+
+  function renderResults(box, matches){
+    var resultsEl = box.querySelector('[data-search-results]');
+    resultsEl.innerHTML = '';
+    if (matches.length === 0){
+      resultsEl.innerHTML = '<div class="no-hit">一致する記事が見つかりません</div>';
+    } else {
+      matches.slice(0, 8).forEach(function(item){
+        var a = document.createElement('a');
+        a.href = item.url;
+        a.textContent = item.title;
+        resultsEl.appendChild(a);
+      });
+    }
+    resultsEl.classList.add('open');
+  }
+
+  function runSearch(box){
+    var input = box.querySelector('[data-search-input]');
+    var keyword = input.value.trim();
+    var resultsEl = box.querySelector('[data-search-results]');
+    if (!keyword){
+      resultsEl.classList.remove('open');
+      return;
+    }
+    loadIndex().then(function(data){
+      var matches = data.filter(function(item){
+        return item.title.indexOf(keyword) !== -1 || item.tags.indexOf(keyword) !== -1;
+      });
+      renderResults(box, matches);
+    });
+  }
+
+  document.querySelectorAll('[data-search-box]').forEach(function(box){
+    var input = box.querySelector('[data-search-input]');
+    var button = box.querySelector('[data-search-button]');
+    input.addEventListener('input', function(){ runSearch(box); });
+    input.addEventListener('focus', function(){ if (input.value.trim()) runSearch(box); });
+    button.addEventListener('click', function(){ runSearch(box); });
+  });
+
+  document.addEventListener('click', function(e){
+    document.querySelectorAll('[data-search-box]').forEach(function(box){
+      if (!box.contains(e.target)){
+        box.querySelector('[data-search-results]').classList.remove('open');
+      }
+    });
+  });
+})();
+</script>
 
 <script>
 (function(){

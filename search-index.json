@@ -6,6 +6,13 @@
   { "title": "犬は空気を読み、豚は倫理で動く？研究が明かす動物の知性の驚くべき真実", "url": "A002-dog-reads-air-pig-ethics-animal-intelligence.html", "tags": "動物の頭脳 犬 豚" },
   { "title": "犬は嗅覚・鶏は視覚が最強！動物の感覚特化の秘密を研究データで徹底比較", "url": "B007-dog-stress-smell-detection-mechanism.html", "tags": "動物の五感 犬 鶏" },
   { "title": "ブタとイヌ、本当の「鼻の王様」はどっち?！嗅覚バトル！", "url": "B001-pig-dog-smell-battle-olfactory-comparison.html", "tags": "動物の頭脳 犬 豚" },
+  { "title": "犬の散歩は「脳と心の薬」だった！科学が証明する7つの驚くべき効果", "url": "A011-dog-walking-brain-health.html", "tags": "動物の頭脳 犬" },
+  { "title": "犬の耳が語る心：耳が後ろのときに読み取るべきサインとは！", "url": "A012-dog-ears-back-signs-emotion.html", "tags": "動物の頭脳 犬" },
+  { "title": "犬の耳は18個の筋肉を持つ「高感度レーダー」！", "url": "A005-dog-ear-muscles-radar-hearing.html", "tags": "動物の頭脳 犬" },
+  { "title": "犬のしつけは楽しい科学実験だ！", "url": "C003-dog-training-science-experiment.html", "tags": "動物の頭脳 犬" },
+  { "title": "犬が食べてはいけない食材トップ10！チョコ・ブドウ・キシリトールの危険を研究データで解説", "url": "C006-dog-dangerous-food-top10-research.html", "tags": "動物の頭脳 犬" },
+  { "title": "犬の換毛期完全ガイド｜毛周期の科学から実践的ケア法まで徹底解説", "url": "C008-dog-shedding-season-complete-guide.html", "tags": "動物の頭脳 犬" },
+  { "title": "犬の尻尾振りの向きでわかる感情：右振り・左振りの科学", "url": "dog-tail-wagging.html", "tags": "動物の行動 犬" },
 
   { "title": "鶏の数の認知能力：簡単な足し算・引き算ができる？", "url": "chicken-numerical-cognition.html", "tags": "動物の頭脳 鶏" },
   { "title": "鶏の「砂浴び」は何のため？感覚・社会性・寄生虫対策の三重の意味", "url": "C013-why-chickens-dust-bathe.html", "tags": "動物の行動 鶏" },
@@ -14,6 +21,8 @@
   { "title": "鶏の視覚：人間と異なる4色カラービジョン", "url": "B004-chicken-vision-4color-uv-human-comparison.html", "tags": "動物の五感 鶏" },
   { "title": "鶏は人間の顔を見分けられる？", "url": "A009-chicken-face-recognition-250-people-research.html", "tags": "動物の頭脳 鶏" },
   { "title": "鶏の「コケコッコー」は何時何分？体内時計と概日リズムの科学", "url": "A015-chicken-crowing-body-clock-circadian-rhythm.html", "tags": "動物の頭脳 鶏" },
+  { "title": "Chicken Eyesight Secrets 02 : What These Birds Can See That You Can't", "url": "B014-chicken-eyesight-secrets-02.html", "tags": "動物の五感 鶏" },
+  { "title": "Chicken Eyesight Secrets : What These Birds Can See That You Can't", "url": "B015-chicken-eyesight-secrets-01.html.html", "tags": "動物の五感 鶏" },
 
   { "title": "猫のゴロゴロ音と周波数25〜150Hzの癒し効果", "url": "B18-cat-purr-frequency-healing.html", "tags": "動物の五感 猫" },
   { "title": "猫がスリスリしてくる理由｜愛情？マーキング？科学でわかる本当の意味", "url": "cat-rubbing-softly.html", "tags": "動物の行動 猫" },
@@ -27,10 +36,21 @@
   { "title": "猫の食事の科学：「真性肉食動物」の驚くべき栄養世界", "url": "C007-cat-obligate-carnivore-nutrition-science.html", "tags": "動物の行動 猫" },
   { "title": "猫の爪とぎをやめさせられない理由【学術研究が明かす本能と心理の真実】", "url": "C015-cat-scratching-instinct-psychology-research.html", "tags": "動物の行動 猫" },
   { "title": "猫の夜間視力はなぜ人間の6倍？タペタム・ルシダムの秘密を徹底解説", "url": "B013-cat-night-vision.html", "tags": "動物の五感 猫" },
+  { "title": "猫と豚の聴力を比較！聞こえる音域がこんなに違う理由とは", "url": "B006-cat-pig-hearing-comparison-frequency.html", "tags": "動物の頭脳 猫 豚" },
+  { "title": "猫の爪とぎをやめさせられない理由【学術研究が明かす本能と心理の真実】", "url": "B008-cat-scratching-instinct-psychology-research.html", "tags": "動物の頭脳 猫" },
+  { "title": "猫の肉球：意外すぎる科学と面白エピソードの宝庫", "url": "B009-cat-paw-pad-science-episodes.html", "tags": "動物の五感 猫" },
+  { "title": "猫の理想体重と正しいダイエット法｜科学的根拠に基づく完全ガイド", "url": "B010-cat-weight-ideal-diet-science.html", "tags": "動物の五感 猫" },
+  { "title": "Fluffy Friends: Cats vs. Cows – Who's the Fluffiest?", "url": "B016-fluffy-cats-vs-cows.html", "tags": "動物の五感 猫" },
+  { "title": "猫のコミュニケーション：鳴き声の意味とは", "url": "cat-communication.html", "tags": "動物の行動 猫" },
 
   { "title": "豚のエピソード：犬以上の学習力を持つ認知能力", "url": "A010-pig-intelligence-episodes-emotion-research.html", "tags": "動物の頭脳 豚" },
   { "title": "豚が見せる7つのサイン｜尻尾・耳・鳴き声でわかる気持ちと体調のSOS", "url": "C011-pig-tail-ear-stress-signs.html", "tags": "動物の行動 豚" },
   { "title": "子豚の強さランキング！生まれた順番で決まる力関係の秘密", "url": "C009-piglet-strength-ranking-birth-order.html", "tags": "動物の行動 豚" },
   { "title": "豚の鳴き声は20種類以上！感情と状況で使い分ける驚きの会話能力", "url": "C005-pig-20-types-voice-communication-ability.html", "tags": "動物の行動 豚" },
-  { "title": "豚が泥に入る理由｜「汚い」のではなく、自然のスキンケアだった", "url": "C014-why-pigs-wallow-in-mud.html", "tags": "動物の行動 豚" }
+  { "title": "豚が泥に入る理由｜「汚い」のではなく、自然のスキンケアだった", "url": "C014-why-pigs-wallow-in-mud.html", "tags": "動物の行動 豚" },
+  { "title": "豚の鳴き声の意味をAIが解析！ブーブー・キーキーが伝えるホンネ", "url": "C001-pig-voice-ai-analysis-emotion.html", "tags": "動物の頭脳 豚" },
+  { "title": "豚は人の声や身振りを理解できる？研究で判明した驚きのコミュニケーション能力", "url": "C004-pig-human-voice-gesture-communication.html", "tags": "動物の頭脳 豚" },
+  { "title": "豚の7つのサイン：行動から読み取る健康状態", "url": "C011-pig-7-signs.html", "tags": "動物の行動 豚" },
+
+  { "title": "豚・鶏・犬の隠された超能力｜科学が証明した動物の知能の真実", "url": "A001-animal-intelligence-chicken-pig-dog.html", "tags": "動物の頭脳 豚 鶏 犬" }
 ]
