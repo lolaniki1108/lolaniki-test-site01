@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>犬が「あなたの声」で感情を読む仕組み——聴覚処理と脳の科学 | Animal IQ Labo</title>
+<meta name="description" content="犬の可聴域は人間の2倍以上。声のトーンを脳がどう処理し、なぜ言葉よりイントネーションに反応するのかを研究データで解説します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAF6F0;
+    --card:#EFE4D6;
+    --bark:#5C4630;
+    --brand:#8B6F47;
+    --ochre:#B98A2E;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--bark);
+    font-family:'Noto Sans JP',sans-serif;
+    line-height:1.9;
+    font-size:16px;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:24px 20px 60px;}
+  .backlink{
+    display:inline-block;
+    margin-bottom:20px;
+    color:var(--brand);
+    text-decoration:none;
+    font-size:0.9em;
+    font-weight:700;
+  }
+  .backlink:hover{text-decoration:underline;}
+  h1{
+    font-family:'Shippori Mincho',serif;
+    font-weight:800;
+    font-size:1.8em;
+    color:var(--bark);
+    line-height:1.5;
+    margin:0 0 8px;
+  }
+  .meta{font-size:0.82em;color:var(--brand);margin-bottom:28px;}
+  h2.section{
+    font-family:'Shippori Mincho',serif;
+    font-weight:800;
+    font-size:1.35em;
+    color:var(--bark);
+    border-left:6px solid var(--ochre);
+    padding-left:14px;
+    margin:40px 0 18px;
+  }
+  p{margin:0 0 18px;}
+  .lead-box{
+    background:var(--card);
+    border-left:6px solid var(--ochre);
+    border-radius:0 14px 14px 0;
+    padding:22px 24px;
+    margin:0 0 30px;
+  }
+  .lead-box .label{
+    font-size:1.4em;
+    font-weight:900;
+    color:var(--bark);
+    margin:0 0 10px;
+    display:block;
+  }
+  .lead-box ul{margin:0;padding-left:20px;}
+  .lead-box li{margin-bottom:8px;font-size:0.97em;}
+  .lead-box li strong{color:var(--ochre);}
+  figure{margin:28px 0;text-align:center;}
+  figure img{
+    max-width:80px;
+    width:100%;
+    height:auto;
+    border-radius:8px;
+    display:block;
+    margin:0 auto;
+  }
+  figcaption{
+    font-size:0.78em;
+    color:var(--brand);
+    margin-top:8px;
+  }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:0.9em;
+    margin:20px 0;
+  }
+  table caption{
+    text-align:left;
+    font-size:0.82em;
+    color:var(--brand);
+    margin-bottom:8px;
+  }
+  th,td{
+    padding:11px 12px;
+    border-bottom:1px solid #DCCFBB;
+    text-align:left;
+  }
+  thead th{
+    background:var(--brand);
+    color:#fff;
+  }
+  tbody tr:nth-child(even){background:#F4ECE1;}
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:14px;
+    margin:24px 0;
+  }
+  .card{
+    background:var(--card);
+    border:1px solid #DCCFBB;
+    border-radius:14px;
+    padding:18px;
+    text-align:center;
+  }
+  .card .icon{font-size:1.8em;margin-bottom:6px;}
+  .card .title{font-weight:700;color:var(--bark);margin-bottom:4px;font-size:0.92em;}
+  .card .value{font-size:0.85em;color:var(--brand);}
+  .summary-box{
+    background:var(--card);
+    border-radius:14px;
+    padding:24px 26px;
+    margin:32px 0;
+  }
+  .summary-box .label{
+    display:block;
+    font-size:1.1em;
+    font-weight:900;
+    color:var(--bark);
+    margin-bottom:12px;
+  }
+  .summary-box ul{margin:0;padding-left:20px;}
+  .summary-box li{margin-bottom:8px;font-size:0.93em;}
+  .cta-wrap{margin:36px 0;}
+  .cta-title{
+    font-size:0.85em;
+    font-weight:700;
+    color:var(--brand);
+    margin-bottom:12px;
+  }
+  .cta-btn{
+    display:block;
+    background:var(--brand);
+    color:#fff !important;
+    text-decoration:none;
+    padding:14px 18px;
+    border-radius:12px;
+    font-size:0.9em;
+    font-weight:700;
+    margin-bottom:10px;
+  }
+  .cta-btn:hover{background:var(--ochre);}
+  .refs{
+    font-size:0.8em;
+    color:var(--brand);
+    line-height:2;
+    border-top:1px solid #DCCFBB;
+    padding-top:18px;
+    margin-top:36px;
+  }
+  .svg-wrap{margin:26px 0;text-align:center;}
+  footer{
+    margin-top:60px;
+    padding-top:24px;
+    border-top:1px solid #DCCFBB;
+    text-align:center;
+    font-size:0.78em;
+    color:var(--brand);
+  }
+  footer a{color:var(--brand);}
+  @media (max-width:480px){
+    h1{font-size:1.45em;}
+    h2.section{font-size:1.15em;}
+    table{font-size:0.8em;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="backlink" href="/">← Animal IQ Labo テスト版トップ</a>
+
+  <!-- ブロック①タイトル -->
+  <h1>犬が「あなたの声」で感情を読む仕組み——聴覚処理と脳の科学</h1>
+  <div class="meta">動物の五感 ｜ 犬</div>
+
+  <!-- ブロック②リード文 -->
+  <div class="lead-box">
+    <span class="label">🐾 この記事でわかること</span>
+    <ul>
+      <li>犬の可聴域は最大<strong>45kHz</strong>で、人間の約2倍の周波数まで聞き取れること</li>
+      <li>犬の脳が「言葉の意味」と「<strong>声のトーン</strong>」を左右で別々に処理していること</li>
+      <li>犬が単語そのものより<strong>声のイントネーション</strong>に強く反応する理由</li>
+      <li>日常の声かけでトーンを意識すると愛犬との関係が変わること</li>
+    </ul>
+  </div>
+
+  <!-- ブロック③導入文 -->
+  <p>犬は「ダメ」「おすわり」のような単語の意味を理解するより先に、まず声の<strong>トーン</strong>で相手の感情を読み取っています。近年の脳科学研究では、犬の脳内にも人間と同じように、音声の感情的なニュアンスを専門に処理する領域があることが明らかになってきました。本記事では、犬の聴覚の仕組みから、脳が「あなたの声」をどう分析しているのかを、研究データをもとにわかりやすく解説します。</p>
+
+  <!-- ブロック④画像①挿入スペース -->
+  <figure>
+    <img src="B019-dog-voice-emotion-auditory-brain-illust1.webp" alt="人の声に耳を傾ける犬のイラスト" loading="lazy">
+    <figcaption>Illustration：飼い主の声のトーンに耳を澄ませる犬</figcaption>
+  </figure>
+
+  <!-- ブロック⑤セクション1 -->
+  <h2 class="section">🐶 犬の聴覚能力の基本——人間の2倍以上の音域をキャッチする耳</h2>
+  <p>犬の可聴域はおよそ<strong>67Hz〜45kHz</strong>とされ、人間の20Hz〜20kHzと比べて高音域側が大きく広がっています。この高い周波数への感度が、人の声に含まれるわずかなピッチの揺れや抑揚を、人間の耳では意識できないレベルまで拾い上げることを可能にしています。一方で低音域はほぼ人間と同じ範囲を共有しており、日常会話における声のトーン変化を十分に聞き取れる仕組みになっています。</p>
+
+  <table>
+    <caption>📊 TABLE 1｜人と犬の聴覚能力の比較</caption>
+    <thead>
+      <tr><th>項目</th><th>人間</th><th>犬</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>可聴周波数の範囲</td><td>約20Hz〜20kHz</td><td>約67Hz〜45kHz</td></tr>
+      <tr><td>音源の方向を特定する力</td><td>標準</td><td>高い（耳を動かす筋肉が18個以上）</td></tr>
+      <tr><td>声のピッチ変化への感度</td><td>標準</td><td>非常に高い</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ブロック⑥セクション2 -->
+  <h2 class="section">🧠 声のトーンを聞き分ける脳の仕組み——左右の脳が役割分担</h2>
+  <p>ハンガリーの大学の研究チームが行った脳機能イメージング（fMRI）研究では、犬にも人間と同じように音声情報を処理する「聴覚野」が存在し、その中でも感情的な音声情報に強く反応する部位があることが示されました。さらに興味深いのは、犬の脳が「言葉そのものの意味」と「声のイントネーション」を別々の半球で処理している可能性がある点です。単語の意味的な情報はやや左脳寄りで、感情を伴う声のトーンはやや右脳寄りで処理される傾向が報告されています。これは人間の脳の情報処理パターンとよく似ており、犬と人間が声によるコミュニケーションにおいて共通の神経の仕組みを持つ可能性を示しています。</p>
+
+  <div class="svg-wrap">
+<svg viewBox="0 0 640 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="声の情報処理フロー図"><rect x="0" y="0" width="640" height="170" fill="#FAF6F0"/><rect x="10" y="60" width="110" height="50" rx="10" fill="#EFE4D6" stroke="#8B6F47" stroke-width="1.5"/><text x="65" y="90" text-anchor="middle" font-size="14" fill="#5C4630" font-family="Noto Sans JP, sans-serif">耳で集音</text><path d="M120 85 L165 85" stroke="#B98A2E" stroke-width="2" marker-end="url(#arrow)"/><rect x="170" y="60" width="120" height="50" rx="10" fill="#EFE4D6" stroke="#8B6F47" stroke-width="1.5"/><text x="230" y="90" text-anchor="middle" font-size="14" fill="#5C4630" font-family="Noto Sans JP, sans-serif">聴覚野で処理</text><path d="M290 75 L330 40" stroke="#B98A2E" stroke-width="2" marker-end="url(#arrow)"/><path d="M290 95 L330 130" stroke="#B98A2E" stroke-width="2" marker-end="url(#arrow)"/><rect x="335" y="10" width="150" height="55" rx="10" fill="#F4ECE1" stroke="#8B6F47" stroke-width="1.5"/><text x="410" y="33" text-anchor="middle" font-size="13" fill="#5C4630" font-family="Noto Sans JP, sans-serif">左脳寄り</text><text x="410" y="52" text-anchor="middle" font-size="13" fill="#5C4630" font-family="Noto Sans JP, sans-serif">言葉の意味を処理</text><rect x="335" y="105" width="150" height="55" rx="10" fill="#F4ECE1" stroke="#8B6F47" stroke-width="1.5"/><text x="410" y="128" text-anchor="middle" font-size="13" fill="#5C4630" font-family="Noto Sans JP, sans-serif">右脳寄り</text><text x="410" y="147" text-anchor="middle" font-size="13" fill="#5C4630" font-family="Noto Sans JP, sans-serif">声のトーンを処理</text><path d="M485 37 L520 85" stroke="#B98A2E" stroke-width="2" marker-end="url(#arrow)"/><path d="M485 132 L520 85" stroke="#B98A2E" stroke-width="2" marker-end="url(#arrow)"/><rect x="525" y="60" width="105" height="50" rx="10" fill="#EFE4D6" stroke="#8B6F47" stroke-width="1.5"/><text x="577" y="90" text-anchor="middle" font-size="13" fill="#5C4630" font-family="Noto Sans JP, sans-serif">行動反応</text><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#B98A2E"/></marker></defs></svg>
+  </div>
+
+  <!-- ブロック⑦画像②挿入スペース -->
+  <figure>
+    <img src="B019-dog-voice-emotion-auditory-brain-illust2.webp" alt="脳と聴覚のイメージイラスト" loading="lazy">
+    <figcaption>Illustration：声の意味とトーンを分けて処理する脳のイメージ</figcaption>
+  </figure>
+
+  <!-- ブロック⑧セクション3 -->
+  <h2 class="section">💬 なぜ犬は「言葉」より「トーン」に反応するのか</h2>
+  <p>実験では、同じ内容の言葉であっても、褒めるときのような明るいトーンで話しかけられた犬と、叱るときのような低く鋭いトーンで話しかけられた犬とでは、行動や反応に明確な違いが見られました。たとえ意味を持たない言葉であっても、声のトーンだけで犬は「褒められている」のか「叱られている」のかを正しく判断できることが確認されています。これは、犬が人との共生生活の中で、声に含まれる感情的な合図を読み取る力を発達させてきたことを示していると考えられます。</p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="icon">😊</div>
+      <div class="title">明るいトーン</div>
+      <div class="value">尻尾を振る・接近行動が増える</div>
+    </div>
+    <div class="card">
+      <div class="icon">😟</div>
+      <div class="title">低く鋭いトーン</div>
+      <div class="value">耳を伏せる・回避行動が増える</div>
+    </div>
+  </div>
+
+  <!-- ブロック⑨画像③挿入スペース -->
+  <figure>
+    <img src="B019-dog-voice-emotion-auditory-brain-illust3.webp" alt="飼い主とアイコンタクトする犬のイラスト" loading="lazy">
+    <figcaption>Illustration：声のトーンから飼い主の感情を読み取る犬</figcaption>
+  </figure>
+
+  <!-- ブロック⑩セクション4 -->
+  <h2 class="section">🗣️ 声から感情を読み取るサインと日常への応用</h2>
+  <p>犬とのコミュニケーションでは、話す言葉の内容以上に「どんな声で話すか」が伝わり方を左右します。叱るときほど感情的に声を荒げてしまいがちですが、犬にとっては声のトーンの急な変化そのものが強いストレスの合図になり得ます。落ち着いた低めの声で一貫したトーンを保つことは、犬にとって安心できるコミュニケーションにつながります。また、名前を呼ぶときや褒めるときに意識的に明るく高めのトーンを使うことで、日々のやり取りがよりスムーズになると考えられます。</p>
+
+  <!-- ブロック⑪まとめ -->
+  <div class="summary-box">
+    <span class="label">📝 この記事のポイント</span>
+    <ul>
+      <li>犬の聴覚は人間の2倍以上の音域をカバーする高感度センサー</li>
+      <li>声のトーンは脳内で感情情報として専用に処理されている</li>
+      <li>単語の意味より声のイントネーションの方が犬には伝わりやすい</li>
+      <li>日常の声かけでトーンを意識すると愛犬との関係がより良くなる</li>
+    </ul>
+  </div>
+
+  <!-- ブロック⑫関連記事ボタン -->
+  <div class="cta-wrap">
+    <div class="cta-title">🔗 関連記事もあわせてどうぞ</div>
+    <a class="cta-btn" href="https://lolaniki.com/archives/1854">犬の耳は18個の筋肉を持つ「高感度レーダー」！聴覚の仕組みを解説 →</a>
+    <a class="cta-btn" href="https://lolaniki.com/archives/1577">犬の耳が語る心：耳が後ろのときに読み取るべきサインとは →</a>
+    <a class="cta-btn" href="https://lolaniki.com/archives/1716">汗のにおいだけでOK！？犬がストレスを「感じ取る」仕組みとは →</a>
+    <a class="cta-btn" href="https://lolaniki.com/archives/1807">犬は空気を読み、豚は倫理で動く？動物の知性の真実 →</a>
+  </div>
+
+  <!-- ブロック⑬参考文献 -->
+  <div class="refs">
+    📚 参考文献<br>
+    [1] 動物の音声知覚に関する神経科学分野の研究論文（fMRIを用いた犬の聴覚野機能に関する研究）<br>
+    [2] 動物行動学分野における、声のトーンと犬の情動反応に関する実験研究<br>
+    [3] 比較解剖学分野における、犬と人間の聴覚周波数域の違いに関する研究データ
+  </div>
+
+  <footer>
+    © Animal IQ Labo（lolaniki.com）｜本記事は研究データをもとにした一般向け解説であり、獣医学的な診断・治療を目的とするものではありません。<br>
+    <a href="/">トップページへ戻る</a>
+  </footer>
+
+</div>
+</body>
+</html>
