@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>猫が「あなただけ」に見せる行動5選——愛情サインの神経科学 | Animal IQ Labo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Shippori+Mincho:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #FAF6F0;
+      --card-bg: #EFE4D6;
+      --text-main: #5C4630;
+      --brand-color: #8B6F47;
+      --accent-color: #B98A2E;
+      --white: #FFFFFF;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: 'Noto Sans JP', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: var(--white);
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(92, 70, 48, 0.08);
+      padding: 40px;
+      box-sizing: border-box;
+    }
+
+    header {
+      width: 100%;
+      max-width: 800px;
+      margin-top: 20px;
+      padding: 0 5%;
+      box-sizing: border-box;
+    }
+
+    .back-to-top {
+      color: var(--brand-color);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      transition: color 0.2s;
+    }
+
+    .back-to-top:hover {
+      color: var(--accent-color);
+    }
+
+    h1, h2, h3 {
+      font-family: 'Shippori Mincho', serif;
+      color: var(--text-main);
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 2em;
+      line-height: 1.4;
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 2px solid var(--card-bg);
+      padding-bottom: 15px;
+    }
+
+    h3 {
+      font-size: 1.6em;
+      border-left: 6px solid var(--accent-color);
+      padding-left: 15px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .lead-box {
+      background-color: var(--bg-color);
+      border: 2px solid var(--card-bg);
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 40px;
+    }
+
+    .lead-box h4 {
+      font-family: 'Shippori Mincho', serif;
+      font-size: 1.4em;
+      margin: 0 0 15px 0;
+      color: var(--text-main);
+    }
+
+    .lead-box ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .lead-box li {
+      margin-bottom: 10px;
+    }
+
+    .image-block {
+      text-align: center;
+      margin: 35px 0;
+    }
+
+    .image-block img {
+      width: 50%;
+      max-width: 350px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(92, 70, 48, 0.15);
+    }
+
+    .image-caption {
+      font-size: 13px;
+      color: var(--brand-color);
+      margin-top: 8px;
+    }
+
+    .comparison-card {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 40px;
+    }
+
+    .comparison-card h4 {
+      font-family: 'Shippori Mincho', serif;
+      text-align: center;
+      font-size: 1.3em;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      font-size: 14px;
+      border: 1px solid var(--card-bg);
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--brand-color);
+      color: var(--white);
+    }
+
+    tr:nth-child(even) {
+      background-color: var(--bg-color);
+    }
+
+    .feature-point {
+      background-color: var(--bg-color);
+      border-left: 5px solid var(--brand-color);
+      padding: 20px;
+      border-radius: 0 12px 12px 0;
+      margin-bottom: 25px;
+    }
+
+    .feature-point.alt {
+      border-left-color: var(--accent-color);
+    }
+
+    .feature-point h5 {
+      font-size: 1.2em;
+      margin: 0 0 10px 0;
+      color: var(--text-main);
+    }
+
+    .cta-button {
+      display: block;
+      width: fit-content;
+      margin: 30px auto;
+      background-color: var(--accent-color);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 15px 35px;
+      border-radius: 50px;
+      box-shadow: 0 4px 15px rgba(185, 138, 46, 0.3);
+      text-align: center;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .cta-button:hover {
+      background-color: var(--brand-color);
+      transform: translateY(-2px);
+    }
+
+    .progress-section {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 40px;
+    }
+
+    .progress-bar-container {
+      background-color: var(--white);
+      border-radius: 10px;
+      height: 16px;
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 10px;
+    }
+
+    .footer-ref {
+      background-color: var(--bg-color);
+      border-top: 2px solid var(--card-bg);
+      padding: 30px;
+      margin-top: 40px;
+      border-radius: 0 0 16px 16px;
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      padding: 30px 0;
+      font-size: 12px;
+      color: var(--brand-color);
+      background-color: var(--card-bg);
+      margin-top: auto;
+    }
+
+    /* レスポンシブ対応 */
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+        width: 95%;
+      }
+      h1 {
+        font-size: 1.6em;
+      }
+      .cta-button {
+        width: 100%;
+        box-sizing: border-box;
+      }
+      th, td {
+        padding: 8px;
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="./index.html" class="back-to-top">← Animal IQ Labo テスト版トップへ戻る</a>
+  </header>
+
+  <main class="container">
+    <h1>猫が「あなただけ」に見せる行動5選<br><span style="font-size: 0.7em; color: var(--brand-color);">——愛情サインの神経科学</span></h1>
+
+    <!-- Block-01 -->
+    <div class="lead-box">
+      <h4>この記事を読めば、愛猫の「本当の気持ち」がすべてわかる！</h4>
+      <p style="margin-bottom: 15px;">
+        「うちの猫、私のこと本当に好きなのかな？」そんな風に思ったことはありませんか？実は、猫があなたに見せる何気ないポーズやしぐさには、最新の科学研究で明らかになった<b>「特別な愛情のサイン」</b>が隠されています。難しい脳や神経の仕組みを、小学生でも一瞬で理解できるように優しくお話しします！
+      </p>
+      <ul style="color: var(--text-main); font-size: 15px;">
+        <li>猫が「特別な人」を判別するための驚きの感覚システム</li>
+        <li>ゆっくりまばたきやゴロゴロ音の背後にある、脳の「ハッピーホルモン」</li>
+        <li>愛猫とより強い絆を築くための科学的アプローチ</li>
+      </ul>
+    </div>
+
+    <!-- Block-02 -->
+    <div class="image-block">
+      <!-- 同一階層の画像ファイルを参照 -->
+      <img src="b011-illust.jpg" alt="おねだりをする愛らしい猫のイラスト">
+      <div class="image-caption">「ねえねえ、構って！」おねだり行動も特別な信頼のシグナルです</div>
+    </div>
+
+    <!-- Block-03 -->
+    <div class="comparison-card">
+      <h4>【早見表】猫があなただけに見せる5つの愛情サイン</h4>
+      <div style="overflow-x: auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>猫の行動</th>
+              <th>科学的な意味合い</th>
+              <th>猫の脳内キモチ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>① ゆっくりまばたき</b></td>
+              <td>最もリラックスしている状態の証明</td>
+              <td>「あなたがそこにいて安心だよ」</td>
+            </tr>
+            <tr>
+              <td><b>② おでこゴツン</b></td>
+              <td>特有のフェロモンを用いた所有マーク</td>
+              <td>「あなたはお気に入りの大切な人！」</td>
+            </tr>
+            <tr>
+              <td><b>③ ゴロゴロ音</b></td>
+              <td>回復・リラックスを促す低周波の発生</td>
+              <td>「すごく嬉しくてリラックス中！」</td>
+            </tr>
+            <tr>
+              <td><b>④ お腹を見せる</b></td>
+              <td>急所をあえて無防備にする究極の信頼</td>
+              <td>「この人の前なら絶対に安全！」</td>
+            </tr>
+            <tr>
+              <td><b>⑤ しっぽを垂直に立てる</b></td>
+              <td>母猫への甘えと同様の親愛サイン</td>
+              <td>「お母さん、こっち向いて！」</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Block-04 -->
+    <h3>科学が解き明かした！猫の「特別な信頼」の理由</h3>
+    <p>
+      猫は周囲の変化にとても敏感な動物です。東京大学の研究チームが2013年に行った実験では、猫は他の人の声と、飼い主さんの声の響きや音程の違いをはっきりと聴き分けていることが実証されました。あなたがそばにいるだけで、猫の感覚センサーは特別な「安心モード」へと切り替わっているのです。
+    </p>
+
+    <div class="feature-point">
+      <h5>1. ゆっくりな「まばたき」＝お互いの緊張を解く魔法</h5>
+      <p style="margin: 0; font-size: 15px;">
+        サセックス大学の2020年の研究によると、人間が猫に向かってゆっくりと目を閉じると、猫も同じようにまばたきを返す確率が高まり、自ら人間に近づきやすくなることが判明しました。敵意がないことを示すこのゆっくりとした瞬きは、お互いの警戒心を和らげる最大の愛情表現なのです。
+      </p>
+    </div>
+
+    <div class="feature-point alt">
+      <h5>2. おでこの「ゴツン」＝親愛を証明するにおい付け</h5>
+      <p style="margin: 0; font-size: 15px;">
+        猫は、自身の顔周りから気持ちを落ち着かせる特別なフェロモンを分泌しています。大切な相手に頭をぶつけるのは、相手に自分のにおいをつけて「共有スペース」を築くため。この行為によって猫は、より大きな安心感を得ていると考えられています。
+      </p>
+    </div>
+
+    <!-- Block-05 -->
+    <a href="https://lolaniki.com/archives/dog-brain-science" class="cta-button">🐾 犬派向け：犬の脳科学についての記事を読む 🐾</a>
+
+    <!-- Block-06 (SVG Flowchart) -->
+    <div style="background-color: var(--bg-color); border-radius: 12px; padding: 25px; margin: 40px 0; text-align: center;">
+      <h4 style="font-family: 'Shippori Mincho', serif; margin-bottom: 15px;">【視覚図解】触れ合いで深まる脳内の絆サイクル</h4>
+      <div style="max-width: 100%; width: 500px; margin: 0 auto;">
+        <svg viewBox="0 0 500 150" width="100%" height="auto" style="display:block; overflow:visible;">
+          <rect x="10" y="35" width="120" height="80" rx="8" fill="#8B6F47"/>
+          <text x="70" y="70" fill="#FFFFFF" font-size="12" text-anchor="middle" font-weight="bold">飼い主と目が合う</text>
+          <text x="70" y="90" fill="#EFE4D6" font-size="10" text-anchor="middle">（ゆっくりまばたき）</text>
+          <path d="M 140 75 L 170 75" stroke="#B98A2E" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+          <g transform="translate(180, 15)">
+            <rect x="0" y="20" width="140" height="80" rx="8" fill="#EFE4D6" stroke="#8B6F47" stroke-width="2"/>
+            <text x="70" y="55" fill="#5C4630" font-size="12" text-anchor="middle" font-weight="bold">脳内で「オキシトシン」</text>
+            <text x="70" y="75" fill="#5C4630" font-size="12" text-anchor="middle" font-weight="bold">が分泌される！</text>
+            <text x="70" y="92" fill="#B98A2E" font-size="10" text-anchor="middle">安心・ストレス軽減</text>
+          </g>
+          <path d="M 330 75 L 360 75" stroke="#B98A2E" stroke-width="3" fill="none"/>
+          <g transform="translate(370, 35)">
+            <rect x="0" y="0" width="120" height="80" rx="8" fill="#B98A2E"/>
+            <text x="60" y="35" fill="#FFFFFF" font-size="12" text-anchor="middle" font-weight="bold">猫も人間も</text>
+            <text x="60" y="55" fill="#FFFFFF" font-size="12" text-anchor="middle" font-weight="bold">もっと幸せな</text>
+            <text x="60" y="72" fill="#FFFFFF" font-size="10" text-anchor="middle">気持ちに！</text>
+          </g>
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#B98A2E"/>
+            </marker>
+          </defs>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Block-07 -->
+    <div class="feature-point">
+      <h5>3. 「ゴロゴロ」音＝お互いを包み込む癒やしの周波数</h5>
+      <p style="margin: 0; font-size: 15px;">
+        猫が甘える際に鳴らす「ゴロゴロ」という振動音は、約20〜140ヘルツの周波数を持っています。この波長は、緊張した自律神経をリラックスさせ、骨などの組織修復にも良い影響を与える可能性があると考えられています。猫は自分だけでなく、大好きな飼い主さんも同時にリラックスさせようとしているのかもしれません。
+      </p>
+    </div>
+
+    <div class="feature-point alt">
+      <h5>4. お腹の「オープン」＝完全な警戒ゼロの証</h5>
+      <p style="margin: 0; font-size: 15px;">
+        お腹は急所が集まる、最も無防備な部位です。この部分を見せる行為は、飼い主さんに対して一切の警戒をしていない証拠。オレゴン州立大学の研究チームが示した「強い情緒的アタッチメント（愛着行動）」の証であり、絶対的な安心感と信頼関係を物語っています。
+      </p>
+    </div>
+
+    <!-- Block-08 -->
+    <a href="https://lolaniki.com/archives/pig-chicken-intelligence" class="cta-button">🐷 豚やニワトリの驚くべき認知能力を読む 🐔</a>
+
+    <!-- Block-09 -->
+    <div class="progress-section">
+      <h4 style="margin-bottom: 20px;">【感覚データ】猫があなたを識別する強さの秘密</h4>
+      
+      <div style="margin-bottom: 15px;">
+        <div style="display: flex; justify-content: space-between; font-size: 14px; font-weight: bold; margin-bottom: 5px;">
+          <span>👂 聴覚（あなたの声の周波数を特定する能力）</span>
+          <span>95%</span>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-fill" style="background-color: var(--accent-color); width: 95%;"></div>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <div style="display: flex; justify-content: space-between; font-size: 14px; font-weight: bold; margin-bottom: 5px;">
+          <span>👃 嗅覚（服や肌の個別な香りをかぎ分ける能力）</span>
+          <span>85%</span>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-fill" style="background-color: var(--brand-color); width: 85%;"></div>
+        </div>
+      </div>
+
+      <div>
+        <div style="display: flex; justify-content: space-between; font-size: 14px; font-weight: bold; margin-bottom: 5px;">
+          <span>👁️ 視覚（顔のディテールを見分ける能力）</span>
+          <span>40%</span>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-fill" style="background-color: #C2B4A3; width: 40%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block-10 -->
+    <div class="footer-ref">
+      <h4 style="font-family: 'Shippori Mincho', serif; margin-top: 0; color: var(--brand-color); font-size: 1.2em; margin-bottom: 15px;">💡 この記事の参考文献（科学データ一覧）</h4>
+      <ol style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.8;">
+        <li style="margin-bottom: 10px;">
+          <b>東京大学の研究チーム（2013年発表）</b><br>
+          "Vocal recognition of owners by domestic cats (Felis catus)" —— 飼い主の声と他人の声を猫が聴き分け、識別していることを示した行動実験。
+        </li>
+        <li style="margin-bottom: 10px;">
+          <b>サセックス大学の研究チーム（2020年発表）</b><br>
+          "The role of cat eye-narrowing movements in cat–human communication" —— ゆっくりとしたまばたきが猫との情緒的な交流を深めることを明らかにした実験。
+        </li>
+        <li style="margin-bottom: 10px;">
+          <b>オレゴン州立大学の研究チーム（2019年発表）</b><br>
+          "An attachment bond in domestic cats" —— 猫と飼い主の間に犬や子どもと同様の確固たる愛着関係が存在することを示した心理学研究。
+        </li>
+      </ol>
+    </div>
+  </main>
+
+  <footer>
+    <p style="margin: 0;">© 2026 Animal IQ Labo. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
