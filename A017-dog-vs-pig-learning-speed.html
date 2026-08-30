@@ -8,67 +8,141 @@
   <meta name="keywords" content="犬, 豚, 学習速度, 比較, 犬 学習スピード, 豚 知能, 動物 認知科学, コマンド 覚える 速さ, ペット 学習能力">
   
   <style>
-  :root {
-    --bg-cream: #FAF6F0;
-    --card: #EFE4D6;
-    --bark: #5C4630;
-    --brand: #8B6F47;
-    --ochre: #B98A2E;
-    --border: #D8CBB8;
-  }
   * { box-sizing: border-box; }
   body {
-    background: var(--bg-cream);
-    color: #3E3226;
-    font-family: "Noto Sans JP", sans-serif;
     margin: 0;
-    padding: 0;
-    line-height: 1.9;
+    background: #FAF6F0;
+    color: #3a2f22;
+    font-family: "Noto Sans JP", sans-serif;
+    line-height: 1.8;
   }
-  .aql-wrap {
-    max-width: 780px;
-    margin: 0 auto;
-    padding: 20px 18px 60px 18px;
-  }
-  .aql-back {
+  .wrap { max-width: 760px; margin: 0 auto; padding: 20px 16px 60px; }
+  .back-link {
     display: inline-block;
-    margin: 18px 0 10px 0;
-    color: var(--brand);
+    margin: 16px 0 24px;
+    color: #8B6F47;
     text-decoration: none;
-    font-size: 0.92em;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: bold;
   }
-  .aql-back:hover { color: var(--ochre); }
-  h1.aql-title {
+  .back-link:hover { text-decoration: underline; }
+  h1 {
     font-family: "Shippori Mincho", serif;
-    font-weight: 800;
-    color: var(--bark);
-    font-size: 1.9em;
+    color: #5C4630;
+    font-size: 1.85em;
     line-height: 1.5;
-    margin: 10px 0 26px 0;
-    border-bottom: 4px solid var(--ochre);
-    padding-bottom: 14px;
+    border-bottom: 3px solid #B98A2E;
+    padding-bottom: 12px;
+    margin-bottom: 8px;
   }
-  h3 { font-family: "Shippori Mincho", serif; }
-  .aql-footer {
-    max-width: 780px;
-    margin: 40px auto 0 auto;
-    padding: 26px 18px;
-    border-top: 1px solid var(--border);
+  .lead { font-size: 1.05em; color: #5C4630; margin-bottom: 28px; }
+  h2 {
+    font-family: "Shippori Mincho", serif;
+    color: #5C4630;
+    font-size: 1.4em;
+    margin-top: 44px;
+    border-left: 6px solid #B98A2E;
+    padding-left: 12px;
+  }
+  h3 { color: #5C4630; font-size: 1.1em; margin-top: 28px; }
+  h4 { color: #5C4630; font-size: 1.02em; }
+  .highlight-box {
+    background: #EFE4D6;
+    border-radius: 12px;
+    padding: 20px 22px;
+    font-size: 1.15em;
+    font-weight: bold;
+    color: #5C4630;
+    margin: 20px 0;
+    border-left: 6px solid #B98A2E;
+  }
+  img { max-width: 100%; border-radius: 10px; display: block; margin: 20px auto; }
+  img.illust-img { max-width: 320px; width: 60%; }
+  figcaption { text-align: center; font-size: 0.85em; color: #8B6F47; margin-top: -10px; }
+  .stat-box {
+    background: #1a1a2e;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 20px 0;
     text-align: center;
-    color: var(--brand);
-    font-size: 0.88em;
   }
-  .aql-footer a { color: var(--brand); }
-  img { max-width: 100%; height: auto; }
-  table { width: 100%; }
-  @media (max-width: 480px) {
-    h1.aql-title { font-size: 1.5em; }
-    h3 { font-size: 1.3em !important; }
-  }
-  img.illust-img { max-width: 320px; width: 60%; margin-left: auto; margin-right: auto; }
-</style>
 
+
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.93em; }
+  th, td { border: 1px solid #ddd0bd; padding: 10px 12px; text-align: left; }
+  th { background: #EFE4D6; color: #5C4630; }
+  tr:nth-child(even) { background: #FBF8F3; }
+  img { max-width: 100%; border-radius: 10px; display: block; margin: 20px auto; }
+  img.illust-img { max-width: 320px; width: 60%; }
+  figcaption { text-align: center; font-size: 0.85em; color: #8B6F47; margin-top: -10px; }
+
+  .dark-box { background: #1a1a2e; border-radius: 12px; padding: 24px; margin: 20px 0; }
+  .dark-box h4 { color: #FFD700; text-align: center; margin: 0 0 18px; font-size: 15px; }
+
+  .bar-chart { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+  .bar-item { text-align: center; min-width: 100px; }
+  .bar-item .icon { font-size: 30px; }
+  .bar-item .bar { margin: 8px auto; border-radius: 4px 4px 0 0; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 4px; width: 56px; }
+  .bar-item .bar span { color: #fff; font-size: 11px; font-weight: bold; }
+  .bar-item .label { color: #fff; font-size: 12px; }
+  .bar-note { color: #aaa; font-size: 11px; text-align: center; margin: 16px 0 0; }
+
+  .gene-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .gene-icon { min-width: 44px; font-size: 20px; text-align: center; }
+  .gene-track { flex: 1; }
+  .gene-label { display: flex; justify-content: space-between; margin-bottom: 4px; font-size: 13px; font-weight: bold; }
+  .gene-bar-bg { background: #eee; border-radius: 4px; height: 20px; }
+  .gene-bar-fill { height: 100%; border-radius: 4px; }
+  .gene-wrap { background: #f0f4ff; border-radius: 12px; padding: 20px; margin: 20px 0; }
+
+  .tip-box {
+    background: #fff8f0;
+    border-left: 4px solid #B98A2E;
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin: 20px 0;
+    font-size: 0.95em;
+  }
+
+  .flow-wrap { background: #EFE4D6; border-radius: 12px; padding: 24px 16px; margin: 20px 0; }
+  .flow-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; }
+  .flow-step { color: #fff; border-radius: 8px; padding: 12px 14px; min-width: 96px; text-align: center; font-size: 0.78em; font-weight: bold; }
+  .flow-arrow { color: #8B6914; font-size: 18px; }
+  .flow-note { text-align: center; font-size: 0.8em; color: #8B6F47; margin-top: 12px; }
+
+  .versus-wrap { background: #f8f4f0; border-radius: 12px; padding: 24px; margin: 20px 0; }
+  .versus-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .versus-card { background: #fff; border: 2px solid; border-radius: 10px; padding: 16px; flex: 1; min-width: 150px; text-align: center; }
+  .versus-card.pig { border-color: #FF8C00; }
+  .versus-card.dog { border-color: #4169E1; }
+  .versus-card ul { text-align: left; font-size: 12px; color: #555; margin: 8px 0 0; padding-left: 18px; line-height: 1.8; }
+  .versus-vs { display: flex; align-items: center; justify-content: center; font-size: 26px; color: #8B6914; font-weight: bold; }
+  .versus-result { background: #e8f5e9; border-radius: 8px; padding: 12px 16px; margin-top: 16px; text-align: center; color: #2d6a2d; font-weight: bold; font-size: 0.9em; }
+
+  .card-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; }
+  .card { background: #fff; border-top: 4px solid; border-radius: 0 0 10px 10px; padding: 16px; flex: 1; min-width: 170px; }
+  .card .icon { font-size: 22px; text-align: center; }
+  .card .title { font-weight: bold; font-size: 13px; margin: 8px 0; text-align: center; }
+  .card p { font-size: 12px; color: #555; margin: 0; line-height: 1.7; }
+
+  .roadmap-item { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.06); border-radius: 8px; padding: 12px; margin-bottom: 10px; }
+  .roadmap-item .icon { font-size: 22px; flex-shrink: 0; }
+  .roadmap-item .rtitle { color: #FFD700; font-weight: bold; font-size: 13px; }
+  .roadmap-item .rdesc { color: #aaa; font-size: 12px; margin-top: 2px; }
+
+  details { background: #FBF3E6; border: 1px solid #B98A2E; border-radius: 10px; padding: 14px 18px; margin-bottom: 12px; }
+  summary { font-weight: bold; color: #5C4630; cursor: pointer; list-style: none; }
+
+  .cta-wrap { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0; }
+  .cta-btn { display: block; flex: 1; min-width: 160px; color: #fff; border-radius: 8px; padding: 14px 18px; text-decoration: none; font-weight: bold; text-align: center; font-size: 0.88em; }
+
+  .refs { background: #EFE4D6; border-radius: 12px; padding: 20px 22px; margin: 20px 0; }
+  .ref-item { margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid #ddd0bd; font-size: 0.9em; }
+  .ref-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .ref-num { display: inline-block; background: #8B6F47; color: #fff; border-radius: 50%; width: 24px; height: 24px; text-align: center; line-height: 24px; font-size: 11px; margin-right: 8px; }
+
+  footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #ddd0bd; text-align: center; font-size: 0.8em; color: #8B6F47; }
+</style>
 </head>
 <body>
 <div class="wrap">
