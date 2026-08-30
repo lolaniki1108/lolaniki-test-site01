@@ -4,94 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>猫と豚、どちらが夢を見ているのか？REM睡眠と記憶固定の比較</title>
-  <meta name="description" content="猫と豚、24時間のうちどれくらい夢を見ているの？ REM睡眠の割合や記憶固定との関係を、20年以上の飼育・畜産経験と研究データから比較します。">
+  <meta name="description" content="猫と豚、24時間のうちどれくらい夢を見ているの？ REM睡眠の割合や記憶固定との関係を、飼育・畜産経験と研究データから比較します。">
   <meta name="keywords" content="猫 睡眠, 豚 睡眠, REM睡眠 記憶固定, 動物 夢を見る, 動物 睡眠 比較">
   <style>
-    /* Cloudflare / モバイル対応共通ベース CSS */
-    :root {
-      --bg-main: #FAF6F0;
-      --bg-card: #F5EFE4;
-      --bg-accent: #EFE4D6;
-      --text-main: #3C3226;
-      --text-title: #5C4630;
-      --text-sub: #7A6A54;
-      --brand-primary: #8B6F47;
-      --brand-secondary: #B98A2E;
-    }
-
-    * { box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-      line-height: 1.8;
-      color: var(--text-main);
-      background-color: #fff;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px 16px;
-    }
-
-    h1, h2, h3 { color: var(--text-title); line-height: 1.4; }
-    h2 { font-size: 1.5em; border-bottom: 3px solid var(--brand-secondary); padding-bottom: 8px; margin: 40px 0 20px; }
-    p { font-size: 1.02em; margin-bottom: 1.2em; }
-
-    /* ハイライトボックス */
-    .highlight-box {
-      background: var(--bg-card);
-      border-left: 6px solid var(--brand-primary);
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 28px;
-    }
-    .highlight-title { font-size: 1.25em; font-weight: bold; color: var(--text-title); margin: 0 0 12px; }
-    .highlight-box ul { margin: 0; padding-left: 1.2em; color: #4A3B2A; }
-    .highlight-box li { margin-bottom: 8px; }
-
-    /* 図・画像レスポンシブ対応 */
-    .media-container { margin: 24px 0; text-align: center; }
-    .media-container svg { width: 100%; height: auto; max-width: 640px; display: block; margin: 0 auto; border-radius: 12px; }
-    .media-container img { max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
-    .caption { font-size: 0.85em; color: var(--text-sub); margin-top: 8px; text-align: center; }
-
-    /* テーブル・スマホ横スクロール対応 */
-    .table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 24px 0; }
-    table { width: 100%; border-collapse: collapse; min-width: 500px; font-size: 0.95em; }
-    th, td { padding: 12px; border: 1px solid #D8C6AE; text-align: left; }
-    th { background: var(--brand-primary); color: #fff; }
-    tr:nth-child(even) { background: var(--bg-main); }
-    tr:nth-child(odd) { background: var(--bg-accent); }
-
-    /* 関連記事（グリッド） */
-    .related-box { background: var(--bg-accent); border-radius: 14px; padding: 24px; margin: 40px 0; }
-    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 16px; }
-    .related-btn {
-      display: block;
-      background: var(--brand-primary);
-      color: #fff;
-      text-align: center;
-      padding: 14px 10px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.2s;
-    }
-    .related-btn:hover { background: var(--text-title); }
-
-    /* 参考文献リスト */
-    .references { border-top: 2px solid #D8C6AE; margin-top: 40px; padding-top: 20px; font-size: 0.88em; }
-    .references ol { padding-left: 1.3em; color: var(--text-sub); }
-
-    /* スマホ（〜600px）最適化 */
-    @media (max-width: 600px) {
-      .container { padding: 16px 12px; }
-      h2 { font-size: 1.3em; }
-      .related-grid { grid-template-columns: 1fr; } /* 1列に変更 */
-    }
-    img { max-width: 100%; border-radius: 10px; display: block; margin: 20px auto; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #FAF6F0;
+    color: #3a2f22;
+    font-family: "Noto Sans JP", sans-serif;
+    line-height: 1.8;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 20px 16px 60px; }
+  .back-link {
+    display: inline-block;
+    margin: 16px 0 24px;
+    color: #8B6F47;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .back-link:hover { text-decoration: underline; }
+  h1 {
+    font-family: "Shippori Mincho", serif;
+    color: #5C4630;
+    font-size: 1.85em;
+    line-height: 1.5;
+    border-bottom: 3px solid #B98A2E;
+    padding-bottom: 12px;
+    margin-bottom: 8px;
+  }
+  .lead { font-size: 1.05em; color: #5C4630; margin-bottom: 28px; }
+  h2 {
+    font-family: "Shippori Mincho", serif;
+    color: #5C4630;
+    font-size: 1.4em;
+    margin-top: 44px;
+    border-left: 6px solid #B98A2E;
+    padding-left: 12px;
+  }
+  h3 { color: #5C4630; font-size: 1.1em; margin-top: 28px; }
+  h4 { color: #5C4630; font-size: 1.02em; }
+  .highlight-box {
+    background: #EFE4D6;
+    border-radius: 12px;
+    padding: 20px 22px;
+    font-size: 1.15em;
+    font-weight: bold;
+    color: #5C4630;
+    margin: 20px 0;
+    border-left: 6px solid #B98A2E;
+  }
+  img { max-width: 100%; border-radius: 10px; display: block; margin: 20px auto; }
   img.illust-img { max-width: 320px; width: 60%; }
   figcaption { text-align: center; font-size: 0.85em; color: #8B6F47; margin-top: -10px; }
   .stat-box {
@@ -103,9 +67,89 @@
   }
 
 
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.93em; }
+  th, td { border: 1px solid #ddd0bd; padding: 10px 12px; text-align: left; }
+  th { background: #EFE4D6; color: #5C4630; }
+  tr:nth-child(even) { background: #FBF8F3; }
+  img { max-width: 100%; border-radius: 10px; display: block; margin: 20px auto; }
+  img.illust-img { max-width: 320px; width: 60%; }
+  figcaption { text-align: center; font-size: 0.85em; color: #8B6F47; margin-top: -10px; }
+
+  .dark-box { background: #1a1a2e; border-radius: 12px; padding: 24px; margin: 20px 0; }
+  .dark-box h4 { color: #FFD700; text-align: center; margin: 0 0 18px; font-size: 15px; }
+
+  .bar-chart { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+  .bar-item { text-align: center; min-width: 100px; }
+  .bar-item .icon { font-size: 30px; }
+  .bar-item .bar { margin: 8px auto; border-radius: 4px 4px 0 0; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 4px; width: 56px; }
+  .bar-item .bar span { color: #fff; font-size: 11px; font-weight: bold; }
+  .bar-item .label { color: #fff; font-size: 12px; }
+  .bar-note { color: #aaa; font-size: 11px; text-align: center; margin: 16px 0 0; }
+
+  .gene-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .gene-icon { min-width: 44px; font-size: 20px; text-align: center; }
+  .gene-track { flex: 1; }
+  .gene-label { display: flex; justify-content: space-between; margin-bottom: 4px; font-size: 13px; font-weight: bold; }
+  .gene-bar-bg { background: #eee; border-radius: 4px; height: 20px; }
+  .gene-bar-fill { height: 100%; border-radius: 4px; }
+  .gene-wrap { background: #f0f4ff; border-radius: 12px; padding: 20px; margin: 20px 0; }
+
+  .tip-box {
+    background: #fff8f0;
+    border-left: 4px solid #B98A2E;
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin: 20px 0;
+    font-size: 0.95em;
+  }
+
+  .flow-wrap { background: #EFE4D6; border-radius: 12px; padding: 24px 16px; margin: 20px 0; }
+  .flow-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; }
+  .flow-step { color: #fff; border-radius: 8px; padding: 12px 14px; min-width: 96px; text-align: center; font-size: 0.78em; font-weight: bold; }
+  .flow-arrow { color: #8B6914; font-size: 18px; }
+  .flow-note { text-align: center; font-size: 0.8em; color: #8B6F47; margin-top: 12px; }
+
+  .versus-wrap { background: #f8f4f0; border-radius: 12px; padding: 24px; margin: 20px 0; }
+  .versus-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .versus-card { background: #fff; border: 2px solid; border-radius: 10px; padding: 16px; flex: 1; min-width: 150px; text-align: center; }
+  .versus-card.pig { border-color: #FF8C00; }
+  .versus-card.dog { border-color: #4169E1; }
+  .versus-card ul { text-align: left; font-size: 12px; color: #555; margin: 8px 0 0; padding-left: 18px; line-height: 1.8; }
+  .versus-vs { display: flex; align-items: center; justify-content: center; font-size: 26px; color: #8B6914; font-weight: bold; }
+  .versus-result { background: #e8f5e9; border-radius: 8px; padding: 12px 16px; margin-top: 16px; text-align: center; color: #2d6a2d; font-weight: bold; font-size: 0.9em; }
+
+  .card-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; }
+  .card { background: #fff; border-top: 4px solid; border-radius: 0 0 10px 10px; padding: 16px; flex: 1; min-width: 170px; }
+  .card .icon { font-size: 22px; text-align: center; }
+  .card .title { font-weight: bold; font-size: 13px; margin: 8px 0; text-align: center; }
+  .card p { font-size: 12px; color: #555; margin: 0; line-height: 1.7; }
+
+  .roadmap-item { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.06); border-radius: 8px; padding: 12px; margin-bottom: 10px; }
+  .roadmap-item .icon { font-size: 22px; flex-shrink: 0; }
+  .roadmap-item .rtitle { color: #FFD700; font-weight: bold; font-size: 13px; }
+  .roadmap-item .rdesc { color: #aaa; font-size: 12px; margin-top: 2px; }
+
+  details { background: #FBF3E6; border: 1px solid #B98A2E; border-radius: 10px; padding: 14px 18px; margin-bottom: 12px; }
+  summary { font-weight: bold; color: #5C4630; cursor: pointer; list-style: none; }
+
+  .cta-wrap { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0; }
+  .cta-btn { display: block; flex: 1; min-width: 160px; color: #fff; border-radius: 8px; padding: 14px 18px; text-decoration: none; font-weight: bold; text-align: center; font-size: 0.88em; }
+
+  .refs { background: #EFE4D6; border-radius: 12px; padding: 20px 22px; margin: 20px 0; }
+  .ref-item { margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid #ddd0bd; font-size: 0.9em; }
+  .ref-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .ref-num { display: inline-block; background: #8B6F47; color: #fff; border-radius: 50%; width: 24px; height: 24px; text-align: center; line-height: 24px; font-size: 11px; margin-right: 8px; }
+
+  footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #ddd0bd; text-align: center; font-size: 0.8em; color: #8B6F47; }
   </style>
 </head>
 <body>
+<div class="wrap">
+
+<a class="back-link" href="/">← Animal IQ Labo テスト版トップ</a>
+
+<h1>猫と豚、どちらが夢を見ているのか？REM睡眠と記憶固定の比較</h1>
+<p class="lead">猫と豚、24時間のうちどれくらい夢を見ているの？ REM睡眠の割合や記憶固定との関係を、20年以上の飼育・畜産経験と研究データから比較します。</p>
 
 <main class="container">
   <article>
@@ -138,7 +182,7 @@
       </div>
 
       <div class="media-container">
-        <img src="sleeping-cat.jpg" alt="丸まって眠る猫" loading="lazy">
+        <img src="C017-cat-pig-rem-sleep-memory-consolidation01.webp" alt="丸まって眠る猫" loading="lazy">
         <p class="caption">写真: 丸まって眠る猫</p>
       </div>
     </section>
@@ -157,7 +201,7 @@
       <p>子豚を対象にした観察研究では、生後1週目から5週目にかけてREM睡眠の割合が明確に減っていくことも報告されています。人間の赤ちゃんも新生児期にREM睡眠（もしくはそれに近い「活動睡眠」）の割合が非常に高く、成長とともに減っていくことが知られており、豚でも似た発達パターンが見られるのは興味深い共通点です。</p>
       
       <div class="media-container">
-        <img src="sleeping-piglets.jpg" alt="重なり合って眠る子豚たち" loading="lazy">
+        <img src="C017-cat-pig-rem-sleep-memory-consolidation02.webp" alt="重なり合って眠る子豚たち" loading="lazy">
         <p class="caption">写真: 群れで体を寄せ合って眠る子豚</p>
       </div>
     </section>
