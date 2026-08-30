@@ -8,254 +8,67 @@
   <meta name="keywords" content="犬, 豚, 学習速度, 比較, 犬 学習スピード, 豚 知能, 動物 認知科学, コマンド 覚える 速さ, ペット 学習能力">
   
   <style>
-    /* --------------------------------------------------
-       Global Reset & CSS Variables
-    -------------------------------------------------- */
-    :root {
-      --color-bg-primary: #FAF6F0;
-      --color-bg-card: #EFE4D6;
-      --color-bg-highlight: #FBF0DD;
-      --color-text-main: #3E3226;
-      --color-accent-primary: #B98A2E;
-      --color-accent-dark: #8B6F47;
-      --color-heading: #5C4630;
-      --color-white: #FFFFFF;
-      --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: var(--font-family-base);
-      background-color: var(--color-bg-primary);
-      color: var(--color-text-main);
-      line-height: 1.8;
-      font-size: 16px;
-      padding: 16px;
-    }
-
-    .article-container {
-      max-width: 800px;
-      margin: 0 auto;
-      background-color: var(--color-white);
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(92, 70, 48, 0.08);
-    }
-
-    /* --------------------------------------------------
-       Typography & Section Titles
-    -------------------------------------------------- */
-    h3 {
-      font-size: 1.35em;
-      font-weight: bold;
-      color: var(--color-heading);
-      border-bottom: 3px solid var(--color-accent-primary);
-      padding-bottom: 8px;
-      margin: 36px 0 20px 0;
-    }
-
-    p {
-      font-size: 1em;
-      line-height: 1.9;
-      color: var(--color-text-main);
-      margin-bottom: 16px;
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* --------------------------------------------------
-       Components & Blocks
-    -------------------------------------------------- */
-    .block-wrapper {
-      margin-bottom: 32px;
-    }
-
-    /* Highlight Box */
-    .highlight-box {
-      background-color: var(--color-bg-highlight);
-      border-left: 6px solid var(--color-accent-primary);
-      border-radius: 8px;
-      padding: 20px;
-    }
-
-    .highlight-title {
-      font-size: 1.25em;
-      font-weight: bold;
-      color: var(--color-heading);
-      margin-bottom: 12px;
-    }
-
-    .highlight-list {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .highlight-list li {
-      position: relative;
-      padding-left: 24px;
-      margin-bottom: 10px;
-      font-size: 0.98em;
-    }
-
-    .highlight-list li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--color-accent-primary);
-      font-weight: bold;
-    }
-
-    /* Card Wrapper (SVG & Charts) */
-    .card-box {
-      background-color: var(--color-bg-card);
-      border-radius: 10px;
-      padding: 20px;
-    }
-
-    .card-title {
-      font-size: 1.1em;
-      font-weight: bold;
-      color: var(--color-heading);
-      margin-bottom: 14px;
-    }
-
-    .card-caption {
-      font-size: 0.85em;
-      color: var(--color-accent-dark);
-      margin-top: 12px;
-      text-align: center;
-    }
-
-    /* Media Styles */
-    .image-block {
-      text-align: center;
-    }
-
-    .image-block img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(92, 70, 48, 0.12);
-    }
-
-    /* Responsive Tables */
-    .table-container {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background-color: var(--color-white);
-      border-radius: 8px;
-      overflow: hidden;
-      min-width: 500px;
-    }
-
-    th, td {
-      padding: 12px 14px;
-      text-align: left;
-      font-size: 0.92em;
-    }
-
-    th {
-      background-color: var(--color-accent-dark);
-      color: var(--color-white);
-      font-weight: bold;
-    }
-
-    tr:nth-child(even) {
-      background-color: var(--color-bg-primary);
-    }
-
-    tr {
-      border-bottom: 1px solid var(--color-bg-card);
-    }
-
-    /* FAQ Section */
-    .faq-item {
-      margin-bottom: 16px;
-    }
-
-    .faq-item:last-child {
-      margin-bottom: 0;
-    }
-
-    .faq-question {
-      font-weight: bold;
-      color: var(--color-heading);
-      margin-bottom: 6px;
-    }
-
-    .faq-answer {
-      font-size: 0.95em;
-    }
-
-    /* Related Links Grid */
-    .related-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-    }
-
-    .related-card {
-      display: block;
-      background-color: var(--color-accent-dark);
-      color: var(--color-white);
-      text-decoration: none;
-      text-align: center;
-      padding: 14px 12px;
-      border-radius: 8px;
-      font-size: 0.95em;
-      font-weight: bold;
-      transition: background-color 0.2s ease;
-    }
-
-    .related-card:hover {
-      background-color: var(--color-heading);
-    }
-
-    /* --------------------------------------------------
-       Responsive Breakpoints (Desktop)
-    -------------------------------------------------- */
-    @media (min-width: 640px) {
-      body {
-        padding: 32px 16px;
-      }
-
-      .article-container {
-        padding: 40px;
-      }
-
-      h3 {
-        font-size: 1.5em;
-      }
-
-      .highlight-box {
-        padding: 24px 28px;
-      }
-
-      .card-box {
-        padding: 24px;
-      }
-
-      .related-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-
+  :root {
+    --bg-cream: #FAF6F0;
+    --card: #EFE4D6;
+    --bark: #5C4630;
+    --brand: #8B6F47;
+    --ochre: #B98A2E;
+    --border: #D8CBB8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg-cream);
+    color: #3E3226;
+    font-family: "Noto Sans JP", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.9;
+  }
+  .aql-wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 20px 18px 60px 18px;
+  }
+  .aql-back {
+    display: inline-block;
+    margin: 18px 0 10px 0;
+    color: var(--brand);
+    text-decoration: none;
+    font-size: 0.92em;
+    font-weight: 700;
+  }
+  .aql-back:hover { color: var(--ochre); }
+  h1.aql-title {
+    font-family: "Shippori Mincho", serif;
+    font-weight: 800;
+    color: var(--bark);
+    font-size: 1.9em;
+    line-height: 1.5;
+    margin: 10px 0 26px 0;
+    border-bottom: 4px solid var(--ochre);
+    padding-bottom: 14px;
+  }
+  h3 { font-family: "Shippori Mincho", serif; }
+  .aql-footer {
+    max-width: 780px;
+    margin: 40px auto 0 auto;
+    padding: 26px 18px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--brand);
+    font-size: 0.88em;
+  }
+  .aql-footer a { color: var(--brand); }
+  img { max-width: 100%; height: auto; }
+  table { width: 100%; }
+  @media (max-width: 480px) {
+    h1.aql-title { font-size: 1.5em; }
+    h3 { font-size: 1.3em !important; }
+  }
   img.illust-img { max-width: 320px; width: 60%; margin-left: auto; margin-right: auto; }
+</style>
 
-  </style>
 </head>
 <body>
 <div class="wrap">
