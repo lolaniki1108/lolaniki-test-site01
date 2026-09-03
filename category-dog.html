@@ -311,7 +311,6 @@
     pagination.innerHTML = '';
     if (totalPages <= 1) return;
 
-    // 前へボタン («)
     if (current > 1) {
       var prev = document.createElement('button');
       prev.type = 'button';
@@ -321,7 +320,6 @@
       pagination.appendChild(prev);
     }
 
-    // ページ番号ボタン
     for (var p = 1; p <= totalPages; p++) {
       (function(p){
         var btn = document.createElement('button');
@@ -333,7 +331,6 @@
       })(p);
     }
 
-    // 次へボタン (»)
     if (current < totalPages) {
       var next = document.createElement('button');
       next.type = 'button';
