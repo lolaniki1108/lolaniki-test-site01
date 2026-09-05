@@ -27,126 +27,144 @@
   }
   </script>
 
+
   <style>
-    /* ベーススタイル */
-    :root {
-      --primary-color: #5C4630;
-      --accent-color: #B98A2E;
-      --bg-light: #FAF6F0;
-      --box-bg: #E6DACE;
-      --text-color: #333333;
-    }
-    
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.8;
-      color: var(--text-color);
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 16px;
-      background-color: #fff;
-    }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #FAF6F0;
+    color: #3a2f22;
+    font-family: "Noto Sans JP", sans-serif;
+    line-height: 1.8;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 20px 16px 60px; }
+  .back-link {
+    display: inline-block;
+    margin: 16px 0 24px;
+    color: #8B6F47;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .back-link:hover { text-decoration: underline; }
+  h1 {
+    font-family: "Shippori Mincho", serif;
+    color: #5C4630;
+    font-size: 1.85em;
+    line-height: 1.5;
+    border-bottom: 3px solid #B98A2E;
+    padding-bottom: 12px;
+    margin-bottom: 8px;
+  }
+  .lead { font-size: 1.05em; color: #5C4630; margin-bottom: 28px; }
+  h2 {
+    font-family: "Shippori Mincho", serif;
+    color: #5C4630;
+    font-size: 1.4em;
+    margin-top: 44px;
+    border-left: 6px solid #B98A2E;
+    padding-left: 12px;
+  }
+  h3 { color: #5C4630; font-size: 1.1em; margin-top: 28px; }
+  h4 { color: #5C4630; font-size: 1.02em; }
+  .highlight-box {
+    background: #EFE4D6;
+    border-radius: 12px;
+    padding: 20px 22px;
+    font-size: 1.15em;
+    font-weight: bold;
+    color: #5C4630;
+    margin: 20px 0;
+    border-left: 6px solid #B98A2E;
+  }
+  img { max-width: 100%; border-radius: 10px; display: block; margin: 20px auto; }
+  img.illust-img { max-width: 320px; width: 60%; }
+  figcaption { text-align: center; font-size: 0.85em; color: #8B6F47; margin-top: -10px; }
+  .stat-box {
+    background: #1a1a2e;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 20px 0;
+    text-align: center;
+  }
 
-    h1 {
-      font-size: 1.8rem;
-      color: var(--primary-color);
-      line-height: 1.4;
-      border-bottom: 3px solid var(--accent-color);
-      padding-bottom: 12px;
-      margin-bottom: 24px;
-    }
 
-    h2 {
-      font-size: 1.4rem;
-      color: var(--primary-color);
-      border-bottom: 2px solid var(--accent-color);
-      padding-bottom: 6px;
-      margin-top: 40px;
-    }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.93em; }
+  th, td { border: 1px solid #ddd0bd; padding: 10px 12px; text-align: left; }
+  th { background: #EFE4D6; color: #5C4630; }
+  tr:nth-child(even) { background: #FBF8F3; }
+  img { max-width: 100%; border-radius: 10px; display: block; margin: 20px auto; }
+  img.illust-img { max-width: 320px; width: 60%; }
+  figcaption { text-align: center; font-size: 0.85em; color: #8B6F47; margin-top: -10px; }
 
-    p {
-      font-size: 1rem;
-      margin-bottom: 1.2rem;
-    }
+  .dark-box { background: #1a1a2e; border-radius: 12px; padding: 24px; margin: 20px 0; }
+  .dark-box h4 { color: #FFD700; text-align: center; margin: 0 0 18px; font-size: 15px; }
 
-    /* ハイライトボックス & まとめボックス */
-    .highlight-box {
-      background-color: var(--box-bg);
-      border-left: 6px solid var(--primary-color);
-      border-radius: 8px;
-      padding: 20px;
-      margin-bottom: 28px;
-    }
-    .highlight-title {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: var(--primary-color);
-      margin-bottom: 10px;
-    }
-    .highlight-box ul {
-      margin: 0;
-      padding-left: 1.2rem;
-    }
+  .bar-chart { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+  .bar-item { text-align: center; min-width: 100px; }
+  .bar-item .icon { font-size: 30px; }
+  .bar-item .bar { margin: 8px auto; border-radius: 4px 4px 0 0; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 4px; width: 56px; }
+  .bar-item .bar span { color: #fff; font-size: 11px; font-weight: bold; }
+  .bar-item .label { color: #fff; font-size: 12px; }
+  .bar-note { color: #aaa; font-size: 11px; text-align: center; margin: 16px 0 0; }
 
-    .summary-box {
-      background-color: #EFE4D6;
-      border-left: 6px solid var(--accent-color);
-      border-radius: 8px;
-      padding: 20px;
-      margin: 30px 0;
-    }
+  .gene-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .gene-icon { min-width: 44px; font-size: 20px; text-align: center; }
+  .gene-track { flex: 1; }
+  .gene-label { display: flex; justify-content: space-between; margin-bottom: 4px; font-size: 13px; font-weight: bold; }
+  .gene-bar-bg { background: #eee; border-radius: 4px; height: 20px; }
+  .gene-bar-fill { height: 100%; border-radius: 4px; }
+  .gene-wrap { background: #f0f4ff; border-radius: 12px; padding: 20px; margin: 20px 0; }
 
-    .result-card {
-      background-color: #FBEFD9;
-      border: 1px dashed var(--accent-color);
-      border-radius: 8px;
-      padding: 16px 20px;
-      margin: 20px 0;
-    }
+  .tip-box {
+    background: #fff8f0;
+    border-left: 4px solid #B98A2E;
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin: 20px 0;
+    font-size: 0.95em;
+  }
 
-    /* レスポンシブテーブル */
-    .table-container {
-      overflow-x: auto;
-      margin: 20px 0;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.95rem;
-      min-width: 480px;
-    }
-    th {
-      background-color: var(--primary-color);
-      color: #fff;
-      padding: 10px;
-      text-align: left;
-    }
-    td {
-      padding: 10px;
-      border: 1px solid #ddd;
-    }
-    tr:nth-child(even) {
-      background-color: var(--bg-light);
-    }
+  .flow-wrap { background: #EFE4D6; border-radius: 12px; padding: 24px 16px; margin: 20px 0; }
+  .flow-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; }
+  .flow-step { color: #fff; border-radius: 8px; padding: 12px 14px; min-width: 96px; text-align: center; font-size: 0.78em; font-weight: bold; }
+  .flow-arrow { color: #8B6914; font-size: 18px; }
+  .flow-note { text-align: center; font-size: 0.8em; color: #8B6F47; margin-top: 12px; }
 
-    /* レスポンシブSVG・画像 */
-    .media-container {
-      width: 100%;
-      text-align: center;
-      margin: 24px 0;
-    }
-    .media-container img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-    .caption {
-      font-size: 0.85rem;
-      color: var(--primary-color);
-      margin-top: 6px;
-    }
+  .versus-wrap { background: #f8f4f0; border-radius: 12px; padding: 24px; margin: 20px 0; }
+  .versus-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .versus-card { background: #fff; border: 2px solid; border-radius: 10px; padding: 16px; flex: 1; min-width: 150px; text-align: center; }
+  .versus-card.pig { border-color: #FF8C00; }
+  .versus-card.dog { border-color: #4169E1; }
+  .versus-card ul { text-align: left; font-size: 12px; color: #555; margin: 8px 0 0; padding-left: 18px; line-height: 1.8; }
+  .versus-vs { display: flex; align-items: center; justify-content: center; font-size: 26px; color: #8B6914; font-weight: bold; }
+  .versus-result { background: #e8f5e9; border-radius: 8px; padding: 12px 16px; margin-top: 16px; text-align: center; color: #2d6a2d; font-weight: bold; font-size: 0.9em; }
 
-    /* 関連記事リンク Grid (PC 2列 / スマホ 1列) */
+  .card-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; }
+  .card { background: #fff; border-top: 4px solid; border-radius: 0 0 10px 10px; padding: 16px; flex: 1; min-width: 170px; }
+  .card .icon { font-size: 22px; text-align: center; }
+  .card .title { font-weight: bold; font-size: 13px; margin: 8px 0; text-align: center; }
+  .card p { font-size: 12px; color: #555; margin: 0; line-height: 1.7; }
+
+  .roadmap-item { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.06); border-radius: 8px; padding: 12px; margin-bottom: 10px; }
+  .roadmap-item .icon { font-size: 22px; flex-shrink: 0; }
+  .roadmap-item .rtitle { color: #FFD700; font-weight: bold; font-size: 13px; }
+  .roadmap-item .rdesc { color: #aaa; font-size: 12px; margin-top: 2px; }
+
+  details { background: #FBF3E6; border: 1px solid #B98A2E; border-radius: 10px; padding: 14px 18px; margin-bottom: 12px; }
+  summary { font-weight: bold; color: #5C4630; cursor: pointer; list-style: none; }
+
+  .cta-wrap { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0; }
+  .cta-btn { display: block; flex: 1; min-width: 160px; color: #fff; border-radius: 8px; padding: 14px 18px; text-decoration: none; font-weight: bold; text-align: center; font-size: 0.88em; }
+
+  .refs { background: #EFE4D6; border-radius: 12px; padding: 20px 22px; margin: 20px 0; }
+  .ref-item { margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid #ddd0bd; font-size: 0.9em; }
+  .ref-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .ref-num { display: inline-block; background: #8B6F47; color: #fff; border-radius: 50%; width: 24px; height: 24px; text-align: center; line-height: 24px; font-size: 11px; margin-right: 8px; }
+
+  footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #ddd0bd; text-align: center; font-size: 0.8em; color: #8B6F47; }
+
+   /* 関連記事リンク Grid (PC 2列 / スマホ 1列) */
     .related-links {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -166,33 +184,12 @@
     }
     .related-btn:hover {
       background-color: var(--accent-color);
-    }
-
-    /* 参考文献リスト */
-    .references {
-      margin-top: 40px;
-      border-top: 2px solid var(--box-bg);
-      padding-top: 16px;
-      font-size: 0.88rem;
-      color: #666;
-    }
-
-    /* スマホ表示向けの調整 */
-    @media (max-width: 600px) {
-      body {
-        padding: 12px;
-      }
-      h1 {
-        font-size: 1.5rem;
-      }
-      h2 {
-        font-size: 1.25rem;
-      }
-    }
-  </style>
+    } 
+</style>
 </head>
 <body>
-
+<div class="wrap">
+  
   <!-- メインタイトル -->
   <h1>鶏は仲間をかばうのか？共感能力の研究で判明した驚きの行動</h1>
 
@@ -208,7 +205,7 @@
   </div>
 
   <!-- ブロック2：導入文 -->
-  <p>鶏を20年以上飼育してきた中で、「あれ、今この子、仲間を気にかけているな」と感じる瞬間が何度もありました。弱った鶏のそばから離れない個体がいたり、オスがメスたちの様子をずっと窺っていたり。ただ、これは人間側の思い込みなのか、それとも本当に鶏には「仲間を思いやる力」が備わっているのか。この疑問に、科学はどこまで答えを出しているのでしょうか。今回は、鶏の共感能力を調べた研究論文をもとに、意外な結果も含めてわかりやすく紹介します。</p>
+  <p>鶏を飼育してきた中で、「あれ、今この子、仲間を気にかけているな」と感じる瞬間が何度もありました。弱った鶏のそばから離れない個体がいたり、オスがメスたちの様子をずっと窺っていたり。ただ、これは人間側の思い込みなのか、それとも本当に鶏には「仲間を思いやる力」が備わっているのか。この疑問に、科学はどこまで答えを出しているのでしょうか。今回は、鶏の共感能力を調べた研究論文をもとに、意外な結果も含めてわかりやすく紹介します。</p>
 
   <!-- ブロック3：母鶏とヒナの実験 -->
   <h2>母鶏はヒナの「つらさ」を感じ取っていた</h2>
@@ -280,7 +277,7 @@
 
   <!-- 画像挿入位置1 -->
   <div class="media-container">
-    <img src="C017-cat-pig-rem-sleep-memory-consolidation01.webp" alt="母鶏とヒナが寄り添う様子">
+    <img src="C018-chicken-empathy-protect-companions01.webp" alt="母鶏とヒナが寄り添う様子">
     <div class="caption">母鶏はヒナの小さな変化にも敏感に反応する</div>
   </div>
 
@@ -336,7 +333,7 @@
 
   <!-- 画像挿入位置2 -->
   <div class="media-container">
-    <img src="C017-cat-pig-rem-sleep-memory-consolidation02.webp" alt="仲間の鶏に寄り添う鶏">
+    <img src="C018-chicken-empathy-protect-companions02.webp" alt="仲間の鶏に寄り添う鶏">
     <div class="caption">長く一緒にいる群れの中では、個体同士の関係性が行動に表れることがある</div>
   </div>
 
