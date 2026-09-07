@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【ここに記事タイトル】｜Animal IQ Labo</title>
+<link rel="icon" type="image/png" href="cropped-logo-icon.webp">
+<meta name="description" content="【ここにメタディスクリプション（120字前後）】">
+<meta property="og:title" content="【ここに記事タイトル】｜Animal IQ Labo">
+<meta property="og:description" content="【ここにメタディスクリプション】">
+<meta property="og:image" content="【記事ID】-【スラッグ】-illust01.webp">
+<meta property="og:url" content="https://lolaniki-test-site01.lolaniki1108.workers.dev/【記事ID】-【スラッグ】">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF6F0; --card:#EFE4D6; --bark:#5C4630; --brand:#8B6F47; --ochre:#B98A2E; --ink:#3A2E22; --line: rgba(92,70,48,0.16);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Sans JP', sans-serif;line-height:1.9;}
+  .wrap{max-width:800px;margin:0 auto;padding:0 24px;}
+  a{color:inherit;}
+  header.site{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:50;}
+  .nav-inner{max-width:960px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+  .brand-name{font-weight:700;font-size:20px;color:var(--bark);text-decoration:none;display:flex;align-items:center;gap:8px;}
+  nav.main-nav{display:flex;gap:22px;font-size:14px;font-weight:700;}
+  nav.main-nav a{text-decoration:none;color:var(--brand);}
+  nav.main-nav a:hover{color:var(--ochre);}
+  .back-link{display:inline-block;margin:24px 0 8px;font-size:13px;color:var(--brand);text-decoration:none;font-weight:700;}
+  .cat-label{font-size:12.5px;letter-spacing:0.08em;color:var(--ochre);font-weight:700;margin:20px 0 10px;}
+  h1.article-title{font-size:clamp(24px,3.6vw,32px);line-height:1.55;color:var(--bark);margin:0 0 8px;font-weight:700;}
+  .meta-line{font-size:12.5px;color:var(--brand);margin-bottom:28px;}
+  .lede{font-size:15px;color:#4a3c2e;margin-bottom:28px;}
+  .highlight-box{background:#fff;border-left:5px solid var(--ochre);border-radius:0 12px 12px 0;padding:22px 26px;margin:0 0 32px;}
+  .highlight-title{font-size:1.4em;font-weight:700;color:var(--bark);margin:0 0 12px;}
+  .highlight-box ul{margin:0;padding-left:20px;font-size:15px;line-height:2;}
+  .highlight-box ul li strong{color:var(--ochre);}
+  h2{font-size:21px;color:var(--bark);border-left:5px solid var(--ochre);padding-left:14px;margin:44px 0 20px;font-weight:700;}
+  h3{font-size:17px;color:var(--bark);margin:30px 0 14px;font-weight:700;}
+  p{font-size:15px;color:#3A2E22;margin:0 0 18px;}
+  img { max-width: 100%; border-radius: 10px; display: block; margin: 20px auto; }
+  img.illust-img { max-width: 320px; width: 60%; }
+  figcaption { text-align: center; font-size: 0.85em; color: #8B6F47; margin-top: -10px; }
+  .stat-box { background: #1a1a2e; border-radius: 12px; padding: 24px; margin: 20px 0; text-align: center; }
+  figure.article-img{margin:28px 0;}
+  figure.article-img img{width:100%;border-radius:12px;border:1px solid var(--line);display:block;}
+  figure.article-img figcaption{font-size:12px;color:var(--brand);margin-top:8px;}
+  table.data-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:13.5px;background:#fff;border-radius:10px;overflow:hidden;}
+  table.data-table th{background:var(--bark);color:#fff;padding:11px 14px;text-align:left;}
+  table.data-table td{padding:10px 14px;border-bottom:1px solid var(--line);}
+  table.data-table tr:nth-child(even){background:var(--cream);}
+  .flow-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:20px 0;font-size:14px;color:var(--bark);font-weight:700;}
+  .flow-step{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;}
+  .flow-arrow{color:var(--ochre);font-size:16px;}
+  .step-flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:26px 0;}
+  .step-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;text-align:center;font-size:13px;}
+  .step-card .step-icon{font-size:24px;margin-bottom:8px;}
+  .step-card .step-title{font-weight:700;color:var(--bark);margin-bottom:6px;}
+  .research-note{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin:26px 0;font-size:13.5px;}
+  .research-note .r-title{font-weight:700;color:var(--ochre);margin-bottom:10px;font-size:13px;}
+  .science-note{background:var(--card);border-radius:12px;padding:20px 24px;margin:26px 0;font-size:14px;}
+  .science-note .s-title{font-weight:700;color:var(--bark);margin-bottom:8px;}
+  .faq-item{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 22px;margin-bottom:12px;}
+  .faq-q{font-weight:700;color:var(--ochre);margin-bottom:8px;font-size:14.5px;}
+  .faq-a{font-size:14px;color:#4a3c2e;}
+  .summary-box{background:var(--card);border-radius:12px;padding:8px 22px;margin:30px 0;}
+  .summary-box table{width:100%;border-collapse:collapse;font-size:14px;}
+  .summary-box td{padding:12px 8px;border-bottom:1px solid rgba(92,70,48,0.15);}
+  .summary-box tr:last-child td{border-bottom:none;}
+  .refs{font-size:12.5px;color:var(--brand);line-height:1.9;margin:20px 0 36px;padding-left:20px;}
+  .related-title{font-weight:700;color:var(--bark);font-size:16px;margin:40px 0 16px;}
+  .related-links{display:flex;flex-direction:column;gap:10px;margin-bottom:40px;width:50%;}
+  .related-links a{background:var(--bark);color:#fff;padding:12px 20px;border-radius:24px;text-decoration:none;font-size:13.5px;font-weight:700;display:inline-flex;align-items:center;gap:8px;}
+  @media (max-width:640px){.related-links{width:100%;}}
+  footer.site{text-align:center;padding:36px 24px 48px;font-size:12.5px;color:var(--brand);border-top:1px solid var(--line);margin-top:20px;}
+</style>
+</head>
+<body>
+
+<!-- ============================================= -->
+<!-- ここから下は基本、毎回まるごとコピーして使う「骨格」部分 -->
+<!-- 変更していいのは data-table の中身、highlight-box の中身、
+     見出しテキスト、画像ファイル名、参考文献、関連記事リンクだけ -->
+<!-- ============================================= -->
+
+<header class="site">
+  <div class="nav-inner">
+    <a class="brand-name" href="index.html"><img src="cropped-logo-icon.webp" alt="" style="width: 40px; height: 40px; border-radius: 50%;">Animal IQ Labo</a>
+    <nav class="main-nav">
+      <a href="index.html">TOP</a>
+      <a href="animal.html">Animal</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- 1. パンくず（必ずこの1行をそのままコピー） -->
+  <a class="back-link" href="index.html">← Animal IQ Labo テスト版トップ</a>
+
+  <!-- 2. カテゴリラベル：絵文字と動物名だけ差し替え -->
+  <div class="cat-label">【カテゴリ名（例：動物の五感）】 ｜ 【絵文字】【動物名】</div>
+
+  <!-- 3. タイトル・更新日：class は絶対に外さない -->
+  <h1 class="article-title">【ここに記事タイトル】</h1>
+  <div class="meta-line">最終更新：【YYYY-MM】</div>
+
+  <!-- 4. リード文（導入）：class="lede" は必須 -->
+  <p class="lede">【ここに導入文・つかみの1〜2文】</p>
+
+  <!-- 5. この記事でわかること -->
+  <div class="highlight-box">
+    <div class="highlight-title">【絵文字】この記事でわかること</div>
+    <ul>
+      <li>【ポイント1】</li>
+      <li>【ポイント2】</li>
+      <li>【ポイント3】</li>
+      <li>【ポイント4】</li>
+    </ul>
+  </div>
+
+  <!-- 6. 本文セクション（h2 + p を繰り返す） -->
+  <h2>【小見出し1】</h2>
+  <p>【本文】</p>
+
+  <!-- 7. 画像：class="illust-img" を必ず付ける（付けないと画像が巨大化する） -->
+  <img class="illust-img" src="【記事ID】-【スラッグ】-illust01.webp" alt="【代替テキスト】">
+  <figcaption>【キャプション】</figcaption>
+
+  <!-- 8. ステップ図解を使う場合 -->
+  <div class="step-flow">
+    <div class="step-card"><div class="step-icon">【絵文字】</div><div class="step-title">【ステップ名】</div>【説明】</div>
+    <div class="step-card"><div class="step-icon">【絵文字】</div><div class="step-title">【ステップ名】</div>【説明】</div>
+  </div>
+
+  <h2>【小見出し2】</h2>
+  <p>【本文】</p>
+
+  <!-- 9. 表：table class="data-table" を必ず付ける。table-container 等の独自divで包まない -->
+  <table class="data-table">
+    <thead><tr><th>【項目】</th><th>【比較A】</th><th>【比較B】</th></tr></thead>
+    <tbody>
+      <tr><td>【行1】</td><td>【値】</td><td>【値】</td></tr>
+      <tr><td>【行2】</td><td>【値】</td><td>【値】</td></tr>
+    </tbody>
+  </table>
+
+  <h2>よくある質問</h2>
+  <div class="faq-item"><div class="faq-q">Q. 【質問】</div><div class="faq-a">【回答】</div></div>
+  <div class="faq-item"><div class="faq-q">Q. 【質問】</div><div class="faq-a">【回答】</div></div>
+
+  <h2>まとめ</h2>
+  <div class="summary-box">
+    <table>
+      <tr><td>【項目】</td><td>【要点】</td></tr>
+      <tr><td>【項目】</td><td>【要点】</td></tr>
+    </table>
+  </div>
+
+  <div class="related-title">🔗 あわせて読みたい関連記事</div>
+  <div class="related-links">
+    <a href="https://lolaniki.com/archives/【ID】">【絵文字】 【関連記事タイトル】 →</a>
+    <a href="https://lolaniki.com/archives/【ID】">【絵文字】 【関連記事タイトル】 →</a>
+  </div>
+
+  <h2>参考文献</h2>
+  <ol class="refs">
+    <li>【著者】（【年】）— 【タイトル】</li>
+    <li>【著者】（【年】）— 【タイトル】</li>
+  </ol>
+
+</div>
+
+<footer class="site">
+  Animal IQ Labo（テスト環境） / 本番サイトは <a href="https://lolaniki.com" style="color:var(--brand);">lolaniki.com</a>
+  <br><a href="contact.html" style="color:var(--brand);">ご意見・お問い合わせ</a>
+</footer>
+
+</body>
+</html>

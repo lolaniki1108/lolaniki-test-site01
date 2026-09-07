@@ -3,220 +3,104 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>犬のしつけは「楽しい科学実験」だ！ごほうびで変わる行動のしくみ | Animal IQ Labo</title>
+<title>犬のしつけは「楽しい科学実験」だ！ごほうびで変わる行動のしくみ｜Animal IQ Labo</title>
+<link rel="icon" type="image/png" href="cropped-logo-icon.webp">
 <meta name="description" content="犬のしつけを「叱る・我慢」ではなく「楽しい科学実験」として捉え直す記事。ごほうびのタイミングや頻度で行動がどう変わるかを、家庭でできる観察実験として図解とともに紹介します。">
-<meta name="keywords" content="犬 しつけ, 犬 学習, オペラント条件付け, 犬 ごほうび, 犬 行動学">
-<!-- focus keyword: 犬 しつけ 科学実験 -->
-<!-- slug: inu-shitsuke-kagaku-jikken -->
+<meta property="og:title" content="犬のしつけは「楽しい科学実験」だ！ごほうびで変わる行動のしくみ｜Animal IQ Labo">
+<meta property="og:description" content="犬のしつけを「叱る・我慢」ではなく「楽しい科学実験」として捉え直す記事。ごほうびのタイミングや頻度で行動がどう変わるかを紹介します。">
+<meta property="og:image" content="C003-dog-training-science-experiment-illust01.webp">
+<meta property="og:url" content="https://lolaniki-test-site01.lolaniki1108.workers.dev/C003-dog-training-science-experiment">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --cream: #FAF6F0;
-    --card: #EFE4D6;
-    --bark: #5C4630;
-    --brand: #8B6F47;
-    --ochre: #B98A2E;
+  :root{
+    --cream:#FAF6F0; --card:#EFE4D6; --bark:#5C4630; --brand:#8B6F47; --ochre:#B98A2E; --ink:#3A2E22; --line: rgba(92,70,48,0.16);
   }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--cream);
-    color: var(--bark);
-    font-family: "Noto Sans JP", sans-serif;
-    line-height: 1.9;
-    font-size: 16px;
-  }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 20px 18px 60px; }
-  .backlink {
-    display: inline-block;
-    margin: 14px 0 10px;
-    color: var(--brand);
-    text-decoration: none;
-    font-size: 0.9em;
-    font-weight: 700;
-  }
-  .backlink:hover { text-decoration: underline; }
-  h1 {
-    font-family: "Shippori Mincho", serif;
-    font-weight: 900;
-    color: var(--bark);
-    font-size: 1.7em;
-    line-height: 1.5;
-    margin: 10px 0 6px;
-    border-bottom: 4px solid var(--ochre);
-    padding-bottom: 14px;
-  }
-  .meta-sub {
-    font-size: 0.85em;
-    color: var(--brand);
-    margin-bottom: 24px;
-  }
-  h3 {
-    font-family: "Shippori Mincho", serif;
-    font-weight: 900;
-    color: var(--bark);
-    font-size: 1.35em;
-    margin: 44px 0 18px;
-    padding-left: 14px;
-    border-left: 8px solid var(--ochre);
-  }
-  p { margin: 0 0 18px; }
-  .block-tag {
-    font-size: 0.72em;
-    color: #fff;
-    background: var(--brand);
-    display: inline-block;
-    padding: 2px 10px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    letter-spacing: 0.05em;
-  }
-  /* ブロック1: ハイライト */
-  .highlight-box {
-    background: linear-gradient(135deg, var(--card), #F6EDE1);
-    border: 2px solid var(--ochre);
-    border-radius: 16px;
-    padding: 26px 24px;
-    margin: 18px 0 34px;
-  }
-  .highlight-box h2 {
-    font-family: "Shippori Mincho", serif;
-    font-size: 1.3em;
-    color: var(--bark);
-    margin: 0 0 12px;
-  }
-  .highlight-box p:last-child { margin-bottom: 0; }
-  /* この記事でわかること */
-  .lead-box {
-    background: #fff;
-    border-left: 8px solid var(--brand);
-    border-radius: 10px;
-    padding: 20px 22px;
-    margin: 24px 0 34px;
-    box-shadow: 0 2px 8px rgba(92,70,48,0.08);
-  }
-  .lead-box .lead-title {
-    font-size: 1.4em;
-    font-weight: 700;
-    color: var(--bark);
-    margin-bottom: 12px;
-  }
-  .lead-box ul { margin: 0; padding-left: 1.3em; }
-  .lead-box li { margin-bottom: 8px; }
-  /* 図解 */
-  .diagram-box {
-    background: #fff;
-    border-radius: 14px;
-    padding: 18px;
-    margin: 22px 0 30px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(92,70,48,0.08);
-  }
-  .diagram-caption {
-    font-size: 0.85em;
-    color: var(--brand);
-    margin-top: 10px;
-  }
-  /* 表 */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0 30px;
-    font-size: 0.92em;
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  th, td {
-    border: 1px solid var(--card);
-    padding: 12px 10px;
-    text-align: left;
-  }
-  th {
-    background: var(--brand);
-    color: #fff;
-    font-weight: 700;
-  }
-  tr:nth-child(even) td { background: #FBF7F1; }
-  /* イラストプレースホルダー */
-  .illust {
-    width: 100%;
-    max-width: 480px;
-    height: auto;
-    display: block;
-    margin: 24px auto;
-    border-radius: 14px;
-  }
-  /* CTAボタン */
-  .cta-wrap { margin: 40px 0; }
-  .cta-title { font-weight: 700; margin-bottom: 14px; font-size: 1.05em; }
-  .cta-btn {
-    display: block;
-    background: var(--brand);
-    color: #fff !important;
-    text-decoration: none;
-    padding: 16px 20px;
-    border-radius: 10px;
-    margin-bottom: 12px;
-    font-weight: 700;
-    font-size: 0.98em;
-    transition: opacity 0.2s;
-  }
-  .cta-btn:hover { opacity: 0.85; }
-  .cta-btn span { display: block; font-size: 0.8em; font-weight: 400; margin-top: 4px; opacity: 0.9; }
-  /* 実験ノートカード */
-  .note-card {
-    background: var(--card);
-    border-radius: 14px;
-    padding: 22px;
-    margin: 22px 0 30px;
-  }
-  .note-card ol { padding-left: 1.2em; margin: 0; }
-  .note-card li { margin-bottom: 10px; }
-  /* 参考文献 */
-  .refs {
-    margin-top: 50px;
-    padding-top: 24px;
-    border-top: 2px solid var(--card);
-    font-size: 0.82em;
-    color: #7a6952;
-  }
-  .refs ol { padding-left: 1.4em; }
-  .refs li { margin-bottom: 8px; }
-  footer {
-    margin-top: 60px;
-    padding-top: 24px;
-    border-top: 1px solid var(--card);
-    text-align: center;
-    font-size: 0.8em;
-    color: var(--brand);
-  }
-  @media (max-width: 480px) {
-    h1 { font-size: 1.4em; }
-    h3 { font-size: 1.15em; }
-    .wrap { padding: 14px 14px 50px; }
-  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Sans JP', sans-serif;line-height:1.9;}
+  .wrap{max-width:800px;margin:0 auto;padding:0 24px;}
+  a{color:inherit;}
+  header.site{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:50;}
+  .nav-inner{max-width:960px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+  .brand-name{font-weight:700;font-size:20px;color:var(--bark);text-decoration:none;display:flex;align-items:center;gap:8px;}
+  nav.main-nav{display:flex;gap:22px;font-size:14px;font-weight:700;}
+  nav.main-nav a{text-decoration:none;color:var(--brand);}
+  nav.main-nav a:hover{color:var(--ochre);}
+  .back-link{display:inline-block;margin:24px 0 8px;font-size:13px;color:var(--brand);text-decoration:none;font-weight:700;}
+  .cat-label{font-size:12.5px;letter-spacing:0.08em;color:var(--ochre);font-weight:700;margin:20px 0 10px;}
+  h1.article-title{font-size:clamp(24px,3.6vw,32px);line-height:1.55;color:var(--bark);margin:0 0 8px;font-weight:700;}
+  .meta-line{font-size:12.5px;color:var(--brand);margin-bottom:28px;}
+  .lede{font-size:15px;color:#4a3c2e;margin-bottom:28px;}
+  .highlight-box{background:#fff;border-left:5px solid var(--ochre);border-radius:0 12px 12px 0;padding:22px 26px;margin:0 0 32px;}
+  .highlight-title{font-size:1.4em;font-weight:700;color:var(--bark);margin:0 0 12px;}
+  .highlight-box ul{margin:0;padding-left:20px;font-size:15px;line-height:2;}
+  .highlight-box ul li strong{color:var(--ochre);}
+  h2{font-size:21px;color:var(--bark);border-left:5px solid var(--ochre);padding-left:14px;margin:44px 0 20px;font-weight:700;}
+  h3{font-size:17px;color:var(--bark);margin:30px 0 14px;font-weight:700;}
+  p{font-size:15px;color:#3A2E22;margin:0 0 18px;}
+  img { max-width: 100%; border-radius: 10px; display: block; margin: 20px auto; }
+  img.illust-img { max-width: 320px; width: 60%; }
+  figcaption { text-align: center; font-size: 0.85em; color: #8B6F47; margin-top: -10px; }
+  .stat-box { background: #1a1a2e; border-radius: 12px; padding: 24px; margin: 20px 0; text-align: center; }
+  figure.article-img{margin:28px 0;}
+  figure.article-img img{width:100%;border-radius:12px;border:1px solid var(--line);display:block;}
+  figure.article-img figcaption{font-size:12px;color:var(--brand);margin-top:8px;}
+  table.data-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:13.5px;background:#fff;border-radius:10px;overflow:hidden;}
+  table.data-table th{background:var(--bark);color:#fff;padding:11px 14px;text-align:left;}
+  table.data-table td{padding:10px 14px;border-bottom:1px solid var(--line);}
+  table.data-table tr:nth-child(even){background:var(--cream);}
+  .flow-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:20px 0;font-size:14px;color:var(--bark);font-weight:700;}
+  .flow-step{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;}
+  .flow-arrow{color:var(--ochre);font-size:16px;}
+  .step-flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:26px 0;}
+  .step-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;text-align:center;font-size:13px;}
+  .step-card .step-icon{font-size:24px;margin-bottom:8px;}
+  .step-card .step-title{font-weight:700;color:var(--bark);margin-bottom:6px;}
+  .research-note{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin:26px 0;font-size:13.5px;}
+  .research-note .r-title{font-weight:700;color:var(--ochre);margin-bottom:10px;font-size:13px;}
+  .science-note{background:var(--card);border-radius:12px;padding:20px 24px;margin:26px 0;font-size:14px;}
+  .science-note .s-title{font-weight:700;color:var(--bark);margin-bottom:8px;}
+  .faq-item{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 22px;margin-bottom:12px;}
+  .faq-q{font-weight:700;color:var(--ochre);margin-bottom:8px;font-size:14.5px;}
+  .faq-a{font-size:14px;color:#4a3c2e;}
+  .summary-box{background:var(--card);border-radius:12px;padding:8px 22px;margin:30px 0;}
+  .summary-box table{width:100%;border-collapse:collapse;font-size:14px;}
+  .summary-box td{padding:12px 8px;border-bottom:1px solid rgba(92,70,48,0.15);}
+  .summary-box tr:last-child td{border-bottom:none;}
+  .refs{font-size:12.5px;color:var(--brand);line-height:1.9;margin:20px 0 36px;padding-left:20px;}
+  .related-title{font-weight:700;color:var(--bark);font-size:16px;margin:40px 0 16px;}
+  .related-links{display:flex;flex-direction:column;gap:10px;margin-bottom:40px;width:50%;}
+  .related-links a{background:var(--bark);color:#fff;padding:12px 20px;border-radius:24px;text-decoration:none;font-size:13.5px;font-weight:700;display:inline-flex;align-items:center;gap:8px;}
+  @media (max-width:640px){.related-links{width:100%;}}
+  footer.site{text-align:center;padding:36px 24px 48px;font-size:12.5px;color:var(--brand);border-top:1px solid var(--line);margin-top:20px;}
 </style>
 </head>
 <body>
+
+<header class="site">
+  <div class="nav-inner">
+    <a class="brand-name" href="index.html"><img src="cropped-logo-icon.webp" alt="" style="width: 40px; height: 40px; border-radius: 50%;">Animal IQ Labo</a>
+    <nav class="main-nav">
+      <a href="index.html">TOP</a>
+      <a href="animal.html">Animal</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </div>
+</header>
+
 <div class="wrap">
 
-  <a class="backlink" href="/">← Animal IQ Labo テスト版トップ</a>
+  <a class="back-link" href="index.html">← Animal IQ Labo テスト版トップ</a>
+  <div class="cat-label">動物の行動 ｜ 🐶 犬</div>
 
-  <h1>犬のしつけは「楽しい科学実験」だ！ごほうびで変わる行動のしくみ</h1>
-  <div class="meta-sub">カテゴリ：動物の行動 ／ 目安読了時間：約9分</div>
+  <h1 class="article-title">犬のしつけは「楽しい科学実験」だ！ごほうびで変わる行動のしくみ</h1>
+  <div class="meta-line">最終更新：2026-09</div>
 
-  <!-- ブロック01：ハイライト -->
+  <p class="lede">「しつけ」と聞くと、根気強く叱ったり、何度も同じことを繰り返させたりする、少し重たいイメージがあるかもしれません。しかし行動科学の視点から見ると、しつけの本質はとてもシンプルです。それは「行動のあとに何が起きたかを、犬自身が学習していく」というプロセスにすぎません。ごほうびを出すタイミングを0.5秒変えるだけで学習速度が変わり、頻度を変えるだけで行動の定着のしかたまで変わります。家庭のリビングは、立派な行動実験室になり得るのです。</p>
+
   <div class="highlight-box">
-    <span class="block-tag">BLOCK 01 / ハイライト</span>
-    <h2>🔬 今日から愛犬は「実験パートナー」になる</h2>
-    <p>「しつけ」と聞くと、根気強く叱ったり、何度も同じことを繰り返させたりする、少し重たいイメージがあるかもしれません。しかし行動科学の視点から見ると、しつけの本質はとてもシンプルです。それは「行動のあとに何が起きたかを、犬自身が学習していく」というプロセスにすぎません。</p>
-    <p>ごほうびを出すタイミングを0.5秒変えるだけで学習速度が変わり、ごほうびの頻度を変えるだけで行動の「定着のしかた」まで変わります。つまり家庭のリビングは、立派な行動実験室になり得るのです。この記事では、その仕組みを3つの実験になぞらえて、飼い主自身が観察者として楽しめる形で紹介します。</p>
-  </div>
-
-  <!-- ブロック02：この記事でわかること -->
-  <div class="lead-box">
-    <span class="block-tag">BLOCK 02 / リード文</span>
-    <div class="lead-title">📋 この記事でわかること</div>
+    <div class="highlight-title">📋 この記事でわかること</div>
     <ul>
       <li>犬の行動が「ごほうびのタイミング」でどう変わるかという基本原理</li>
       <li>「正の強化」「負の強化」「正の罰」「負の罰」という4つの分類と、その中で家庭に向くもの</li>
@@ -226,153 +110,102 @@
     </ul>
   </div>
 
-  <!-- ブロック03：導入 -->
-  <span class="block-tag">BLOCK 03 / 導入</span>
-  <p>犬は人間の言葉の意味を理解しているわけではなく、「ある行動をした直後に、良いことが起きたか・悪いことが起きたか」という結果をもとに、次にその行動をとるかどうかを判断していると考えられています。これは20世紀初頭から積み重ねられてきた学習心理学の基本的な考え方で、犬に限らず多くの動物に共通する仕組みです。</p>
+  <p>犬は人間の言葉の意味を理解しているわけではなく、「ある行動をした直後に、良いことが起きたか・悪いことが起きたか」という結果をもとに、次にその行動をとるかどうかを判断していると考えられています。これは学習心理学の基本的な考え方で、犬に限らず多くの動物に共通する仕組みです。</p>
   <p>この視点に立つと、しつけの失敗の多くは「犬が覚えが悪い」からではなく、「ごほうびや合図の出し方が、犬にとって分かりにくいタイミングだった」ことが原因だと見えてきます。つまり飼い主がすべきことは、犬を叱ることではなく、実験条件を少しずつ調整していくことなのです。</p>
 
-  <img class="illust" alt="ごほうびを見つめる犬のイラスト" src="C001-inu-shitsuke-kagaku-jikken-illust1.webp">
+  <img class="illust-img" src="C003-dog-training-science-experiment-illust01.webp" alt="ごほうびを見つめる犬のイラスト">
+  <figcaption>犬にとって「ごほうび」は最強の学習教材になる</figcaption>
 
-  <!-- ブロック04：実験1 -->
-  <h3>実験1：ごほうびのタイミングが結果を変える</h3>
-  <span class="block-tag">BLOCK 04 / 実験1</span>
+  <h2>実験1：ごほうびのタイミングが結果を変える</h2>
   <p>最初の実験は「タイミング実験」です。犬がお座りをした瞬間に0〜1秒以内でごほうびを与えるグループと、3秒以上たってから与えるグループを比べると、前者の方が圧倒的に早く行動を覚えることが、行動分析の研究の中で繰り返し確認されています。これは「行動」と「結果」の結びつきが、時間が空くほど弱くなるためです。</p>
   <p>犬から見ると、3秒後にもらえるおやつは「さっきのお座り」に対する報酬なのか、「その後にたまたまやった別の動き」に対する報酬なのか、区別がつきにくくなります。これが、しつけがうまく進まない最大の原因の一つです。</p>
 
-  <div class="diagram-box">
-    <svg viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:600px;height:auto;">
-      <rect x="10" y="70" width="140" height="80" rx="14" fill="#EFE4D6" stroke="#8B6F47" stroke-width="2"/>
-      <text x="80" y="105" font-family="Noto Sans JP, sans-serif" font-size="15" fill="#5C4630" text-anchor="middle" font-weight="700">合図</text>
-      <text x="80" y="128" font-family="Noto Sans JP, sans-serif" font-size="12" fill="#5C4630" text-anchor="middle">「お座り」</text>
-      <path d="M155 110 L235 110" stroke="#B98A2E" stroke-width="3" marker-end="url(#arrow)"/>
-      <rect x="240" y="70" width="140" height="80" rx="14" fill="#EFE4D6" stroke="#8B6F47" stroke-width="2"/>
-      <text x="310" y="105" font-family="Noto Sans JP, sans-serif" font-size="15" fill="#5C4630" text-anchor="middle" font-weight="700">行動</text>
-      <text x="310" y="128" font-family="Noto Sans JP, sans-serif" font-size="12" fill="#5C4630" text-anchor="middle">お尻をつく</text>
-      <path d="M385 110 L465 110" stroke="#B98A2E" stroke-width="3" marker-end="url(#arrow)"/>
-      <rect x="470" y="70" width="150" height="80" rx="14" fill="#8B6F47" stroke="#5C4630" stroke-width="2"/>
-      <text x="545" y="100" font-family="Noto Sans JP, sans-serif" font-size="15" fill="#fff" text-anchor="middle" font-weight="700">ごほうび</text>
-      <text x="545" y="122" font-family="Noto Sans JP, sans-serif" font-size="12" fill="#fff" text-anchor="middle">0〜1秒以内が理想</text>
-      <path d="M545 150 C 545 200, 80 200, 80 150" stroke="#5C4630" stroke-width="2" fill="none" stroke-dasharray="5,4" marker-end="url(#arrow2)"/>
-      <text x="310" y="205" font-family="Noto Sans JP, sans-serif" font-size="12" fill="#5C4630" text-anchor="middle">結びつきが強化され、次も同じ行動をとりやすくなる</text>
-      <defs>
-        <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#B98A2E"/></marker>
-        <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#5C4630"/></marker>
-      </defs>
-    </svg>
-    <div class="diagram-caption">図1：行動と結果を素早く結びつけるほど、学習は速く進む</div>
-  </div>
+  <svg viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:600px;height:auto;display:block;margin:0 auto 20px;"><rect x="10" y="70" width="140" height="80" rx="14" fill="#EFE4D6" stroke="#8B6F47" stroke-width="2"/><text x="80" y="105" font-size="15" fill="#5C4630" text-anchor="middle" font-weight="700">合図</text><text x="80" y="128" font-size="12" fill="#5C4630" text-anchor="middle">「お座り」</text><path d="M155 110 L235 110" stroke="#B98A2E" stroke-width="3" marker-end="url(#arrow)"/><rect x="240" y="70" width="140" height="80" rx="14" fill="#EFE4D6" stroke="#8B6F47" stroke-width="2"/><text x="310" y="105" font-size="15" fill="#5C4630" text-anchor="middle" font-weight="700">行動</text><text x="310" y="128" font-size="12" fill="#5C4630" text-anchor="middle">お尻をつく</text><path d="M385 110 L465 110" stroke="#B98A2E" stroke-width="3" marker-end="url(#arrow)"/><rect x="470" y="70" width="150" height="80" rx="14" fill="#8B6F47" stroke="#5C4630" stroke-width="2"/><text x="545" y="100" font-size="15" fill="#fff" text-anchor="middle" font-weight="700">ごほうび</text><text x="545" y="122" font-size="12" fill="#fff" text-anchor="middle">0〜1秒以内が理想</text><path d="M545 150 C 545 200, 80 200, 80 150" stroke="#5C4630" stroke-width="2" fill="none" stroke-dasharray="5,4" marker-end="url(#arrow2)"/><text x="310" y="205" font-size="12" fill="#5C4630" text-anchor="middle">結びつきが強化され、次も同じ行動をとりやすくなる</text><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#B98A2E"/></marker><marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#5C4630"/></marker></defs></svg>
 
-  <!-- ブロック05：4分類の表 -->
-  <h3>実験2：4つの「結果パターン」を仕分けてみる</h3>
-  <span class="block-tag">BLOCK 05 / 実験2・表</span>
+  <h2>実験2：4つの「結果パターン」を仕分けてみる</h2>
   <p>行動のあとに起きる「結果」は、大きく4つのパターンに整理できます。ここでいう「正」は何かを「与える」こと、「負」は何かを「取り除く」ことを指し、日常語の善悪とは関係ありません。家庭で扱いやすいのは、圧倒的に表の一番上、「正の強化」です。</p>
 
-  <table>
-    <tr>
-      <th>パターン</th>
-      <th>内容</th>
-      <th>家庭での扱いやすさ</th>
-    </tr>
-    <tr>
-      <td>正の強化</td>
-      <td>行動の直後に、犬が喜ぶもの（おやつ・声かけ・遊び）を与える</td>
-      <td>◎ もっとも扱いやすく、副作用が少ない</td>
-    </tr>
-    <tr>
-      <td>負の強化</td>
-      <td>行動の直後に、犬にとって不快なもの（リードのテンションなど）を取り除く</td>
-      <td>△ タイミングを誤ると不安を強めやすい</td>
-    </tr>
-    <tr>
-      <td>正の罰</td>
-      <td>行動の直後に、犬にとって不快なもの（大声・叱責）を与える</td>
-      <td>× 恐怖学習につながりやすく推奨しにくい</td>
-    </tr>
-    <tr>
-      <td>負の罰</td>
-      <td>行動の直後に、犬が欲しいもの（注目・遊び）を取り除く</td>
-      <td>○ 使い方次第では有効だが慎重さが必要</td>
-    </tr>
+  <table class="data-table">
+    <thead><tr><th>パターン</th><th>内容</th><th>家庭での扱いやすさ</th></tr></thead>
+    <tbody>
+      <tr><td>正の強化</td><td>行動の直後に、犬が喜ぶもの（おやつ・声かけ・遊び）を与える</td><td>◎ もっとも扱いやすく、副作用が少ない</td></tr>
+      <tr><td>負の強化</td><td>行動の直後に、犬にとって不快なもの（リードのテンションなど）を取り除く</td><td>△ タイミングを誤ると不安を強めやすい</td></tr>
+      <tr><td>正の罰</td><td>行動の直後に、犬にとって不快なもの（大声・叱責）を与える</td><td>× 恐怖学習につながりやすく推奨しにくい</td></tr>
+      <tr><td>負の罰</td><td>行動の直後に、犬が欲しいもの（注目・遊び）を取り除く</td><td>○ 使い方次第では有効だが慎重さが必要</td></tr>
+    </tbody>
   </table>
 
   <p>多くの家庭犬のしつけ教室や行動学の入門書で「まずは正の強化から」と勧められるのは、副作用（不安・攻撃性の増加など）が少なく、犬との関係性を良好に保ちながら行動を変えられるためです。</p>
 
-  <img class="illust" alt="お座りする犬とおやつのイラスト" src="C001-inu-shitsuke-kagaku-jikken-illust2.webp">
+  <img class="illust-img" src="C003-dog-training-science-experiment-illust02.webp" alt="お座りする犬とおやつのイラスト">
+  <figcaption>「正の強化」は家庭でもっとも扱いやすいパターン</figcaption>
 
-  <!-- ブロック06：合図の結びつけ -->
-  <h3>実験3：「合図」と「行動」を結びつける</h3>
-  <span class="block-tag">BLOCK 06 / 実験3</span>
+  <h2>実験3：「合図」と「行動」を結びつける</h2>
   <p>犬は最初から「お座り」という言葉の意味を知っているわけではありません。飼い主が「お座り」と言った直後に、犬がたまたまお尻をつき、そこにごほうびが続く——この一連の流れを何度も繰り返すことで、はじめて「音」と「行動」が結びついていきます。これは、ある刺激と別の刺激（あるいは行動）が繰り返し対で経験されることで結びつきが形成される、という古典的な学習理論の応用です。</p>
   <p>面白いのは、この結びつきが「言葉の意味」ではなく「音のパターン」として学習される点です。声のトーンや語尾を変えると、犬にとっては別の合図に聞こえてしまうことがあります。実験のつもりで、家族全員が同じ言い方・同じトーンで合図を出せているか、一度チェックしてみると発見があるはずです。</p>
 
-  <!-- ブロック07：強化スケジュール -->
-  <h3>実験4：ごほうびの「頻度」を変えると何が起きるか</h3>
-  <span class="block-tag">BLOCK 07 / 実験4・図解</span>
+  <h2>実験4：ごほうびの「頻度」を変えると何が起きるか</h2>
   <p>行動が身についてきたら、次に試したいのが「頻度実験」です。毎回必ずごほうびをあげる「連続強化」は、新しい行動を教える初期段階では効果的です。一方で、成功したりしなかったりのランダムなタイミングでごほうびをあげる「間欠強化」に切り替えると、行動が長期的に安定しやすくなることが知られています。</p>
   <p>これは、いつ当たるか分からないから続けてしまう、という仕組みに近いものです。犬の場合も「今回はもらえるかもしれない」という期待が、行動を粘り強く維持させる力になります。</p>
 
-  <div class="diagram-box">
-    <svg viewBox="0 0 620 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:580px;height:auto;">
-      <text x="10" y="24" font-family="Noto Sans JP, sans-serif" font-size="13" fill="#5C4630" font-weight="700">連続強化（毎回ごほうび）</text>
-      <rect x="10" y="34" width="280" height="22" rx="6" fill="#EFE4D6"/>
-      <rect x="10" y="34" width="180" height="22" rx="6" fill="#B98A2E"/>
-      <text x="300" y="50" font-family="Noto Sans JP, sans-serif" font-size="12" fill="#5C4630">習得は早いが、やめると消えやすい</text>
+  <table class="data-table">
+    <thead><tr><th>ごほうびの出し方</th><th>特徴</th></tr></thead>
+    <tbody>
+      <tr><td>連続強化（毎回ごほうび）</td><td>習得は早いが、やめると行動が消えやすい</td></tr>
+      <tr><td>間欠強化（たまにごほうび）</td><td>習得後の行動が長続きしやすい</td></tr>
+    </tbody>
+  </table>
 
-      <text x="10" y="104" font-family="Noto Sans JP, sans-serif" font-size="13" fill="#5C4630" font-weight="700">間欠強化（たまにごほうび）</text>
-      <rect x="10" y="114" width="280" height="22" rx="6" fill="#EFE4D6"/>
-      <rect x="10" y="114" width="250" height="22" rx="6" fill="#8B6F47"/>
-      <text x="300" y="130" font-family="Noto Sans JP, sans-serif" font-size="12" fill="#5C4630">習得後の行動が長続きしやすい</text>
+  <h2>実験ノートをつけてみよう</h2>
+  <p>今日から使える、3項目だけの観察記録です。</p>
 
-      <text x="10" y="180" font-family="Noto Sans JP, sans-serif" font-size="12" fill="#7a6952">※バーの長さは「行動が続きやすい傾向」のイメージです</text>
-    </svg>
-    <div class="diagram-caption">図2：ごほうびの出し方を変えるだけで、行動の持続性が変わる</div>
+  <div class="step-flow">
+    <div class="step-card"><div class="step-icon">⏱️</div><div class="step-title">合図を出した時刻</div>秒単位までは不要、「◯回目のお座り」で十分です</div>
+    <div class="step-card"><div class="step-icon">🍖</div><div class="step-title">ごほうびまでの体感時間</div>「即」「1秒くらい」「少し遅れた」の3段階でメモ</div>
+    <div class="step-card"><div class="step-icon">🐕</div><div class="step-title">犬の反応</div>すぐ座った／迷った／別の行動をした、など一言で記録</div>
   </div>
 
-  <!-- ブロック08：実験ノート -->
-  <h3>実験ノートをつけてみよう</h3>
-  <span class="block-tag">BLOCK 08 / やってみようコーナー</span>
-  <div class="note-card">
-    <p style="margin-bottom:14px;"><strong>今日から使える、3項目だけの観察記録です。</strong></p>
-    <ol>
-      <li><strong>合図を出した時刻</strong>：秒単位までは不要、「◯回目のお座り」で十分です</li>
-      <li><strong>ごほうびを出すまでの体感時間</strong>：「即」「1秒くらい」「少し遅れた」の3段階でメモ</li>
-      <li><strong>犬の反応</strong>：すぐ座った／迷った／別の行動をした、など一言で記録</li>
-    </ol>
-    <p style="margin-top:16px; margin-bottom:0;">1週間続けるだけで、「自分のごほうびのタイミングが安定していない日ほど、犬の反応もばらついている」といったパターンが見えてくることがあります。これこそが、家庭でできる立派な行動観察です。</p>
+  <div class="science-note">
+    <div class="s-title">💡 続けてみると見えてくること</div>
+    <p style="margin:0;">1週間続けるだけで、「自分のごほうびのタイミングが安定していない日ほど、犬の反応もばらついている」といったパターンが見えてくることがあります。これこそが、家庭でできる立派な行動観察です。</p>
   </div>
 
-  <img class="illust" alt="ノートに記録する飼い主と犬のイラスト" src="C001-inu-shitsuke-kagaku-jikken-illust3.webp">
+  <img class="illust-img" src="C003-dog-training-science-experiment-illust03.webp" alt="ノートに記録する飼い主と犬のイラスト">
+  <figcaption>3項目だけの記録でも、続けるとパターンが見えてくる</figcaption>
 
-  <!-- ブロック09：まとめ -->
-  <h3>まとめ：しつけは「対決」ではなく「共同実験」</h3>
-  <span class="block-tag">BLOCK 09 / まとめ</span>
+  <h2>まとめ：しつけは「対決」ではなく「共同実験」</h2>
   <p>しつけを「言うことを聞かせる作業」ではなく、「行動と結果の結びつきを一緒に発見していく実験」として捉え直すと、うまくいかない日も「今日は条件設定にヒントがあったな」と前向きに振り返れるようになります。ごほうびのタイミング、結果のパターン、合図の一貫性、頻度の調整——この4つのレバーを少しずつ動かしながら、愛犬というかけがえのない実験パートナーとの毎日を楽しんでみてください。</p>
 
-  <!-- ブロック10：関連記事CTA -->
-  <div class="cta-wrap">
-    <span class="block-tag">BLOCK 10 / 関連記事</span>
-    <div class="cta-title">🔗 あわせて読みたい関連記事</div>
-    <a class="cta-btn" href="https://lolaniki.com/archives/3222" target="_blank" rel="noopener">鶏の「コケコッコー」は何時何分？体内時計と概日リズムの科学<span>動物の体内時計から学ぶ「行動のタイミング」</span></a>
-    <a class="cta-btn" href="https://lolaniki.com/archives/1673" target="_blank" rel="noopener">豚は賢いのか？研究で判明した知能レベルと感情の秘密<span>学習能力を種を超えて比較してみる</span></a>
-    <a class="cta-btn" href="https://lolaniki.com/archives/3116" target="_blank" rel="noopener">豚の社会性｜自己コントロール能力から見える意外な一面<span>「我慢」と「学習」の関係を考える</span></a>
-    <a class="cta-btn" href="https://lolaniki.com/" target="_blank" rel="noopener">Animal IQ Labo トップページ<span>豚・鶏・犬・猫の知能と行動の記事一覧はこちら</span></a>
+  <div class="summary-box">
+    <table>
+      <tr><td>実験1：タイミング</td><td>0〜1秒以内のごほうびが学習を最も速める</td></tr>
+      <tr><td>実験2：結果パターン</td><td>家庭では「正の強化」がもっとも扱いやすい</td></tr>
+      <tr><td>実験3：合図の結びつけ</td><td>同じ言い方・同じトーンで一貫させることが鍵</td></tr>
+      <tr><td>実験4：頻度</td><td>間欠強化に切り替えると行動が長続きする</td></tr>
+    </table>
   </div>
 
-  <!-- 参考文献 -->
-  <div class="refs">
-    <strong>参考文献</strong>
-    <ol>
-      <li>Skinner, B. F. (1938). <em>The Behavior of Organisms: An Experimental Analysis of Behavior.</em> Appleton-Century.</li>
-      <li>Pavlov, I. P. (1927). <em>Conditioned Reflexes: An Investigation of the Physiological Activity of the Cerebral Cortex.</em> Oxford University Press.</li>
-      <li>Cook, P. F., Prichard, A., Spivak, M., & Berns, G. S. (2016). Awake canine fMRI predicts dogs' preference for praise vs. food. <em>Social Cognitive and Affective Neuroscience</em>, 11(12), 1853–1862.</li>
-      <li>Fugazza, C., Pogány, Á., & Miklósi, Á. (2016). Do as I ... Did! Long-term memory of imitative actions in dogs. <em>Animal Cognition</em>, 19(2), 263–269.</li>
-    </ol>
+  <div class="related-title">🔗 あわせて読みたい関連記事</div>
+  <div class="related-links">
+    <a href="https://lolaniki.com/archives/3222">🐔 鶏の「コケコッコー」は何時何分？体内時計と概日リズムの科学 →</a>
+    <a href="https://lolaniki.com/archives/1673">🐷 豚は賢いのか？研究で判明した知能レベルと感情の秘密 →</a>
+    <a href="https://lolaniki.com/archives/3116">🐷 豚の社会性｜自己コントロール能力から見える意外な一面 →</a>
   </div>
 
-  <footer>
-    &copy; 2026 Animal IQ Labo（テスト版） — 本サイトは研究論文をもとにした一般向け読み物であり、獣医学的な診断・治療を目的とするものではありません。
-  </footer>
+  <h2>参考文献</h2>
+  <ol class="refs">
+    <li>Skinner, B. F.（1938）— The Behavior of Organisms: An Experimental Analysis of Behavior. Appleton-Century.</li>
+    <li>Pavlov, I. P.（1927）— Conditioned Reflexes: An Investigation of the Physiological Activity of the Cerebral Cortex. Oxford University Press.</li>
+    <li>Cook, P. F., Prichard, A., Spivak, M., & Berns, G. S.（2016）— Awake canine fMRI predicts dogs' preference for praise vs. food. Social Cognitive and Affective Neuroscience, 11(12), 1853–1862.</li>
+    <li>Fugazza, C., Pogány, Á., & Miklósi, Á.（2016）— Do as I ... Did! Long-term memory of imitative actions in dogs. Animal Cognition, 19(2), 263–269.</li>
+  </ol>
 
 </div>
+
+<footer class="site">
+  Animal IQ Labo（テスト環境） / 本番サイトは <a href="https://lolaniki.com" style="color:var(--brand);">lolaniki.com</a>
+  <br><a href="contact.html" style="color:var(--brand);">ご意見・お問い合わせ</a>
+</footer>
+
 </body>
 </html>
