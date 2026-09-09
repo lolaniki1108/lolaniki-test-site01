@@ -22,11 +22,17 @@
   .wrap{max-width:800px;margin:0 auto;padding:0 24px;}
   a{color:inherit;}
   header.site{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:50;}
-  .nav-inner{max-width:960px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
-  .brand-name{font-weight:700;font-size:20px;color:var(--bark);text-decoration:none;display:flex;align-items:center;gap:8px;}
+  .nav-inner{max-width:960px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+  .brand-name{font-weight:700;font-size:13px;color:var(--bark);text-decoration:none;display:flex;align-items:center;gap:10px;}
+  .brand-logo{width:52px;height:52px;border-radius:50%;object-fit:cover;flex-shrink:0;}
   nav.main-nav{display:flex;gap:22px;font-size:14px;font-weight:700;}
+  nav.main-nav > .nav-item{position:relative;}
   nav.main-nav a{text-decoration:none;color:var(--brand);}
   nav.main-nav a:hover{color:var(--ochre);}
+  .nav-item .dropdown{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 0;min-width:170px;box-shadow:0 6px 16px rgba(92,70,48,0.14);z-index:60;}
+  .nav-item:hover .dropdown{display:block;}
+  .dropdown a{display:block;padding:9px 18px;font-size:13px;color:var(--brand);white-space:nowrap;font-weight:500;}
+  .dropdown a:hover{background:var(--cream);color:var(--ochre);}
   .back-link{display:inline-block;margin:24px 0 8px;font-size:13px;color:var(--brand);text-decoration:none;font-weight:700;}
   .cat-label{font-size:12.5px;letter-spacing:0.08em;color:var(--ochre);font-weight:700;margin:20px 0 10px;}
   h1.article-title{font-size:clamp(24px,3.6vw,32px);line-height:1.55;color:var(--bark);margin:0 0 8px;font-weight:700;}
@@ -86,11 +92,26 @@
 
 <header class="site">
   <div class="nav-inner">
-    <a class="brand-name" href="index.html"><img src="cropped-logo-icon.webp" alt="" style="width: 40px; height: 40px; border-radius: 50%;">Animal IQ Labo</a>
+    <a class="brand-name" href="index.html"><img class="brand-logo" src="cropped-logo-icon.webp" alt="Animal IQ Labo">Animal IQ Labo</a>
     <nav class="main-nav">
-      <a href="index.html">TOP</a>
-      <a href="animal.html">Animal</a>
-      <a href="blog.html">Blog</a>
+      <div class="nav-item"><a href="index.html">TOP</a></div>
+      <div class="nav-item">
+        <a href="animal.html">Animal</a>
+        <div class="dropdown">
+          <a href="category-pig.html">🐷 豚</a>
+          <a href="category-chicken.html">🐔 鶏</a>
+          <a href="category-dog.html">🐶 犬</a>
+          <a href="category-cat.html">🐱 猫</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="blog.html">Blog</a>
+        <div class="dropdown">
+          <a href="category-animal-brain.html">🧠 動物の頭脳</a>
+          <a href="category-animal-senses.html">👁️ 動物の五感</a>
+          <a href="category-animal-behavior.html">🏃 動物の行動</a>
+        </div>
+      </div>
     </nav>
   </div>
 </header>
@@ -98,7 +119,7 @@
 <div class="wrap">
 
   <!-- 1. パンくず（必ずこの1行をそのままコピー） -->
-  <a class="back-link" href="index.html">← Animal IQ Labo テスト版トップ</a>
+  <a class="back-link" href="index.html">← Animal IQ Labo トップ</a>
 
   <!-- 2. カテゴリラベル：絵文字と動物名だけ差し替え -->
   <div class="cat-label">【カテゴリ名（例：動物の五感）】 ｜ 【絵文字】【動物名】</div>
@@ -174,7 +195,7 @@
 </div>
 
 <footer class="site">
-  Animal IQ Labo（テスト環境） / 本番サイトは <a href="https://lolaniki.com" style="color:var(--brand);">lolaniki.com</a>
+  Animal IQ Labo / 詳しくは <a href="https://lolaniki.com" style="color:var(--brand);">lolaniki.com</a>
   <br><a href="contact.html" style="color:var(--brand);">ご意見・お問い合わせ</a>
 </footer>
 
