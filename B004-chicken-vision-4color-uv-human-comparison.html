@@ -4,147 +4,253 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>鶏の視覚は人間の上位互換！4色型色覚と紫外線が見えるニワトリの驚くべき目の仕組み｜Animal IQ Labo</title>
-<meta name="description" content="鶏は人間の3色型色覚に対し4色型色覚を持ち、紫外線まで見えるとされています。鶏の視覚の仕組みを最新の知見をもとに解説。">
+<link rel="icon" type="image/png" href="cropped-logo-icon.webp">
+<meta name="description" content="鶏は人間の3色型に対し4色型色覚を持ち、紫外線まで見えるとされる。錐体細胞の仕組み、300度の視野角、動体視力、養鶏現場での紫外線ライティング活用まで研究データをもとに徹底解説。">
+<meta property="og:title" content="鶏の視覚は人間の上位互換！4色型色覚と紫外線が見えるニワトリの驚くべき目の仕組み｜Animal IQ Labo">
+<meta property="og:description" content="鶏は人間の3色型に対し4色型色覚を持ち、紫外線まで見えるとされる。錐体細胞の仕組み、300度の視野角、動体視力、養鶏現場での紫外線ライティング活用まで研究データをもとに徹底解説。">
+<meta property="og:image" content="B004-chicken-vision-4color-uv-human-comparison-illust01.webp">
+<meta property="og:url" content="https://lolaniki-test-site01.lolaniki1108.workers.dev/B004-chicken-vision-4color-uv-human-comparison">
+<meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --cream:#FAF6F0; --card:#EFE4D6; --bark:#5C4630; --brand:#8B6F47; --ochre:#B98A2E;
+  :root{
+    --cream:#FAF6F0; --card:#EFE4D6; --bark:#5C4630; --brand:#8B6F47; --ochre:#B98A2E; --ink:#3A2E22; --line: rgba(92,70,48,0.16);
   }
-  * { box-sizing:border-box; }
-  body {
-    margin:0; background:var(--cream); color:var(--bark);
-    font-family:'Noto Sans JP',sans-serif; line-height:1.9;
-  }
-  h1,h2,h3 { font-family:'Shippori Mincho',serif; color:var(--bark); }
-  .wrap { max-width:760px; margin:0 auto; padding:20px 18px 60px; }
-  .backlink {
-    display:inline-block; margin:16px 0; font-size:0.85em; color:var(--brand);
-    text-decoration:none; font-weight:700;
-  }
-  h1 { font-size:1.7em; font-weight:800; line-height:1.5; margin:8px 0 20px; }
-  .lead {
-    background:var(--card); border-left:5px solid var(--ochre); border-radius:0 12px 12px 0;
-    padding:18px 22px; margin:0 0 26px; font-size:0.95em;
-  }
-  .lead p { margin:0 0 8px; font-weight:700; color:var(--bark); }
-  .lead ul { margin:0; padding-left:20px; }
-  .lead li { margin:4px 0; }
-  h2 {
-    font-size:1.3em; font-weight:800; border-left:6px solid var(--ochre);
-    padding-left:14px; margin:34px 0 16px;
-  }
-  h3 { font-size:1.08em; font-weight:700; margin:22px 0 10px; }
-  p { margin:0 0 16px; font-size:0.98em; }
-  .stat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:12px; margin:22px 0; }
-  .stat-card { background:var(--card); border-radius:14px; padding:16px; text-align:center; }
-  .stat-num { font-size:1.7em; font-weight:800; color:var(--ochre); font-family:'Shippori Mincho',serif; }
-  .stat-label { font-size:0.78em; margin-top:4px; }
-  table { width:100%; border-collapse:collapse; font-size:0.86em; margin:18px 0; }
-  th { background:var(--brand); color:#fff; padding:10px 12px; text-align:left; }
-  td { padding:9px 12px; border-bottom:1px solid #E4D9C8; }
-  tr:nth-child(even) td { background:#F4EEE3; }
-  .img-placeholder {
-    margin:22px 0; padding:14px; background:var(--card); border:2px dashed var(--brand);
-    border-radius:12px; text-align:center; font-size:0.82em; color:var(--brand);
-  }
-  .summary-box {
-    background:var(--card); border-radius:14px; padding:20px 24px; margin:30px 0;
-  }
-  .summary-box strong { display:block; margin-bottom:10px; font-size:1em; }
-  .summary-box ul { margin:0; padding-left:20px; }
-  .cta-wrap { display:flex; flex-wrap:wrap; gap:10px; margin:26px 0; }
-  .cta {
-    display:inline-flex; align-items:center; gap:6px; background:var(--brand); color:#fff;
-    padding:10px 18px; border-radius:24px; text-decoration:none; font-size:0.85em; font-weight:700;
-  }
-  .refs { font-size:0.78em; color:#8a7a68; line-height:2; margin-top:10px; }
-  footer {
-    margin-top:50px; padding-top:20px; border-top:1px solid #E4D9C8;
-    font-size:0.78em; color:#8a7a68; text-align:center;
-  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Sans JP', sans-serif;line-height:1.9;}
+  .wrap{max-width:800px;margin:0 auto;padding:0 24px;}
+  a{color:inherit;}
+  header.site{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:50;}
+  .nav-inner{max-width:960px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+  .brand-name{font-weight:700;font-size:13px;color:var(--bark);text-decoration:none;display:flex;align-items:center;gap:10px;}
+  .brand-logo{width:52px;height:52px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+  nav.main-nav{display:flex;gap:22px;font-size:14px;font-weight:700;}
+  nav.main-nav > .nav-item{position:relative;}
+  nav.main-nav a{text-decoration:none;color:var(--brand);}
+  nav.main-nav a:hover{color:var(--ochre);}
+  .nav-item .dropdown{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 0;min-width:170px;box-shadow:0 6px 16px rgba(92,70,48,0.14);z-index:60;}
+  .nav-item:hover .dropdown{display:block;}
+  .dropdown a{display:block;padding:9px 18px;font-size:13px;color:var(--brand);white-space:nowrap;font-weight:500;}
+  .dropdown a:hover{background:var(--cream);color:var(--ochre);}
+  .back-link{display:inline-block;margin:24px 0 8px;font-size:13px;color:var(--brand);text-decoration:none;font-weight:700;}
+  .cat-label{font-size:12.5px;letter-spacing:0.08em;color:var(--ochre);font-weight:700;margin:20px 0 10px;}
+  h1.article-title{font-size:clamp(24px,3.6vw,32px);line-height:1.55;color:var(--bark);margin:0 0 8px;font-weight:700;}
+  .meta-line{font-size:12.5px;color:var(--brand);margin-bottom:28px;}
+  .lede{font-size:15px;color:#4a3c2e;margin-bottom:28px;}
+  .highlight-box{background:#fff;border-left:5px solid var(--ochre);border-radius:0 12px 12px 0;padding:22px 26px;margin:0 0 32px;}
+  .highlight-title{font-size:1.4em;font-weight:700;color:var(--bark);margin:0 0 12px;}
+  .highlight-box ul{margin:0;padding-left:20px;font-size:15px;line-height:2;}
+  .highlight-box ul li strong{color:var(--ochre);}
+  h2{font-size:21px;color:var(--bark);border-left:5px solid var(--ochre);padding-left:14px;margin:44px 0 20px;font-weight:700;}
+  h3{font-size:17px;color:var(--bark);margin:30px 0 14px;font-weight:700;}
+  p{font-size:15px;color:#3A2E22;margin:0 0 18px;}
   img { max-width: 100%; border-radius: 10px; display: block; margin: 20px auto; }
   img.illust-img { max-width: 320px; width: 60%; }
   figcaption { text-align: center; font-size: 0.85em; color: #8B6F47; margin-top: -10px; }
-  .stat-box {
-    background: #1a1a2e;
-    border-radius: 12px;
-    padding: 24px;
-    margin: 20px 0;
-    text-align: center;
-  }
+  .stat-box { background: #1a1a2e; border-radius: 12px; padding: 24px; margin: 20px 0; text-align: center; }
+  figure.article-img{margin:28px 0;}
+  figure.article-img img{width:100%;border-radius:12px;border:1px solid var(--line);display:block;}
+  figure.article-img figcaption{font-size:12px;color:var(--brand);margin-top:8px;}
+  table.data-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:13.5px;background:#fff;border-radius:10px;overflow:hidden;}
+  table.data-table th{background:var(--bark);color:#fff;padding:11px 14px;text-align:left;}
+  table.data-table td{padding:10px 14px;border-bottom:1px solid var(--line);}
+  table.data-table tr:nth-child(even){background:var(--cream);}
+  .flow-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:20px 0;font-size:14px;color:var(--bark);font-weight:700;}
+  .flow-step{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;}
+  .flow-arrow{color:var(--ochre);font-size:16px;}
+  .step-flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:26px 0;}
+  .step-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;text-align:center;font-size:13px;}
+  .step-card .step-icon{font-size:24px;margin-bottom:8px;}
+  .step-card .step-title{font-weight:700;color:var(--bark);margin-bottom:6px;}
+  .research-note{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin:26px 0;font-size:13.5px;}
+  .research-note .r-title{font-weight:700;color:var(--ochre);margin-bottom:10px;font-size:13px;}
+  .science-note{background:var(--card);border-radius:12px;padding:20px 24px;margin:26px 0;font-size:14px;}
+  .science-note .s-title{font-weight:700;color:var(--bark);margin-bottom:8px;}
+  .faq-item{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 22px;margin-bottom:12px;}
+  .faq-q{font-weight:700;color:var(--ochre);margin-bottom:8px;font-size:14.5px;}
+  .faq-a{font-size:14px;color:#4a3c2e;}
+  .summary-box{background:var(--card);border-radius:12px;padding:8px 22px;margin:30px 0;}
+  .summary-box table{width:100%;border-collapse:collapse;font-size:14px;}
+  .summary-box td{padding:12px 8px;border-bottom:1px solid rgba(92,70,48,0.15);}
+  .summary-box tr:last-child td{border-bottom:none;}
+  .refs{font-size:12.5px;color:var(--brand);line-height:1.9;margin:20px 0 36px;padding-left:20px;}
+  .related-title{font-weight:700;color:var(--bark);font-size:16px;margin:40px 0 16px;}
+  .related-links{display:flex;flex-direction:column;gap:10px;margin-bottom:40px;width:50%;}
+  .related-links a{background:var(--bark);color:#fff;padding:12px 20px;border-radius:24px;text-decoration:none;font-size:13.5px;font-weight:700;display:inline-flex;align-items:center;gap:8px;}
+  @media (max-width:640px){.related-links{width:100%;}}
+  footer.site{text-align:center;padding:36px 24px 48px;font-size:12.5px;color:var(--brand);border-top:1px solid var(--line);margin-top:20px;}
 </style>
 </head>
 <body>
+
+<header class="site">
+  <div class="nav-inner">
+    <a class="brand-name" href="index.html"><img class="brand-logo" src="cropped-logo-icon.webp" alt="Animal IQ Labo">Animal IQ Labo</a>
+    <nav class="main-nav">
+      <div class="nav-item"><a href="index.html">TOP</a></div>
+      <div class="nav-item">
+        <a href="animal.html">Animal</a>
+        <div class="dropdown">
+          <a href="category-pig.html">🐷 豚</a>
+          <a href="category-chicken.html">🐔 鶏</a>
+          <a href="category-dog.html">🐶 犬</a>
+          <a href="category-cat.html">🐱 猫</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="blog.html">Blog</a>
+        <div class="dropdown">
+          <a href="category-animal-brain.html">🧠 動物の頭脳</a>
+          <a href="category-animal-senses.html">👁️ 動物の五感</a>
+          <a href="category-animal-behavior.html">🏃 動物の行動</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
 <div class="wrap">
-<a class="backlink" href="/">← Animal IQ Labo テスト版トップ</a>
-<h1>鶏の視覚は人間の上位互換！4色型色覚と紫外線が見えるニワトリの驚くべき目の仕組み</h1>
-<div class="lead">
-<p>📌 この記事でわかること</p>
-<ul>
-<li>人間との色覚の違い：3色型 vs 4色型</li>
-<li>紫外線が見えるとされる仕組み</li>
-<li>広い視野角がもたらすメリット</li>
-<li>鶏が見ている世界のイメージ</li>
-</ul>
+
+  <!-- 1. パンくず -->
+  <a class="back-link" href="index.html">← Animal IQ Labo トップ</a>
+
+  <!-- 2. カテゴリラベル -->
+  <div class="cat-label">動物の五感 ｜ 🐔鶏</div>
+
+  <!-- 3. タイトル・更新日 -->
+  <h1 class="article-title">鶏の視覚は人間の上位互換！4色型色覚と紫外線が見えるニワトリの驚くべき目の仕組み</h1>
+  <div class="meta-line">最終更新：2026-03</div>
+
+  <!-- 4. リード文（導入） -->
+  <p class="lede">鶏を間近で見たとき、あの丸くて動きの速い目に「一体何が見えているのだろう」と感じたことはないだろうか。実は鶏の目は、色を感じ取る仕組みも、周囲を見渡す範囲も、動きを追う速さも、いずれも人間とはまったく異なる設計になっているとされる。人間の目を基準に「鶏は目が悪い」と語られることもあるが、視覚科学の観点から見ると、鶏の目はむしろ人間には備わっていない能力をいくつも持つ、非常に高性能なセンサーだと考えられている。この記事では、鶏の色覚・視野角・動体視力・紫外線の使い道を、研究データをもとに一つずつ紐解いていく。</p>
+
+  <!-- 5. この記事でわかること -->
+  <div class="highlight-box">
+    <div class="highlight-title">📌 この記事でわかること</div>
+    <ul>
+      <li>人間の<strong>3色型色覚</strong>に対し、鶏は紫外線まで感知する<strong>4色型色覚</strong>を持つとされる根拠</li>
+      <li>紫外線が採餌・羽毛の状態把握・繁殖行動に使われている可能性</li>
+      <li>視野<strong>300度</strong>・両眼視野わずか30度という「監視カメラ」のような目の構造</li>
+      <li>人間よりずっと速い<strong>動体視力（フリッカー融合率）</strong>の仕組み</li>
+    </ul>
+  </div>
+
+  <!-- 6. 本文セクション -->
+  <h2>🌈 4色型色覚という「見えないボーナスカラー」</h2>
+  <p>人間の網膜には、赤・緑・青の波長を感知する3種類の錐体細胞があり、これによって3色型色覚が成り立っている。これに対し鶏の網膜には、紫外線に近い波長（およそ360nm付近）を感知する錐体細胞が加わった4種類の単一錐体が存在するとされ、紫外線・青・緑・赤という4つの領域をそれぞれ独立に感じ取れる4色型色覚を持つと報告されている<sup>[1]</sup>。さらに鶏の網膜には、色の識別を専門に担う単一錐体とは別に、明るさや動きの検出に優れているとされる「複重錐体」も備わっており、色を感じる仕組みと動きを感じる仕組みが役割分担しながら網の目状に規則正しく配置されているという研究報告もある<sup>[2]</sup>。それぞれの単一錐体には「油滴」と呼ばれる色付きの構造が組み込まれており、これが特定の波長だけを通すフィルターのように働くことで、色と色の境目をよりくっきり識別できるようになっていると考えられている<sup>[1][4]</sup>。</p>
+
+  <!-- 7. 画像 -->
+  <img class="illust-img" src="B004-chicken-vision-4color-uv-human-comparison-illust01.webp" alt="鶏の視覚と錐体細胞のイメージ">
+  <figcaption>鶏の網膜には紫外線までとらえる4色の単一錐体が存在する</figcaption>
+
+  <h2>☀️ 紫外線は鶏にとって「もう一つの言語」</h2>
+  <p>紫外線を感知できるということは、人間には見えていない情報のレイヤーがもう一枚存在するということでもある。鶏を含む多くの鳥では、羽毛の一部が紫外線を強く反射しており、この紫外線反射の強さが個体の栄養状態や健康状態を映し出すサインになっている可能性が指摘されている。実際にブロイラー用の親鶏を対象にした研究では、紫外線A波（UVA）を含む光の下で飼育されたオスに対し、メスがより長く注目し、近づいて過ごす時間が長くなる傾向が確認されており、オスの羽毛が持つ紫外線反射が配偶者選びの手がかりになっている可能性が示唆されている<sup>[6][7]</sup>。また紫外線の有無によって、地面の粒餌や虫の見え方も変化するとされ、採餌の際に獲物を見つけやすくなる効果があるとも考えられている。</p>
+
+  <h2>👀 視野角300度、鶏の目は「動く監視カメラ」</h2>
+  <p>鶏の目は頭の側面についているため、人間のおよそ180度に対して、鶏はおよそ300度という非常に広い視野角を持つとされる。ただし両目の視野が重なる「両眼視野」は多くの鳥類で20〜30度ほどとごく狭く、これは奥行きを正確に把握する能力とは引き換えになっていると考えられている<sup>[5]</sup>。奥行き感を犠牲にしてでも周囲をほぼ死角なく見渡せるようにすることで、天敵をいち早く発見できる構造になっているとみられる。さらに、片方の目は遠くを見渡すのに適し、もう片方は足元の採餌行動に適しているとする報告もあり、左右の目がそれぞれ異なる役割を担いながら、周囲の警戒と足元の餌探しを同時にこなしていると考えられている。</p>
+
+  <h2>🎬 動体視力：鶏には世界が「コマ送り」で見えている？</h2>
+  <p>点滅する光が「点滅している」と感じられなくなり、連続した光として見え始める切り替わりの速さのことを「フリッカー融合率」と呼ぶ。人間のフリッカー融合率はおよそ40〜60Hzとされるのに対し、明るい環境下での鶏はおよそ70〜95Hzに達するとの報告があり、人間よりもかなり速い点滅までなめらかな光として認識できる可能性が示されている。この差には、色の識別を担う単一錐体とは別に、動きの検出を専門に担っているとされる複重錐体の働きが関わっているとみられ、素早く動く捕食者や逃げ回る虫の動きを的確にとらえるうえで役立っていると考えられている。人間の目には自然に見える蛍光灯や照明のちらつきも、鶏の目にはコマ送りのようにちらついて見えている可能性があるとされ、養鶏の照明選びでも配慮すべき点として挙げられることがある。</p>
+
+  <!-- 9. 表 -->
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>項目</th>
+        <th>🧑 人間</th>
+        <th>🐔 鶏</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>単一錐体のタイプ数</td>
+        <td>3種類</td>
+        <td>4種類（紫外線含む）</td>
+      </tr>
+      <tr>
+        <td>視野角</td>
+        <td>約180°</td>
+        <td>約300°</td>
+      </tr>
+      <tr>
+        <td>両眼視野</td>
+        <td>約120°</td>
+        <td>約20〜30°</td>
+      </tr>
+      <tr>
+        <td>フリッカー融合率</td>
+        <td>約40〜60Hz</td>
+        <td>約70〜95Hz</td>
+      </tr>
+      <tr>
+        <td>紫外線の感知</td>
+        <td>できない</td>
+        <td>できる（〜360nm付近）</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>💡 紫外線ライティングが養鶏の現場を変える</h2>
+  <p>鶏の紫外線感知能力を踏まえ、飼育環境の照明に紫外線A波（UVA）を加える取り組みが海外の研究で検証されている。ブロイラーを対象にした研究では、UVAを含む光を加えることで羽毛の状態が改善し、恐怖反応の強さを示す指標である「不動化反応」の持続時間が短くなり、歩行状態を示す評価スコアも改善したと報告されている<sup>[7]</sup>。またUVAのある環境では羽づくろい行動が増える傾向や、鶏自身がUVAを含む光を好んで選ぶ傾向を示した実験結果もあり<sup>[8]</sup>、快適な光環境を整えることが鶏の福祉向上につながる可能性が指摘されている。</p>
+
+  <h2>🐤 ヒナはわずか48時間で「一人前の目」に</h2>
+  <p>孵化した直後のヒナは、餌となる小さな種子や粒を素早く見分ける必要があるため、視覚の発達が非常に速いことが知られている。孵化からおよそ48時間ほどで、ヒナの視覚の鋭さはほぼ成鶏に近い水準まで達するとされ、これは視力が安定するまでに数週間から数ヶ月を要する多くの哺乳類の赤ちゃんと比べても際立って早い。紫外線まで感知できる4色型色覚を含む高性能な視覚は、天敵から身を守りながら限られた期間で効率よく餌を見つけ出すための重要な適応の一つだったと考えられている。</p>
+
+  <h2>よくある質問</h2>
+  <div class="faq-item">
+    <div class="faq-q">Q. 鶏は暗い場所（夜）でも目が見えていますか？</div>
+    <div class="faq-a">鶏は昼行性の動物であり、色や動きを識別する錐体細胞が極めて発達している反面、暗所で光を感じ取る「桿体細胞」の割合は低めです。そのため、暗闇や夜間の視力は人間以上に低下すると考えられています。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Q. なぜ鶏は歩くときに首を前後に振るのですか？</div>
+    <div class="faq-a">鶏の目は頭部に固定されており、眼球を自由に動かすことがほとんどできません。そのため、歩行時に頭の位置を空間に固定（フリーズ）させる時間を作ることで、網膜上の像がぶれないように視界を安定させ、動体や風景を正確に捉えています。</div>
+  </div>
+
+  <h2>まとめ</h2>
+  <div class="summary-box">
+    <table>
+      <tr>
+        <td>色覚の仕組み</td>
+        <td>紫外線（〜360nm）を感知できる4色型色覚とフィルター役の「油滴」を持つ</td>
+      </tr>
+      <tr>
+        <td>視野と動体視力</td>
+        <td>約300度の広視野と高いフリッカー融合率（70〜95Hz）で周囲の危険や獲物を察知</td>
+      </tr>
+      <tr>
+        <td>生態・応用</td>
+        <td>配偶者選びや採餌に紫外線を利用し、養鶏現場の福祉ライティング改善にも応用される</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="related-title">🔗 あわせて読みたい関連記事</div>
+  <div class="related-links">
+    <a href="https://lolaniki.com/archives/1797">🐶 犬は嗅覚・鶏は視覚が最強！感覚特化の秘密 →</a>
+    <a href="https://lolaniki.com/archives/1708">🐔 鶏は人間の顔を見分けられる？ →</a>
+    <a href="https://lolaniki.com/archives/1681">🪶 なぜ鶏に羽があるのか？ →</a>
+    <a href="https://lolaniki.com/archives/1894">🩺 鶏の元気度チェック法 →</a>
+  </div>
+
+  <h2>参考文献</h2>
+  <ol class="refs">
+    <li>Wilby, D. et al. (2015). Optics of cone photoreceptors in the chicken (Gallus gallus domesticus). Journal of the Royal Society Interface.</li>
+    <li>Kram, Y.A., Mantey, S., Corbo, J.C. (2010). Avian Cone Photoreceptors Tile the Retina as Five Independent, Self-Organizing Mosaics. PLOS ONE.</li>
+    <li>Osorio, D., Vorobyev, M., Jones, C.D. (1999). Colour vision of domestic chicks. Journal of Experimental Biology.</li>
+    <li>Bloch, N.I. et al. (2016). Complementary shifts in photoreceptor spectral tuning unlock the full adaptive potential of ultraviolet vision in birds. eLife.</li>
+    <li>Martin, G.R. (2007). Visual fields and their functions in birds. Journal of Ornithology.</li>
+    <li>Jones, E.K.M., Prescott, N.B. (2000). Social signalling in the domestic fowl: Role of UVA light in mating and mate choice. British Poultry Science.</li>
+    <li>James, C., Asher, L., Herborn, K., Wiseman, J. (2018). The effect of supplementary ultraviolet wavelengths on broiler chicken welfare indicators. Applied Animal Behaviour Science.</li>
+    <li>Vasdal, G. et al. (2023). Effect of light sources with and without UVA on selected behavior and health. Poultry Science.</li>
+  </ol>
+
 </div>
 
-<div class="img-placeholder">📷 ここに鶏のフリー画像を追加</div>
+<footer class="site">
+  Animal IQ Labo / 詳しくは <a href="https://lolaniki.com" style="color:var(--brand);">lolaniki.com</a>
+  <br><a href="contact.html" style="color:var(--brand);">ご意見・お問い合わせ</a>
+</footer>
 
-
-<h2>🐔 4色型色覚という「上位互換」</h2>
-<p>人間の網膜には赤・緑・青を感知する3種類の錐体細胞がありますが、鶏の網膜にはこれに紫外線を感知する錐体細胞が加わった4種類が備わっているとされています。これにより、人間には見えない色の情報まで識別できると考えられています。</p>
-<h2>☀️ 紫外線が見える意味</h2>
-<p>紫外線を感知できることで、餌となる虫の存在や、羽毛の模様の違いなど、人間には知覚できない情報を読み取れる可能性があります。求愛行動における個体識別にも、紫外線の見え方が関わっているのではないかと考えられています。</p>
-<h2>👀 広い視野角</h2>
-<p>鶏の目は頭の側面についているため、非常に広い範囲を見渡せる視野角を持っています。これは捕食者をいち早く察知するために発達した特徴だと考えられています。</p>
-
-
-
-<div class="img-placeholder"><svg viewBox="0 0 680 170" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;font-family:sans-serif;">
-<text x="20" y="28" font-size="16" font-weight="700" fill="#5C4630">色覚を構成する錐体細胞の種類数</text>
-<text x="138" y="72.0" font-size="13" fill="#5C4630" text-anchor="end">人間</text>
-<rect x="150" y="50" width="490" height="34" rx="8" fill="#EFE4D6"/>
-<rect x="150" y="50" width="319.6" height="34" rx="8" fill="#B98A2E"/>
-<text x="479.6" y="72.0" font-size="13" font-weight="700" fill="#8B6F47">3種類</text>
-<text x="138" y="122.0" font-size="13" fill="#5C4630" text-anchor="end">鶏</text>
-<rect x="150" y="100" width="490" height="34" rx="8" fill="#EFE4D6"/>
-<rect x="150" y="100" width="426.1" height="34" rx="8" fill="#B98A2E"/>
-<text x="586.1" y="122.0" font-size="13" font-weight="700" fill="#8B6F47">4種類</text>
-</svg></div>
-<h2>🐤 ヒナの発育と視覚の関係</h2>
-<p>孵化直後のヒナは、視覚を頼りに餌となる小さな粒を見分ける必要があり、早い段階から高い視覚能力を発達させるとされています。4色型色覚は、限られた期間で効率よく餌を見つけるための重要な適応だったと考えられています。</p>
-<h2>🎨 鶏が見ている「本当の色」を人間は再現できない</h2>
-<p>紫外線を含む4色型の色覚を人間が体験することはできないため、鶏が実際にどのような色彩の世界を見ているのかを完全に再現することはできません。研究者たちは特殊なカメラや計算モデルを使い、鶏の視覚をシミュレーションすることで、その一端を推測しようとしています。</p>
-<h2>🏠 養鶏の現場での応用</h2>
-<p>鶏の視覚特性を踏まえ、飼育環境の照明を調整することでストレスを軽減しようとする取り組みも行われています。鶏にとって快適な光環境を整えることは、健康管理の観点からも重要視されています。</p>
-<h2>🦅 他の鳥類との比較</h2>
-<p>4色型色覚や紫外線感知能力は鶏に限らず、多くの鳥類に共通して見られる特徴だとされています。猛禽類などはさらに高い視力を持つとされ、鳥類全体が「視覚の達人」であることがうかがえます。</p>
-
-
-<h2>🐔 品種による視覚特性の違い</h2>
-<p>鶏の品種によって、視覚の鋭さや色への反応にはある程度の個体差・品種差があるとされています。野生に近い品種ほど、捕食者を察知するための視覚が鋭く発達している傾向が指摘されています。</p>
-<h2>🌈 紫外線視覚と求愛行動の関係</h2>
-<p>紫外線を感知できることは、求愛行動における相手の健康状態の判断にも関わっている可能性があるとされています。羽毛の紫外線反射の強さが、個体の栄養状態や免疫力を反映しているのではないかとする仮説もあり、研究が続けられています。</p>
-
-<div class="summary-box">
-<strong>📌 この記事のポイント</strong>
-<ul>
-<li>鶏は人間より1種類多い4色型色覚を持つとされる</li>
-<li>紫外線を感知でき、人間には見えない情報を得られる可能性がある</li>
-<li>広い視野角で周囲の危険をいち早く察知できる</li>
-</ul>
-</div>
-
-<div class="cta-wrap">
-<a class="cta" href="https://lolaniki.com/archives/1708">鶏は人間の顔を見分けられる？ →</a>
-<a class="cta" href="https://lolaniki.com/archives/1681">なぜ鶏に羽があるのか？ →</a>
-</div>
-
-<h2>📖 参考文献</h2>
-<p class="refs">記事内で参照した研究・データは公表されている学術情報にもとづいています。詳細な文献リストは随時更新します。</p>
-
-<footer>© Animal IQ Labo（テスト版） — 豚・鶏・犬・猫の知能・感覚・行動を科学的に解説</footer>
-</div>
 </body>
 </html>
