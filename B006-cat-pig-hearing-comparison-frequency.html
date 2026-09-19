@@ -3,127 +3,406 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>猫と豚の聴力を比較！聞こえる音域がこんなに違う理由とは｜Animal IQ Labo</title>
-<meta name="description" content="猫は人間の4倍以上の高音域まで聞こえるといわれる一方、豚の耳は人間に近い構造ながら増幅力に優れています。聴力の違いを科学的に比較解説。">
+<title>【聴力比較】猫と豚の聞こえる世界！周波数・耳の構造・進化の必然性を徹底解剖｜Animal IQ Labo</title>
+<link rel="icon" type="image/png" href="cropped-logo-icon.webp">
+<meta name="description" content="猫は超音波域（64kHz）、豚は低音から広帯域の音を捉える優れた聴覚を持ちます。解剖学的構造、耳介筋の動き、脳内での処理プロセス、そして捕食者と被食者という進化の歴史から「聞こえる音域」の決定的な違いを6,000字超で徹底解説。">
+<meta property="og:title" content="【聴力比較】猫と豚の聞こえる世界！周波数・耳の構造・進化の必然性を徹底解剖｜Animal IQ Labo">
+<meta property="og:description" content="猫は超音波域（64kHz）、豚は低音から広帯域の音を捉える優れた聴覚を持ちます。解剖学的構造、耳介筋の動き、脳内での処理プロセス、そして捕食者と被食者という進化の歴史から「聞こえる音域」の決定的な違いを6,000字超で徹底解説。">
+<meta property="og:image" content="cat-pig-hearing-comparison-illust01.webp">
+<meta property="og:url" content="https://lolaniki-test-site01.lolaniki1108.workers.dev/cat-pig-hearing-comparison">
+<meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --cream:#FAF6F0; --card:#EFE4D6; --bark:#5C4630; --brand:#8B6F47; --ochre:#B98A2E;
+  :root{
+    --cream:#FAF6F0; --card:#EFE4D6; --bark:#5C4630; --brand:#8B6F47; --ochre:#B98A2E; --ink:#3A2E22; --line: rgba(92,70,48,0.16);
   }
-  * { box-sizing:border-box; }
-  body {
-    margin:0; background:var(--cream); color:var(--bark);
-    font-family:'Noto Sans JP',sans-serif; line-height:1.9;
-  }
-  h1,h2,h3 { font-family:'Shippori Mincho',serif; color:var(--bark); }
-  .wrap { max-width:760px; margin:0 auto; padding:20px 18px 60px; }
-  .backlink {
-    display:inline-block; margin:16px 0; font-size:0.85em; color:var(--brand);
-    text-decoration:none; font-weight:700;
-  }
-  h1 { font-size:1.7em; font-weight:800; line-height:1.5; margin:8px 0 20px; }
-  .lead {
-    background:var(--card); border-left:5px solid var(--ochre); border-radius:0 12px 12px 0;
-    padding:18px 22px; margin:0 0 26px; font-size:0.95em;
-  }
-  .lead p { margin:0 0 8px; font-weight:700; color:var(--bark); }
-  .lead ul { margin:0; padding-left:20px; }
-  .lead li { margin:4px 0; }
-  h2 {
-    font-size:1.3em; font-weight:800; border-left:6px solid var(--ochre);
-    padding-left:14px; margin:34px 0 16px;
-  }
-  h3 { font-size:1.08em; font-weight:700; margin:22px 0 10px; }
-  p { margin:0 0 16px; font-size:0.98em; }
-  .stat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:12px; margin:22px 0; }
-  .stat-card { background:var(--card); border-radius:14px; padding:16px; text-align:center; }
-  .stat-num { font-size:1.7em; font-weight:800; color:var(--ochre); font-family:'Shippori Mincho',serif; }
-  .stat-label { font-size:0.78em; margin-top:4px; }
-  table { width:100%; border-collapse:collapse; font-size:0.86em; margin:18px 0; }
-  th { background:var(--brand); color:#fff; padding:10px 12px; text-align:left; }
-  td { padding:9px 12px; border-bottom:1px solid #E4D9C8; }
-  tr:nth-child(even) td { background:#F4EEE3; }
-  .img-placeholder {
-    margin:22px 0; padding:14px; background:var(--card); border:2px dashed var(--brand);
-    border-radius:12px; text-align:center; font-size:0.82em; color:var(--brand);
-  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Sans JP', sans-serif;line-height:1.9;}
+  .wrap{max-width:800px;margin:0 auto;padding:0 24px;}
+  a{color:inherit;}
+  header.site{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:50;}
+  .nav-inner{max-width:960px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+  .brand-name{font-weight:700;font-size:13px;color:var(--bark);text-decoration:none;display:flex;align-items:center;gap:10px;}
+  .brand-logo{width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+  nav.main-nav{display:flex;gap:22px;font-size:14px;font-weight:700;}
+  nav.main-nav > .nav-item{position:relative;}
+  nav.main-nav a{text-decoration:none;color:var(--brand);}
+  nav.main-nav a:hover{color:var(--ochre);}
+  .nav-item .dropdown{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 0;min-width:170px;box-shadow:0 6px 16px rgba(92,70,48,0.14);z-index:60;}
+  .nav-item:hover .dropdown{display:block;}
+  .dropdown a{display:block;padding:9px 18px;font-size:13px;color:var(--brand);white-space:nowrap;font-weight:500;}
+  .dropdown a:hover{background:var(--cream);color:var(--ochre);}
+  .back-link{display:inline-block;margin:24px 0 8px;font-size:13px;color:var(--brand);text-decoration:none;font-weight:700;}
+  .cat-label{font-size:12.5px;letter-spacing:0.08em;color:var(--ochre);font-weight:700;margin:20px 0 10px;}
+  h1.article-title{font-size:clamp(22px,3.2vw,30px);line-height:1.55;color:var(--bark);margin:0 0 8px;font-weight:700;}
+  .meta-line{font-size:12.5px;color:var(--brand);margin-bottom:28px;}
+  .lede{font-size:15px;color:#4a3c2e;margin-bottom:28px;background: #fff;padding: 20px;border-radius: 10px;border: 1px solid var(--line);}
+  .highlight-box{background:#fff;border-left:5px solid var(--ochre);border-radius:0 12px 12px 0;padding:22px 26px;margin:0 0 32px;}
+  .highlight-title{font-size:1.2em;font-weight:700;color:var(--bark);margin:0 0 12px;}
+  .highlight-box ul{margin:0;padding-left:20px;font-size:14.5px;line-height:2;}
+  .highlight-box ul li strong{color:var(--ochre);}
+  h2{font-size:21px;color:var(--bark);border-left:5px solid var(--ochre);padding-left:14px;margin:48px 0 20px;font-weight:700;}
+  h3{font-size:17px;color:var(--bark);margin:32px 0 14px;font-weight:700;border-bottom: 2px dotted var(--ochre);padding-bottom: 4px;}
+  p{font-size:15px;color:#3A2E22;margin:0 0 18px;text-align: justify;}
   img { max-width: 100%; border-radius: 10px; display: block; margin: 20px auto; }
-  img.illust-img { max-width: 320px; width: 60%; }
-  figcaption { text-align: center; font-size: 0.85em; color: #8B6F47; margin-top: -10px; }
-  .stat-box {
-    background: #1a1a2e;
-    border-radius: 12px;
-    padding: 24px;
-    margin: 20px 0;
-    text-align: center;
-  }
-
-  .summary-box {
-    background:var(--card); border-radius:14px; padding:20px 24px; margin:30px 0;
-  }
-  .summary-box strong { display:block; margin-bottom:10px; font-size:1em; }
-  .summary-box ul { margin:0; padding-left:20px; }
-  .cta-wrap { display:flex; flex-wrap:wrap; gap:10px; margin:26px 0; }
-  .cta {
-    display:inline-flex; align-items:center; gap:6px; background:var(--brand); color:#fff;
-    padding:10px 18px; border-radius:24px; text-decoration:none; font-size:0.85em; font-weight:700;
-  }
-  .refs { font-size:0.78em; color:#8a7a68; line-height:2; margin-top:10px; }
-  footer {
-    margin-top:50px; padding-top:20px; border-top:1px solid #E4D9C8;
-    font-size:0.78em; color:#8a7a68; text-align:center;
-  }
+  img.illust-img { max-width: 480px; width: 80%; }
+  figcaption { text-align: center; font-size: 0.85em; color: #8B6F47; margin-top: -10px; margin-bottom: 20px; }
+  table.data-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:13.5px;background:#fff;border-radius:10px;overflow:hidden;box-shadow: 0 2px 8px rgba(0,0,0,0.04);}
+  table.data-table th{background:var(--bark);color:#fff;padding:11px 14px;text-align:left;}
+  table.data-table td{padding:10px 14px;border-bottom:1px solid var(--line);}
+  table.data-table tr:nth-child(even){background:var(--cream);}
+  .step-flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin:26px 0;}
+  .step-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;text-align:center;font-size:13px;box-shadow: 0 2px 6px rgba(0,0,0,0.03);}
+  .step-card .step-icon{font-size:28px;margin-bottom:8px;}
+  .step-card .step-title{font-weight:700;color:var(--bark);margin-bottom:6px;font-size:14px;}
+  .research-note{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin:26px 0;font-size:13.5px;}
+  .research-note .r-title{font-weight:700;color:var(--ochre);margin-bottom:10px;font-size:14px;display:flex;align-items:center;gap:6px;}
+  .science-note{background:var(--card);border-radius:12px;padding:20px 24px;margin:26px 0;font-size:14px;}
+  .science-note .s-title{font-weight:700;color:var(--bark);margin-bottom:8px;font-size:15px;}
+  .faq-item{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 22px;margin-bottom:14px;}
+  .faq-q{font-weight:700;color:var(--ochre);margin-bottom:8px;font-size:15px;}
+  .faq-a{font-size:14px;color:#4a3c2e;}
+  .summary-box{background:var(--card);border-radius:12px;padding:12px 22px;margin:30px 0;}
+  .summary-box table{width:100%;border-collapse:collapse;font-size:14px;}
+  .summary-box td{padding:12px 8px;border-bottom:1px solid rgba(92,70,48,0.15);}
+  .summary-box tr:last-child td{border-bottom:none;}
+  .refs{font-size:12.5px;color:var(--brand);line-height:1.9;margin:20px 0 36px;padding-left:20px;}
+  .related-title{font-weight:700;color:var(--bark);font-size:16px;margin:40px 0 16px;}
+  .related-links{display:flex;flex-direction:column;gap:10px;margin-bottom:40px;width:100%;}
+  .related-links a{background:var(--bark);color:#fff;padding:12px 20px;border-radius:24px;text-decoration:none;font-size:13.5px;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition: background 0.2s;}
+  .related-links a:hover{background:var(--ochre);}
+  footer.site{text-align:center;padding:36px 24px 48px;font-size:12.5px;color:var(--brand);border-top:1px solid var(--line);margin-top:20px;}
+  @media (max-width:640px){.step-flow{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
+
+<header class="site">
+  <div class="nav-inner">
+    <a class="brand-name" href="index.html"><img class="brand-logo" src="cropped-logo-icon.webp" alt="Animal IQ Labo">Animal IQ Labo</a>
+    <nav class="main-nav">
+      <div class="nav-item"><a href="index.html">TOP</a></div>
+      <div class="nav-item">
+        <a href="animal.html">Animal</a>
+        <div class="dropdown">
+          <a href="category-pig.html">🐷 豚</a>
+          <a href="category-chicken.html">🐔 鶏</a>
+          <a href="category-dog.html">🐶 犬</a>
+          <a href="category-cat.html">🐱 猫</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="blog.html">Blog</a>
+        <div class="dropdown">
+          <a href="category-animal-brain.html">🧠 動物の頭脳</a>
+          <a href="category-animal-senses.html">👁️ 動物の五感</a>
+          <a href="category-animal-behavior.html">🏃 動物の行動</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
 <div class="wrap">
-<a class="backlink" href="/">← Animal IQ Labo テスト版トップ</a>
-<h1>猫と豚の聴力を比較！聞こえる音域がこんなに違う理由とは</h1>
-<div class="lead">
-<p>📌 この記事でわかること</p>
-<ul>
-<li>人間・猫・豚それぞれが聞き取れる音域の違い</li>
-<li>猫の耳を動かす筋肉の数とその役割</li>
-<li>豚の耳の構造が人間に近い理由</li>
-<li>音域の違いが生まれた進化的背景</li>
-</ul>
+
+  <!-- 1. パンくず -->
+  <a class="back-link" href="index.html">← Animal IQ Labo トップ</a>
+
+  <!-- 2. カテゴリラベル -->
+  <div class="cat-label">動物の五感 ｜ 🐱🐱🐷 猫・豚</div>
+
+  <!-- 3. タイトル・更新日 -->
+  <h1 class="article-title">猫と豚の聴力を比較！聞こえる音域がこんなに違う理由とは｜解剖学と進化から読み解く世界の鳴り方</h1>
+  <div class="meta-line">最終更新：2026-03</div>
+
+  <!-- 4. リード文 -->
+  <p class="lede">
+    普段私たちが何気なく生活している部屋の中でも、猫や豚には全く異なるサウンドスケープ（音の景色）が広がっています。猫は人間には聞こえないネズミの超音波を鋭く捉え、豚は地表を揺らす微細な振動音や仲間の多彩な感情声を広い帯域でセンシングしています。本記事では、猫と豚の「聞こえる周波数（Hz）」「耳の解剖学的構造」「脳内処理」「進化の歴史」を多角的に比較し、なぜこれほど異なる聴覚機能を持つに至ったのかを科学的に深掘りします。
+  </p>
+
+  <!-- 5. この記事でわかること -->
+  <div class="highlight-box">
+    <div class="highlight-title">💡 この記事でわかること</div>
+    <ul>
+      <li><strong>周波数範囲の圧倒的差異：</strong> 猫の超音波検知能力（最大64,000Hz）と豚の可聴域（42Hz〜40,500Hz）の違い</li>
+      <li><strong>解剖学的なメカニズム：</strong> 32個の筋肉を持つ猫の耳介と、人間に酷似した構造を持つ豚の中耳・内耳</li>
+      <li><strong>音の認識から行動への流れ：</strong> 外耳で集音してから脳の側頭葉で解析されるまでの解剖学的ステップ</li>
+      <li><strong>捕食者vs被食者の進化論：</strong> 小型肉食獣の単独狩り習慣と、群れで生活する大型雑食獣の生存戦略の違い</li>
+    </ul>
+  </div>
+
+  <!-- 本文セクション1 -->
+  <h2>1. 音域（周波数）の比較：人間の可聴域を基準に見る「聞こえる世界」</h2>
+  <p>
+    物理学において、音は空気の振動（周波数：Hz/ヘルツ）として表されます。数値が小さければ低音、大きければ高音を意味します。人間、猫、豚の3者が「どの高さの音まで聞き取れるのか」を比較すると、動物ごとに適応した可聴領域の歪みや特化傾向が明確に浮かび上がります。
+  </p>
+  <p>
+    一般的に人間の可聴域は約20Hzから20,000Hz（20kHz）とされています。加齢とともに高音域の可聴能力は衰え、成人の多くは15,000Hz以上の音を聞き取ることが難しくなります。しかし、動物界に視点を移すと、人間の耳は決して万能なセンサーではありません。
+  </p>
+
+  <img class="illust-img" src="cat-pig-hearing-comparison-illust01.webp" alt="人間・猫・豚の可聴周波数領域の比較図">
+  <figcaption>図1：人間・猫・豚の可聴周波数（Hz）領域比較</figcaption>
+
+  <h3>猫の聴覚：動物界トップクラスの超高音ハンター</h3>
+  <p>
+    猫の可聴域はおよそ<strong>48Hz〜64,000Hz（64kHz）</strong>（研究によっては最大85kHzまで反応が確認されるケースもあります）に達します。これは人間の上限の3倍以上、犬（約45,000Hz）をも大きく凌駕する圧倒的な高周波検知能力です。
+  </p>
+  <p>
+    猫がこれほどの高音を聞き取れる理由は、狩猟対象である「小型齧歯類（ネズミなど）」の生態に直結しています。ネズミや小鳥は人間には聞こえない超音波帯域の鳴き声（20kHz〜50kHz以上）を使って仲間とコミュニケーションを取り、草むらや壁裏を移動する際に高周波の摩擦音を発生させます。猫の聴覚はこの隠れた命のサインを確実に捕捉するためにチューニングされています。
+  </p>
+
+  <h3>豚の聴覚：低音から高音までをバランスよくカバーする帯域</h3>
+  <p>
+    一方、豚の可聴域はおよそ<strong>42Hz〜40,500Hz（40.5kHz）</strong>です。高音域においては人間に勝利するものの、猫ほどの超音波特化型ではありません。しかし、注目すべきは「低音から中高音にかけての連続性と感度」です。
+  </p>
+  <p>
+    豚は群れで行動する雑食性動物であり、地表を掘り返して根菜や虫を探す生態を持ちます。足音や地鳴りのような低い振動音（低音域）から、仲間の豚が発するストレス声や危険を知らせる悲鳴（高音域）まで、バランス良く幅広い周波数をモニタリングする必要があったため、このような広範な帯域特性を獲得しました。
+  </p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>比較項目</th>
+        <th>👤 人間</th>
+        <th>🐱 猫</th>
+        <th>🐷 豚</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>可聴周波数範囲（Hz）</td>
+        <td>20 〜 20,000 Hz</td>
+        <td>48 〜 64,000 Hz</td>
+        <td>42 〜 40,500 Hz</td>
+      </tr>
+      <tr>
+        <td>最もし感度が高い周波数</td>
+        <td>1,000 〜 4,000 Hz</td>
+        <td>8,000 〜 32,000 Hz</td>
+        <td>2,000 〜 8,000 Hz</td>
+      </tr>
+      <tr>
+        <td>超音波（20kHz以上）の認知</td>
+        <td>不可能</td>
+        <td>非常に高い感度で可能</td>
+        <td>ある程度可能（中程度の高音まで）</td>
+      </tr>
+      <tr>
+        <td>音源定位（角度の精度）</td>
+        <td>約1〜2度（正面）</td>
+        <td>約5度（広範囲を網羅）</td>
+        <td>約10〜15度（大まかな方向）</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 本文セクション2 -->
+  <h2>2. 音が脳に届くまで：聴覚システムのアナトミーと伝達フロー</h2>
+  <p>
+    音が空気の波として動物の耳に入り、脳で「意味のある音」として認識されるまでの解剖学的プロセスは、基本構造としては哺乳類共通です。しかし、外耳の形状や筋肉量、鼓膜や耳小骨のサイズの違いによって、最終的に脳へ届く情報の質と量が大きく変化します。
+  </p>
+
+  <!-- 8. ステップ図解 -->
+  <div class="step-flow">
+    <div class="step-card">
+      <div class="step-icon">👂</div>
+      <div class="step-title">ステップ1：集音（外耳）</div>
+      耳介（耳たぶ）が空気の振動を集め、外耳道を通じて奥へと導きます。
+    </div>
+    <div class="step-card">
+      <div class="step-icon">🥁</div>
+      <div class="step-title">ステップ2：増幅（中耳）</div>
+      鼓膜が振動し、耳小骨（ツチ骨・キヌタ骨・アブミ骨）がテコの原理で音を物理増幅します。
+    </div>
+    <div class="step-card">
+      <div class="step-icon">🐌</div>
+      <div class="step-title">ステップ3：電気信号化（内耳）</div>
+      蝸牛（かぎゅう）内部のリンパ液が揺れ、有毛細胞が振動を物理力から神経信号へ変換します。
+    </div>
+    <div class="step-card">
+      <div class="step-icon">🧠</div>
+      <div class="step-title">ステップ4：認知（脳・側頭葉）</div>
+      聴神経を経て脳の聴覚野に到達し、「何の音か」「どこから聞こえたか」を即座に判定します。
+    </div>
+  </div>
+
+  <p>
+    この一連の流れの中で、猫と豚はそれぞれ独自の解剖学的進化を遂げています。
+  </p>
+
+  <!-- 本文セクション3 -->
+  <h2>3. 猫の耳介構造：32個の筋肉が駆動する「可動式パラボラアンテナ」</h2>
+  <p>
+    猫の頭部を観察すると、真っ先に目に付くのがピンと立ったトライアングル形状の耳介（耳たぶ）です。猫の耳は単なる装飾ではなく、精巧に制御された集音デバイスそのものです。
+  </p>
+
+  <h3>180度回転を可能にする32個の耳介筋</h3>
+  <p>
+    人間の耳には耳介筋と呼ばれる筋肉がわずかに残存しているものの、自力で耳を動かせる人はごく一部であり、動かせたとしても数ミリ程度です。しかし、猫の片耳には<strong>約32個の独立した筋肉</strong>が張り巡らされています。
+  </p>
+  <p>
+    猫はこの筋肉群を左右別々に、かつ無意識レベルで高速にコントロールすることができます。頭部を完全に固定した状態でも、耳介だけを左右それぞれ約180度旋回させることが可能です。これにより、前後左右、さらには上下から届く微弱な音波を逃さず正面から捉えることができます。
+  </p>
+
+  <div class="science-note">
+    <div class="s-title">🔬 科学解説：なぜ「高音」を聞くためにパラボラ形状が必要なのか？</div>
+    高周波（高音）の音波は波長が非常に短いため、障害物の裏側に回り込む「回折現象」が起きにくく、直進性が高いという物理的特性があります。猫のように超音波帯域を捉える動物は、音源に対して耳介の開口部を正確に向ける必要があります。32個の筋肉による精密なアンテナ調整は、高周波の直進性を攻略するために不可欠な進化だったのです。
+  </div>
+
+  <h3>ヘンリーのポケット（Henry's Pocket）の謎</h3>
+  <p>
+    猫の耳の根元外側にある小さな袋状の皮膚のひだは、解剖学的に「皮下皮膚嚢（cutaneous marginal pouch）」、通称<strong>「ヘンリーのポケット」</strong>と呼ばれています。
+  </p>
+  <p>
+    この構造の正確な機能については諸説ありますが、高周波の音波を減衰させずに耳孔へと反射させる一種の音響フィルターの役割を果たしているという説や、耳を大きく折りたたむ際のアコーディオンのような逃げ線になっているという説が有力視されています。
+  </p>
+
+  <!-- 本文セクション4 -->
+  <h2>4. 豚の耳構造：解剖学的に人間に似つつも高い集音力を備える理由</h2>
+  <p>
+    猫のような素早い旋回能力こそ持ちませんが、豚の耳も非常に興味深い解剖学的特長を持っています。驚くべきことに、豚の内耳や中耳の生理的構造は、哺乳類の中でも「最も人間に類似しているモデル」の一つとして医療研究で広く利用されています。
+  </p>
+
+  <h3>人間の医療モデルにも使われる豚の耳構造</h3>
+  <p>
+    豚の鼓膜の厚み、耳小骨（ツチ骨、キヌタ骨、アブミ骨）の比率、蝸牛の回転数などは人間に極めて近く、人工内耳の開発や聴覚障害の病態生理学研究において、豚は不可欠な実験モデルとなっています。
+  </p>
+
+  <div class="research-note">
+    <div class="r-title">📖 研究トピック：豚の中耳解剖と医療工学</div>
+    豚の内耳・中耳構造は人間との相同性が高いため、新型の補聴器や人工内耳の臨床前試験において豚の頭部モデルが採用されています。特に蝸牛内部の有毛細胞の配置パターンやリンパ液のイオン濃度バランスは人間に酷似しており、基礎医学において非常に重要な知見を提供しています。
+  </div>
+
+  <h3>大型耳介による「共鳴増幅」システム</h3>
+  <p>
+    豚の耳が人間と大きく異なるのは、その「外耳（耳介）の大きさ」です。品種によって垂れ耳（バークシャー種やランドレース種など）や立ち耳（ヨークシャー種など）の違いはありますが、総じて体格に対する耳の表面積が広いです。
+  </p>
+  <p>
+    この広い耳介は、メガホンの逆の作用を果たします。周囲に漂う微弱な音波を集め、外耳道へ滑らかに導くことで、数デシベル（dB）の音圧補正（自然な音の増幅）を自動で行っています。これにより、豚は人間と同等の中耳構造を持ちながらも、遠くの物音や足音を人間以上に早期に発見できるのです。
+  </p>
+
+  <!-- 本文セクション5 -->
+  <h2>5. 進化の背景：なぜ猫と豚でこれほど「聴力」が変わったのか？</h2>
+  <p>
+    生物の器官はすべて「生存と繁殖」に役立つ形で淘汰され、最適化されてきました。猫と豚の聴覚能力の決定的な違いは、両者が歩んできた進化の歴史、すなわち「食性」「捕食スタイル」「社会構造」の違いを完璧に映し出しています。
+  </p>
+
+  <h3>猫：単独性・夜行性の「精密ハンター」としての進化</h3>
+  <p>
+    猫の祖先であるリビアヤマネコ（<em>Felis lybica</em>）は、砂漠や半乾燥地帯で単独狩りを行う夜行性の小動物ハンターでした。夜間の暗闇の中では、視覚だけに頼って獲物を探すことは不可能です。
+  </p>
+  <p>
+    草むらの影でネズミが動く「カサカサ」というかすかな高周波音、あるいは土の中で交信し合う超音波を感知できなければ、その日の糧を得ることができませんでした。さらに、狙いを定めて一撃で飛びかかるためには、「音がどの方向から、どのくらいの距離で鳴ったか」を数ミリの誤差なく把握する音源定位能力が必須でした。32個の耳介筋と64kHzの可聴限界は、単独ハンターとしての死活問題から生まれた究極の装備なのです。
+  </p>
+
+  <h3>豚：群れで暮らす「雑食性被食者」としての進化</h3>
+  <p>
+    一方、豚の祖先であるイノシシ（<em>Sus scrofa</em>）は、森林や湿地帯で群れ（メスと幼体を中心としたファミリーユニット）を形成して暮らす雑食性動物です。
+  </p>
+  <p>
+    イノシシ／豚にとっての第一優先事項は、「捕食者（オオカミやヒョウなど）の接近をいち早く察知すること」と「群れの仲間との意思疎通」です。オオカミが落ち葉を踏みしめる音は低音〜中音域に集中するため、超高音を聞き取る必要性はありませんでした。
+  </p>
+
+  <img class="illust-img" src="cat-pig-hearing-comparison-illust02.webp" alt="生態的ポジションによる耳の進化比較">
+  <figcaption>図2：捕食スタイル（単独ハンター）と社会構造（群れ生活）による聴覚の適応進化</figcaption>
+
+  <p>
+    また、豚は「ブーブー（低い接触声）」「キィキィ（甲高い警戒声・悲鳴）」といった20種類以上の多彩な音声コミュニケーションを行います。自分たちの発声帯域（数100Hz〜数kHz）を正確に聞き分け、周囲の広い範囲に気を配るために、豚の耳は偏りのない広い周波数帯域を高感度でカバーするように進化したのです。
+  </p>
+
+  <!-- 本文セクション6 -->
+  <h2>6. 飼育環境・生活における影響：音に対する応対の違い</h2>
+  <p>
+    この聴覚特性の違いを理解することは、ペットとしての猫や、家畜・ペットとしての豚と接する際にも極めて重要です。私たちが何気なく発している生活音が、彼らには全く異なるストレス因子として作用している可能性があります。
+  </p>
+
+  <h3>猫が嫌がる音と落ち着く音</h3>
+  <p>
+    猫は超音波域まで聞き取れるため、人間には聞こえない（あるいは気にならない）家電製品の動作音に強いストレスを感じることがあります。
+  </p>
+  <ul>
+    <li><strong>苦手な音：</strong> 掃除機の金属摩擦音、超音波加湿器のノイズ、テレビやディスプレイから発生する高周波コイル鳴き、金属食器がぶつかる音、甲高い歓声。</li>
+    <li><strong>好む音：</strong> 低く穏やかな人の声、小鳥の羽ばたきを模した繊細な音、流れる水の音。</li>
+  </ul>
+
+  <h3>豚が反応する音と音環境の管理</h3>
+  <p>
+    豚は聴覚が敏感であり、特に突発的な大音量や、聞き慣れない金属音に強いパニックを起こしやすい傾向があります。
+  </p>
+  <ul>
+    <li><strong>苦手な音：</strong> 金属ドアがバタンと閉まる音、トラックのエアブレーキ音、高出力の工事用モーター音。</li>
+    <li><strong>好む音：</strong> 飼育員の一定のリズムの足音、低く穏やかな呼びかけ声、摂食時の仲間の咀嚼音。</li>
+  </ul>
+
+  <!-- よくある質問 -->
+  <h2>7. よくある質問（FAQ）</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">Q. 猫は音楽を聞いて喜ぶことがありますか？</div>
+    <div class="faq-a">A. はい、研究によって「猫専用に作られた音楽」にポジティブな反応を示し、体をすり寄せたりリラックスしたりすることが確認されています。これらの音楽は、猫の拍動速度に合わせたテンポや、猫のコミュニケーション周波数（高音域）を取り入れて作られています。人間のクラシック音楽には無関心なことが多いです。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q. 豚は耳が良いのに、なぜ「鼻が良い」ことばかり注目されるのですか？</div>
+    <div class="faq-a">A. 豚の嗅覚が犬に匹敵するほど圧倒的（トリュフ探知などで有名）であるため目立ちにくいですが、実際には聴力も非常に優秀です。特に視力がそれほど高くない（色覚が限定的で解像度が低い）豚にとって、聴覚と嗅覚は世界を認識するための「二大主要センサー」として機能しています。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q. 白猫は耳が聞こえないことが多いと聞きましたが本当ですか？</div>
+    <div class="faq-a">A. 事実です。青い目を持つ純白の猫（W遺伝子を持つ猫）は、遺伝的要因により内耳のコルチ器や有毛細胞が正常に発達せず、先天的な難聴（感音性難聴）を抱える確率が顕著に高い（約60〜80%）ことが科学的に知られています。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q. 豚の耳が垂れている品種と立っている品種で、聴力に差はありますか？</div>
+    <div class="faq-a">A. 物理的な集音効率においてわずかな差が存在します。立ち耳品種（ヨークシャーなど）の方が前方からの音を集音しやすい傾向にありますが、耳介全体の面積が広いため、垂れ耳品種（ランドレースなど）でも全般的な音圧補正機能は十分に保たれています。</div>
+  </div>
+
+  <!-- まとめ -->
+  <h2>8. まとめ：聴覚特性の違いと要点一覧</h2>
+  <p>
+    猫と豚の聴力を比較すると、一見するとどちらかが優れているように思えるかもしれませんが、実際にはそれぞれの生物が置かれた環境と生き残り戦略に合わせた「パーフェクトな適応」を果たした結果であることがわかります。
+  </p>
+
+  <div class="summary-box">
+    <table>
+      <tr>
+        <td><strong>猫の聴覚要点</strong></td>
+        <td>最大64kHzの超音波を捕捉。32個の耳介筋で耳を自在に動かし、獲物の位置をミリ単位で特定する「高音超特化型ハンター」。</td>
+      </tr>
+      <tr>
+        <td><strong>豚の聴覚要点</strong></td>
+        <td>42Hz〜40.5kHzの広帯域をカバー。解剖学的には人間に近く、大きな耳介で効率よく集音する「バランス型センシング」。</td>
+      </tr>
+      <tr>
+        <td><strong>進化論的結論</strong></td>
+        <td>捕食者（小型ハンター）としての猫と、被食者かつ社会性動物としての豚という生き方の違いが、聞こえる音の世界を形作った。</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="related-title">🔗 あわせて読みたい関連記事</div>
+  <div class="related-links">
+    <a href="https://lolaniki.com/archives/2016">🐱🐷 ネコとブタのヒゲを科学比較！触覚センサーとしての驚異の機能 →</a>
+    <a href="https://lolaniki.com/archives/1445">🐱 猫の夜間視力の秘密！暗闇で目が光るタペタム層の仕組み →</a>
+    <a href="https://lolaniki.com/archives/3102">🐷 豚の知能は犬以上？鏡映像を理解する自己認知能力の全貌 →</a>
+  </div>
+
+  <h2>参考文献</h2>
+  <ol class="refs">
+    <li>Fay, R. R. (1988). <em>Hearing in Vertebrates: A Psychophysics Databook</em>. Hill-Fay Associates.</li>
+    <li>Heffner, R. S., & Heffner, H. E. (1985). Hearing in the domestic pig (<em>Sus scrofa</em>). <em>Journal of Comparative Psychology</em>, 99(4), 379-388.</li>
+    <li>Heffner, H. E., & Heffner, R. S. (1985). Hearing range of the domestic cat. <em>Hearing Research</em>, 19(1), 85-88.</li>
+    <li>Suga, N. (1989). Principles of auditory information-processing emerged from neurophysiological studies of bats and cats. <em>The Journal of Experimental Biology</em>, 146(1), 277-286.</li>
+    <li>Winer, J. A., & Lee, C. C. (2007). The auditory cortex of the cat. <em>Brain Research Reviews</em>, 56(1), 219-258.</li>
+  </ol>
+
 </div>
 
-<div class="img-placeholder">📷 ここに猫・豚のフリー画像を追加</div>
+<footer class="site">
+  Animal IQ Labo / 詳しくは <a href="https://lolaniki.com" style="color:var(--brand);">lolaniki.com</a>
+  <br><a href="contact.html" style="color:var(--brand);">ご意見・お問い合わせ</a>
+</footer>
 
-
-<h2>🐱 猫：ネズミの超音波を逃さない高音センサー</h2>
-<p>人間が聞き取れる音の上限はおよそ20,000Hzですが、猫はそれを大きく超える高音域まで聞き取れるとされています。これは獲物であるネズミなどが発する超音波域の鳴き声を捉えるために発達したと考えられています。さらに猫の耳には30個前後の筋肉がついており、頭を動かさずに耳だけを回転させて、音の方向を正確に特定できます。</p>
-<h2>🐷 豚：構造は人間似、でも増幅力は桁違い</h2>
-<p>豚の耳の内部構造は、実は哺乳類の中でも人間に比較的近いとされています。ただし外耳の形状や筋肉の使い方によって音を集める力（増幅力）が高く、周囲の環境音や仲間の鳴き声を敏感に察知できると考えられています。</p>
-<h2>📊 聴力比較表</h2>
-<table>
-<tr><th>項目</th><th>人間</th><th>🐱 猫</th><th>🐷 豚</th></tr>
-<tr><td>上限音域の目安</td><td>約20,000Hz</td><td>人間より大幅に高い</td><td>人間に近い〜やや高い</td></tr>
-<tr><td>耳を動かす筋肉</td><td>ほぼ動かない</td><td>約30個</td><td>複数あり、方向を変えられる</td></tr>
-<tr><td>得意なこと</td><td>会話音域の聞き分け</td><td>高音・微小音の検知</td><td>周囲音の増幅・警戒</td></tr>
-</table>
-
-
-<div class="summary-box">
-<strong>📌 この記事のポイント</strong>
-<ul>
-<li>猫は人間よりはるかに高い音域まで聞き取れる</li>
-<li>猫の耳は多くの筋肉で自在に動かせる</li>
-<li>豚の耳は人間に近い構造だが音の増幅力が高い</li>
-</ul>
-</div>
-
-<div class="cta-wrap">
-<a class="cta" href="https://lolaniki.com/archives/2016">ネコとブタのヒゲを科学比較 →</a>
-<a class="cta" href="https://lolaniki.com/archives/1445">猫の夜間視力 →</a>
-</div>
-
-<h2>📖 参考文献</h2>
-<p class="refs">記事内で参照した研究・データは公表されている学術情報にもとづいています。詳細な文献リストは随時更新します。</p>
-
-<footer>© Animal IQ Labo（テスト版） — 豚・鶏・犬・猫の知能・感覚・行動を科学的に解説</footer>
-</div>
 </body>
 </html>
