@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>犬と猫、本当に嫉妬深いのはどっち？研究データで比較する「やきもち」の科学｜Animal IQ Labo</title>
+<title>犬と猫、どちらが「嫉妬」を感じるのか——社会的感情の科学比較｜Animal IQ Labo</title>
 <link rel="icon" type="image/png" href="cropped-logo-icon.webp">
-<meta name="description" content="ぬいぐるみの犬・猫を使った実験で明らかになった「やきもち」の正体。犬と猫、それぞれの反応の違いを研究データから比較し、どちらが嫉妬深いのかをわかりやすく解説します。">
-<meta property="og:title" content="犬と猫、本当に嫉妬深いのはどっち？研究データで比較する「やきもち」の科学｜Animal IQ Labo">
-<meta property="og:description" content="ぬいぐるみの犬・猫を使った実験で明らかになった「やきもち」の正体。犬と猫、それぞれの反応の違いを研究データから比較し、どちらが嫉妬深いのかをわかりやすく解説します。">
-<meta property="og:image" content="dogtail-illustration.webp">
-<meta property="og:url" content="https://lolaniki-test-site01.lolaniki1108.workers.dev/B020-dog-vs-cat-jealousy-comparison">
+<meta name="description" content="犬と猫は本当に嫉妬するのか。犬36頭・猫52頭を対象にした実験と、犬の「不公平感」実験、日本の飼い主546人への調査を比較し、社会的感情の違いを解説します。">
+<meta property="og:title" content="犬と猫、どちらが「嫉妬」を感じるのか——社会的感情の科学比較｜Animal IQ Labo">
+<meta property="og:description" content="犬と猫は本当に嫉妬するのか。犬36頭・猫52頭を対象にした実験と、犬の「不公平感」実験、日本の飼い主546人への調査を比較し、社会的感情の違いを解説します。">
+<meta property="og:image" content="C001-inu-neko-shitto-hikaku-illust01.webp">
+<meta property="og:url" content="https://lolaniki-test-site01.lolaniki1108.workers.dev/C001-inu-neko-shitto-hikaku">
 <meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -22,11 +22,17 @@
   .wrap{max-width:800px;margin:0 auto;padding:0 24px;}
   a{color:inherit;}
   header.site{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:50;}
-  .nav-inner{max-width:960px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
-  .brand-name{font-weight:700;font-size:20px;color:var(--bark);text-decoration:none;display:flex;align-items:center;gap:8px;}
+  .nav-inner{max-width:960px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+  .brand-name{font-weight:700;font-size:13px;color:var(--bark);text-decoration:none;display:flex;align-items:center;gap:10px;}
+  .brand-logo{width:52px;height:52px;border-radius:50%;object-fit:cover;flex-shrink:0;}
   nav.main-nav{display:flex;gap:22px;font-size:14px;font-weight:700;}
+  nav.main-nav > .nav-item{position:relative;}
   nav.main-nav a{text-decoration:none;color:var(--brand);}
   nav.main-nav a:hover{color:var(--ochre);}
+  .nav-item .dropdown{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 0;min-width:170px;box-shadow:0 6px 16px rgba(92,70,48,0.14);z-index:60;}
+  .nav-item:hover .dropdown{display:block;}
+  .dropdown a{display:block;padding:9px 18px;font-size:13px;color:var(--brand);white-space:nowrap;font-weight:500;}
+  .dropdown a:hover{background:var(--cream);color:var(--ochre);}
   .back-link{display:inline-block;margin:24px 0 8px;font-size:13px;color:var(--brand);text-decoration:none;font-weight:700;}
   .cat-label{font-size:12.5px;letter-spacing:0.08em;color:var(--ochre);font-weight:700;margin:20px 0 10px;}
   h1.article-title{font-size:clamp(24px,3.6vw,32px);line-height:1.55;color:var(--bark);margin:0 0 8px;font-weight:700;}
@@ -80,145 +86,196 @@
 
 <header class="site">
   <div class="nav-inner">
-    <a class="brand-name" href="index.html"><img src="cropped-logo-icon.webp" alt="" style="width: 40px; height: 40px; border-radius: 50%;">Animal IQ Labo</a>
+    <a class="brand-name" href="index.html"><img class="brand-logo" src="cropped-logo-icon.webp" alt="Animal IQ Labo">Animal IQ Labo</a>
     <nav class="main-nav">
-      <a href="index.html">TOP</a>
-      <a href="animal.html">Animal</a>
-      <a href="blog.html">Blog</a>
+      <div class="nav-item"><a href="index.html">TOP</a></div>
+      <div class="nav-item">
+        <a href="animal.html">Animal</a>
+        <div class="dropdown">
+          <a href="category-pig.html">🐷 豚</a>
+          <a href="category-chicken.html">🐔 鶏</a>
+          <a href="category-dog.html">🐶 犬</a>
+          <a href="category-cat.html">🐱 猫</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="blog.html">Blog</a>
+        <div class="dropdown">
+          <a href="category-animal-brain.html">🧠 動物の頭脳</a>
+          <a href="category-animal-senses.html">👁️ 動物の五感</a>
+          <a href="category-animal-behavior.html">🏃 動物の行動</a>
+        </div>
+      </div>
     </nav>
   </div>
 </header>
 
 <div class="wrap">
 
-  <!-- 1. パンくず -->
-  <a class="back-link" href="index.html">← Animal IQ Labo テスト版トップ</a>
+  <a class="back-link" href="index.html">← Animal IQ Labo トップ</a>
 
-  <!-- 2. カテゴリラベル -->
-  <div class="cat-label">動物の行動 ｜ 🐕🐱犬・猫</div>
+  <div class="cat-label">動物の行動 ｜ 🐶🐶 犬・猫</div>
 
-  <!-- 3. タイトル・更新日 -->
-  <h1 class="article-title">犬と猫、本当に嫉妬深いのはどっち？研究データで比較する「やきもち」の科学</h1>
-  <div class="meta-line">最終更新：2026-09</div>
+  <h1 class="article-title">犬と猫、どちらが「嫉妬」を感じるのか——社会的感情の科学比較</h1>
+  <div class="meta-line">最終更新：2026-03</div>
 
-  <!-- 4. リード文 -->
-  <p class="lede">飼い主が別のペットや赤ちゃんをかわいがると、そわそわしたり間に割り込んできたりする愛犬・愛猫。あの行動は本当に「嫉妬」なのでしょうか。ぬいぐるみのライバルを使った実験から、犬と猫でまったく違う反応パターンが見えてきました。研究データをもとに、どちらが本当に嫉妬深いのかを比較します。</p>
+  <p class="lede">複数のペットを飼っていると、一方を可愛がった瞬間にもう一方が割り込んでくる場面に遭遇します。これは甘えたいだけなのか、それとも「嫉妬」なのでしょうか。最新の比較実験から、犬と猫の心理の違いを探ります。</p>
 
-  <!-- 5. この記事でわかること -->
   <div class="highlight-box">
-    <div class="highlight-title">🔍 この記事でわかること</div>
+    <div class="highlight-title">💡 この記事でわかること</div>
     <ul>
-      <li><strong>犬の嫉妬実験</strong>で確認された「割り込み」「攻撃」行動の実態</li>
-      <li><strong>猫の嫉妬実験</strong>で見えた、犬とは異なる反応の仕方</li>
-      <li>犬と猫、どちらがより強く「嫉妬らしき反応」を示すのか</li>
-      <li>反応の違いが生まれる<strong>進化的・社会的な理由</strong></li>
-      <li>「嫉妬」という感情が動物福祉に投げかける意味</li>
+      <li>犬36頭を対象にした<strong>「嫉妬」検証実験</strong>の具体的な数値</li>
+      <li>猫52頭の追試で見えてきた<strong>「視線」による猫特有の感情サイン</strong></li>
+      <li>「お手」実験で判明した<strong>犬が抱く「不公平感」の仕組み</strong></li>
+      <li>飼い主アンケートと動物行動学から読み解く<strong>犬猫の社会的感情の違い</strong></li>
     </ul>
   </div>
 
-  <!-- 6. 本文セクション1 -->
-  <h2>犬の嫉妬実験――ぬいぐるみの犬に本気で対抗</h2>
-  <p>2014年に発表された実験では、36頭の犬とその飼い主を対象に、飼い主が「本物そっくりに鳴いて尻尾を振るぬいぐるみの犬」「新奇な物（かぼちゃ型のバケツ）」「絵本」の3つに順番に愛情を示すという場面を観察しました。</p>
-  <p>結果は明確でした。飼い主がぬいぐるみの犬をかわいがっている間、犬たちは他の2つの場面に比べて、飼い主とぬいぐるみの間に割り込む・押す・触るといった行動を大幅に増やしたのです。一部の犬はぬいぐるみに対して威嚇するような行動も見せました。</p>
+  <h2>① 犬の嫉妬実験——36頭の犬が見せたリアルな行動</h2>
+  <p>アメリカの心理学チームが行った研究では、乳児の「非言語的嫉妬」実験を応用し、36頭の犬を対象に検証が行われました。飼い主が本物そっくりの犬のぬいぐるみを可愛がる様子を見せたところ、多くの犬に明確な行動の変化が確認されたのです。</p>
 
-  <img class="illust-img" src="dogtail-illustration.webp" alt="しっぽを振る犬のイラスト" loading="lazy">
-  <figcaption>犬は「飼い主との関係」に割り込むライバルへ、はっきりとした反応を見せます。</figcaption>
+  <img class="illust-img" src="C001-inu-neko-shitto-hikaku-illust01.webp" alt="飼い主とぬいぐるみの間に割り込もうとする犬">
+  <figcaption>ライバル役（ぬいぐるみ）を可愛がる場面を見せる実験デザイン</figcaption>
 
-  <h3>実験で観察された犬の反応</h3>
-  <div class="step-flow">
-    <div class="step-card"><div class="step-icon">👀</div><div class="step-title">注視時間の増加</div>ぬいぐるみの犬を長く見つめ続けた。</div>
-    <div class="step-card"><div class="step-icon">🐾</div><div class="step-title">割り込み行動</div>飼い主とぬいぐるみの間に体を入れようとした。</div>
-    <div class="step-card"><div class="step-icon">😠</div><div class="step-title">威嚇・攻撃行動</div>一部の犬がぬいぐるみに対して威嚇的な行動を示した。</div>
-    <div class="step-card"><div class="step-icon">👃</div><div class="step-title">お尻のにおい嗅ぎ</div>実験後、多くの犬がぬいぐるみのお尻を確認するように嗅いだ。</div>
-  </div>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>対象（飼い主の相手）</th>
+        <th>割り込み・接触行動</th>
+        <th>唸る・噛みつく素振り</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>犬のぬいぐるみ</td>
+        <td>約80%</td>
+        <td>約25%</td>
+      </tr>
+      <tr>
+        <td>カボチャ提灯</td>
+        <td>約40%</td>
+        <td>稀（ほぼなし）</td>
+      </tr>
+      <tr>
+        <td>絵本（読書）</td>
+        <td>関心なし</td>
+        <td>なし</td>
+      </tr>
+    </tbody>
+  </table>
 
   <div class="science-note">
-    <div class="s-title">🧬 この行動が示すもの</div>
-    犬たちがぬいぐるみのお尻を嗅ぐ行動をとったことは、多くの犬が「本物の犬」として認識していた可能性を示しています。飼い主との関係に割り込もうとする行動は、社会的な結びつきを守ろうとする、より原始的な形の嫉妬感情の存在を示唆すると考えられています。
+    <div class="s-title">🧠 脳科学的な裏付け</div>
+    <p>脳活動の研究（fMRI）においても、他の犬がおやつをもらう様子を見た犬の脳内で「扁桃体（感情に関わる部位）」が強く反応することがわかっています。犬は社会的な文脈をしっかり理解しているのです。</p>
   </div>
 
-  <h2>猫にも嫉妬心はあるのか</h2>
-  <p>では猫はどうでしょうか。日本の家庭や猫カフェで暮らす52匹の猫を対象にした実験では、飼い主が本物そっくりのぬいぐるみの猫と、ただのクッションをそれぞれかわいがる様子を見せました。さらに比較のため、見知らぬ実験者が同じ行動をする場面も観察しています。</p>
-  <p>結果、猫たちは飼い主がぬいぐるみの猫をかわいがった後、そのぬいぐるみをクッションよりも熱心に確認する様子を見せました。一方で、犬のように飼い主とぬいぐるみの間に割り込んだり、攻撃的な行動をとったりする様子は見られず、ストレスを示すサインもほとんど確認されませんでした。</p>
+  <h2>② 猫の嫉妬実験——52頭の猫が見せた「静かな注視」</h2>
+  <p>一方、猫52頭（家庭猫・猫カフェ猫）を対象に行われた実験では、犬とはまったく異なる反応が得られました。飼い主が猫のぬいぐるみを撫でた際、猫は噛みついたり無理に割り込むような攻撃行動はほとんど見せませんでした。</p>
 
-  <img class="illust-img" src="cat-illust.webp" alt="くつろぐ猫のイラスト" loading="lazy">
-  <figcaption>猫は関心を示しつつも、犬のような強い割り込み行動は見せませんでした。</figcaption>
+  <img class="illust-img" src="C001-inu-neko-shitto-hikaku-illust02.webp" alt="飼い主の行動をじっと見つめる猫">
+  <figcaption>猫は行動ではなく「じっと見つめる時間」に大きな差が出た</figcaption>
 
-  <div class="research-note">
-    <div class="r-title">📌 犬と猫、反応の決定的な違い</div>
-    猫は「見知らぬ人」より「飼い主」の行動により強く反応しており、飼い主との結びつきを意識していることは確かなようです。ただし、犬に見られたような「関係に割り込む」「攻撃する」といった行動はほとんど確認されませんでした。研究チームは、犬ほど明確な嫉妬行動ではないものの、社会的な関心の高さを示す結果だとしています。
-  </div>
+  <p>猫が見せた主な反応は「じっと見つめる（注視）」ことでした。特に家庭で飼われている猫は、飼い主がぬいぐるみを撫でた際、ただのクッションを撫でたときよりも有意に長く見つめ続けました。この反応は「親しい飼い主」が相手のときのみ表れ、初対面の実験者では表れませんでした。</p>
 
-  <h2>犬と猫、どちらが「嫉妬深い」のか徹底比較</h2>
+  <h2>③ 犬と猫、社会的感情の「出方」の比較</h2>
+  <p>群れで暮らし序列や関係性に敏感な犬と、単独行動が基本で資源を守る習性を持つ猫では、感情の表出し方が大きく異なります。</p>
+
   <table class="data-table">
-    <thead><tr><th>反応の種類</th><th>犬</th><th>猫</th></tr></thead>
+    <thead>
+      <tr>
+        <th>比較項目</th>
+        <th>🐶 犬のケース</th>
+        <th>🐱 猫のケース</th>
+      </tr>
+    </thead>
     <tbody>
-      <tr><td>ライバルへの注視時間</td><td>増加が確認された</td><td>増加が確認された</td></tr>
-      <tr><td>飼い主とライバルへの割り込み</td><td>頻繁に見られた</td><td>ほとんど見られなかった</td></tr>
-      <tr><td>ライバルへの攻撃・威嚇</td><td>一部で確認された</td><td>ほぼ確認されなかった</td></tr>
-      <tr><td>ストレスを示すサイン</td><td>報告あり</td><td>ほとんど見られなかった</td></tr>
-      <tr><td>見知らぬ人の行動への反応</td><td>弱い</td><td>飼い主の場合より明確に弱い</td></tr>
+      <tr>
+        <td>主な反応行動</td>
+        <td>割って入る・吠える・噛む</td>
+        <td>じっと見つめる（注視）</td>
+      </tr>
+      <tr>
+        <td>感情の方向性</td>
+        <td>外向き（能動的・直接的）</td>
+        <td>内向き（観察的・受動的）</td>
+      </tr>
+      <tr>
+        <td>対象の重要度</td>
+        <td>ライバルの存在自体に反応</td>
+        <td>「特定の人（飼い主）」に強く反応</td>
+      </tr>
     </tbody>
   </table>
-  <p>数値だけを見れば、「関係に割り込もうとする」「攻撃的な反応を示す」という点で、犬の方がより激しく嫉妬らしき行動を見せるという結果になっています。ただし猫も、飼い主の行動には確かに関心を向けており、「無関心」というわけでは決してありません。</p>
 
-  <h2>なぜ犬と猫で反応の仕方が違うのか</h2>
-  <p>この違いの背景には、それぞれの動物が歩んできた進化の歴史があると考えられています。犬は群れで協力して暮らす社会的な動物として家畜化されてきた一方、猫の祖先は単独で狩りをする生活に適応してきました。</p>
+  <h2>④ もうひとつの心——犬の「不公平感」実験</h2>
+  <p>嫉妬と並んで興味深いのが「不公平感」の実験です。2頭の犬に「お手」をさせ、片方だけに報酬（おやつ）を与える実験を行ったところ、自分だけ報酬がもらえない犬は次第に「お手」を拒否するようになりました。</p>
+
+  <img class="illust-img" src="C001-inu-neko-shitto-hikaku-illust03.webp" alt="隣の犬のおやつを見て不満そうにする犬">
+  <figcaption>「自分だけもらえない」という状況に犬は不快感を示す</figcaption>
 
   <div class="step-flow">
-    <div class="step-card"><div class="step-icon">🐕</div><div class="step-title">犬＝群れ社会型</div>群れの中の序列や結びつきを重視するため、関係への割り込みに敏感。</div>
-    <div class="step-card"><div class="step-icon">🐱</div><div class="step-title">猫＝単独ハンター型</div>単独行動が基本のため、関係の変化への反応が比較的穏やか。</div>
-    <div class="step-card"><div class="step-icon">🏠</div><div class="step-title">家庭内での結びつき</div>どちらも飼い主との結びつきを大切にしていることは共通している。</div>
+    <div class="step-card">
+      <div class="step-icon">🤝</div>
+      <div class="step-title">1. 両方におやつ</div>
+      順調に指示に従い続ける
+    </div>
+    <div class="step-card">
+      <div class="step-icon">🍖</div>
+      <div class="step-title">2. 相方だけおやつ</div>
+      周囲を観察し、やる気を失う
+    </div>
+    <div class="step-card">
+      <div class="step-icon">🙅‍♂️</div>
+      <div class="step-title">3. 不公平の認知</div>
+      「お手」の指示を拒否する
+    </div>
   </div>
 
-  <h2>「嫉妬」という感情が示す意味</h2>
-  <table class="data-table">
-    <thead><tr><th>分野</th><th>この発見が示すこと</th></tr></thead>
-    <tbody>
-      <tr><td>動物福祉</td><td>複数のペットを飼う家庭では、それぞれへの関わり方に配慮する視点が生まれる</td></tr>
-      <tr><td>認知科学</td><td>嫉妬のような複雑な感情が、人間以外の動物にも存在しうる可能性を示す</td></tr>
-      <tr><td>飼育・しつけ</td><td>新しいペットや家族を迎える際、既存のペットの反応を理解する手がかりになる</td></tr>
-      <tr><td>教育</td><td>「動物には感情がない」という考え方を見直すきっかけになる</td></tr>
-    </tbody>
-  </table>
-
   <h2>よくある質問</h2>
-  <div class="faq-item"><div class="faq-q">Q. 犬と猫、科学的にはどちらが嫉妬深いのですか？</div><div class="faq-a">A. 実験データを比較すると、飼い主とライバルの間に割り込んだり攻撃的な反応を見せたりする点で、犬の方がより明確な嫉妬らしき行動を示す傾向があります。</div></div>
-  <div class="faq-item"><div class="faq-q">Q. 猫は本当に嫉妬していないのですか？</div><div class="faq-a">A. 猫が飼い主の行動にまったく無関心というわけではありません。ぬいぐるみを熱心に確認する様子は見られており、関心の高さはうかがえます。ただし、犬のような割り込みや攻撃的な行動はほとんど確認されていません。</div></div>
-  <div class="faq-item"><div class="faq-q">Q. 新しいペットを迎えるとき、既存のペットへの配慮は必要ですか？</div><div class="faq-a">A. 特に犬は関係の変化に敏感な傾向があるため、新しい家族やペットを迎える際は、既存のペットにも十分な関わりの時間を確保することが安心につながると考えられます。</div></div>
+  <div class="faq-item">
+    <div class="faq-q">Q. 多頭飼いで嫉妬させない工夫はありますか？</div>
+    <div class="faq-a">犬の場合は「帰宅時やご飯の順番を固定する」「交互に目を見て声をかける」など、機会の平等を意識するのが効果的です。猫の場合は一頭だけで甘えさせられる時間を個別に設けるのがおすすめです。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Q. 猫がじっと見つめるのは本当に嫉妬ですか？</div>
+    <div class="faq-a">研究者の間でも「自分も撫でてほしい」「なになに？と観察している」「共感している」など解釈が分かれています。攻撃性が低いため「好奇心や共感」に近い側面もあると考えられています。</div>
+  </div>
 
   <h2>まとめ</h2>
   <div class="summary-box">
     <table>
-      <tr><td>犬の実験</td><td>ぬいぐるみの犬に対し、割り込みや攻撃的な行動を頻繁に示した</td></tr>
-      <tr><td>猫の実験</td><td>関心は示したが、割り込みや攻撃的な行動はほとんど見せなかった</td></tr>
-      <tr><td>比較の結果</td><td>行動の激しさでは犬の方が明確な嫉妬らしき反応を示す</td></tr>
-      <tr><td>背景にある違い</td><td>群れ社会型の犬と、単独ハンター型の猫という進化の歴史の違い</td></tr>
-      <tr><td>意義</td><td>複数ペットの飼育や動物福祉を考えるうえでの手がかりになる</td></tr>
+      <tr>
+        <td><strong>犬の嫉妬</strong></td>
+        <td>身体的に割り込むなど直接的な行動として表れる。不公平さにも敏感。</td>
+      </tr>
+      <tr>
+        <td><strong>猫の嫉妬</strong></td>
+        <td>視線を注ぐなど観察的な変化として表れる。飼い主との結びつきが鍵。</td>
+      </tr>
+      <tr>
+        <td><strong>飼育上のヒント</strong></td>
+        <td>犬には「わかりやすい公平さ」、猫には「静かなサインへの気付き」が大切。</td>
+      </tr>
     </table>
   </div>
 
-  <p>次に愛犬・愛猫が他のペットに気を取られているあなたを見つめてきたら、それは単なる気まぐれではなく、大切な関係を守ろうとするサインなのかもしれません。</p>
-
   <div class="related-title">🔗 あわせて読みたい関連記事</div>
   <div class="related-links">
-    <a href="https://lolaniki.com/archives/1531">🐱 猫のしっぽは語る！ミケとしっぽの7日間戦争を読む →</a>
-    <a href="https://lolaniki.com/archives/1632">🐕 犬が食べてはいけない食材トップ10を読む →</a>
-    <a href="https://lolaniki.com/archives/3116">🐷 豚は仲間の顔や声を見分ける？豚の社会性を読む →</a>
-    <a href="https://lolaniki.com/archives/3222">🐔 鶏の「コケコッコー」は何時何分？体内時計の科学を読む →</a>
+    <a href="category-dog.html">🐶 犬の行動と言語の科学 →</a>
+    <a href="category-cat.html">🐱 猫のしぐさに隠された心理 →</a>
   </div>
 
   <h2>参考文献</h2>
   <ol class="refs">
-    <li>Harris, C.R., Prouvost, C.（2014）— Jealousy in Dogs. PLoS ONE, 9(7): e94597.</li>
-    <li>Bucher, B., Arahori, M., Chijiiwa, H., Takagi, S., Fujita, K.（2020）— Domestic cats' reactions to their owner and an unknown individual petting a potential rival. Pet Behaviour Science, 9, 16-33.</li>
-    <li>Cook, P., Prichard, A., Spivak, M., Berns, G.S.（2018）— Jealousy in dogs? Evidence from brain imaging. Animal Sentience, 3(22).</li>
+    <li>Harris, C. R., & Prouvost, C. (2014). Jealousy in Dogs. <em>PLOS ONE</em>, 9(7), e94597.</li>
+    <li>Chijiiwa, H., et al. (2021). Cats exhibit jealousy-like behavior. <em>Behavioural Processes</em>.</li>
+    <li>Range, F., et al. (2009). The absence of reward induces inequity aversion in dogs. <em>PNAS</em>, 106(1), 340-345.</li>
   </ol>
 
 </div>
 
 <footer class="site">
-  Animal IQ Labo（テスト環境） / 本番サイトは <a href="https://lolaniki.com" style="color:var(--brand);">lolaniki.com</a>
+  Animal IQ Labo / 詳しくは <a href="https://lolaniki.com" style="color:var(--brand);">lolaniki.com</a>
   <br><a href="contact.html" style="color:var(--brand);">ご意見・お問い合わせ</a>
 </footer>
 
