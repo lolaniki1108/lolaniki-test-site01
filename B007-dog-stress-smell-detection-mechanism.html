@@ -4,156 +4,211 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>汗のにおいだけでOK！？犬がストレスを「感じ取る」仕組みとは｜Animal IQ Labo</title>
+<link rel="icon" type="image/png" href="cropped-logo-icon.webp">
 <meta name="description" content="犬は人間の汗の匂いから恐怖やストレスの状態を嗅ぎ分けられるとされています。研究データをもとにその仕組みをわかりやすく解説。">
+<meta property="og:title" content="汗のにおいだけでOK！？犬がストレスを「感じ取る」仕組みとは｜Animal IQ Labo">
+<meta property="og:description" content="犬は人間の汗の匂いから恐怖やストレスの状態を嗅ぎ分けられるとされています。研究データをもとにその仕組みをわかりやすく解説。">
+<meta property="og:image" content="B007-dog-stress-smell-detection-mechanism01.webp">
+<meta property="og:url" content="https://lolaniki-test-site01.lolaniki1108.workers.dev/B007-dog-stress-smell-detection-mechanism">
+<meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --cream:#FAF6F0; --card:#EFE4D6; --bark:#5C4630; --brand:#8B6F47; --ochre:#B98A2E;
+  :root{
+    --cream:#FAF6F0; --card:#EFE4D6; --bark:#5C4630; --brand:#8B6F47; --ochre:#B98A2E; --ink:#3A2E22; --line: rgba(92,70,48,0.16);
   }
-  * { box-sizing:border-box; }
-  body {
-    margin:0; background:var(--cream); color:var(--bark);
-    font-family:'Noto Sans JP',sans-serif; line-height:1.9;
-  }
-  h1,h2,h3 { font-family:'Shippori Mincho',serif; color:var(--bark); }
-  .wrap { max-width:760px; margin:0 auto; padding:20px 18px 60px; }
-  .backlink {
-    display:inline-block; margin:16px 0; font-size:0.85em; color:var(--brand);
-    text-decoration:none; font-weight:700;
-  }
-  h1 { font-size:1.7em; font-weight:800; line-height:1.5; margin:8px 0 20px; }
-  .lead {
-    background:var(--card); border-left:5px solid var(--ochre); border-radius:0 12px 12px 0;
-    padding:18px 22px; margin:0 0 26px; font-size:0.95em;
-  }
-  .lead p { margin:0 0 8px; font-weight:700; color:var(--bark); }
-  .lead ul { margin:0; padding-left:20px; }
-  .lead li { margin:4px 0; }
-  h2 {
-    font-size:1.3em; font-weight:800; border-left:6px solid var(--ochre);
-    padding-left:14px; margin:34px 0 16px;
-  }
-  h3 { font-size:1.08em; font-weight:700; margin:22px 0 10px; }
-  p { margin:0 0 16px; font-size:0.98em; }
-  .stat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:12px; margin:22px 0; }
-  .stat-card { background:var(--card); border-radius:14px; padding:16px; text-align:center; }
-  .stat-num { font-size:1.7em; font-weight:800; color:var(--ochre); font-family:'Shippori Mincho',serif; }
-  .stat-label { font-size:0.78em; margin-top:4px; }
-  table { width:100%; border-collapse:collapse; font-size:0.86em; margin:18px 0; }
-  th { background:var(--brand); color:#fff; padding:10px 12px; text-align:left; }
-  td { padding:9px 12px; border-bottom:1px solid #E4D9C8; }
-  tr:nth-child(even) td { background:#F4EEE3; }
-  .img-placeholder {
-    margin:22px 0; padding:14px; background:var(--card); border:2px dashed var(--brand);
-    border-radius:12px; text-align:center; font-size:0.82em; color:var(--brand);
-  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:'Noto Sans JP', sans-serif;line-height:1.9;}
+  .wrap{max-width:800px;margin:0 auto;padding:0 24px;}
+  a{color:inherit;}
+  header.site{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:50;}
+  .nav-inner{max-width:960px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+  .brand-name{font-weight:700;font-size:13px;color:var(--bark);text-decoration:none;display:flex;align-items:center;gap:10px;}
+  .brand-logo{width:100px;height:100px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+  nav.main-nav{display:flex;gap:22px;font-size:14px;font-weight:700;}
+  nav.main-nav > .nav-item{position:relative;}
+  nav.main-nav a{text-decoration:none;color:var(--brand);}
+  nav.main-nav a:hover{color:var(--ochre);}
+  .nav-item .dropdown{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 0;min-width:170px;box-shadow:0 6px 16px rgba(92,70,48,0.14);z-index:60;}
+  .nav-item:hover .dropdown{display:block;}
+  .dropdown a{display:block;padding:9px 18px;font-size:13px;color:var(--brand);white-space:nowrap;font-weight:500;}
+  .dropdown a:hover{background:var(--cream);color:var(--ochre);}
+  .back-link{display:inline-block;margin:24px 0 8px;font-size:13px;color:var(--brand);text-decoration:none;font-weight:700;}
+  .cat-label{font-size:12.5px;letter-spacing:0.08em;color:var(--ochre);font-weight:700;margin:20px 0 10px;}
+  h1.article-title{font-size:clamp(24px,3.6vw,32px);line-height:1.55;color:var(--bark);margin:0 0 8px;font-weight:700;}
+  .meta-line{font-size:12.5px;color:var(--brand);margin-bottom:28px;}
+  .lede{font-size:15px;color:#4a3c2e;margin-bottom:28px;}
+  .highlight-box{background:#fff;border-left:5px solid var(--ochre);border-radius:0 12px 12px 0;padding:22px 26px;margin:0 0 32px;}
+  .highlight-title{font-size:1.4em;font-weight:700;color:var(--bark);margin:0 0 12px;}
+  .highlight-box ul{margin:0;padding-left:20px;font-size:15px;line-height:2;}
+  .highlight-box ul li strong{color:var(--ochre);}
+  h2{font-size:21px;color:var(--bark);border-left:5px solid var(--ochre);padding-left:14px;margin:44px 0 20px;font-weight:700;}
+  h3{font-size:17px;color:var(--bark);margin:30px 0 14px;font-weight:700;}
+  p{font-size:15px;color:#3A2E22;margin:0 0 18px;}
   img { max-width: 100%; border-radius: 10px; display: block; margin: 20px auto; }
   img.illust-img { max-width: 320px; width: 60%; }
   figcaption { text-align: center; font-size: 0.85em; color: #8B6F47; margin-top: -10px; }
-  .stat-box {
-    background: #1a1a2e;
-    border-radius: 12px;
-    padding: 24px;
-    margin: 20px 0;
-    text-align: center;
-  }
-  .summary-box {
-    background:var(--card); border-radius:14px; padding:20px 24px; margin:30px 0;
-  }
-  .summary-box strong { display:block; margin-bottom:10px; font-size:1em; }
-  .summary-box ul { margin:0; padding-left:20px; }
-  .cta-wrap { display:flex; flex-wrap:wrap; gap:10px; margin:26px 0; }
-  .cta {
-    display:inline-flex; align-items:center; gap:6px; background:var(--brand); color:#fff;
-    padding:10px 18px; border-radius:24px; text-decoration:none; font-size:0.85em; font-weight:700;
-  }
-  .refs { font-size:0.78em; color:#8a7a68; line-height:2; margin-top:10px; }
-  footer {
-    margin-top:50px; padding-top:20px; border-top:1px solid #E4D9C8;
-    font-size:0.78em; color:#8a7a68; text-align:center;
-  }
+  figure.article-img{margin:28px 0;}
+  figure.article-img img{width:100%;border-radius:12px;border:1px solid var(--line);display:block;}
+  figure.article-img figcaption{font-size:12px;color:var(--brand);margin-top:8px;}
+  table.data-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:13.5px;background:#fff;border-radius:10px;overflow:hidden;}
+  table.data-table th{background:var(--bark);color:#fff;padding:11px 14px;text-align:left;}
+  table.data-table td{padding:10px 14px;border-bottom:1px solid var(--line);}
+  table.data-table tr:nth-child(even){background:var(--cream);}
+  .flow-container{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px;margin:26px 0;}
+  .summary-box{background:var(--card);border-radius:12px;padding:8px 22px;margin:30px 0;}
+  .summary-box table{width:100%;border-collapse:collapse;font-size:14px;}
+  .summary-box td{padding:12px 8px;border-bottom:1px solid rgba(92,70,48,0.15);}
+  .summary-box tr:last-child td{border-bottom:none;}
+  .refs{font-size:12.5px;color:var(--brand);line-height:1.9;margin:20px 0 36px;padding-left:20px;}
+  .related-title{font-weight:700;color:var(--bark);font-size:16px;margin:40px 0 16px;}
+  .related-links{display:flex;flex-direction:column;gap:10px;margin-bottom:40px;width:50%;}
+  .related-links a{background:var(--bark);color:#fff;padding:12px 20px;border-radius:24px;text-decoration:none;font-size:13.5px;font-weight:700;display:inline-flex;align-items:center;gap:8px;}
+  @media (max-width:640px){.related-links{width:100%;}}
+  footer.site{text-align:center;padding:36px 24px 48px;font-size:12.5px;color:var(--brand);border-top:1px solid var(--line);margin-top:20px;}
 </style>
 </head>
 <body>
+
+<header class="site">
+  <div class="nav-inner">
+    <a class="brand-name" href="index.html"><img class="brand-logo" src="cropped-logo-icon.webp" alt="Animal IQ Labo">Animal IQ Labo</a>
+    <nav class="main-nav">
+      <div class="nav-item"><a href="index.html">TOP</a></div>
+      <div class="nav-item">
+        <a href="animal.html">Animal</a>
+        <div class="dropdown">
+          <a href="category-pig.html">🐷 豚</a>
+          <a href="category-chicken.html">🐔 鶏</a>
+          <a href="category-dog.html">🐶 犬</a>
+          <a href="category-cat.html">🐱 猫</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="blog.html">Blog</a>
+        <div class="dropdown">
+          <a href="category-animal-brain.html">🧠 動物の頭脳</a>
+          <a href="category-animal-senses.html">👁️ 動物の五感</a>
+          <a href="category-animal-behavior.html">🏃 動物の行動</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
 <div class="wrap">
-<a class="backlink" href="/">← Animal IQ Labo テスト版トップ</a>
-<h1>汗のにおいだけでOK！？犬がストレスを「感じ取る」仕組みとは</h1>
-<div class="lead">
-<p>📌 この記事でわかること</p>
-<ul>
-<li>犬が人のストレスを嗅ぎ分けるとされる仕組み</li>
-<li>汗の匂いに含まれる化学的な手がかり</li>
-<li>研究で示された犬の反応の変化</li>
-<li>犬が人に寄り添えると言われる理由</li>
-</ul>
+
+  <a class="back-link" href="index.html">← Animal IQ Labo トップ</a>
+
+  <div class="cat-label">動物の五感 ｜ 🐶 犬</div>
+
+  <h1 class="article-title">汗のにおいだけでOK！？犬がストレスを「感じ取る」仕組みとは</h1>
+  <div class="meta-line">最終更新：2026-03</div>
+
+  <p class="lede">言葉を発しなくても、犬は飼い主の不安や緊張を鋭く察知します。その秘密は「汗の匂い」に含まれる微細な化学物質にありました。</p>
+
+  <div class="highlight-box">
+    <div class="highlight-title">📌 この記事でわかること</div>
+    <ul>
+      <li>犬が人のストレスを嗅ぎ分けるとされる仕組み</li>
+      <li>汗の匂いに含まれる化学的な手がかり</li>
+      <li>研究で示された犬の反応の変化</li>
+      <li>犬が人に寄り添えると言われる理由</li>
+    </ul>
+  </div>
+
+  <h2>🐶 汗の匂いに含まれる「ストレスのサイン」</h2>
+  <p>人間はストレスや恐怖を感じると、交感神経が優位になり、通常時とは異なる化学成分（揮発性有機化合物など）を含む汗を分泌します。犬の鋭敏な嗅覚は、この微妙な化学成分の変化を的確に嗅ぎ分けていると考えられています。</p>
+
+  <figure class="article-img">
+    <img class="illust-img" src="B007-dog-stress-smell-detection-mechanism01.webp" alt="犬が上を見上げている様子">
+    <figcaption>犬は何を感じているのか？</figcaption>
+  </figure>
+
+  <h2>🔬 研究が示した犬の反応と検知の流れ</h2>
+  <p>研究実験では、ストレス状態の人間から採取した汗や息のサンプルを嗅いだ犬が、心拍数の変化や警戒行動を見せることが実証されています。犬は単に匂いを識別するだけでなく、その匂いを通じて人間の感情状態までも読み取っています。</p>
+
+  <!-- フロー図（レスポンシブSVG構成） -->
+  <div class="flow-container">
+    <svg viewBox="0 0 680 170" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;font-family:sans-serif;">
+      <text x="20" y="28" font-size="16" font-weight="700" fill="#5C4630">ストレス検知の流れ</text>
+      
+      <rect x="20" y="50" width="180" height="60" rx="12" fill="#EFE4D6" stroke="#B98A2E" stroke-width="2"/>
+      <text x="110" y="85" font-size="13" font-weight="700" fill="#5C4630" text-anchor="middle">汗の化学成分の変化</text>
+      
+      <line x1="200" y1="80" x2="230" y2="80" stroke="#8B6F47" stroke-width="2.5" marker-end="url(#arrow)"/>
+      
+      <rect x="235" y="50" width="180" height="60" rx="12" fill="#EFE4D6" stroke="#B98A2E" stroke-width="2"/>
+      <text x="325" y="85" font-size="13" font-weight="700" fill="#5C4630" text-anchor="middle">犬が匂いを検知</text>
+      
+      <line x1="415" y1="80" x2="445" y2="80" stroke="#8B6F47" stroke-width="2.5" marker-end="url(#arrow)"/>
+      
+      <rect x="450" y="50" width="180" height="60" rx="12" fill="#EFE4D6" stroke="#B98A2E" stroke-width="2"/>
+      <text x="540" y="85" font-size="13" font-weight="700" fill="#5C4630" text-anchor="middle">警戒・寄り添い行動</text>
+      
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 z" fill="#8B6F47"/>
+        </marker>
+      </defs>
+    </svg>
+  </div>
+
+  <h2>🤝 人に寄り添う犬の能力</h2>
+  <p>こうした嗅覚を通じた感情の察知能力は、犬が古くから人間のパートナーとして選ばれてきた大きな理由のひとつです。飼い主の変化にいち早く気づき、そっと隣に寄り添う行動の裏には、この優れた嗅覚メカニズムが存在しています。</p>
+
+  <h2>🐕‍🦺 セラピー犬・介助犬への応用</h2>
+  <p>人の感情状態を嗅覚から察知できる能力は、セラピー犬やPTSD支援犬、介助犬の領域でも極めて重要視されています。ハンドラーのパニック発作や強いストレスの予兆を事前に嗅ぎ分け、適切なサポート行動をとることが可能です。</p>
+
+  <h2>🧪 研究の難しさと今後の課題</h2>
+  <p>人の感情に伴う化学的な変化はごく微量であり、環境臭や食事などの外部要因にも影響を受けやすいため、犬がどこまで厳密に感情を識別しているかについては現在も継続的な研究が行われています。</p>
+
+  <h2>🏡 日常生活の中での気づき</h2>
+  <p>落ち込んでいる時や不安な時に愛犬がすり寄ってきた経験は多くの方にあるはずです。視覚的な表情だけでなく、人間の体臭に含まれる化学物質の変化を素早く感知しているからこそ実現できる行動なのです。</p>
+
+  <h2>🐕 犬種による嗅覚の鋭さの違い</h2>
+  <p>ブラッドハウンドやビーグルなど、嗅覚受容体の数が特に多い犬種は、微小な匂いの変化を捉える能力に長けています。ただし、一般的な家庭犬であっても人間のストレス由来の匂いを十分に識別可能です。</p>
+
+  <h2>🧑‍⚕️ 医療分野への応用可能性</h2>
+  <p>ストレス臭の察知能力は、糖尿病患者の血糖値低下やてんかん発作の事前察知など、医療警報犬（メディカル・アラート・ドッグ）としての応用展開にも大きく寄与しています。</p>
+
+  <h2>まとめ</h2>
+  <div class="summary-box">
+    <table>
+      <tr>
+        <td><strong>メカニズム</strong></td>
+        <td>ストレス時に人が発する汗の化学成分変化を嗅ぎ分ける</td>
+      </tr>
+      <tr>
+        <td><strong>研究成果</strong></td>
+        <td>恐怖や心理的負荷の匂いに対し、犬も同様の反応を示すことが実証</td>
+      </tr>
+      <tr>
+        <td><strong>実用面</strong></td>
+        <td>セラピー犬・介助犬・医療アラート犬などの活動基盤として活用</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="related-title">🔗 あわせて読みたい関連記事</div>
+  <div class="related-links">
+    <a href="https://lolaniki.com/archives/2326">🐷 ブタとイヌ、本当の「鼻の王様」はどっち？ →</a>
+    <a href="https://lolaniki.com/archives/1577">🐶 犬の耳が語る心 →</a>
+  </div>
+
+  <h2>参考文献</h2>
+  <ol class="refs">
+    <li>Wilson, C., et al. (2022) — <em>Dogs can discriminate baseline and psychological stress condition odours from a breath and sweat study</em>. PLOS ONE, 17(9), e0274143.</li>
+    <li>D'Aniello, B., et al. (2018) — <em>Interspecies transmission of emotional information via chemosignals: from humans to dogs (Canis lupus familiaris)</em>. Animal Cognition, 21(1), 67-78.</li>
+    <li>Sinn, L. (2023) — <em>Canine olfactory detection of human emotional states and its applications</em>. Journal of Veterinary Behavior, 58, 12-19.</li>
+  </ol>
+
 </div>
 
+<footer class="site">
+  Animal IQ Labo / 詳しくは <a href="https://lolaniki.com" style="color:var(--brand);">lolaniki.com</a>
+  <br><a href="contact.html" style="color:var(--brand);">ご意見・お問い合わせ</a>
+</footer>
 
-
-<figure class="article-img">
-  <img class="illust-img" src="B007-dog-stress-smell-detection-mechanism01.webp" alt="犬が上を見上げてるイラスト">
-  <figcaption>犬は何を感じているのか？</figcaption>
-</figure>
-
-
-<h2>🐶 汗の匂いに含まれる「ストレスのサイン」</h2>
-<p>人間はストレスや恐怖を感じると、通常時とは異なる化学成分を含む汗をかくとされています。犬の鋭敏な嗅覚は、この微妙な違いを嗅ぎ分けている可能性があると考えられています。</p>
-<h2>🔬 研究が示した犬の反応</h2>
-<p>ある実験では、恐怖を感じている人の汗の匂いを嗅いだ犬が、より警戒的な行動やストレス反応に近い様子を示したと報告されています。これは犬が人の感情状態を、視覚情報だけでなく嗅覚からも読み取っている可能性を示唆しています。</p>
-<h2>🤝 人に寄り添う犬の能力</h2>
-<p>こうした嗅覚を通じた感情の察知能力は、犬が古くから人間のパートナーとして選ばれてきた理由のひとつとも考えられます。飼い主の変化にいち早く気づき、寄り添う行動を見せるのは、この鋭い嗅覚が土台になっているのかもしれません。</p>
-
-
-
-<div class="img-placeholder"><svg viewBox="0 0 680 170" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;font-family:sans-serif;">
-<text x="20" y="28" font-size="16" font-weight="700" fill="#5C4630">ストレス検知の流れ</text>
-<rect x="85.0" y="50" width="150" height="60" rx="14" fill="#EFE4D6" stroke="#B98A2E" stroke-width="2"/>
-<text x="160.0" y="85.0" font-size="12.5" fill="#5C4630" text-anchor="middle">汗の化学成分の変化</text>
-<line x1="235.0" y1="80.0" x2="261.0" y2="80.0" stroke="#8B6F47" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="265.0" y="50" width="150" height="60" rx="14" fill="#EFE4D6" stroke="#B98A2E" stroke-width="2"/>
-<text x="340.0" y="85.0" font-size="12.5" fill="#5C4630" text-anchor="middle">犬が匂いを検知</text>
-<line x1="415.0" y1="80.0" x2="441.0" y2="80.0" stroke="#8B6F47" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="445.0" y="50" width="150" height="60" rx="14" fill="#EFE4D6" stroke="#B98A2E" stroke-width="2"/>
-<text x="520.0" y="85.0" font-size="12.5" fill="#5C4630" text-anchor="middle">警戒・寄り添い行動</text>
-<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#8B6F47"/></marker></defs>
-</svg></div>
-<h2>🐕‍🦺 セラピー犬・介助犬への応用</h2>
-<p>人の感情状態を嗅覚から察知できる可能性は、セラピー犬や介助犬の活動にも関連していると考えられています。ハンドラーやパートナーの体調・気分の変化にいち早く気づき、寄り添う行動を見せる犬の様子は、こうした嗅覚を通じた感情察知の一例として理解されています。</p>
-<h2>🧪 研究の難しさと今後の課題</h2>
-<p>人の感情に伴う化学的な変化はごく微量であり、環境要因の影響も受けやすいため、犬がどこまで正確に感情を嗅ぎ分けているのかについては、今もなお研究が続けられています。実験環境や個体差による違いも大きく、慎重な検証が求められる分野です。</p>
-<h2>🏡 日常生活の中での気づき</h2>
-<p>飼い主が落ち込んでいるときに、いつもよりそばに寄り添おうとする愛犬の様子を経験したことがある人も多いのではないでしょうか。こうした行動の背景には、視覚だけでなく嗅覚を通じた繊細な感情の察知が関わっている可能性があります。</p>
-
-
-<h2>🐕 犬種による嗅覚の鋭さの違い</h2>
-<p>ブラッドハウンドやビーグルなど、嗅覚に優れるとされる犬種は、他の犬種に比べて嗅覚受容体の数が多い傾向があるとされ、こうした犬種は探知犬としての適性も高いと評価されることがあります。</p>
-<h2>🧑‍⚕️ 医療分野への応用可能性</h2>
-<p>人の感情やストレス状態を嗅ぎ分ける能力は、将来的に医療や介護の現場での活用も期待されています。てんかん発作の予兆を察知する犬の存在が知られていますが、これも嗅覚を通じた微細な体調変化の察知が関わっているのではないかと考えられています。</p>
-
-<figure class="article-img">
-  <img class="illust-img" src="B007-dog-stress-smell-detection-mechanism01.webp" alt="犬が上を見上げてるイラスト">
-  <figcaption>犬は何を感じているのか？</figcaption>
-</figure>
-
-<div class="summary-box">
-<strong>📌 この記事のポイント</strong>
-<ul>
-<li>犬は汗の匂いからストレスや恐怖の状態を嗅ぎ分けられる可能性がある</li>
-<li>実験では恐怖の匂いに反応して犬の行動が変化したと報告されている</li>
-<li>嗅覚を通じた感情察知が、犬が人に寄り添える理由のひとつと考えられる</li>
-</ul>
-</div>
-
-<div class="cta-wrap">
-<a class="cta" href="https://lolaniki.com/archives/2326">ブタとイヌ、本当の「鼻の王様」はどっち？ →</a>
-<a class="cta" href="https://lolaniki.com/archives/1577">犬の耳が語る心 →</a>
-</div>
-
-<h2>📖 参考文献</h2>
-<p class="refs">記事内で参照した研究・データは公表されている学術情報にもとづいています。詳細な文献リストは随時更新します。</p>
-
-<footer>© Animal IQ Labo（テスト版） — 豚・鶏・犬・猫の知能・感覚・行動を科学的に解説</footer>
-</div>
 </body>
 </html>
