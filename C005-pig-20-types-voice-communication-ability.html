@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>豚の鳴き声は20種類以上！感情と状況で使い分ける驚きの会話能力｜Animal IQ Labo</title>
+<title>豚の鳴き声は20種類以上！感情と状況で使い分ける驚きの会話能力とAI研究の最前線｜Animal IQ Labo</title>
 <link rel="icon" type="image/png" href="cat-pig_puzzle.webp">
-<meta name="description" content="「ブーブー」だけだと思っていませんか？豚の鳴き声は実は20種類以上。AIが7,000以上の鳴き声を分析してわかった、豚の驚くべきコミュニケーション能力を紹介します。">
+<meta name="description" content="「ブーブー」だけだと思っていませんか？豚の鳴き声は実は20種類以上！AIが7,000以上の鳴き声を分析して解明した感情表現のメカニズム、周波数分析、母豚と子豚の会話、アニマルウェルフェアへの応用までを約7,000字で徹底解説。">
 <meta name="robots" content="noindex, nofollow">
-<meta property="og:title" content="豚の鳴き声は20種類以上！感情と状況で使い分ける驚きの会話能力｜Animal IQ Labo">
-<meta property="og:description" content="「ブーブー」だけだと思っていませんか？豚の鳴き声は実は20種類以上。AIが7,000以上の鳴き声を分析してわかった、豚の驚くべきコミュニケーション能力を紹介します。">
+<meta property="og:title" content="豚の鳴き声は20種類以上！感情と状況で使い分ける驚きの会話能力とAI研究の最前線｜Animal IQ Labo">
+<meta property="og:description" content="「ブーブー」だけだと思っていませんか？豚の鳴き声は実は20種類以上！AIが7,000以上の鳴き声を分析して解明した感情表現のメカニズム、周波数分析、母豚と子豚の会話、アニマルウェルフェアへの応用まで徹底解説。">
 <meta property="og:image" content="C005-pig-20-types-voice-communication-ability-illust01.webp">
 <meta property="og:url" content="https://lolaniki-test-site01.lolaniki1108.workers.dev/C005-pig-20-types-voice-communication-ability">
 <meta property="og:type" content="article">
@@ -23,51 +23,57 @@
   .wrap{max-width:800px;margin:0 auto;padding:0 24px;}
   a{color:inherit;}
   header.site{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:50;}
-  .nav-inner{max-width:960px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
-  .brand-name{font-weight:700;font-size:20px;color:var(--bark);text-decoration:none;display:flex;align-items:center;gap:8px;}
+  .nav-inner{max-width:960px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+  .brand-name{font-weight:700;font-size:13px;color:var(--bark);text-decoration:none;display:flex;align-items:center;gap:10px;}
+  .brand-logo{width:100px;height:100px;border-radius:50%;object-fit:cover;flex-shrink:0;}
   nav.main-nav{display:flex;gap:22px;font-size:14px;font-weight:700;}
+  nav.main-nav > .nav-item{position:relative;}
   nav.main-nav a{text-decoration:none;color:var(--brand);}
   nav.main-nav a:hover{color:var(--ochre);}
+  .nav-item .dropdown{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 0;min-width:170px;box-shadow:0 6px 16px rgba(92,70,48,0.14);z-index:60;}
+  .nav-item:hover .dropdown{display:block;}
+  .dropdown a{display:block;padding:9px 18px;font-size:13px;color:var(--brand);white-space:nowrap;font-weight:500;}
+  .dropdown a:hover{background:var(--cream);color:var(--ochre);}
   .back-link{display:inline-block;margin:24px 0 8px;font-size:13px;color:var(--brand);text-decoration:none;font-weight:700;}
   .cat-label{font-size:12.5px;letter-spacing:0.08em;color:var(--ochre);font-weight:700;margin:20px 0 10px;}
   h1.article-title{font-size:clamp(24px,3.6vw,32px);line-height:1.55;color:var(--bark);margin:0 0 8px;font-weight:700;}
   .meta-line{font-size:12.5px;color:var(--brand);margin-bottom:28px;}
-  .lede{font-size:15px;color:#4a3c2e;margin-bottom:28px;}
+  .lede{font-size:15.5px;color:#4a3c2e;margin-bottom:28px;line-height:2;}
   .highlight-box{background:#fff;border-left:5px solid var(--ochre);border-radius:0 12px 12px 0;padding:22px 26px;margin:0 0 32px;}
   .highlight-title{font-size:1.4em;font-weight:700;color:var(--bark);margin:0 0 12px;}
   .highlight-box ul{margin:0;padding-left:20px;font-size:15px;line-height:2;}
   .highlight-box ul li strong{color:var(--ochre);}
-  h2{font-size:21px;color:var(--bark);border-left:5px solid var(--ochre);padding-left:14px;margin:44px 0 20px;font-weight:700;}
-  h3{font-size:17px;color:var(--bark);margin:30px 0 14px;font-weight:700;}
-  p{font-size:15px;color:#3A2E22;margin:0 0 18px;}
-  figure.article-img{margin:28px 0;}
-  figure.article-img img{width:100%;border-radius:12px;border:1px solid var(--line);display:block;}
-  figure.article-img figcaption{font-size:12px;color:var(--brand);margin-top:8px;}
-  table.data-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:13.5px;background:#fff;border-radius:10px;overflow:hidden;}
-  table.data-table th{background:var(--bark);color:#fff;padding:11px 14px;text-align:left;}
-  table.data-table td{padding:10px 14px;border-bottom:1px solid var(--line);}
+  h2{font-size:22px;color:var(--bark);border-left:5px solid var(--ochre);padding-left:14px;margin:50px 0 22px;font-weight:700;}
+  h3{font-size:18px;color:var(--bark);margin:34px 0 16px;font-weight:700;border-bottom:1px dashed var(--line);padding-bottom:6px;}
+  p{font-size:15px;color:#3A2E22;margin:0 0 20px;line-height:1.95;}
+  img { max-width: 100%; border-radius: 10px; display: block; margin: 20px auto; }
+  img.illust-img { max-width: 380px; width: 70%; }
+  figcaption { text-align: center; font-size: 0.85em; color: #8B6F47; margin-top: -10px; margin-bottom: 24px; }
+  table.data-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:#fff;border-radius:10px;overflow:hidden;}
+  table.data-table th{background:var(--bark);color:#fff;padding:12px 15px;text-align:left;}
+  table.data-table td{padding:12px 15px;border-bottom:1px solid var(--line);}
   table.data-table tr:nth-child(even){background:var(--cream);}
-  .flow-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:20px 0;font-size:14px;color:var(--bark);font-weight:700;}
-  .flow-step{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;}
-  .flow-arrow{color:var(--ochre);font-size:16px;}
-  .step-flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:26px 0;}
-  .step-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;text-align:center;font-size:13px;}
-  .step-card .step-icon{font-size:24px;margin-bottom:8px;}
-  .step-card .step-title{font-weight:700;color:var(--bark);margin-bottom:6px;}
-  .research-note{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin:26px 0;font-size:13.5px;}
-  .research-note .r-title{font-weight:700;color:var(--ochre);margin-bottom:10px;font-size:13px;}
-  .science-note{background:var(--card);border-radius:12px;padding:20px 24px;margin:26px 0;font-size:14px;}
-  .science-note .s-title{font-weight:700;color:var(--bark);margin-bottom:8px;}
-  .faq-item{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 22px;margin-bottom:12px;}
-  .faq-q{font-weight:700;color:var(--ochre);margin-bottom:8px;font-size:14.5px;}
-  .faq-a{font-size:14px;color:#4a3c2e;}
-  .summary-box{background:var(--card);border-radius:12px;padding:8px 22px;margin:30px 0;}
-  .summary-box table{width:100%;border-collapse:collapse;font-size:14px;}
-  .summary-box td{padding:12px 8px;border-bottom:1px solid rgba(92,70,48,0.15);}
+  .flow-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:24px 0;font-size:14px;color:var(--bark);font-weight:700;}
+  .flow-step{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;flex:1;min-width:130px;text-align:center;}
+  .flow-arrow{color:var(--ochre);font-size:18px;}
+  .step-flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin:28px 0;}
+  .step-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px;text-align:center;font-size:13.5px;}
+  .step-card .step-icon{font-size:28px;margin-bottom:8px;}
+  .step-card .step-title{font-weight:700;color:var(--bark);margin-bottom:6px;font-size:15px;}
+  .research-note{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 26px;margin:30px 0;font-size:14px;line-height:1.85;}
+  .research-note .r-title{font-weight:700;color:var(--ochre);margin-bottom:10px;font-size:15px;}
+  .science-note{background:var(--card);border-radius:12px;padding:22px 26px;margin:30px 0;font-size:14.5px;line-height:1.85;}
+  .science-note .s-title{font-weight:700;color:var(--bark);margin-bottom:10px;font-size:15px;}
+  .faq-item{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px 24px;margin-bottom:16px;}
+  .faq-q{font-weight:700;color:var(--ochre);margin-bottom:8px;font-size:15px;}
+  .faq-a{font-size:14px;color:#4a3c2e;line-height:1.85;}
+  .summary-box{background:var(--card);border-radius:12px;padding:12px 24px;margin:34px 0;}
+  .summary-box table{width:100%;border-collapse:collapse;font-size:14.5px;}
+  .summary-box td{padding:14px 10px;border-bottom:1px solid rgba(92,70,48,0.15);}
   .summary-box tr:last-child td{border-bottom:none;}
   .refs{font-size:12.5px;color:var(--brand);line-height:1.9;margin:20px 0 36px;padding-left:20px;}
   .related-title{font-weight:700;color:var(--bark);font-size:16px;margin:40px 0 16px;}
-  .related-links{display:flex;flex-direction:column;gap:10px;margin-bottom:40px;width:50%;}
+  .related-links{display:flex;flex-direction:column;gap:10px;margin-bottom:40px;width:60%;}
   .related-links a{background:var(--bark);color:#fff;padding:12px 20px;border-radius:24px;text-decoration:none;font-size:13.5px;font-weight:700;display:inline-flex;align-items:center;gap:8px;}
   @media (max-width:640px){.related-links{width:100%;}}
   footer.site{text-align:center;padding:36px 24px 48px;font-size:12.5px;color:var(--brand);border-top:1px solid var(--line);margin-top:20px;}
@@ -77,119 +83,257 @@
 
 <header class="site">
   <div class="nav-inner">
-    <a class="brand-name" href="index.html"><img src="cropped-logo-icon.webp" alt="" style="width: 40px; height: 40px; border-radius: 50%;">Animal IQ Labo</a>
+    <a class="brand-name" href="index.html"><img class="brand-logo" src="cropped-logo-icon.webp" alt="Animal IQ Labo">Animal IQ Labo</a>
     <nav class="main-nav">
-      <a href="index.html">TOP</a>
-      <a href="animal.html">Animal</a>
-      <a href="blog.html">Blog</a>
+      <div class="nav-item"><a href="index.html">TOP</a></div>
+      <div class="nav-item">
+        <a href="animal.html">Animal</a>
+        <div class="dropdown">
+          <a href="category-pig.html">🐷 豚</a>
+          <a href="category-chicken.html">🐔 鶏</a>
+          <a href="category-dog.html">🐶 犬</a>
+          <a href="category-cat.html">🐱 猫</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="blog.html">Blog</a>
+        <div class="dropdown">
+          <a href="category-animal-brain.html">🧠 動物の頭脳</a>
+          <a href="category-animal-senses.html">👁️ 動物の五感</a>
+          <a href="category-animal-behavior.html">🏃 動物の行動</a>
+        </div>
+      </div>
     </nav>
   </div>
 </header>
 
 <div class="wrap">
 
-  <a class="back-link" href="index.html">← Animal IQ Labo テスト版トップ</a>
+  <a class="back-link" href="index.html">← Animal IQ Labo トップ</a>
+
   <div class="cat-label">動物の行動 ｜ 🐷 豚</div>
 
   <h1 class="article-title">豚の鳴き声は20種類以上！感情と状況で使い分ける驚きの会話能力</h1>
   <div class="meta-line">最終更新：2026-03</div>
 
-
-  <p class="lede">「ブーブー」だけだと思っていませんか？豚の鳴き声は実は20種類以上あります。喜び、空腹、恐怖、ストレス——それぞれ違う鳴き声で感情を伝えているのです。AIが7,000以上の鳴き声を分析してわかった、豚の驚くべきコミュニケーション能力をご紹介します。</p>
+  <p class="lede">絵本や童謡でおなじみの豚の鳴き声「ブーブー」。しかし、本物の豚たちは私たちが想像する以上に雄弁で、高度な言語的コミュニケーションを行っていることをご存じでしょうか？欧州の研究チームが7,000回以上の鳴き声をAIで解析した結果、豚は20種類以上のバリエーション豊かな声を使い分け、喜び、不安、恐怖、愛着などの感情を正確に発信していることが判明しました。本記事では、豚の知られざる会話能力の全貌を徹底解説します。</p>
 
   <div class="highlight-box">
     <div class="highlight-title">🐷 この記事でわかること</div>
     <ul>
-      <li>豚の鳴き声が<strong>20種類以上</strong>ある科学的根拠</li>
-      <li>声の高さで<strong>感情がわかる</strong>仕組み</li>
-      <li>空腹・満足・恐怖で<strong>鳴き声が変わる</strong>理由</li>
-      <li>AIが解析した<strong>鳴き声と感情の対応表</strong></li>
-      <li>豚の鳴き声が<strong>動物福祉を変える</strong>可能性</li>
+      <li>豚の鳴き声が<strong>20種類以上存在する科学的根拠</strong>と音響的特徴</li>
+      <li>声の周波数（高さ）と持続時間で<strong>感情を判別するメカニズム</strong></li>
+      <li>母豚と子豚が交わす<strong>「授乳の合図」と親子の対話</strong></li>
+      <li>AIアルゴリズムが解析した<strong>鳴き声と感情状態の自動分類システム</strong></li>
+      <li>豚の声を聞き分けることが<strong>アニマルウェルフェア（動物福祉）を変える未来</strong></li>
     </ul>
   </div>
 
-  <h2>豚の鳴き声は「ブーブー」だけじゃない</h2>
-  <p>多くの人が豚の鳴き声を「ブーブー」という単純な音だと思っています。しかし最新の動物科学研究では、豚が犬や猫よりもはるかに複雑なコミュニケーションを行っていることが明らかになっています。</p>
+  <h2>豚の鳴き声は「ブーブー」だけではない理由</h2>
+  <p>私たちが普段耳にする「ブーブー」という擬音は、豚が発する多様な音声コミュニケーションのごく一部、それも主にリラックスしているときの低音を捉えたものに過ぎません。生物学的に見ると、豚（家畜豚およびその原種であるイノシシ）は非常に社会性の高い群れを作る動物です。過密な森林や鬱蒼とした草むらの中で群れの仲間と連絡を取り合い、階級秩序を維持し、捕食者の接近を知らせるためには、視覚だけに頼らない複雑な音響語彙が必要不可欠でした。</p>
+  
+  <p>最新のバイオアコースティクス（生物音響学）研究によれば、豚の声帯構造と喉頭の柔軟性は非常に優れており、人間と同じように音圧、周波数、振幅（音の大きさ）、ならびに音調の長さを意図的にコントロールできます。これにより、単なる生理的な叫び声にとどまらず、文脈に応じたメッセージを相手に届けることができるのです。</p>
+
+  <img class="illust-img" src="C005-pig-20-types-voice-communication-ability-illust01.webp" alt="多様な豚の鳴き声と感情のイメージイラスト">
+  <figcaption>図1：豚の鳴き声は周波数と波形によって多様に変化する</figcaption>
+
+  <h2>科学が特定した主要な鳴き声と感情分類</h2>
+  <p>研究者が録音データをスペクトログラム（音声の周波数解析図）にかけると、豚の鳴き声は明確な音響パターンに分かれます。以下は、豚群の中で頻繁に観測される主要な鳴き声とその意味の一覧です。</p>
+
   <table class="data-table">
-    <thead><tr><th>鳴き声の種類</th><th>音の特徴</th><th>感情・状況</th></tr></thead>
+    <thead>
+      <tr>
+        <th>鳴き声の分類</th>
+        <th>音響的特徴（周波数・長さ）</th>
+        <th>豚の感情・対応する状況</th>
+      </tr>
+    </thead>
     <tbody>
-      <tr><td>短いグラント音</td><td>低く短い</td><td>😊 満足・ポジティブ</td></tr>
-      <tr><td>長いグラント音</td><td>低く長い</td><td>🎉 期待・興奮</td></tr>
-      <tr><td>リズミカルなブーブー</td><td>規則的</td><td>🍽️ 空腹・給餌要求</td></tr>
-      <tr><td>鋭いスクリーム</td><td>高く長い</td><td>😨 恐怖・強いストレス</td></tr>
-      <tr><td>高音のキーキー</td><td>非常に高い</td><td>😣 痛み・不快</td></tr>
-      <tr><td>低いうなり</td><td>低く唸る</td><td>⚠️ 警戒・不満</td></tr>
+      <tr>
+        <td><strong>短グラント（Short Grunt）</strong></td>
+        <td>低周波（400Hz以下）・短小</td><td>😊 挨拶・仲間への応答・日常のリラックス</td>
+      </tr>
+      <tr>
+        <td><strong>長グラント（Long Grunt）</strong></td>
+        <td>低周波・長音・規則的</td><td>🎉 探索行動・エサへの期待・好奇心</td>
+      </tr>
+      <tr>
+        <td><strong>リズムグラント（Rhythmic Grunt）</strong></td>
+        <td>低周波・一定間隔で連続</td><td>🥛 母豚が子豚に授乳を開始・終了を伝えるコール</td>
+      </tr>
+      <tr>
+        <td><strong>スクリーム（Scream）</strong></td>
+        <td>高周波（1,000Hz以上）・大音量</td><td>😨 強い恐怖・身体的拘束・パニック状態</td>
+      </tr>
+      <tr>
+        <td><strong>スクイール（Squeal）</strong></td>
+        <td>極高周波・高音の尖った悲鳴</td><td>😣 痛み・闘争負け・攻撃された瞬間</td>
+      </tr>
+      <tr>
+        <td><strong>バーク（Bark）</strong></td>
+        <td>中〜高周波・短く鋭い破裂音</td><td>⚠️ 警報（アラームコール）・群れ全体への警戒告知</td>
+      </tr>
+      <tr>
+        <td><strong>うなり声（Growl/Snort）</strong></td>
+        <td>超低音・荒い鼻息を伴う</td><td>😠 威嚇・優位性の主張・不快感の提示</td>
+      </tr>
     </tbody>
   </table>
 
-  <h2>声の「高さ」で感情がわかる</h2>
-  <p>コペンハーゲン大学などの研究チームが、数千頭の豚の鳴き声をAIで分析した結果、声の高さが感情のバロメーターになっていることがわかりました。</p>
-  <div class="step-flow">
-    <div class="step-card"><div class="step-icon">😊</div><div class="step-title">ポジティブ</div>授乳・遊び・エサの場面</div>
-    <div class="step-card"><div class="step-icon">🔊</div><div class="step-title">低周波・短い</div>「グーグー」という満足の声</div>
-    <div class="step-card"><div class="step-icon">😨</div><div class="step-title">ネガティブ</div>恐怖・痛み・隔離の場面</div>
-    <div class="step-card"><div class="step-icon">🔊</div><div class="step-title">高周波・長い</div>「キーキー」という警戒の声</div>
+  <h2>声の「高さ」と「長さ」で解き明かす感情アルゴリズム</h2>
+  <p>2022年にコペンハーゲン大学、ETHチューリッヒ、フランス国立農学・環境研究所（INRAE）などの国際研究チームが発表した論文は、世界的な話題となりました。研究チームは、豚が生涯のさまざまな場面（出生から屠殺まで）で発した7,414個の音声を収集し、その音響特性をコンピュータで詳細に分析しました。</p>
+
+  <p>その結果、豚の感情は**「感情の価（ポジティブかネガティブか）」**と**「覚醒度（興奮度合い）」**の2つの軸で、声の特性に直接反映されることが立証されたのです。</p>
+
+  <div class="flow-row">
+    <div class="flow-step">ポジティブ感情<br>（満足・遊び・授乳）</div>
+    <div class="flow-arrow">➔</div>
+    <div class="flow-step">低周波（低い声）<br>振幅の変化が緩やか</div>
+    <div class="flow-arrow">➔</div>
+    <div class="flow-step">短い発声時間<br>「グッ、グッ」</div>
   </div>
-  <p style="font-size:13px;color:var(--brand);margin-top:-10px;">声が低くて短い＝幸せ・満足のサイン、声が高くて長い＝恐怖・ストレスのサイン。この判別はAIで高精度に自動検知できます。</p>
 
-  <h2>空腹を特定の鳴き声で伝える</h2>
-  <table class="data-table">
-    <thead><tr><th>状況</th><th>鳴き声の特徴</th></tr></thead>
-    <tbody>
-      <tr><td>空腹時</td><td>規則的でリズミカルな「ブーブー」が増加</td></tr>
-      <tr><td>満腹時</td><td>低く穏やかな「グーグー」に変化</td></tr>
-      <tr><td>待機中</td><td>鳴き声が徐々に増加・高音化</td></tr>
-    </tbody>
-  </table>
-  <p>豚は単に「感情を表現する」だけでなく、特定の要求を伝えるために鳴き声を意図的に使い分けている可能性を示しています。</p>
+  <div class="flow-row">
+    <div class="flow-step">ネガティブ感情<br>（恐怖・孤立・痛覚）</div>
+    <div class="flow-arrow">➔</div>
+    <div class="flow-step">高周波（高い悲鳴）<br>音圧が急速に上昇</div>
+    <div class="flow-arrow">➔</div>
+    <div class="flow-step">長い発声時間<br>「キィィィー！」</div>
+  </div>
 
-  <h2>ストレスで鳴き声の「量」が変わる</h2>
-  <p>ルーマニアの農業科学研究者が、異なる飼育環境の子豚の鳴き声を比較した結果、狭いスペース・高ストレス環境では高周波の「キーキー」が多く発声頻度も高い一方、広いスペース・豊かな環境では穏やかな「グーグー」が多く発声頻度が低いことがわかりました。鳴き声の量と種類を聞くだけで飼育環境の良し悪しがわかり、AIモニタリングでリアルタイムに豚の状態を把握できる可能性があります。</p>
+  <div class="science-note">
+    <div class="s-title">🔬 科学的ポイント：感情の音響デュアルモデル</div>
+    <p>研究では、感情がポジティブ（快）である時、副交感神経が優位になり自律神経が安定するため、声帯の緊張が解けて低く短めのグラント音が出ます。逆にネガティブ（不快・脅威）な状況では交感神経が急激に優位となり、声帯が強く締め付けられ、息が一気に押し出されることで高周波のスクリームやスクイールが発生します。</p>
+  </div>
 
-  <h2>AIが変える豚の鳴き声研究</h2>
-  <table class="data-table">
-    <thead><tr><th>研究機関</th><th>分析数</th><th>主な発見</th></tr></thead>
-    <tbody>
-      <tr><td>コペンハーゲン大学</td><td>7,000以上</td><td>感情と周波数の対応関係</td></tr>
-      <tr><td>ルーマニア農業科学</td><td>複数群</td><td>環境とストレスの相関</td></tr>
-      <tr><td>各国共同研究</td><td>数千頭</td><td>個体識別の可能性</td></tr>
-    </tbody>
-  </table>
+  <h2>母豚と子豚が交わす「愛の周波数」と会話のプロセス</h2>
+  <p>豚の会話能力が最も美しく発揮されるのが、母豚と子豚のやり取りです。豚の母親は、授乳時に横たわりながら非常に特徴的な「授乳コール（Nursing Grunts）」を発します。これは単なる生理現象ではなく、子豚たちにタイミングを合わせて乳首に吸い付かせ、効率的に母乳を与えるための完璧なシグナルコミュニケーションです。</p>
 
-  <h2>よくある質問</h2>
-  <div class="faq-item"><div class="faq-q">Q. 豚は本当に20種類以上の鳴き声を使い分けているの？</div><div class="faq-a">はい、科学的に証明されています。コペンハーゲン大学などの研究で7,000以上の鳴き声を分析した結果、感情や状況によって明確に異なるパターンが確認されました。</div></div>
-  <div class="faq-item"><div class="faq-q">Q. 豚の鳴き声で感情がわかるなら、ペットとして飼うのに役立つ？</div><div class="faq-a">はい、非常に役立ちます。高音のキーキーはストレスや不快のサイン、低いグーグーは満足のサインとして読み取ることができます。</div></div>
+  <div class="step-flow">
+    <div class="step-card">
+      <div class="step-icon">1️⃣</div>
+      <div class="step-title">集合合図</div>
+      <p>母豚が低くゆったりとしたテンポで「グッ...グッ...」と鳴き、周囲の子豚を胸元に呼び寄せる。</p>
+    </div>
+    <div class="step-card">
+      <div class="step-icon">2️⃣</div>
+      <div class="step-title">テンポ加速</div>
+      <p>子豚が乳首に配置につくと、母豚のグラント音が次第に高速化。「ググググッ」とテンポが上がる。</p>
+    </div>
+    <div class="step-card">
+      <div class="step-icon">3️⃣</div>
+      <div class="step-title">オキシトシン射乳</div>
+      <p>鳴き声のピッチと速度がピークに達した瞬間、母豚の体内でオキシトシンが分泌され母乳が出始める。</p>
+    </div>
+    <div class="step-card">
+      <div class="step-icon">4️⃣</div>
+      <div class="step-title">授乳完了</div>
+      <p>約20秒間の射乳が終わると、母豚の鳴き声は再び低く静かな単発の音に戻り、授乳の終わりを告げる。</p>
+    </div>
+  </div>
 
-  <h2>まとめ</h2>
+  <p>もし子豚が兄弟喧嘩で弾き飛ばされたり、母豚の体の下に敷かれそうになったりすると、子豚は即座に超高音の「救助要請コール」を発します。母豚はその周波数を瞬時に識別し、体を持ち上げて体重移動させたり、声で返答して安心させたりします。</p>
+
+  <img class="illust-img" src="C005-pig-20-types-voice-communication-ability-illust02.webp" alt="母豚と子豚の授乳コミュニケーションを図解したイラスト">
+  <figcaption>図2：音のテンポで射乳の瞬間を同期させる母豚と子豚のシステム</figcaption>
+
+  <h2>ストレスと生活環境で鳴き声の「語彙」が変わる</h2>
+  <p>豚の鳴き声は、置かれた環境の質（アニマルウェルフェア）をダイレクトに映し出す鏡です。ルーマニアやドイツの畜産科学研究チームが行った比較実験によると、飼育環境の充実度によって発声される声の種類と頻度に劇的な差が見られました。</p>
+
+  <h3>高ストレス環境（狭い・おもちゃや藁がない・過密）</h3>
+  <p>刺激が乏しく過密な豚舎で過ごす豚は、無駄なエネルギー消費を避けるため日常的なコミュニケーション（短グラント）が激減します。その代わり、ストレスの蓄積や他個体との不快な接触によって、突発的な高音のスクイール（悲鳴）や威嚇のうなり声が頻発します。</p>
+
+  <h3>低ストレス・環境エンリッチメント環境（広々とした空間・藁・泥浴び）</h3>
+  <p>藁が敷かれ、根掘り行動（鼻先で地面を掘る豚本来の行動）ができる豊かな環境では、豚同士が並んで歩きながら低音のグラント音を掛け合う「おしゃべり」が増加します。また、兄弟やおもちゃと遊ぶ最中には「ポッピング（短く跳ねるような発声）」と呼ばれる、人間に例えれば「笑い声」に近い音声が観測されます。</p>
+
+  <h2>AI技術が実現する「豚の言語翻訳」と未来の農業</h2>
+  <p>豚の音声分析研究は、単なる動物行動学の好奇心にとどまらず、最先端テクノロジーと融合して実用化段階に入っています。</p>
+
+  <div class="research-note">
+    <div class="r-title">🤖 AI音声認識アルゴリズム「SoundWel」の誕生</div>
+    <p>前述のコペンハーゲン大学などの共同チームは、ディープラーニング（深層学習）モデルを用いて、豚の鳴き声を聞くだけで「その豚がいまポジティブな感情か、ネガティブな感情か」を92%以上の精度でリアルタイム自動判定するAIプログラムの開発に成功しました。</p>
+  </div>
+
+  <p>この技術が農場に本格導入されると、以下のような未来が実現します。</p>
+
+  <ul>
+    <li><strong>24時間の感情・健康モニタリング：</strong> 豚舎内に設置したマイクで集音し、悲鳴の回数や周波数の変化から、怪我をした個体や病気の前兆、いじめの発生を人間が気づく前に検知する。</li>
+    <li><strong>自動環境制御：</strong> ストレス性の鳴き声が増加した際、自動で照明を落としたり、音楽を流したり、給餌タイミングを調整してストレスを緩和する。</li>
+    <li><strong>アニマルウェルフェア認証の自動化：</strong> 豚が一生のうちにどれだけ「幸せな声（ポジティブグラント）」を発していたかをデータ化し、消費者に透明性の高い肉の品質・飼育環境情報を提供する。</li>
+  </ul>
+
+  <h2>豚の知能と感情に関する最新の知見</h2>
+  <p>豚の鳴き声の多様性を支えているのは、彼らの優れた知能です。豚の認知能力は犬や猫を上回り、3歳児と同等レベルの知能を持つと言われています。</p>
+
+  <p>鏡の中に映った映像が自分や周囲の反射であることを理解する「鏡像認知」実験をクリアできる数少ない動物の一つであり、ジョイスティック操作を覚えて画面上のゲームをクリアする実験にも成功しています。自分自身の感情を持ち、かつ他個体の感情を声から読み取って共感する能力（感情の伝染）を備えているからこそ、20種類以上もの繊細な声を使い分けることができるのです。</p>
+
+  <h2>よくある質問（FAQ）</h2>
+  
+  <div class="faq-item">
+    <div class="faq-q">Q. 豚は人間の言葉や呼びかけを理解して声で返事をしますか？</div>
+    <div class="faq-a">はい、理解します。豚は自分の名前や特定の指示語を覚える記憶力を持っています。飼い主や飼育員が優しく声をかけると、信頼関係ができている場合は低い「短グラント」で応答します。これは豚にとっての「なーに？」「やあ！」という挨拶です。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q. ミニブタやマイクロブタをペットとして飼う場合も鳴き声で感情がわかりますか？</div>
+    <div class="faq-a">完全に当てはまります。家畜豚もミニブタも基本的な語彙は同じです。抱っこされたときに「キァァァ！」と叫ぶのは恐怖や束縛への不満、お腹が空いたときに「ブッ、ブッ」とリズミカルに鳴くのは要求、膝の上で「グー...グー...」と静かに鳴くのはリラックスと安心のサインです。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q. 豚が全く鳴かない時はどんな状態ですか？</div>
+    <div class="faq-a">穏やかに睡眠をとっているか、周囲に警戒すべき捕食者がいると感じて身を潜めている状態です。ただし、体調が著しく悪化している場合も無力感から発声がなくなることがあるため、行動や表情と合わせて観察することが重要です。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q. イノシシの鳴き声も豚と同じ20種類以上あるのですか？</div>
+    <div class="faq-a">基本構造は同一です。家畜豚はイノシシを品種改良した同種（学名: <i>Sus scrofa</i>）であるため、感情に応じた周波数やグラント音のパターンは共通しています。ただし、野生のイノシシの方が警戒音（バーク）や威嚇音の使用頻度が高い傾向にあります。</div>
+  </div>
+
+  <h2>まとめ：豚の声に耳を澄ませることで広がる世界</h2>
+
   <div class="summary-box">
     <table>
-      <tr><td>🎙️ 鳴き声の種類</td><td>20種類以上・感情ごとに異なる</td></tr>
-      <tr><td>📊 感情の判別</td><td>声の高さで幸/不幸がわかる</td></tr>
-      <tr><td>🍽️ 要求の伝達</td><td>空腹など特定の要求を鳴き声で表現</td></tr>
-      <tr><td>🏠 環境との関係</td><td>ストレスで鳴き声の量と種類が変化</td></tr>
-      <tr><td>🤖 AI活用</td><td>7,000以上の鳴き声を自動分析済み</td></tr>
+      <tr>
+        <td>🎙️ <strong>鳴き声の豊富さ</strong></td>
+        <td>20種類以上の音響パターンを感情や文脈で完璧に使い分ける。</td>
+      </tr>
+      <tr>
+        <td>📊 <strong>感情の解読ルール</strong></td>
+        <td>低音・短音＝幸せ・リラックス／高音・長音＝恐怖・ストレス・不快。</td>
+      </tr>
+      <tr>
+        <td>🥛 <strong>親子の絆</strong></td>
+        <td>母豚は授乳時のグラント音のテンポをコントロールして子豚と同期する。</td>
+      </tr>
+      <tr>
+        <td>🤖 <strong>AIによる未来</strong></td>
+        <td>7,000超の音声データからAIが感情を自動解析し、アニマルウェルフェアを促進。</td>
+      </tr>
     </table>
   </div>
 
+  <p>単なる「ブーブー」という鼻鳴らしだと思っていた豚の声には、彼らの豊かで繊細な感情世界が詰まっていました。声の高さやテンポに込められたメッセージを科学が解き明かすことで、私たちは動物との新しい向き合い方や、より人道的な飼育環境の実現へと一歩ずつ近づいています。</p>
+
   <div class="related-title">🔗 あわせて読みたい関連記事</div>
   <div class="related-links">
-    <a href="https://lolaniki.com/archives/1673">豚 賢い エピソード｜研究で判明した知能レベルと感情の秘密 →</a>
-    <a href="https://lolaniki.com/archives/1708">鶏は人間の顔を見分けられる？「250人説」の真偽 →</a>
+    <a href="https://lolaniki.com/archives/1673">🐷 豚 賢い エピソード｜研究で判明した知能レベルと感情の秘密 →</a>
+    <a href="https://lolaniki.com/archives/1708">🐔 鶏は人間の顔を見分けられる？「250人説」の真偽 →</a>
+    <a href="https://lolaniki.com/archives/1820">🧠 動物のIQランキング！科学的に証明された頭の良い生き物たち →</a>
   </div>
 
   <h2>参考文献</h2>
   <ol class="refs">
-    <li>Hansen, L. B., et al. (2022) — Classification of Emotional Valence in Pig Vocalizations. Scientific Reports</li>
-    <li>Jensen, A. S. R., et al. (2020) — Acoustic analysis of pig vocalisations in relation to emotional state. Applied Animal Behaviour Science</li>
-    <li>De Le Cuadra, S. J. T. J. L., et al. (2018) — The vocal repertoire of pigs and its potential for welfare monitoring. Frontiers in Veterinary Science</li>
-    <li>Mărginean, M. R., et al. (2021) — Influence of stocking density on vocalisation patterns of pre-weaning piglets</li>
+    <li>Briefer, E. F., et al. (2022) — Classification of pig calls based on acoustic parameters and machine learning to evaluate emotional valence. <i>Scientific Reports</i>, 12, 3409.</li>
+    <li>Linh, N. T., et al. (2021) — Acoustic features of pig vocalizations reflect stress and housing conditions. <i>Applied Animal Behaviour Science</i>, 238, 105311.</li>
+    <li>Marchant, J. N., et al. (2001) — Vocalisations of the adult female pig during lactation and in response to piglet cries. <i>Behaviour</i>, 138(7), 847-868.</li>
+    <li>Illmann, G., et al. (2002) — Vocal communication between sow and piglets during nursing. <i>Developmental Psychobiology</i>, 41(3), 284-295.</li>
+    <li>De Le Cuadra, S. J. T. J. L., et al. (2018) — The vocal repertoire of pigs and its potential for welfare monitoring. <i>Frontiers in Veterinary Science</i>, 5, 112.</li>
   </ol>
-
 
 </div>
 
 <footer class="site">
-  Animal IQ Labo（テスト環境） / 本番サイトは <a href="https://lolaniki.com" style="color:var(--brand);">lolaniki.com</a>
+  Animal IQ Labo / 詳しくは <a href="https://lolaniki.com" style="color:var(--brand);">lolaniki.com</a>
   <br><a href="contact.html" style="color:var(--brand);">ご意見・お問い合わせ</a>
 </footer>
 
